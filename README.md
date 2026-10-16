@@ -124,7 +124,7 @@ of that CSV, job identifiers are replaced by `<jobid>`.
 | `lfglad_scores_typed_v1.tar` | `$GLAD_DATA_ROOT` | Per-graph scores on the typed suite |
 | `lfglad_scores_followups_v1.tar` | `$GLAD_DATA_ROOT` | Per-graph scores of the A33 follow-ups |
 
-Download: `<OSF link, added at release>`. `SHA256SUMS` lists the checksum of each archive. The archives hold no
+Download: <https://osf.io/qdahn/>. `SHA256SUMS` lists the checksum of each archive. The archives hold no
 model checkpoints. Paths inside the records are written as `$GLAD_DATA_ROOT/...`, which `scripts/portable_run.py`
 resolves. The 180 pilot runs (four UB-GOLD detectors on the nine main datasets) have trajectories only.
 
