@@ -1,0 +1,2028 @@
+{
+ "results": [
+  {
+   "dataset": "AIDS",
+   "meta": {
+    "dataset": "AIDS",
+    "kind": "TU",
+    "fixed_split": false,
+    "protocol": "UB-GOLD ad / get_ad_dataset_TU: StratifiedKFold(5, shuffle=True, random_state=0) over all graphs; train = train-fold graphs with label!=0; test = test fold; anomaly = class 0 (smallest raw graph label)",
+    "anomaly_class": 0,
+    "anomaly_class_raw": 0,
+    "normal_classes": [
+     1
+    ],
+    "normal_classes_raw": [
+     1
+    ],
+    "class_counts": [
+     400,
+     1600
+    ],
+    "n_graphs": 2000,
+    "ubgold_node_features": "node_label_onehot",
+    "ubgold_uses_node_labels": true,
+    "node_label_dim": 38,
+    "x_attr_dim": 4,
+    "ubgold_num_feat": 38,
+    "ubgold_verified": true,
+    "ubgold_table1": [
+     1280,
+     320,
+     80
+    ]
+   },
+   "reader_info": {
+    "n_graphs": 2000,
+    "graph_label_raw_values": [
+     0,
+     1
+    ],
+    "class_counts": [
+     400,
+     1600
+    ],
+    "node_label_min_raw": 0,
+    "node_label_dim": 38,
+    "x_attr_dim": 4,
+    "self_loops_removed": 0,
+    "asymmetric_directed_entries": 0
+   },
+   "ubgold_export": {
+    "n_graph_mismatches": 0,
+    "num_feat": 38,
+    "versions": {
+     "torch": "2.14.1+cpu",
+     "torch_geometric": "2.6.1",
+     "sklearn": "1.9.1"
+    }
+   },
+   "n_graphs_cached": 2000,
+   "avg_n": 15.6925,
+   "avg_m": 16.195,
+   "max_n": 95,
+   "min_n": 2,
+   "n_graphs_no_edges": 0,
+   "n_graphs_with_isolated_nodes": 163,
+   "wl_graphs_shared_across_classes": 0,
+   "folds": [
+    {
+     "fold": 0,
+     "seed": 3407,
+     "n_train": 1280,
+     "n_test_normal": 320,
+     "n_test_anom": 80,
+     "anom_ratio_test": 0.2,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": true,
+     "wl_dup_test_normal": 18,
+     "wl_dup_test_anom": 0,
+     "size_auroc": 0.9986328125
+    },
+    {
+     "fold": 1,
+     "seed": 3408,
+     "n_train": 1280,
+     "n_test_normal": 320,
+     "n_test_anom": 80,
+     "anom_ratio_test": 0.2,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": true,
+     "wl_dup_test_normal": 22,
+     "wl_dup_test_anom": 0,
+     "size_auroc": 1.0
+    },
+    {
+     "fold": 2,
+     "seed": 3409,
+     "n_train": 1280,
+     "n_test_normal": 320,
+     "n_test_anom": 80,
+     "anom_ratio_test": 0.2,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": true,
+     "wl_dup_test_normal": 23,
+     "wl_dup_test_anom": 0,
+     "size_auroc": 0.9955273437500001
+    },
+    {
+     "fold": 3,
+     "seed": 3410,
+     "n_train": 1280,
+     "n_test_normal": 320,
+     "n_test_anom": 80,
+     "anom_ratio_test": 0.2,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": true,
+     "wl_dup_test_normal": 21,
+     "wl_dup_test_anom": 0,
+     "size_auroc": 0.9922070312500001
+    },
+    {
+     "fold": 4,
+     "seed": 3411,
+     "n_train": 1280,
+     "n_test_normal": 320,
+     "n_test_anom": 80,
+     "anom_ratio_test": 0.2,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": true,
+     "wl_dup_test_normal": 27,
+     "wl_dup_test_anom": 0,
+     "size_auroc": 1.0
+    }
+   ],
+   "seconds": 0.2
+  },
+  {
+   "dataset": "BZR",
+   "meta": {
+    "dataset": "BZR",
+    "kind": "TU",
+    "fixed_split": false,
+    "protocol": "UB-GOLD ad / get_ad_dataset_TU: StratifiedKFold(5, shuffle=True, random_state=0) over all graphs; train = train-fold graphs with label!=0; test = test fold; anomaly = class 0 (smallest raw graph label)",
+    "anomaly_class": 0,
+    "anomaly_class_raw": -1,
+    "normal_classes": [
+     1
+    ],
+    "normal_classes_raw": [
+     1
+    ],
+    "class_counts": [
+     319,
+     86
+    ],
+    "n_graphs": 405,
+    "ubgold_node_features": "node_label_onehot",
+    "ubgold_uses_node_labels": true,
+    "node_label_dim": 53,
+    "x_attr_dim": 3,
+    "ubgold_num_feat": 53,
+    "ubgold_verified": true,
+    "ubgold_table1": [
+     69,
+     17,
+     64
+    ]
+   },
+   "reader_info": {
+    "n_graphs": 405,
+    "graph_label_raw_values": [
+     -1,
+     1
+    ],
+    "class_counts": [
+     319,
+     86
+    ],
+    "node_label_min_raw": 1,
+    "node_label_dim": 53,
+    "x_attr_dim": 3,
+    "self_loops_removed": 0,
+    "asymmetric_directed_entries": 0
+   },
+   "ubgold_export": {
+    "n_graph_mismatches": 0,
+    "num_feat": 53,
+    "versions": {
+     "torch": "2.14.1+cpu",
+     "torch_geometric": "2.6.1",
+     "sklearn": "1.9.1"
+    }
+   },
+   "n_graphs_cached": 405,
+   "avg_n": 35.75061728395062,
+   "avg_m": 38.358024691358025,
+   "max_n": 57,
+   "min_n": 13,
+   "n_graphs_no_edges": 0,
+   "n_graphs_with_isolated_nodes": 0,
+   "wl_graphs_shared_across_classes": 0,
+   "folds": [
+    {
+     "fold": 0,
+     "seed": 3407,
+     "n_train": 69,
+     "n_test_normal": 17,
+     "n_test_anom": 64,
+     "anom_ratio_test": 0.7901234567901234,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": true,
+     "wl_dup_test_normal": 0,
+     "wl_dup_test_anom": 0,
+     "size_auroc": 0.7224264705882353
+    },
+    {
+     "fold": 1,
+     "seed": 3408,
+     "n_train": 69,
+     "n_test_normal": 17,
+     "n_test_anom": 64,
+     "anom_ratio_test": 0.7901234567901234,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": true,
+     "wl_dup_test_normal": 0,
+     "wl_dup_test_anom": 0,
+     "size_auroc": 0.6346507352941176
+    },
+    {
+     "fold": 2,
+     "seed": 3409,
+     "n_train": 69,
+     "n_test_normal": 17,
+     "n_test_anom": 64,
+     "anom_ratio_test": 0.7901234567901234,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": true,
+     "wl_dup_test_normal": 0,
+     "wl_dup_test_anom": 0,
+     "size_auroc": 0.5932904411764706
+    },
+    {
+     "fold": 3,
+     "seed": 3410,
+     "n_train": 69,
+     "n_test_normal": 17,
+     "n_test_anom": 64,
+     "anom_ratio_test": 0.7901234567901234,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": true,
+     "wl_dup_test_normal": 0,
+     "wl_dup_test_anom": 0,
+     "size_auroc": 0.6199448529411764
+    },
+    {
+     "fold": 4,
+     "seed": 3411,
+     "n_train": 68,
+     "n_test_normal": 18,
+     "n_test_anom": 63,
+     "anom_ratio_test": 0.7777777777777778,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": true,
+     "wl_dup_test_normal": 0,
+     "wl_dup_test_anom": 0,
+     "size_auroc": 0.4973544973544973
+    }
+   ],
+   "seconds": 0.1
+  },
+  {
+   "dataset": "COX2",
+   "meta": {
+    "dataset": "COX2",
+    "kind": "TU",
+    "fixed_split": false,
+    "protocol": "UB-GOLD ad / get_ad_dataset_TU: StratifiedKFold(5, shuffle=True, random_state=0) over all graphs; train = train-fold graphs with label!=0; test = test fold; anomaly = class 0 (smallest raw graph label)",
+    "anomaly_class": 0,
+    "anomaly_class_raw": -1,
+    "normal_classes": [
+     1
+    ],
+    "normal_classes_raw": [
+     1
+    ],
+    "class_counts": [
+     365,
+     102
+    ],
+    "n_graphs": 467,
+    "ubgold_node_features": "node_label_onehot",
+    "ubgold_uses_node_labels": true,
+    "node_label_dim": 35,
+    "x_attr_dim": 3,
+    "ubgold_num_feat": 35,
+    "ubgold_verified": true,
+    "ubgold_table1": [
+     81,
+     21,
+     73
+    ]
+   },
+   "reader_info": {
+    "n_graphs": 467,
+    "graph_label_raw_values": [
+     -1,
+     1
+    ],
+    "class_counts": [
+     365,
+     102
+    ],
+    "node_label_min_raw": 1,
+    "node_label_dim": 35,
+    "x_attr_dim": 3,
+    "self_loops_removed": 0,
+    "asymmetric_directed_entries": 0
+   },
+   "ubgold_export": {
+    "n_graph_mismatches": 0,
+    "num_feat": 35,
+    "versions": {
+     "torch": "2.14.1+cpu",
+     "torch_geometric": "2.6.1",
+     "sklearn": "1.9.1"
+    }
+   },
+   "n_graphs_cached": 467,
+   "avg_n": 41.224839400428266,
+   "avg_m": 43.44539614561028,
+   "max_n": 56,
+   "min_n": 32,
+   "n_graphs_no_edges": 0,
+   "n_graphs_with_isolated_nodes": 0,
+   "wl_graphs_shared_across_classes": 0,
+   "folds": [
+    {
+     "fold": 0,
+     "seed": 3407,
+     "n_train": 81,
+     "n_test_normal": 21,
+     "n_test_anom": 73,
+     "anom_ratio_test": 0.776595744680851,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": true,
+     "wl_dup_test_normal": 0,
+     "wl_dup_test_anom": 0,
+     "size_auroc": 0.509784735812133
+    },
+    {
+     "fold": 1,
+     "seed": 3408,
+     "n_train": 81,
+     "n_test_normal": 21,
+     "n_test_anom": 73,
+     "anom_ratio_test": 0.776595744680851,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": true,
+     "wl_dup_test_normal": 0,
+     "wl_dup_test_anom": 0,
+     "size_auroc": 0.5759947814742336
+    },
+    {
+     "fold": 2,
+     "seed": 3409,
+     "n_train": 82,
+     "n_test_normal": 20,
+     "n_test_anom": 73,
+     "anom_ratio_test": 0.7849462365591398,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": true,
+     "wl_dup_test_normal": 0,
+     "wl_dup_test_anom": 0,
+     "size_auroc": 0.6554794520547945
+    },
+    {
+     "fold": 3,
+     "seed": 3410,
+     "n_train": 82,
+     "n_test_normal": 20,
+     "n_test_anom": 73,
+     "anom_ratio_test": 0.7849462365591398,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": true,
+     "wl_dup_test_normal": 0,
+     "wl_dup_test_anom": 0,
+     "size_auroc": 0.5486301369863014
+    },
+    {
+     "fold": 4,
+     "seed": 3411,
+     "n_train": 82,
+     "n_test_normal": 20,
+     "n_test_anom": 73,
+     "anom_ratio_test": 0.7849462365591398,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": true,
+     "wl_dup_test_normal": 0,
+     "wl_dup_test_anom": 0,
+     "size_auroc": 0.4845890410958904
+    }
+   ],
+   "seconds": 0.1
+  },
+  {
+   "dataset": "DHFR",
+   "meta": {
+    "dataset": "DHFR",
+    "kind": "TU",
+    "fixed_split": false,
+    "protocol": "UB-GOLD ad / get_ad_dataset_TU: StratifiedKFold(5, shuffle=True, random_state=0) over all graphs; train = train-fold graphs with label!=0; test = test fold; anomaly = class 0 (smallest raw graph label)",
+    "anomaly_class": 0,
+    "anomaly_class_raw": -1,
+    "normal_classes": [
+     1
+    ],
+    "normal_classes_raw": [
+     1
+    ],
+    "class_counts": [
+     295,
+     461
+    ],
+    "n_graphs": 756,
+    "ubgold_node_features": "node_label_onehot",
+    "ubgold_uses_node_labels": true,
+    "node_label_dim": 53,
+    "x_attr_dim": 3,
+    "ubgold_num_feat": 53,
+    "ubgold_verified": true,
+    "ubgold_table1": [
+     368,
+     93,
+     59
+    ]
+   },
+   "reader_info": {
+    "n_graphs": 756,
+    "graph_label_raw_values": [
+     -1,
+     1
+    ],
+    "class_counts": [
+     295,
+     461
+    ],
+    "node_label_min_raw": 1,
+    "node_label_dim": 53,
+    "x_attr_dim": 3,
+    "self_loops_removed": 0,
+    "asymmetric_directed_entries": 0
+   },
+   "ubgold_export": {
+    "n_graph_mismatches": 0,
+    "num_feat": 53,
+    "versions": {
+     "torch": "2.14.1+cpu",
+     "torch_geometric": "2.6.1",
+     "sklearn": "1.9.1"
+    }
+   },
+   "n_graphs_cached": 756,
+   "avg_n": 42.42724867724868,
+   "avg_m": 44.544973544973544,
+   "max_n": 71,
+   "min_n": 20,
+   "n_graphs_no_edges": 0,
+   "n_graphs_with_isolated_nodes": 0,
+   "wl_graphs_shared_across_classes": 2,
+   "folds": [
+    {
+     "fold": 0,
+     "seed": 3407,
+     "n_train": 368,
+     "n_test_normal": 93,
+     "n_test_anom": 59,
+     "anom_ratio_test": 0.3881578947368421,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": true,
+     "wl_dup_test_normal": 5,
+     "wl_dup_test_anom": 0,
+     "size_auroc": 0.6198286859850556
+    },
+    {
+     "fold": 1,
+     "seed": 3408,
+     "n_train": 369,
+     "n_test_normal": 92,
+     "n_test_anom": 59,
+     "anom_ratio_test": 0.39072847682119205,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": true,
+     "wl_dup_test_normal": 2,
+     "wl_dup_test_anom": 1,
+     "size_auroc": 0.6136698599852616
+    },
+    {
+     "fold": 2,
+     "seed": 3409,
+     "n_train": 369,
+     "n_test_normal": 92,
+     "n_test_anom": 59,
+     "anom_ratio_test": 0.39072847682119205,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": true,
+     "wl_dup_test_normal": 3,
+     "wl_dup_test_anom": 0,
+     "size_auroc": 0.6239867354458364
+    },
+    {
+     "fold": 3,
+     "seed": 3410,
+     "n_train": 369,
+     "n_test_normal": 92,
+     "n_test_anom": 59,
+     "anom_ratio_test": 0.39072847682119205,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": true,
+     "wl_dup_test_normal": 2,
+     "wl_dup_test_anom": 0,
+     "size_auroc": 0.5942336035372144
+    },
+    {
+     "fold": 4,
+     "seed": 3411,
+     "n_train": 369,
+     "n_test_normal": 92,
+     "n_test_anom": 59,
+     "anom_ratio_test": 0.39072847682119205,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": true,
+     "wl_dup_test_normal": 8,
+     "wl_dup_test_anom": 0,
+     "size_auroc": 0.542557111274871
+    }
+   ],
+   "seconds": 0.2
+  },
+  {
+   "dataset": "ENZYMES",
+   "meta": {
+    "dataset": "ENZYMES",
+    "kind": "TU",
+    "fixed_split": false,
+    "protocol": "UB-GOLD ad / get_ad_dataset_TU: StratifiedKFold(5, shuffle=True, random_state=0) over all graphs; train = train-fold graphs with label!=0; test = test fold; anomaly = class 0 (smallest raw graph label)",
+    "anomaly_class": 0,
+    "anomaly_class_raw": 1,
+    "normal_classes": [
+     1,
+     2,
+     3,
+     4,
+     5
+    ],
+    "normal_classes_raw": [
+     2,
+     3,
+     4,
+     5,
+     6
+    ],
+    "class_counts": [
+     100,
+     100,
+     100,
+     100,
+     100,
+     100
+    ],
+    "n_graphs": 600,
+    "ubgold_node_features": "node_label_onehot",
+    "ubgold_uses_node_labels": true,
+    "node_label_dim": 3,
+    "x_attr_dim": 18,
+    "ubgold_num_feat": 3,
+    "ubgold_verified": true,
+    "ubgold_table1": [
+     400,
+     100,
+     20
+    ]
+   },
+   "reader_info": {
+    "n_graphs": 600,
+    "graph_label_raw_values": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6
+    ],
+    "class_counts": [
+     100,
+     100,
+     100,
+     100,
+     100,
+     100
+    ],
+    "node_label_min_raw": 1,
+    "node_label_dim": 3,
+    "x_attr_dim": 18,
+    "self_loops_removed": 0,
+    "asymmetric_directed_entries": 0
+   },
+   "ubgold_export": {
+    "n_graph_mismatches": 0,
+    "num_feat": 3,
+    "versions": {
+     "torch": "2.14.1+cpu",
+     "torch_geometric": "2.6.1",
+     "sklearn": "1.9.1"
+    }
+   },
+   "n_graphs_cached": 600,
+   "avg_n": 32.63333333333333,
+   "avg_m": 62.13666666666666,
+   "max_n": 126,
+   "min_n": 2,
+   "n_graphs_no_edges": 0,
+   "n_graphs_with_isolated_nodes": 8,
+   "wl_graphs_shared_across_classes": 0,
+   "folds": [
+    {
+     "fold": 0,
+     "seed": 3407,
+     "n_train": 400,
+     "n_test_normal": 100,
+     "n_test_anom": 20,
+     "anom_ratio_test": 0.16666666666666666,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": true,
+     "wl_dup_test_normal": 1,
+     "wl_dup_test_anom": 0,
+     "size_auroc": 0.39475
+    },
+    {
+     "fold": 1,
+     "seed": 3408,
+     "n_train": 400,
+     "n_test_normal": 100,
+     "n_test_anom": 20,
+     "anom_ratio_test": 0.16666666666666666,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": true,
+     "wl_dup_test_normal": 1,
+     "wl_dup_test_anom": 0,
+     "size_auroc": 0.6220000000000001
+    },
+    {
+     "fold": 2,
+     "seed": 3409,
+     "n_train": 400,
+     "n_test_normal": 100,
+     "n_test_anom": 20,
+     "anom_ratio_test": 0.16666666666666666,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": true,
+     "wl_dup_test_normal": 2,
+     "wl_dup_test_anom": 0,
+     "size_auroc": 0.49
+    },
+    {
+     "fold": 3,
+     "seed": 3410,
+     "n_train": 400,
+     "n_test_normal": 100,
+     "n_test_anom": 20,
+     "anom_ratio_test": 0.16666666666666666,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": true,
+     "wl_dup_test_normal": 1,
+     "wl_dup_test_anom": 0,
+     "size_auroc": 0.55325
+    },
+    {
+     "fold": 4,
+     "seed": 3411,
+     "n_train": 400,
+     "n_test_normal": 100,
+     "n_test_anom": 20,
+     "anom_ratio_test": 0.16666666666666666,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": true,
+     "wl_dup_test_normal": 3,
+     "wl_dup_test_anom": 0,
+     "size_auroc": 0.6295
+    }
+   ],
+   "seconds": 0.1
+  },
+  {
+   "dataset": "NCI1",
+   "meta": {
+    "dataset": "NCI1",
+    "kind": "TU",
+    "fixed_split": false,
+    "protocol": "UB-GOLD ad / get_ad_dataset_TU: StratifiedKFold(5, shuffle=True, random_state=0) over all graphs; train = train-fold graphs with label!=0; test = test fold; anomaly = class 0 (smallest raw graph label)",
+    "anomaly_class": 0,
+    "anomaly_class_raw": 0,
+    "normal_classes": [
+     1
+    ],
+    "normal_classes_raw": [
+     1
+    ],
+    "class_counts": [
+     2053,
+     2057
+    ],
+    "n_graphs": 4110,
+    "ubgold_node_features": "node_label_onehot",
+    "ubgold_uses_node_labels": true,
+    "node_label_dim": 37,
+    "x_attr_dim": null,
+    "ubgold_num_feat": 37,
+    "ubgold_verified": true,
+    "ubgold_table1": [
+     1646,
+     411,
+     411
+    ]
+   },
+   "reader_info": {
+    "n_graphs": 4110,
+    "graph_label_raw_values": [
+     0,
+     1
+    ],
+    "class_counts": [
+     2053,
+     2057
+    ],
+    "node_label_min_raw": 1,
+    "node_label_dim": 37,
+    "x_attr_dim": null,
+    "self_loops_removed": 0,
+    "asymmetric_directed_entries": 0
+   },
+   "ubgold_export": {
+    "n_graph_mismatches": 0,
+    "num_feat": 37,
+    "versions": {
+     "torch": "2.14.1+cpu",
+     "torch_geometric": "2.6.1",
+     "sklearn": "1.9.1"
+    }
+   },
+   "n_graphs_cached": 4110,
+   "avg_n": 29.8654501216545,
+   "avg_m": 32.3,
+   "max_n": 111,
+   "min_n": 3,
+   "n_graphs_no_edges": 0,
+   "n_graphs_with_isolated_nodes": 399,
+   "wl_graphs_shared_across_classes": 15,
+   "folds": [
+    {
+     "fold": 0,
+     "seed": 3407,
+     "n_train": 1646,
+     "n_test_normal": 411,
+     "n_test_anom": 411,
+     "anom_ratio_test": 0.5,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": true,
+     "wl_dup_test_normal": 21,
+     "wl_dup_test_anom": 1,
+     "size_auroc": 0.3228225028267652
+    },
+    {
+     "fold": 1,
+     "seed": 3408,
+     "n_train": 1646,
+     "n_test_normal": 411,
+     "n_test_anom": 411,
+     "anom_ratio_test": 0.5,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": true,
+     "wl_dup_test_normal": 18,
+     "wl_dup_test_anom": 2,
+     "size_auroc": 0.29537772094647796
+    },
+    {
+     "fold": 2,
+     "seed": 3409,
+     "n_train": 1646,
+     "n_test_normal": 411,
+     "n_test_anom": 411,
+     "anom_ratio_test": 0.5,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": true,
+     "wl_dup_test_normal": 19,
+     "wl_dup_test_anom": 0,
+     "size_auroc": 0.31528051574404603
+    },
+    {
+     "fold": 3,
+     "seed": 3410,
+     "n_train": 1645,
+     "n_test_normal": 412,
+     "n_test_anom": 410,
+     "anom_ratio_test": 0.49878345498783455,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": true,
+     "wl_dup_test_normal": 13,
+     "wl_dup_test_anom": 1,
+     "size_auroc": 0.3489551266871892
+    },
+    {
+     "fold": 4,
+     "seed": 3411,
+     "n_train": 1645,
+     "n_test_normal": 412,
+     "n_test_anom": 410,
+     "anom_ratio_test": 0.49878345498783455,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": true,
+     "wl_dup_test_normal": 20,
+     "wl_dup_test_anom": 1,
+     "size_auroc": 0.29796945299550087
+    }
+   ],
+   "seconds": 0.6
+  },
+  {
+   "dataset": "MUTAG",
+   "meta": {
+    "dataset": "MUTAG",
+    "kind": "TU",
+    "fixed_split": false,
+    "protocol": "UB-GOLD ad / get_ad_dataset_TU: StratifiedKFold(5, shuffle=True, random_state=0) over all graphs; train = train-fold graphs with label!=0; test = test fold; anomaly = class 0 (smallest raw graph label)",
+    "anomaly_class": 0,
+    "anomaly_class_raw": -1,
+    "normal_classes": [
+     1
+    ],
+    "normal_classes_raw": [
+     1
+    ],
+    "class_counts": [
+     63,
+     125
+    ],
+    "n_graphs": 188,
+    "ubgold_node_features": "node_label_onehot",
+    "ubgold_uses_node_labels": true,
+    "node_label_dim": 7,
+    "x_attr_dim": null,
+    "ubgold_num_feat": 7,
+    "ubgold_verified": true,
+    "ubgold_table1": null
+   },
+   "reader_info": {
+    "n_graphs": 188,
+    "graph_label_raw_values": [
+     -1,
+     1
+    ],
+    "class_counts": [
+     63,
+     125
+    ],
+    "node_label_min_raw": 0,
+    "node_label_dim": 7,
+    "x_attr_dim": null,
+    "self_loops_removed": 0,
+    "asymmetric_directed_entries": 0
+   },
+   "ubgold_export": {
+    "n_graph_mismatches": 0,
+    "num_feat": 7,
+    "versions": {
+     "torch": "2.14.1+cpu",
+     "torch_geometric": "2.6.1",
+     "sklearn": "1.9.1"
+    }
+   },
+   "n_graphs_cached": 188,
+   "avg_n": 17.930851063829788,
+   "avg_m": 19.79255319148936,
+   "max_n": 28,
+   "min_n": 10,
+   "n_graphs_no_edges": 0,
+   "n_graphs_with_isolated_nodes": 0,
+   "wl_graphs_shared_across_classes": 0,
+   "folds": [
+    {
+     "fold": 0,
+     "seed": 3407,
+     "n_train": 100,
+     "n_test_normal": 25,
+     "n_test_anom": 13,
+     "anom_ratio_test": 0.34210526315789475,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": true,
+     "wl_dup_test_normal": 6,
+     "wl_dup_test_anom": 0,
+     "size_auroc": 0.1030769230769231
+    },
+    {
+     "fold": 1,
+     "seed": 3408,
+     "n_train": 100,
+     "n_test_normal": 25,
+     "n_test_anom": 13,
+     "anom_ratio_test": 0.34210526315789475,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": true,
+     "wl_dup_test_normal": 4,
+     "wl_dup_test_anom": 0,
+     "size_auroc": 0.17846153846153848
+    },
+    {
+     "fold": 2,
+     "seed": 3409,
+     "n_train": 100,
+     "n_test_normal": 25,
+     "n_test_anom": 13,
+     "anom_ratio_test": 0.34210526315789475,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": true,
+     "wl_dup_test_normal": 4,
+     "wl_dup_test_anom": 0,
+     "size_auroc": 0.10615384615384617
+    },
+    {
+     "fold": 3,
+     "seed": 3410,
+     "n_train": 100,
+     "n_test_normal": 25,
+     "n_test_anom": 12,
+     "anom_ratio_test": 0.32432432432432434,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": true,
+     "wl_dup_test_normal": 4,
+     "wl_dup_test_anom": 0,
+     "size_auroc": 0.11166666666666665
+    },
+    {
+     "fold": 4,
+     "seed": 3411,
+     "n_train": 100,
+     "n_test_normal": 25,
+     "n_test_anom": 12,
+     "anom_ratio_test": 0.32432432432432434,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": true,
+     "wl_dup_test_normal": 4,
+     "wl_dup_test_anom": 0,
+     "size_auroc": 0.07999999999999997
+    }
+   ],
+   "seconds": 0.0
+  },
+  {
+   "dataset": "PROTEINS_full",
+   "meta": {
+    "dataset": "PROTEINS_full",
+    "kind": "TU",
+    "fixed_split": false,
+    "protocol": "UB-GOLD ad / get_ad_dataset_TU: StratifiedKFold(5, shuffle=True, random_state=0) over all graphs; train = train-fold graphs with label!=0; test = test fold; anomaly = class 0 (smallest raw graph label)",
+    "anomaly_class": 0,
+    "anomaly_class_raw": 1,
+    "normal_classes": [
+     1
+    ],
+    "normal_classes_raw": [
+     2
+    ],
+    "class_counts": [
+     663,
+     450
+    ],
+    "n_graphs": 1113,
+    "ubgold_node_features": "node_label_onehot",
+    "ubgold_uses_node_labels": true,
+    "node_label_dim": 3,
+    "x_attr_dim": 29,
+    "ubgold_num_feat": 3,
+    "ubgold_verified": true,
+    "ubgold_table1": [
+     360,
+     90,
+     133
+    ]
+   },
+   "reader_info": {
+    "n_graphs": 1113,
+    "graph_label_raw_values": [
+     1,
+     2
+    ],
+    "class_counts": [
+     663,
+     450
+    ],
+    "node_label_min_raw": 0,
+    "node_label_dim": 3,
+    "x_attr_dim": 29,
+    "self_loops_removed": 0,
+    "asymmetric_directed_entries": 0
+   },
+   "ubgold_export": {
+    "n_graph_mismatches": 0,
+    "num_feat": 3,
+    "versions": {
+     "torch": "2.14.1+cpu",
+     "torch_geometric": "2.6.1",
+     "sklearn": "1.9.1"
+    }
+   },
+   "n_graphs_cached": 1113,
+   "avg_n": 39.05750224618149,
+   "avg_m": 72.8158131176999,
+   "max_n": 620,
+   "min_n": 4,
+   "n_graphs_no_edges": 0,
+   "n_graphs_with_isolated_nodes": 5,
+   "wl_graphs_shared_across_classes": 15,
+   "folds": [
+    {
+     "fold": 0,
+     "seed": 3407,
+     "n_train": 360,
+     "n_test_normal": 90,
+     "n_test_anom": 133,
+     "anom_ratio_test": 0.5964125560538116,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": true,
+     "wl_dup_test_normal": 14,
+     "wl_dup_test_anom": 1,
+     "size_auroc": 0.7651211361737678
+    },
+    {
+     "fold": 1,
+     "seed": 3408,
+     "n_train": 360,
+     "n_test_normal": 90,
+     "n_test_anom": 133,
+     "anom_ratio_test": 0.5964125560538116,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": true,
+     "wl_dup_test_normal": 6,
+     "wl_dup_test_anom": 0,
+     "size_auroc": 0.7312865497076023
+    },
+    {
+     "fold": 2,
+     "seed": 3409,
+     "n_train": 360,
+     "n_test_normal": 90,
+     "n_test_anom": 133,
+     "anom_ratio_test": 0.5964125560538116,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": true,
+     "wl_dup_test_normal": 9,
+     "wl_dup_test_anom": 1,
+     "size_auroc": 0.7641604010025064
+    },
+    {
+     "fold": 3,
+     "seed": 3410,
+     "n_train": 360,
+     "n_test_normal": 90,
+     "n_test_anom": 132,
+     "anom_ratio_test": 0.5945945945945946,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": true,
+     "wl_dup_test_normal": 15,
+     "wl_dup_test_anom": 0,
+     "size_auroc": 0.773063973063973
+    },
+    {
+     "fold": 4,
+     "seed": 3411,
+     "n_train": 360,
+     "n_test_normal": 90,
+     "n_test_anom": 132,
+     "anom_ratio_test": 0.5945945945945946,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": true,
+     "wl_dup_test_normal": 12,
+     "wl_dup_test_anom": 0,
+     "size_auroc": 0.7733585858585859
+    }
+   ],
+   "seconds": 0.2
+  },
+  {
+   "dataset": "IMDB-BINARY",
+   "meta": {
+    "dataset": "IMDB-BINARY",
+    "kind": "TU",
+    "fixed_split": false,
+    "protocol": "UB-GOLD ad / get_ad_dataset_TU: StratifiedKFold(5, shuffle=True, random_state=0) over all graphs; train = train-fold graphs with label!=0; test = test fold; anomaly = class 0 (smallest raw graph label)",
+    "anomaly_class": 0,
+    "anomaly_class_raw": 0,
+    "normal_classes": [
+     1
+    ],
+    "normal_classes_raw": [
+     1
+    ],
+    "class_counts": [
+     500,
+     500
+    ],
+    "n_graphs": 1000,
+    "ubgold_node_features": "constant",
+    "ubgold_uses_node_labels": false,
+    "node_label_dim": null,
+    "x_attr_dim": null,
+    "ubgold_num_feat": 1,
+    "ubgold_verified": true,
+    "ubgold_table1": [
+     400,
+     100,
+     100
+    ]
+   },
+   "reader_info": {
+    "n_graphs": 1000,
+    "graph_label_raw_values": [
+     0,
+     1
+    ],
+    "class_counts": [
+     500,
+     500
+    ],
+    "node_label_min_raw": null,
+    "node_label_dim": null,
+    "x_attr_dim": null,
+    "self_loops_removed": 0,
+    "asymmetric_directed_entries": 0
+   },
+   "ubgold_export": {
+    "n_graph_mismatches": 0,
+    "num_feat": 1,
+    "versions": {
+     "torch": "2.14.1+cpu",
+     "torch_geometric": "2.6.1",
+     "sklearn": "1.9.1"
+    }
+   },
+   "n_graphs_cached": 1000,
+   "avg_n": 19.773,
+   "avg_m": 96.531,
+   "max_n": 136,
+   "min_n": 12,
+   "n_graphs_no_edges": 0,
+   "n_graphs_with_isolated_nodes": 0,
+   "wl_graphs_shared_across_classes": 318,
+   "folds": [
+    {
+     "fold": 0,
+     "seed": 3407,
+     "n_train": 400,
+     "n_test_normal": 100,
+     "n_test_anom": 100,
+     "anom_ratio_test": 0.5,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": true,
+     "wl_dup_test_normal": 57,
+     "wl_dup_test_anom": 33,
+     "size_auroc": 0.43589999999999995
+    },
+    {
+     "fold": 1,
+     "seed": 3408,
+     "n_train": 400,
+     "n_test_normal": 100,
+     "n_test_anom": 100,
+     "anom_ratio_test": 0.5,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": true,
+     "wl_dup_test_normal": 56,
+     "wl_dup_test_anom": 22,
+     "size_auroc": 0.5500499999999999
+    },
+    {
+     "fold": 2,
+     "seed": 3409,
+     "n_train": 400,
+     "n_test_normal": 100,
+     "n_test_anom": 100,
+     "anom_ratio_test": 0.5,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": true,
+     "wl_dup_test_normal": 61,
+     "wl_dup_test_anom": 38,
+     "size_auroc": 0.51895
+    },
+    {
+     "fold": 3,
+     "seed": 3410,
+     "n_train": 400,
+     "n_test_normal": 100,
+     "n_test_anom": 100,
+     "anom_ratio_test": 0.5,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": true,
+     "wl_dup_test_normal": 57,
+     "wl_dup_test_anom": 28,
+     "size_auroc": 0.4975
+    },
+    {
+     "fold": 4,
+     "seed": 3411,
+     "n_train": 400,
+     "n_test_normal": 100,
+     "n_test_anom": 100,
+     "anom_ratio_test": 0.5,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": true,
+     "wl_dup_test_normal": 53,
+     "wl_dup_test_anom": 31,
+     "size_auroc": 0.49325
+    }
+   ],
+   "seconds": 0.1
+  },
+  {
+   "dataset": "DD",
+   "meta": {
+    "dataset": "DD",
+    "kind": "TU",
+    "fixed_split": false,
+    "protocol": "UB-GOLD ad / get_ad_dataset_TU: StratifiedKFold(5, shuffle=True, random_state=0) over all graphs; train = train-fold graphs with label!=0; test = test fold; anomaly = class 0 (smallest raw graph label)",
+    "anomaly_class": 0,
+    "anomaly_class_raw": 1,
+    "normal_classes": [
+     1
+    ],
+    "normal_classes_raw": [
+     2
+    ],
+    "class_counts": [
+     691,
+     487
+    ],
+    "n_graphs": 1178,
+    "ubgold_node_features": "node_label_onehot",
+    "ubgold_uses_node_labels": true,
+    "node_label_dim": 89,
+    "x_attr_dim": null,
+    "ubgold_num_feat": 89,
+    "ubgold_verified": true,
+    "ubgold_table1": [
+     390,
+     97,
+     139
+    ]
+   },
+   "reader_info": {
+    "n_graphs": 1178,
+    "graph_label_raw_values": [
+     1,
+     2
+    ],
+    "class_counts": [
+     691,
+     487
+    ],
+    "node_label_min_raw": 1,
+    "node_label_dim": 89,
+    "x_attr_dim": null,
+    "self_loops_removed": 0,
+    "asymmetric_directed_entries": 0
+   },
+   "ubgold_export": {
+    "n_graph_mismatches": 0,
+    "num_feat": 89,
+    "versions": {
+     "torch": "2.14.1+cpu",
+     "torch_geometric": "2.6.1",
+     "sklearn": "1.9.1"
+    }
+   },
+   "n_graphs_cached": 1178,
+   "avg_n": 284.3166383701188,
+   "avg_m": 715.6587436332767,
+   "max_n": 5748,
+   "min_n": 30,
+   "n_graphs_no_edges": 0,
+   "n_graphs_with_isolated_nodes": 0,
+   "wl_graphs_shared_across_classes": 0,
+   "folds": [
+    {
+     "fold": 0,
+     "seed": 3407,
+     "n_train": 390,
+     "n_test_normal": 97,
+     "n_test_anom": 139,
+     "anom_ratio_test": 0.5889830508474576,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": true,
+     "wl_dup_test_normal": 0,
+     "wl_dup_test_anom": 0,
+     "size_auroc": 0.7737892160498405
+    },
+    {
+     "fold": 1,
+     "seed": 3408,
+     "n_train": 389,
+     "n_test_normal": 98,
+     "n_test_anom": 138,
+     "anom_ratio_test": 0.5847457627118644,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": true,
+     "wl_dup_test_normal": 0,
+     "wl_dup_test_anom": 0,
+     "size_auroc": 0.8034974859509021
+    },
+    {
+     "fold": 2,
+     "seed": 3409,
+     "n_train": 389,
+     "n_test_normal": 98,
+     "n_test_anom": 138,
+     "anom_ratio_test": 0.5847457627118644,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": true,
+     "wl_dup_test_normal": 0,
+     "wl_dup_test_anom": 0,
+     "size_auroc": 0.8034235433303757
+    },
+    {
+     "fold": 3,
+     "seed": 3410,
+     "n_train": 390,
+     "n_test_normal": 97,
+     "n_test_anom": 138,
+     "anom_ratio_test": 0.5872340425531914,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": true,
+     "wl_dup_test_normal": 0,
+     "wl_dup_test_anom": 0,
+     "size_auroc": 0.8158897355445989
+    },
+    {
+     "fold": 4,
+     "seed": 3411,
+     "n_train": 390,
+     "n_test_normal": 97,
+     "n_test_anom": 138,
+     "anom_ratio_test": 0.5872340425531914,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": true,
+     "wl_dup_test_normal": 0,
+     "wl_dup_test_anom": 0,
+     "size_auroc": 0.8291125056028686
+    }
+   ],
+   "seconds": 1.6
+  },
+  {
+   "dataset": "COLLAB",
+   "meta": {
+    "dataset": "COLLAB",
+    "kind": "TU",
+    "fixed_split": false,
+    "protocol": "UB-GOLD ad / get_ad_dataset_TU: StratifiedKFold(5, shuffle=True, random_state=0) over all graphs; train = train-fold graphs with label!=0; test = test fold; anomaly = class 0 (smallest raw graph label)",
+    "anomaly_class": 0,
+    "anomaly_class_raw": 1,
+    "normal_classes": [
+     1,
+     2
+    ],
+    "normal_classes_raw": [
+     2,
+     3
+    ],
+    "class_counts": [
+     2600,
+     775,
+     1625
+    ],
+    "n_graphs": 5000,
+    "ubgold_node_features": "constant",
+    "ubgold_uses_node_labels": false,
+    "node_label_dim": null,
+    "x_attr_dim": null,
+    "ubgold_num_feat": 1,
+    "ubgold_verified": true,
+    "ubgold_table1": [
+     1920,
+     480,
+     520
+    ]
+   },
+   "reader_info": {
+    "n_graphs": 5000,
+    "graph_label_raw_values": [
+     1,
+     2,
+     3
+    ],
+    "class_counts": [
+     2600,
+     775,
+     1625
+    ],
+    "node_label_min_raw": null,
+    "node_label_dim": null,
+    "x_attr_dim": null,
+    "self_loops_removed": 5674,
+    "asymmetric_directed_entries": 0
+   },
+   "ubgold_export": {
+    "n_graph_mismatches": 0,
+    "num_feat": 1,
+    "versions": {
+     "torch": "2.14.1+cpu",
+     "torch_geometric": "2.6.1",
+     "sklearn": "1.9.1"
+    }
+   },
+   "n_graphs_cached": 5000,
+   "avg_n": 74.4948,
+   "avg_m": 2457.2158,
+   "max_n": 492,
+   "min_n": 32,
+   "n_graphs_no_edges": 0,
+   "n_graphs_with_isolated_nodes": 0,
+   "wl_graphs_shared_across_classes": 369,
+   "folds": [
+    {
+     "fold": 0,
+     "seed": 3407,
+     "n_train": 1920,
+     "n_test_normal": 480,
+     "n_test_anom": 520,
+     "anom_ratio_test": 0.52,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": true,
+     "wl_dup_test_normal": 135,
+     "wl_dup_test_anom": 20,
+     "size_auroc": 0.4739523237179487
+    },
+    {
+     "fold": 1,
+     "seed": 3408,
+     "n_train": 1920,
+     "n_test_normal": 480,
+     "n_test_anom": 520,
+     "anom_ratio_test": 0.52,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": true,
+     "wl_dup_test_normal": 145,
+     "wl_dup_test_anom": 19,
+     "size_auroc": 0.49193910256410256
+    },
+    {
+     "fold": 2,
+     "seed": 3409,
+     "n_train": 1920,
+     "n_test_normal": 480,
+     "n_test_anom": 520,
+     "anom_ratio_test": 0.52,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": true,
+     "wl_dup_test_normal": 134,
+     "wl_dup_test_anom": 24,
+     "size_auroc": 0.48068509615384625
+    },
+    {
+     "fold": 3,
+     "seed": 3410,
+     "n_train": 1920,
+     "n_test_normal": 480,
+     "n_test_anom": 520,
+     "anom_ratio_test": 0.52,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": true,
+     "wl_dup_test_normal": 137,
+     "wl_dup_test_anom": 25,
+     "size_auroc": 0.490068108974359
+    },
+    {
+     "fold": 4,
+     "seed": 3411,
+     "n_train": 1920,
+     "n_test_normal": 480,
+     "n_test_anom": 520,
+     "anom_ratio_test": 0.52,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": true,
+     "wl_dup_test_normal": 127,
+     "wl_dup_test_anom": 33,
+     "size_auroc": 0.4653665865384615
+    }
+   ],
+   "seconds": 3.2
+  },
+  {
+   "dataset": "REDDIT-BINARY",
+   "meta": {
+    "dataset": "REDDIT-BINARY",
+    "kind": "TU",
+    "fixed_split": false,
+    "protocol": "UB-GOLD ad / get_ad_dataset_TU: StratifiedKFold(5, shuffle=True, random_state=0) over all graphs; train = train-fold graphs with label!=0; test = test fold; anomaly = class 0 (smallest raw graph label)",
+    "anomaly_class": 0,
+    "anomaly_class_raw": -1,
+    "normal_classes": [
+     1
+    ],
+    "normal_classes_raw": [
+     1
+    ],
+    "class_counts": [
+     1000,
+     1000
+    ],
+    "n_graphs": 2000,
+    "ubgold_node_features": "constant",
+    "ubgold_uses_node_labels": false,
+    "node_label_dim": null,
+    "x_attr_dim": null,
+    "ubgold_num_feat": 1,
+    "ubgold_verified": true,
+    "ubgold_table1": [
+     800,
+     200,
+     200
+    ]
+   },
+   "reader_info": {
+    "n_graphs": 2000,
+    "graph_label_raw_values": [
+     -1,
+     1
+    ],
+    "class_counts": [
+     1000,
+     1000
+    ],
+    "node_label_min_raw": null,
+    "node_label_dim": null,
+    "x_attr_dim": null,
+    "self_loops_removed": 0,
+    "asymmetric_directed_entries": 0
+   },
+   "ubgold_export": {
+    "n_graph_mismatches": 0,
+    "num_feat": 1,
+    "versions": {
+     "torch": "2.14.1+cpu",
+     "torch_geometric": "2.6.1",
+     "sklearn": "1.9.1"
+    }
+   },
+   "n_graphs_cached": 2000,
+   "avg_n": 429.627,
+   "avg_m": 497.754,
+   "max_n": 3782,
+   "min_n": 6,
+   "n_graphs_no_edges": 0,
+   "n_graphs_with_isolated_nodes": 21,
+   "wl_graphs_shared_across_classes": 0,
+   "folds": [
+    {
+     "fold": 0,
+     "seed": 3407,
+     "n_train": 800,
+     "n_test_normal": 200,
+     "n_test_anom": 200,
+     "anom_ratio_test": 0.5,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": true,
+     "wl_dup_test_normal": 1,
+     "wl_dup_test_anom": 0,
+     "size_auroc": 0.7946499999999999
+    },
+    {
+     "fold": 1,
+     "seed": 3408,
+     "n_train": 800,
+     "n_test_normal": 200,
+     "n_test_anom": 200,
+     "anom_ratio_test": 0.5,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": true,
+     "wl_dup_test_normal": 0,
+     "wl_dup_test_anom": 0,
+     "size_auroc": 0.7709375
+    },
+    {
+     "fold": 2,
+     "seed": 3409,
+     "n_train": 800,
+     "n_test_normal": 200,
+     "n_test_anom": 200,
+     "anom_ratio_test": 0.5,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": true,
+     "wl_dup_test_normal": 1,
+     "wl_dup_test_anom": 0,
+     "size_auroc": 0.8213125
+    },
+    {
+     "fold": 3,
+     "seed": 3410,
+     "n_train": 800,
+     "n_test_normal": 200,
+     "n_test_anom": 200,
+     "anom_ratio_test": 0.5,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": true,
+     "wl_dup_test_normal": 1,
+     "wl_dup_test_anom": 0,
+     "size_auroc": 0.7704749999999999
+    },
+    {
+     "fold": 4,
+     "seed": 3411,
+     "n_train": 800,
+     "n_test_normal": 200,
+     "n_test_anom": 200,
+     "anom_ratio_test": 0.5,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": true,
+     "wl_dup_test_normal": 1,
+     "wl_dup_test_anom": 0,
+     "size_auroc": 0.7500374999999999
+    }
+   ],
+   "seconds": 4.0
+  },
+  {
+   "dataset": "Tox21_p53",
+   "meta": {
+    "dataset": "Tox21_p53",
+    "kind": "Tox21",
+    "fixed_split": true,
+    "protocol": "UB-GOLD ad / get_ad_dataset_Tox21: fixed TU _training/_testing files, per-file first-appearance label remap; train = training-file graphs with mapped label 1; y_test = mapped label 1 in testing file; isolated nodes and edge-less graphs dropped; same split for all 5 trials (seeds 3407+i)",
+    "normal_raw_label_train": 0,
+    "anomaly_raw_label_test": 1,
+    "semantics_consistent": true,
+    "ubgold_node_features": "constant",
+    "ubgold_uses_node_labels": false,
+    "node_label_dim": 51,
+    "x_attr_dim": null,
+    "ubgold_num_feat": 1,
+    "ubgold_verified": true,
+    "ubgold_table1": [
+     8088,
+     241,
+     28
+    ]
+   },
+   "reader_info": {
+    "training": {
+     "n_graphs_file": 8634,
+     "n_graphs_kept": 8623,
+     "n_dropped_no_edges": 11,
+     "n_isolated_nodes_dropped": 1506,
+     "self_loop_entries_in_file": 0,
+     "first_appearance_label_order": [
+      1,
+      0
+     ],
+     "raw_label_counts_file": {
+      "1": 537,
+      "0": 8097
+     }
+    },
+    "testing": {
+     "n_graphs_file": 269,
+     "n_graphs_kept": 269,
+     "n_dropped_no_edges": 0,
+     "n_isolated_nodes_dropped": 119,
+     "self_loop_entries_in_file": 0,
+     "first_appearance_label_order": [
+      0,
+      1
+     ],
+     "raw_label_counts_file": {
+      "0": 241,
+      "1": 28
+     }
+    }
+   },
+   "ubgold_export": {
+    "n_graph_mismatches": 0,
+    "num_feat": 1,
+    "versions": null
+   },
+   "n_graphs_cached": 8357,
+   "avg_n": 17.362689960512146,
+   "avg_m": 17.89158789039129,
+   "max_n": 132,
+   "min_n": 2,
+   "n_graphs_no_edges": 0,
+   "n_graphs_with_isolated_nodes": 0,
+   "wl_graphs_shared_across_classes": null,
+   "folds": [
+    {
+     "fold": 0,
+     "seed": 3407,
+     "n_train": 8088,
+     "n_test_normal": 241,
+     "n_test_anom": 28,
+     "anom_ratio_test": 0.10408921933085502,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": null,
+     "wl_dup_test_normal": 44,
+     "wl_dup_test_anom": 2,
+     "size_auroc": 0.6432276229994073
+    },
+    {
+     "fold": 1,
+     "seed": 3408,
+     "n_train": 8088,
+     "n_test_normal": 241,
+     "n_test_anom": 28,
+     "anom_ratio_test": 0.10408921933085502,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": null,
+     "wl_dup_test_normal": 44,
+     "wl_dup_test_anom": 2,
+     "size_auroc": 0.6432276229994073
+    },
+    {
+     "fold": 2,
+     "seed": 3409,
+     "n_train": 8088,
+     "n_test_normal": 241,
+     "n_test_anom": 28,
+     "anom_ratio_test": 0.10408921933085502,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": null,
+     "wl_dup_test_normal": 44,
+     "wl_dup_test_anom": 2,
+     "size_auroc": 0.6432276229994073
+    },
+    {
+     "fold": 3,
+     "seed": 3410,
+     "n_train": 8088,
+     "n_test_normal": 241,
+     "n_test_anom": 28,
+     "anom_ratio_test": 0.10408921933085502,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": null,
+     "wl_dup_test_normal": 44,
+     "wl_dup_test_anom": 2,
+     "size_auroc": 0.6432276229994073
+    },
+    {
+     "fold": 4,
+     "seed": 3411,
+     "n_train": 8088,
+     "n_test_normal": 241,
+     "n_test_anom": 28,
+     "anom_ratio_test": 0.10408921933085502,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": null,
+     "wl_dup_test_normal": 44,
+     "wl_dup_test_anom": 2,
+     "size_auroc": 0.6432276229994073
+    }
+   ],
+   "seconds": 0.9
+  },
+  {
+   "dataset": "Tox21_MMP",
+   "meta": {
+    "dataset": "Tox21_MMP",
+    "kind": "Tox21",
+    "fixed_split": true,
+    "protocol": "UB-GOLD ad / get_ad_dataset_Tox21: fixed TU _training/_testing files, per-file first-appearance label remap; train = training-file graphs with mapped label 1; y_test = mapped label 1 in testing file; isolated nodes and edge-less graphs dropped; same split for all 5 trials (seeds 3407+i)",
+    "normal_raw_label_train": 0,
+    "anomaly_raw_label_test": 1,
+    "semantics_consistent": true,
+    "ubgold_node_features": "constant",
+    "ubgold_uses_node_labels": false,
+    "node_label_dim": 51,
+    "x_attr_dim": null,
+    "ubgold_num_feat": 1,
+    "ubgold_verified": true,
+    "ubgold_table1": [
+     6170,
+     200,
+     38
+    ]
+   },
+   "reader_info": {
+    "training": {
+     "n_graphs_file": 7320,
+     "n_graphs_kept": 7311,
+     "n_dropped_no_edges": 9,
+     "n_isolated_nodes_dropped": 1242,
+     "self_loop_entries_in_file": 0,
+     "first_appearance_label_order": [
+      1,
+      0
+     ],
+     "raw_label_counts_file": {
+      "1": 1142,
+      "0": 6178
+     }
+    },
+    "testing": {
+     "n_graphs_file": 238,
+     "n_graphs_kept": 238,
+     "n_dropped_no_edges": 0,
+     "n_isolated_nodes_dropped": 107,
+     "self_loop_entries_in_file": 0,
+     "first_appearance_label_order": [
+      0,
+      1
+     ],
+     "raw_label_counts_file": {
+      "0": 200,
+      "1": 38
+     }
+    }
+   },
+   "ubgold_export": {
+    "n_graph_mismatches": 0,
+    "num_feat": 1,
+    "versions": null
+   },
+   "n_graphs_cached": 6408,
+   "avg_n": 16.673845193508114,
+   "avg_m": 17.07178526841448,
+   "max_n": 109,
+   "min_n": 2,
+   "n_graphs_no_edges": 0,
+   "n_graphs_with_isolated_nodes": 0,
+   "wl_graphs_shared_across_classes": null,
+   "folds": [
+    {
+     "fold": 0,
+     "seed": 3407,
+     "n_train": 6170,
+     "n_test_normal": 200,
+     "n_test_anom": 38,
+     "anom_ratio_test": 0.15966386554621848,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": null,
+     "wl_dup_test_normal": 37,
+     "wl_dup_test_anom": 1,
+     "size_auroc": 0.6761842105263158
+    },
+    {
+     "fold": 1,
+     "seed": 3408,
+     "n_train": 6170,
+     "n_test_normal": 200,
+     "n_test_anom": 38,
+     "anom_ratio_test": 0.15966386554621848,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": null,
+     "wl_dup_test_normal": 37,
+     "wl_dup_test_anom": 1,
+     "size_auroc": 0.6761842105263158
+    },
+    {
+     "fold": 2,
+     "seed": 3409,
+     "n_train": 6170,
+     "n_test_normal": 200,
+     "n_test_anom": 38,
+     "anom_ratio_test": 0.15966386554621848,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": null,
+     "wl_dup_test_normal": 37,
+     "wl_dup_test_anom": 1,
+     "size_auroc": 0.6761842105263158
+    },
+    {
+     "fold": 3,
+     "seed": 3410,
+     "n_train": 6170,
+     "n_test_normal": 200,
+     "n_test_anom": 38,
+     "anom_ratio_test": 0.15966386554621848,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": null,
+     "wl_dup_test_normal": 37,
+     "wl_dup_test_anom": 1,
+     "size_auroc": 0.6761842105263158
+    },
+    {
+     "fold": 4,
+     "seed": 3411,
+     "n_train": 6170,
+     "n_test_normal": 200,
+     "n_test_anom": 38,
+     "anom_ratio_test": 0.15966386554621848,
+     "idx_overlap": 0,
+     "gid_overlap": 0,
+     "labels_ok": null,
+     "wl_dup_test_normal": 37,
+     "wl_dup_test_anom": 1,
+     "size_auroc": 0.6761842105263158
+    }
+   ],
+   "seconds": 0.6
+  }
+ ],
+ "sklearn_check": {
+  "sklearn_installed": "1.9.1",
+  "datasets": {
+   "AIDS": {
+    "same_102_vs_installed": true,
+    "same_102_vs_cache": true
+   },
+   "BZR": {
+    "same_102_vs_installed": true,
+    "same_102_vs_cache": true
+   },
+   "COX2": {
+    "same_102_vs_installed": true,
+    "same_102_vs_cache": true
+   },
+   "DHFR": {
+    "same_102_vs_installed": true,
+    "same_102_vs_cache": true
+   },
+   "ENZYMES": {
+    "same_102_vs_installed": true,
+    "same_102_vs_cache": true
+   },
+   "NCI1": {
+    "same_102_vs_installed": true,
+    "same_102_vs_cache": true
+   },
+   "MUTAG": {
+    "same_102_vs_installed": true,
+    "same_102_vs_cache": true
+   },
+   "PROTEINS_full": {
+    "same_102_vs_installed": true,
+    "same_102_vs_cache": true
+   },
+   "IMDB-BINARY": {
+    "same_102_vs_installed": true,
+    "same_102_vs_cache": true
+   },
+   "DD": {
+    "same_102_vs_installed": true,
+    "same_102_vs_cache": true
+   },
+   "COLLAB": {
+    "same_102_vs_installed": true,
+    "same_102_vs_cache": true
+   },
+   "REDDIT-BINARY": {
+    "same_102_vs_installed": true,
+    "same_102_vs_cache": true
+   }
+  }
+ }
+}

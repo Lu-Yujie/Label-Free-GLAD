@@ -1,0 +1,221 @@
+{
+ "checks": {
+  "MS1_matched_labels_identical": 1528,
+  "MS1_matched_nm_equal": 1528,
+  "MS1_matched_not_isomorphic_to_parent": 1528,
+  "MS1_matched_signature_ok": 1528,
+  "MS1_matched_simple_connected": 1528,
+  "MS1_matched_total": 1528,
+  "MS1_sizechg_core_eq_matched_and_donor_intact": 1339,
+  "MS1_sizechg_dn_ge_20pct": 1339,
+  "MS1_sizechg_simple_connected": 1339,
+  "MS1_sizechg_total": 1339,
+  "MS2_matched_labels_identical": 789,
+  "MS2_matched_nm_equal": 789,
+  "MS2_matched_not_isomorphic_to_parent": 789,
+  "MS2_matched_signature_ok": 789,
+  "MS2_matched_simple_connected": 789,
+  "MS2_matched_total": 789,
+  "MS2_sizechg_core_eq_matched_and_donor_intact": 725,
+  "MS2_sizechg_dn_ge_20pct": 725,
+  "MS2_sizechg_simple_connected": 725,
+  "MS2_sizechg_total": 725,
+  "MS3_matched_labels_identical": 726,
+  "MS3_matched_nm_equal": 726,
+  "MS3_matched_not_isomorphic_to_parent": 726,
+  "MS3_matched_signature_ok": 726,
+  "MS3_matched_simple_connected": 726,
+  "MS3_matched_total": 726,
+  "MS3_sizechg_core_eq_matched_and_donor_intact": 645,
+  "MS3_sizechg_dn_ge_20pct": 645,
+  "MS3_sizechg_simple_connected": 645,
+  "MS3_sizechg_total": 645,
+  "split_ok": 5
+ },
+ "per_seed": {
+  "0": {
+   "wl_dup_with_train": {
+    "anom_MS1_matched": 0,
+    "anom_MS1_sizechg": 0,
+    "anom_MS2_matched": 0,
+    "anom_MS2_sizechg": 0,
+    "anom_MS3_matched": 1,
+    "anom_MS3_sizechg": 0
+   },
+   "wl_dup_with_test_normal": {
+    "anom_MS1_matched": 0,
+    "anom_MS1_sizechg": 0,
+    "anom_MS2_matched": 0,
+    "anom_MS2_sizechg": 0,
+    "anom_MS3_matched": 1,
+    "anom_MS3_sizechg": 0
+   },
+   "ms2_opened_vs_new_ring_size": {
+    "13->5": 1,
+    "29->4": 1,
+    "3->4": 1,
+    "3->6": 1,
+    "5->4": 19,
+    "5->5": 9,
+    "5->6": 2,
+    "6->4": 69,
+    "6->5": 31,
+    "6->6": 16,
+    "7->4": 4,
+    "7->5": 2
+   }
+  },
+  "1": {
+   "wl_dup_with_train": {
+    "anom_MS1_matched": 0,
+    "anom_MS1_sizechg": 0,
+    "anom_MS2_matched": 0,
+    "anom_MS2_sizechg": 0,
+    "anom_MS3_matched": 0,
+    "anom_MS3_sizechg": 0
+   },
+   "wl_dup_with_test_normal": {
+    "anom_MS1_matched": 0,
+    "anom_MS1_sizechg": 0,
+    "anom_MS2_matched": 0,
+    "anom_MS2_sizechg": 0,
+    "anom_MS3_matched": 0,
+    "anom_MS3_sizechg": 0
+   },
+   "ms2_opened_vs_new_ring_size": {
+    "19->4": 1,
+    "23->4": 1,
+    "26->4": 1,
+    "26->5": 1,
+    "26->6": 1,
+    "30->4": 1,
+    "4->6": 1,
+    "5->4": 15,
+    "5->5": 4,
+    "5->6": 3,
+    "6->4": 71,
+    "6->5": 28,
+    "6->6": 19,
+    "7->4": 7,
+    "7->5": 2,
+    "7->6": 1,
+    "8->4": 1,
+    "8->5": 1
+   }
+  },
+  "2": {
+   "wl_dup_with_train": {
+    "anom_MS1_matched": 0,
+    "anom_MS1_sizechg": 0,
+    "anom_MS2_matched": 0,
+    "anom_MS2_sizechg": 0,
+    "anom_MS3_matched": 1,
+    "anom_MS3_sizechg": 0
+   },
+   "wl_dup_with_test_normal": {
+    "anom_MS1_matched": 0,
+    "anom_MS1_sizechg": 0,
+    "anom_MS2_matched": 0,
+    "anom_MS2_sizechg": 0,
+    "anom_MS3_matched": 0,
+    "anom_MS3_sizechg": 0
+   },
+   "ms2_opened_vs_new_ring_size": {
+    "11->6": 1,
+    "17->4": 1,
+    "19->4": 1,
+    "22->6": 1,
+    "26->4": 1,
+    "5->4": 11,
+    "5->5": 5,
+    "5->6": 4,
+    "6->4": 85,
+    "6->5": 31,
+    "6->6": 9,
+    "7->4": 7,
+    "7->5": 2,
+    "7->6": 1,
+    "8->5": 1,
+    "9->4": 1
+   }
+  },
+  "3": {
+   "wl_dup_with_train": {
+    "anom_MS1_matched": 0,
+    "anom_MS1_sizechg": 0,
+    "anom_MS2_matched": 0,
+    "anom_MS2_sizechg": 0,
+    "anom_MS3_matched": 0,
+    "anom_MS3_sizechg": 0
+   },
+   "wl_dup_with_test_normal": {
+    "anom_MS1_matched": 0,
+    "anom_MS1_sizechg": 0,
+    "anom_MS2_matched": 0,
+    "anom_MS2_sizechg": 0,
+    "anom_MS3_matched": 0,
+    "anom_MS3_sizechg": 0
+   },
+   "ms2_opened_vs_new_ring_size": {
+    "16->4": 1,
+    "22->6": 1,
+    "23->4": 1,
+    "26->6": 1,
+    "3->4": 1,
+    "4->5": 1,
+    "4->6": 1,
+    "5->4": 12,
+    "5->5": 1,
+    "5->6": 2,
+    "6->4": 69,
+    "6->5": 34,
+    "6->6": 16,
+    "7->4": 2,
+    "8->4": 1,
+    "8->5": 1
+   }
+  },
+  "4": {
+   "wl_dup_with_train": {
+    "anom_MS1_matched": 0,
+    "anom_MS1_sizechg": 0,
+    "anom_MS2_matched": 0,
+    "anom_MS2_sizechg": 0,
+    "anom_MS3_matched": 1,
+    "anom_MS3_sizechg": 0
+   },
+   "wl_dup_with_test_normal": {
+    "anom_MS1_matched": 0,
+    "anom_MS1_sizechg": 0,
+    "anom_MS2_matched": 0,
+    "anom_MS2_sizechg": 0,
+    "anom_MS3_matched": 0,
+    "anom_MS3_sizechg": 0
+   },
+   "ms2_opened_vs_new_ring_size": {
+    "11->4": 1,
+    "13->5": 1,
+    "16->4": 2,
+    "19->4": 1,
+    "26->5": 2,
+    "29->6": 1,
+    "3->4": 1,
+    "4->4": 2,
+    "4->6": 1,
+    "5->4": 12,
+    "5->5": 7,
+    "5->6": 2,
+    "6->4": 76,
+    "6->5": 31,
+    "6->6": 15,
+    "7->4": 4,
+    "7->5": 4,
+    "7->6": 2,
+    "8->4": 1,
+    "8->5": 1
+   }
+  }
+ },
+ "failures": [],
+ "n_failures": 0
+}

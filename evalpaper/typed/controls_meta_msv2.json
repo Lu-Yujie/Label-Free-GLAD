@@ -1,0 +1,162 @@
+{
+ "written": "2026-10-13 23:50:36 EDT",
+ "started": "2026-10-13 23:50:17 EDT",
+ "seconds": 19.218677282333374,
+ "generator": "MSV2",
+ "out": "/geode3/home/u110/yujlu/BigRed200/research/GAD/Grail/prelim/results/eval_typed_controls_msv2_PENDING.csv",
+ "out_sha256": "8d148b82a315a2fa4238c97a12f6a414204b4c6d368e91968b21a15a5facbf8e",
+ "rows": 135,
+ "gx_recomputation_check": {
+  "rows": 45,
+  "max_abs_diff_auroc_fraction": 1.4210854715202004e-16,
+  "against": "/geode3/home/u110/yujlu/BigRed200/research/GAD/Grail/prelim/results/eval_typed_controls.csv",
+  "against_sha256": "5d6d410539222eae58998520c06d205a3ff22f026b3a2161c4ab7a85ffe1589c"
+ },
+ "glad_stats_crosscheck": {
+  "glad_stats_sha256": "2731b02f07519f8bbd97305018fd04ff3771ca3f71e4b1d86b6d7a34d5802c78",
+  "n_types": 9,
+  "mismatches": [],
+  "notes": [
+   "eval_typed*.csv: 135 rows from eval_typed_controls_msv2_PENDING.csv"
+  ],
+  "ms_manifest": "/N/slate/yujlu/grail_data/molswap_v2/manifest.json"
+ },
+ "ms_label_alphabet": 37,
+ "n_edge_label_pairs_ms": 703,
+ "null_edit_auroc_per_seed": {
+  "0": {
+   "MS1:matched": {
+    "GRAIL0:ctrl_size_lw": 49.4019277668099,
+    "GRAIL0:ctrl_gc_lw": 45.15413102104544,
+    "POSTHOC:ctrl_edgelab_lw": 52.74842256029111
+   },
+   "MS2:matched": {
+    "GRAIL0:ctrl_size_lw": 51.68295007744549,
+    "GRAIL0:ctrl_gc_lw": 53.66178164343302,
+    "POSTHOC:ctrl_edgelab_lw": 53.68858969776401
+   },
+   "MS3:matched": {
+    "GRAIL0:ctrl_size_lw": 49.305447571658114,
+    "GRAIL0:ctrl_gc_lw": 46.810242056704496,
+    "POSTHOC:ctrl_edgelab_lw": 51.054268387498055
+   }
+  },
+  "1": {
+   "MS1:matched": {
+    "GRAIL0:ctrl_size_lw": 49.42194376072202,
+    "GRAIL0:ctrl_gc_lw": 46.81385345963551,
+    "POSTHOC:ctrl_edgelab_lw": 52.937520200890084
+   },
+   "MS2:matched": {
+    "GRAIL0:ctrl_size_lw": 51.83058531682385,
+    "GRAIL0:ctrl_gc_lw": 49.91659716430358,
+    "POSTHOC:ctrl_edgelab_lw": 54.20649686704733
+   },
+   "MS3:matched": {
+    "GRAIL0:ctrl_size_lw": 50.35417836859515,
+    "GRAIL0:ctrl_gc_lw": 47.49422704861761,
+    "POSTHOC:ctrl_edgelab_lw": 52.38823358089414
+   }
+  },
+  "2": {
+   "MS1:matched": {
+    "GRAIL0:ctrl_size_lw": 49.97432126432757,
+    "GRAIL0:ctrl_gc_lw": 47.4251231412097,
+    "POSTHOC:ctrl_edgelab_lw": 54.475686906179234
+   },
+   "MS2:matched": {
+    "GRAIL0:ctrl_size_lw": 52.08410669777801,
+    "GRAIL0:ctrl_gc_lw": 54.908875572289695,
+    "POSTHOC:ctrl_edgelab_lw": 56.87277933923741
+   },
+   "MS3:matched": {
+    "GRAIL0:ctrl_size_lw": 49.81883509451862,
+    "GRAIL0:ctrl_gc_lw": 48.99678041198615,
+    "POSTHOC:ctrl_edgelab_lw": 53.16155468757885
+   }
+  },
+  "3": {
+   "MS1:matched": {
+    "GRAIL0:ctrl_size_lw": 49.02440486898124,
+    "GRAIL0:ctrl_gc_lw": 45.050668585477005,
+    "POSTHOC:ctrl_edgelab_lw": 52.605384661509866
+   },
+   "MS2:matched": {
+    "GRAIL0:ctrl_size_lw": 53.35963730459143,
+    "GRAIL0:ctrl_gc_lw": 53.00570988644382,
+    "POSTHOC:ctrl_edgelab_lw": 54.056799469643515
+   },
+   "MS3:matched": {
+    "GRAIL0:ctrl_size_lw": 50.04238956005692,
+    "GRAIL0:ctrl_gc_lw": 46.545250855360756,
+    "POSTHOC:ctrl_edgelab_lw": 52.4257930380194
+   }
+  },
+  "4": {
+   "MS1:matched": {
+    "GRAIL0:ctrl_size_lw": 46.25382262996941,
+    "GRAIL0:ctrl_gc_lw": 46.790811125673514,
+    "POSTHOC:ctrl_edgelab_lw": 47.4776709868453
+   },
+   "MS2:matched": {
+    "GRAIL0:ctrl_size_lw": 49.629287395771456,
+    "GRAIL0:ctrl_gc_lw": 54.05253778628474,
+    "POSTHOC:ctrl_edgelab_lw": 50.43451477350229
+   },
+   "MS3:matched": {
+    "GRAIL0:ctrl_size_lw": 47.19740210580839,
+    "GRAIL0:ctrl_gc_lw": 48.29662612437618,
+    "POSTHOC:ctrl_edgelab_lw": 46.8328203289205
+   }
+  }
+ },
+ "null_edit_auroc_mean": {
+  "MS1:matched": {
+   "GRAIL0:ctrl_gc_lw": 46.24691746660823,
+   "GRAIL0:ctrl_size_lw": 48.81528405816203,
+   "POSTHOC:ctrl_edgelab_lw": 52.04893706314313
+  },
+  "MS2:matched": {
+   "GRAIL0:ctrl_gc_lw": 53.109100410550965,
+   "GRAIL0:ctrl_size_lw": 51.71731335848206,
+   "POSTHOC:ctrl_edgelab_lw": 53.851836029438914
+  },
+  "MS3:matched": {
+   "GRAIL0:ctrl_gc_lw": 47.628625299409045,
+   "GRAIL0:ctrl_size_lw": 49.34365054012744,
+   "POSTHOC:ctrl_edgelab_lw": 51.17253400458219
+  }
+ },
+ "engine": [
+  "esu",
+  5
+ ],
+ "host": "login2",
+ "python": "3.12.6",
+ "blas_threads": {
+  "OMP_NUM_THREADS": "2",
+  "MKL_NUM_THREADS": "2",
+  "OPENBLAS_NUM_THREADS": "2"
+ },
+ "versions": {
+  "numpy": "2.5.4",
+  "pandas": "3.0.6",
+  "sklearn": "1.9.1",
+  "scipy": "1.18.1",
+  "networkx": "3.7"
+ },
+ "code_sha256": {
+  "evalpaper/typed/controls_typed.py": "fd3a06bd7cd5cd5762b8c7a317acd287cbf55ee80bd6927c3d05cabe7fac9f15",
+  "evalpaper/typed/typed_data.py": "c73c2eb79e4fb27344c038dff6b9d15887f6b66e16e00b560dd1af11ba425bc7",
+  "grail0/graphlets.py": "2282b62f161c4473e490aa412b7f431170c21851b6eb4f17afd105d21c7a975f",
+  "grail0/controls.py": "87fa1353fc75f882a5084487b08d3f212ee17de09a6b8ff9af04c480789f9670",
+  "grail0/channels.py": "4b34e09cecc6077a23346cce3d2fabde7f33dd825cf58035c98e78c77aa08d81",
+  "common/metrics.py": "d60276d8807a5d073137088944f81d140cfd839a5e652cb4e532d5eec83481bf",
+  "m2_typed/grail0_rerun.py": "3ad1b868142bb1a75936d7071e7bf4ad2731e9f09bd7e2a507bc6e62799493b4",
+  "m2_typed/posthoc_controls.py": "57b999f96240871fde1c9fed8c494fd2520bd3748863eeb5241290c059de9357",
+  "evalpaper/typed/molswap_v2.py": "9981d8ce20ee7c9a4e8f4e17d098ce0a3460a3ce3a0d4ab5ba91726d9b887b3b"
+ },
+ "msv2_manifest_sha256": "7d7ddf76749425a74bed8d7e5c667b510318f6ef7b755a1224ee8d8dd73f2658",
+ "m2_manifest_sha256": "c067952bb8566e428544aa53023f78d947ac423b2afca693f28cdd4d363dac47",
+ "gx_source_sha256": "5d6d410539222eae58998520c06d205a3ff22f026b3a2161c4ab7a85ffe1589c"
+}

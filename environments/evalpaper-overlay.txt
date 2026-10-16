@@ -1,0 +1,7 @@
+# overlay 'evalpaper-overlay': installed with pip install --no-deps --target $GLAD_ENVS/evalpaper-overlay; the runners add it to sys.path
+faiss_cpu==1.8.0.post1
+packaging==24.2
+PyGCL==0.1.2
+texttable==1.6.3
+torch_cluster==1.6.3+pt25cu124
+torch_sparse==0.6.18+pt25cu124

@@ -1,0 +1,61 @@
+{
+ "commit": "a96137b0f67dbb1f97cb1867c77849dd1bf5032f",
+ "commit_date": "2024-10-02 21:33:17 +1000",
+ "source_repo": "$GLAD_DATA_ROOT/ubgold_versions/UB-GOLD_full",
+ "remote": "https://github.com/UB-GOLD/UB-GOLD.git",
+ "created": "2026-10-14 14:36:49 EDT",
+ "created_by": "evalpaper/version_a96137b/make_src.py",
+ "make_src_sha256": "8712a0158b33726cf823388f32450ba73fd1af2049e678430e6480c63178291a",
+ "n_files": 104,
+ "tree_sha256_pristine": "2bdaaccd711b393061b21f3daf73d51aaf5316f57ccf0f774076341fb0ea9fad",
+ "tree_sha256_patched": "a57ca05b8639c5bfcb3ebd58648918b371b2a7545303d2befaa31242b85d93ed",
+ "patched_files": [
+  {
+   "file": "GAOOD/detector/mybase.py",
+   "lines": [
+    {
+     "line": 34,
+     "pristine": "       ",
+     "patched": "        pass  # CHANGE (A17 a96137b): empty abstract body is a SyntaxError in Python 3 (PR #3 f0c6a69 added the same)"
+    },
+    {
+     "line": 38,
+     "pristine": "      ",
+     "patched": "        pass  # CHANGE (A17 a96137b): empty abstract body is a SyntaxError in Python 3 (PR #3 f0c6a69 added the same)"
+    },
+    {
+     "line": 42,
+     "pristine": "       ",
+     "patched": "        pass  # CHANGE (A17 a96137b): empty abstract body is a SyntaxError in Python 3 (PR #3 f0c6a69 added the same)"
+    },
+    {
+     "line": 343,
+     "pristine": "       ",
+     "patched": "        pass  # CHANGE (A17 a96137b): empty abstract body is a SyntaxError in Python 3 (PR #3 f0c6a69 added the same)"
+    },
+    {
+     "line": 347,
+     "pristine": "       ",
+     "patched": "        pass  # CHANGE (A17 a96137b): empty abstract body is a SyntaxError in Python 3 (PR #3 f0c6a69 added the same)"
+    }
+   ],
+   "sha256_pristine": "018e935ef4e29ba2966acfa45995ba8cba70b1e60aa45d46fa1961ecd0b0f77f",
+   "sha256_patched": "c7d108e4aaf42d08df3160c1a2f15185fd1d4e26c088cfeea282066a5ff61db9",
+   "git_blob": "4a7e40bfbb2c712ff6055da82765beadc8e92b8b"
+  },
+  {
+   "file": "dataloader/data_loader.py",
+   "lines": [
+    {
+     "line": 423,
+     "pristine": " 1",
+     "patched": "    # CHANGE (A17 a96137b): stray ' 1' line removed: IndentationError in Python 3 (no-op expression; PR #3 deleted it)"
+    }
+   ],
+   "sha256_pristine": "d1988919d4241dd7315398756aa4ac0bb2bd6c776dd40df0d56f009c7920e172",
+   "sha256_patched": "b252765a9e6b6add9c037f347eebb8dff962e464a5722cb3e0ecdb0cb320c7e6",
+   "git_blob": "9ef837047b42f714fd0bca1db12f58a6014a42ae"
+  }
+ ],
+ "not_patched_note": "data_loader.py l.19 'from GOOD import register' is never executed (the harness extracts single functions with ast); every other file is byte-identical to git."
+}

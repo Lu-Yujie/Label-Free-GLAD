@@ -1,0 +1,7 @@
+method,dataset,fold,hp,source,evidence,amendment
+GLADC,COLLAB,1,hpfree,evalpaper/harness/jobs/tasks_gpu.txt,"# DIVERGED (A12, 2026-10-13 2017 EDT, 4 attempts with identical seeds in pools <jobid> <jobid> <jobid> <jobid> on CPU and GPU, same error as the ubgold folds = GLADC.gen_ran_output torch.normal with NaN std, see STATUS.md): GLADC COLLAB 1 hpfree",A12
+GLADC,COLLAB,1,ubgold,diverged_registry.csv|evalpaper/harness/jobs/tasks_gpu.txt,"GLADC.gen_ran_output: torch.normal(0, std) with non-finite param.data.std() (training diverged to NaN), unmodified UB-GOLD code, same error each attempt",A12
+GLADC,COLLAB,3,hpfree,evalpaper/harness/jobs/tasks_gpu.txt,"# DIVERGED (A12, 2026-10-13 2017 EDT, same evidence): GLADC COLLAB 3 hpfree",A12
+GLADC,COLLAB,3,ubgold,diverged_registry.csv|evalpaper/harness/jobs/tasks_gpu.txt,"GLADC.gen_ran_output: torch.normal(0, std) with non-finite param.data.std() (training diverged to NaN), unmodified UB-GOLD code, same error each attempt",A12
+GLADC,COLLAB,4,hpfree,evalpaper/harness/jobs/tasks_gpu.txt,"# DIVERGED (A12, 2026-10-13 2017 EDT, same evidence): GLADC COLLAB 4 hpfree",A12
+GLADC,COLLAB,4,ubgold,diverged_registry.csv|evalpaper/harness/jobs/tasks_gpu.txt,"GLADC.gen_ran_output: torch.normal(0, std) with non-finite param.data.std() (training diverged to NaN), unmodified UB-GOLD code, same error each attempt",A12

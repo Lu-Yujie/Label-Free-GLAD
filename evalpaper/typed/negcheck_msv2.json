@@ -1,0 +1,15 @@
+{
+ "cross_type": {
+  "MS1_checker_on_MS2": "0/154",
+  "MS1_checker_on_MS3": "0/295",
+  "MS2_checker_on_MS1": "0/237",
+  "MS2_checker_on_MS3": "0/295",
+  "MS3_checker_on_MS1": "0/237",
+  "MS3_checker_on_MS2": "0/154"
+ },
+ "random_swaps": {
+  "MS1_C": "0/400",
+  "MS2_D": "1/400",
+  "MS3_F": "0/400"
+ }
+}

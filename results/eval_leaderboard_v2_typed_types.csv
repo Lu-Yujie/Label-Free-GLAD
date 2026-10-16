@@ -1,0 +1,10 @@
+generator,anomaly_type,size_variant,graphlet_count_lw,size_only,edge_label_pair_lw,valid,confounded,min_anomalies_per_seed,seeds_with_anomaly_count,counts_per_seed,counts_src,feasibility_reading,feasible,controls_src,in_decision,undetermined
+GX,T1a,matched,100.0000,50.9587,51.2366,True,False,,0,,,,True,eval_typed_controls_msv2.csv,True,False
+GX,T3a,matched,90.1421,49.0688,50.1872,True,False,,0,,,,True,eval_typed_controls_msv2.csv,True,False
+GX,T3b,matched,91.2288,50.9904,50.7366,True,False,,0,,,,True,eval_typed_controls_msv2.csv,True,False
+MS,MS1,matched,95.0718,48.8153,52.3004,True,False,237.0000,5,237|246|262|255|252,manifest,any_seed_below_100_infeasible (A25),True,eval_typed_controls_msv2.csv,True,False
+MS,MS1,changing,95.5292,67.4053,76.5546,False,False,237.0000,5,237|245|261|255|252,manifest,any_seed_below_100_infeasible (A25),True,eval_typed_controls_msv2.csv,False,False
+MS,MS2,matched,86.4041,51.7173,59.0417,True,False,139.0000,5,154|143|173|143|139,manifest,any_seed_below_100_infeasible (A25),True,eval_typed_controls_msv2.csv,True,False
+MS,MS2,changing,88.3335,72.2080,81.0587,False,False,139.0000,5,153|141|172|143|139,manifest,any_seed_below_100_infeasible (A25),True,eval_typed_controls_msv2.csv,False,False
+MS,MS3,matched,94.2266,49.3437,51.1576,True,False,294.0000,5,295|294|303|303|307,manifest,any_seed_below_100_infeasible (A25),True,eval_typed_controls_msv2.csv,True,False
+MS,MS3,changing,95.0689,68.0347,76.2894,False,False,293.0000,5,295|293|302|303|306,manifest,any_seed_below_100_infeasible (A25),True,eval_typed_controls_msv2.csv,False,False

@@ -1,0 +1,3 @@
+comparison,g1_mean,ds_boot_ci_lo,ds_boot_ci_hi,crossed_ci_lo,crossed_ci_hi,B,seed,n_methods,n_datasets
+ORACLE - VAL-NORMAL,4.130303,3.321645,4.793184,2.921727,5.364171,4000,20261012,12,9
+ORACLE - LAST,5.119494,3.970365,6.240349,3.631282,6.902212,4000,20261012,12,9

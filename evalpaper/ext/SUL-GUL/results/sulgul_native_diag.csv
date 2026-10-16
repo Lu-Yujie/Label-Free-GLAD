@@ -1,0 +1,6 @@
+dataset,poll_ratio,splits_done,own_rule,own_rule_std,own_rule_epoch,last,last_std,per_split_max,n_train,n_train_anom,n_test,n_test_anom,epochs
+AIDS,0.0,5,68.82,6.35,149,19.2,23.58,77.37,1280,0,400,80,500
+IMDB-BINARY,0.0,5,68.87,5.69,44,61.49,5.7,71.35,400,0,200,100,500
+IMDB-BINARY,1.0,5,66.34,1.5,24,40.0,20.0,71.89,800,400,200,100,500
+MUTAG,0.0,5,89.69,4.13,256,78.43,6.33,92.4,100,0,38,13,500
+MUTAG,1.0,5,90.4,2.08,340,86.89,1.68,94.65,150,50,38,13,500

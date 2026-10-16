@@ -1,0 +1,151 @@
+method,dataset,fold,protocol,auroc,auprc,fpr95,cell,rule
+ProtoGLAD,AIDS,0,oracle_own_gridbest,96.84765625,90.57602785773264,5.3125,h=2 psi1=2 psi2=8 tau=0.05,own: first max of 5-fold mean test AUC over 144 cells (test-label selected)
+ProtoGLAD,AIDS,1,oracle_own_gridbest,98.36328125,88.5984571377587,3.125,h=2 psi1=2 psi2=8 tau=0.05,own: first max of 5-fold mean test AUC over 144 cells (test-label selected)
+ProtoGLAD,AIDS,2,oracle_own_gridbest,98.455078125,91.96073084285784,3.75,h=2 psi1=2 psi2=8 tau=0.05,own: first max of 5-fold mean test AUC over 144 cells (test-label selected)
+ProtoGLAD,AIDS,3,oracle_own_gridbest,98.244140625,93.18920824454959,1.875,h=2 psi1=2 psi2=8 tau=0.05,own: first max of 5-fold mean test AUC over 144 cells (test-label selected)
+ProtoGLAD,AIDS,4,oracle_own_gridbest,99.580078125,97.79356640228266,1.5625,h=2 psi1=2 psi2=8 tau=0.05,own: first max of 5-fold mean test AUC over 144 cells (test-label selected)
+ProtoGLAD,AIDS,0,grid_perfold_best,97.78710937500001,95.06061417698493,8.4375,psi1=4 psi2=64 tau=0.001,descriptive: per-fold max over cells
+ProtoGLAD,AIDS,0,grid_cell_mean,84.75111219618056,65.05477380843313,37.10937499999999,mean of 144 cells,descriptive
+ProtoGLAD,AIDS,1,grid_perfold_best,99.62890625,98.17230035391968,0.9375,psi1=4 psi2=32 tau=0.001,descriptive: per-fold max over cells
+ProtoGLAD,AIDS,1,grid_cell_mean,87.35447862413194,67.8732169230143,38.34201388888889,mean of 144 cells,descriptive
+ProtoGLAD,AIDS,2,grid_perfold_best,98.455078125,91.96073084285784,3.75,psi1=2 psi2=8 tau=0.05,descriptive: per-fold max over cells
+ProtoGLAD,AIDS,2,grid_cell_mean,89.32851833767361,71.13114019427907,32.06380208333333,mean of 144 cells,descriptive
+ProtoGLAD,AIDS,3,grid_perfold_best,98.51757812500001,95.57500350940602,1.875,psi1=2 psi2=32 tau=0.001,descriptive: per-fold max over cells
+ProtoGLAD,AIDS,3,grid_cell_mean,87.55950249565973,65.17489351940493,27.584635416666664,mean of 144 cells,descriptive
+ProtoGLAD,AIDS,4,grid_perfold_best,99.580078125,97.79356640228266,1.5625,psi1=2 psi2=8 tau=0.05,descriptive: per-fold max over cells
+ProtoGLAD,AIDS,4,grid_cell_mean,85.93385145399306,62.206528455537644,31.22829861111111,mean of 144 cells,descriptive
+ProtoGLAD,BZR,0,oracle_own_gridbest,45.3125,77.3608071017414,100.0,h=2 psi1=8 psi2=32 tau=0.001,own: first max of 5-fold mean test AUC over 144 cells (test-label selected)
+ProtoGLAD,BZR,1,oracle_own_gridbest,68.93382352941175,87.95070831343213,82.35294117647058,h=2 psi1=8 psi2=32 tau=0.001,own: first max of 5-fold mean test AUC over 144 cells (test-label selected)
+ProtoGLAD,BZR,2,oracle_own_gridbest,56.433823529411775,80.43465271907925,94.11764705882352,h=2 psi1=8 psi2=32 tau=0.001,own: first max of 5-fold mean test AUC over 144 cells (test-label selected)
+ProtoGLAD,BZR,3,oracle_own_gridbest,60.79963235294117,85.30705066659857,100.0,h=2 psi1=8 psi2=32 tau=0.001,own: first max of 5-fold mean test AUC over 144 cells (test-label selected)
+ProtoGLAD,BZR,4,oracle_own_gridbest,56.56966490299825,81.46906741504102,94.44444444444444,h=2 psi1=8 psi2=32 tau=0.001,own: first max of 5-fold mean test AUC over 144 cells (test-label selected)
+ProtoGLAD,BZR,0,grid_perfold_best,55.19301470588236,80.82454883102744,94.11764705882352,psi1=2 psi2=32 tau=0.001,descriptive: per-fold max over cells
+ProtoGLAD,BZR,0,grid_cell_mean,42.93587877859478,75.36126412850392,95.4248366013072,mean of 144 cells,descriptive
+ProtoGLAD,BZR,1,grid_perfold_best,69.11764705882352,86.23094109566331,82.35294117647058,psi1=64 psi2=32 tau=0.001,descriptive: per-fold max over cells
+ProtoGLAD,BZR,1,grid_cell_mean,54.556015114379086,80.01560710691312,89.05228758169935,mean of 144 cells,descriptive
+ProtoGLAD,BZR,2,grid_perfold_best,56.433823529411775,80.43465271907925,94.11764705882352,psi1=8 psi2=32 tau=0.001,descriptive: per-fold max over cells
+ProtoGLAD,BZR,2,grid_cell_mean,39.15792228349673,73.45414388940925,98.36601307189542,mean of 144 cells,descriptive
+ProtoGLAD,BZR,3,grid_perfold_best,63.09742647058824,84.05416877871608,88.23529411764706,psi1=32 psi2=4 tau=0.001,descriptive: per-fold max over cells
+ProtoGLAD,BZR,3,grid_cell_mean,55.6289573120915,81.92414027396102,93.46405228758168,mean of 144 cells,descriptive
+ProtoGLAD,BZR,4,grid_perfold_best,56.56966490299825,81.46906741504102,94.44444444444444,psi1=8 psi2=32 tau=0.001,descriptive: per-fold max over cells
+ProtoGLAD,BZR,4,grid_cell_mean,49.16501322751322,77.96327444394377,94.7530864197531,mean of 144 cells,descriptive
+ProtoGLAD,COX2,0,oracle_own_gridbest,51.66340508806262,78.2526326460786,95.23809523809523,h=2 psi1=64 psi2=64 tau=0.05,own: first max of 5-fold mean test AUC over 144 cells (test-label selected)
+ProtoGLAD,COX2,1,oracle_own_gridbest,45.20547945205479,75.97664668642987,100.0,h=2 psi1=64 psi2=64 tau=0.05,own: first max of 5-fold mean test AUC over 144 cells (test-label selected)
+ProtoGLAD,COX2,2,oracle_own_gridbest,53.458904109589035,79.91187538379458,100.0,h=2 psi1=64 psi2=64 tau=0.05,own: first max of 5-fold mean test AUC over 144 cells (test-label selected)
+ProtoGLAD,COX2,3,oracle_own_gridbest,60.171232876712324,82.49743877925835,100.0,h=2 psi1=64 psi2=64 tau=0.05,own: first max of 5-fold mean test AUC over 144 cells (test-label selected)
+ProtoGLAD,COX2,4,oracle_own_gridbest,43.8013698630137,76.32427537121566,100.0,h=2 psi1=64 psi2=64 tau=0.05,own: first max of 5-fold mean test AUC over 144 cells (test-label selected)
+ProtoGLAD,COX2,0,grid_perfold_best,57.599478147423355,80.54950234740107,95.23809523809523,psi1=4 psi2=64 tau=0.001,descriptive: per-fold max over cells
+ProtoGLAD,COX2,0,grid_cell_mean,49.87316083206493,77.49851475601007,91.43518518518518,mean of 144 cells,descriptive
+ProtoGLAD,COX2,1,grid_perfold_best,51.85909980430529,78.72644556292857,100.0,psi1=4 psi2=64 tau=0.01,descriptive: per-fold max over cells
+ProtoGLAD,COX2,1,grid_cell_mean,41.64786728999058,74.00398051092523,97.4867724867725,mean of 144 cells,descriptive
+ProtoGLAD,COX2,2,grid_perfold_best,54.58904109589041,80.24201317094635,95.0,psi1=16 psi2=64 tau=0.05,descriptive: per-fold max over cells
+ProtoGLAD,COX2,2,grid_cell_mean,34.05679223744292,71.36997557062342,97.84722222222224,mean of 144 cells,descriptive
+ProtoGLAD,COX2,3,grid_perfold_best,61.09589041095891,83.29553937348382,100.0,psi1=64 psi2=64 tau=0.01,descriptive: per-fold max over cells
+ProtoGLAD,COX2,3,grid_cell_mean,41.05593607305936,74.27806202897733,96.3888888888889,mean of 144 cells,descriptive
+ProtoGLAD,COX2,4,grid_perfold_best,47.32876712328767,76.1158619282059,95.0,psi1=64 psi2=2 tau=0.001,descriptive: per-fold max over cells
+ProtoGLAD,COX2,4,grid_cell_mean,39.452768264840174,74.15896327638714,98.68055555555554,mean of 144 cells,descriptive
+ProtoGLAD,DHFR,0,oracle_own_gridbest,55.212320029159834,44.25463051112355,93.54838709677419,h=2 psi1=64 psi2=64 tau=0.05,own: first max of 5-fold mean test AUC over 144 cells (test-label selected)
+ProtoGLAD,DHFR,1,oracle_own_gridbest,57.87582903463523,47.69460542703378,94.56521739130434,h=2 psi1=64 psi2=64 tau=0.05,own: first max of 5-fold mean test AUC over 144 cells (test-label selected)
+ProtoGLAD,DHFR,2,oracle_own_gridbest,57.94952100221076,46.431037805725786,96.73913043478261,h=2 psi1=64 psi2=64 tau=0.05,own: first max of 5-fold mean test AUC over 144 cells (test-label selected)
+ProtoGLAD,DHFR,3,oracle_own_gridbest,61.75386882829772,49.302102930314476,98.91304347826086,h=2 psi1=64 psi2=64 tau=0.05,own: first max of 5-fold mean test AUC over 144 cells (test-label selected)
+ProtoGLAD,DHFR,4,oracle_own_gridbest,54.31098010316876,46.25340235162627,95.65217391304348,h=2 psi1=64 psi2=64 tau=0.05,own: first max of 5-fold mean test AUC over 144 cells (test-label selected)
+ProtoGLAD,DHFR,0,grid_perfold_best,56.49717514124294,43.734365709495584,100.0,psi1=4 psi2=4 tau=0.001,descriptive: per-fold max over cells
+ProtoGLAD,DHFR,0,grid_cell_mean,51.66365449648664,41.43650641263509,93.48864994026285,mean of 144 cells,descriptive
+ProtoGLAD,DHFR,1,grid_perfold_best,63.025055268975684,46.79628516462947,90.21739130434783,psi1=32 psi2=64 tau=0.001,descriptive: per-fold max over cells
+ProtoGLAD,DHFR,1,grid_cell_mean,50.883280111356754,40.651854861881255,91.42512077294685,mean of 144 cells,descriptive
+ProtoGLAD,DHFR,2,grid_perfold_best,57.94952100221076,46.431037805725786,96.73913043478261,psi1=64 psi2=64 tau=0.05,descriptive: per-fold max over cells
+ProtoGLAD,DHFR,2,grid_cell_mean,48.73348327601737,37.97953346040611,95.83333333333334,mean of 144 cells,descriptive
+ProtoGLAD,DHFR,3,grid_perfold_best,61.75386882829772,49.302102930314476,98.91304347826086,psi1=64 psi2=64 tau=0.05,descriptive: per-fold max over cells
+ProtoGLAD,DHFR,3,grid_cell_mean,48.68633832801114,41.314786680218255,96.61835748792271,mean of 144 cells,descriptive
+ProtoGLAD,DHFR,4,grid_perfold_best,59.42336035372144,48.99681670508367,93.47826086956522,psi1=2 psi2=16 tau=0.05,descriptive: per-fold max over cells
+ProtoGLAD,DHFR,4,grid_cell_mean,53.10133157291411,42.42408135487569,93.75,mean of 144 cells,descriptive
+ProtoGLAD,ENZYMES,0,oracle_own_gridbest,61.95,34.47219455442656,82.0,h=2 psi1=2 psi2=8 tau=0.001,own: first max of 5-fold mean test AUC over 144 cells (test-label selected)
+ProtoGLAD,ENZYMES,1,oracle_own_gridbest,60.02499999999999,23.143756214527162,93.0,h=2 psi1=2 psi2=8 tau=0.001,own: first max of 5-fold mean test AUC over 144 cells (test-label selected)
+ProtoGLAD,ENZYMES,2,oracle_own_gridbest,56.925000000000004,20.08564062661983,94.0,h=2 psi1=2 psi2=8 tau=0.001,own: first max of 5-fold mean test AUC over 144 cells (test-label selected)
+ProtoGLAD,ENZYMES,3,oracle_own_gridbest,73.275,31.11583407836605,59.0,h=2 psi1=2 psi2=8 tau=0.001,own: first max of 5-fold mean test AUC over 144 cells (test-label selected)
+ProtoGLAD,ENZYMES,4,oracle_own_gridbest,55.02499999999999,28.26389180247238,89.0,h=2 psi1=2 psi2=8 tau=0.001,own: first max of 5-fold mean test AUC over 144 cells (test-label selected)
+ProtoGLAD,ENZYMES,0,grid_perfold_best,67.075,27.092547929427536,68.0,psi1=4 psi2=2 tau=0.001,descriptive: per-fold max over cells
+ProtoGLAD,ENZYMES,0,grid_cell_mean,55.19288194444445,24.43202814532368,81.8611111111111,mean of 144 cells,descriptive
+ProtoGLAD,ENZYMES,1,grid_perfold_best,63.975,32.05982995800289,82.0,psi1=16 psi2=4 tau=0.05,descriptive: per-fold max over cells
+ProtoGLAD,ENZYMES,1,grid_cell_mean,56.291145833333324,21.943393149570333,90.875,mean of 144 cells,descriptive
+ProtoGLAD,ENZYMES,2,grid_perfold_best,59.425,22.84870218255705,93.0,psi1=4 psi2=16 tau=0.01,descriptive: per-fold max over cells
+ProtoGLAD,ENZYMES,2,grid_cell_mean,54.316666666666656,19.519316224738883,89.41666666666666,mean of 144 cells,descriptive
+ProtoGLAD,ENZYMES,3,grid_perfold_best,73.275,31.11583407836605,59.0,psi1=2 psi2=8 tau=0.001,descriptive: per-fold max over cells
+ProtoGLAD,ENZYMES,3,grid_cell_mean,63.85381944444445,26.22753198856975,76.91666666666667,mean of 144 cells,descriptive
+ProtoGLAD,ENZYMES,4,grid_perfold_best,69.1,32.10834190979469,62.0,psi1=2 psi2=64 tau=0.001,descriptive: per-fold max over cells
+ProtoGLAD,ENZYMES,4,grid_cell_mean,56.92517361111111,25.94615496443388,84.95833333333334,mean of 144 cells,descriptive
+ProtoGLAD,NCI1,0,oracle_own_gridbest,69.93565039278717,66.82084785123976,84.42822384428223,h=2 psi1=32 psi2=64 tau=0.001,own: first max of 5-fold mean test AUC over 144 cells (test-label selected)
+ProtoGLAD,NCI1,1,oracle_own_gridbest,69.76752446409861,69.15761588497114,85.88807785888078,h=2 psi1=32 psi2=64 tau=0.001,own: first max of 5-fold mean test AUC over 144 cells (test-label selected)
+ProtoGLAD,NCI1,2,oracle_own_gridbest,69.7376288324128,67.58490111073849,82.23844282238443,h=2 psi1=32 psi2=64 tau=0.001,own: first max of 5-fold mean test AUC over 144 cells (test-label selected)
+ProtoGLAD,NCI1,3,oracle_own_gridbest,67.30316125976795,65.06440799161163,83.7378640776699,h=2 psi1=32 psi2=64 tau=0.001,own: first max of 5-fold mean test AUC over 144 cells (test-label selected)
+ProtoGLAD,NCI1,4,oracle_own_gridbest,71.35419133317546,71.29202896117269,86.6504854368932,h=2 psi1=32 psi2=64 tau=0.001,own: first max of 5-fold mean test AUC over 144 cells (test-label selected)
+ProtoGLAD,NCI1,0,grid_perfold_best,69.99810562333873,67.39886482120437,84.42822384428223,psi1=32 psi2=64 tau=0.05,descriptive: per-fold max over cells
+ProtoGLAD,NCI1,0,grid_cell_mean,59.21659261824561,58.67231382039719,90.23553663152204,mean of 144 cells,descriptive
+ProtoGLAD,NCI1,1,grid_perfold_best,69.76752446409861,69.15761588497114,85.88807785888078,psi1=32 psi2=64 tau=0.001,descriptive: per-fold max over cells
+ProtoGLAD,NCI1,1,grid_cell_mean,57.04256312451119,56.89005556702558,91.25270343336038,mean of 144 cells,descriptive
+ProtoGLAD,NCI1,2,grid_perfold_best,69.7376288324128,67.58490111073849,82.23844282238443,psi1=32 psi2=64 tau=0.001,descriptive: per-fold max over cells
+ProtoGLAD,NCI1,2,grid_cell_mean,61.80402213000291,59.851906144798015,87.83117058664503,mean of 144 cells,descriptive
+ProtoGLAD,NCI1,3,grid_perfold_best,67.37864077669903,64.97986862100514,84.46601941747572,psi1=64 psi2=64 tau=0.01,descriptive: per-fold max over cells
+ProtoGLAD,NCI1,3,grid_cell_mean,55.42501422435342,55.43972672712019,91.17448759439051,mean of 144 cells,descriptive
+ProtoGLAD,NCI1,4,grid_perfold_best,71.88402794222117,71.78536136657617,84.70873786407766,psi1=16 psi2=64 tau=0.001,descriptive: per-fold max over cells
+ProtoGLAD,NCI1,4,grid_cell_mean,61.13076004091352,60.46607524007356,87.17468985976267,mean of 144 cells,descriptive
+ProtoGLAD,PROTEINS_full,0,oracle_own_gridbest,57.685881370091906,64.70091434178384,81.11111111111111,h=2 psi1=64 psi2=64 tau=0.001,own: first max of 5-fold mean test AUC over 144 cells (test-label selected)
+ProtoGLAD,PROTEINS_full,1,oracle_own_gridbest,49.749373433583955,59.751802715270664,92.22222222222223,h=2 psi1=64 psi2=64 tau=0.001,own: first max of 5-fold mean test AUC over 144 cells (test-label selected)
+ProtoGLAD,PROTEINS_full,2,oracle_own_gridbest,57.02172096908939,64.6270323139294,85.55555555555556,h=2 psi1=64 psi2=64 tau=0.001,own: first max of 5-fold mean test AUC over 144 cells (test-label selected)
+ProtoGLAD,PROTEINS_full,3,oracle_own_gridbest,57.97558922558922,63.47708369772248,84.44444444444444,h=2 psi1=64 psi2=64 tau=0.001,own: first max of 5-fold mean test AUC over 144 cells (test-label selected)
+ProtoGLAD,PROTEINS_full,4,oracle_own_gridbest,61.85185185185185,67.79185045519941,86.66666666666667,h=2 psi1=64 psi2=64 tau=0.001,own: first max of 5-fold mean test AUC over 144 cells (test-label selected)
+ProtoGLAD,PROTEINS_full,0,grid_perfold_best,64.6449456975773,68.95417848207211,87.77777777777777,psi1=8 psi2=4 tau=0.001,descriptive: per-fold max over cells
+ProtoGLAD,PROTEINS_full,0,grid_cell_mean,50.93483129119094,59.44179592316705,89.66049382716051,mean of 144 cells,descriptive
+ProtoGLAD,PROTEINS_full,1,grid_perfold_best,56.44945697577276,66.95044732694943,96.66666666666667,psi1=4 psi2=8 tau=0.001,descriptive: per-fold max over cells
+ProtoGLAD,PROTEINS_full,1,grid_cell_mean,46.00584215167548,56.651050516755575,95.03086419753086,mean of 144 cells,descriptive
+ProtoGLAD,PROTEINS_full,2,grid_perfold_best,57.45196324143692,64.84447104658425,85.55555555555556,psi1=64 psi2=64 tau=0.01,descriptive: per-fold max over cells
+ProtoGLAD,PROTEINS_full,2,grid_cell_mean,43.277087394411964,55.34114226583944,94.18209876543213,mean of 144 cells,descriptive
+ProtoGLAD,PROTEINS_full,3,grid_perfold_best,59.98316498316498,63.92538092691211,83.33333333333334,psi1=2 psi2=64 tau=0.05,descriptive: per-fold max over cells
+ProtoGLAD,PROTEINS_full,3,grid_cell_mean,46.394968200523756,55.91132529947159,90.15432098765433,mean of 144 cells,descriptive
+ProtoGLAD,PROTEINS_full,4,grid_perfold_best,62.272727272727266,69.23033256009545,86.66666666666667,psi1=32 psi2=64 tau=0.001,descriptive: per-fold max over cells
+ProtoGLAD,PROTEINS_full,4,grid_cell_mean,49.140741909839136,58.53092532155083,91.83641975308645,mean of 144 cells,descriptive
+ProtoGLAD,IMDB-BINARY,0,oracle_own_gridbest,49.125,52.508069520737486,99.0,h=2 psi1=2 psi2=4 tau=0.001,own: first max of 5-fold mean test AUC over 144 cells (test-label selected)
+ProtoGLAD,IMDB-BINARY,1,oracle_own_gridbest,54.21,54.86383188011749,100.0,h=2 psi1=2 psi2=4 tau=0.001,own: first max of 5-fold mean test AUC over 144 cells (test-label selected)
+ProtoGLAD,IMDB-BINARY,2,oracle_own_gridbest,58.135000000000005,58.52085686829067,94.0,h=2 psi1=2 psi2=4 tau=0.001,own: first max of 5-fold mean test AUC over 144 cells (test-label selected)
+ProtoGLAD,IMDB-BINARY,3,oracle_own_gridbest,53.24499999999999,52.67821469215153,100.0,h=2 psi1=2 psi2=4 tau=0.001,own: first max of 5-fold mean test AUC over 144 cells (test-label selected)
+ProtoGLAD,IMDB-BINARY,4,oracle_own_gridbest,54.55500000000001,54.76461133241796,100.0,h=2 psi1=2 psi2=4 tau=0.001,own: first max of 5-fold mean test AUC over 144 cells (test-label selected)
+ProtoGLAD,IMDB-BINARY,0,grid_perfold_best,59.41,56.87500916211514,100.0,psi1=16 psi2=16 tau=0.001,descriptive: per-fold max over cells
+ProtoGLAD,IMDB-BINARY,0,grid_cell_mean,49.03868055555556,51.56144932665973,99.41666666666666,mean of 144 cells,descriptive
+ProtoGLAD,IMDB-BINARY,1,grid_perfold_best,56.915000000000006,57.51837980024597,100.0,psi1=32 psi2=32 tau=0.001,descriptive: per-fold max over cells
+ProtoGLAD,IMDB-BINARY,1,grid_cell_mean,53.91944444444445,54.7510524502552,99.0,mean of 144 cells,descriptive
+ProtoGLAD,IMDB-BINARY,2,grid_perfold_best,58.135000000000005,58.52085686829067,94.0,psi1=2 psi2=4 tau=0.001,descriptive: per-fold max over cells
+ProtoGLAD,IMDB-BINARY,2,grid_cell_mean,54.109826388888884,55.58743873619115,95.72222222222221,mean of 144 cells,descriptive
+ProtoGLAD,IMDB-BINARY,3,grid_perfold_best,58.214999999999996,56.99000627661101,100.0,psi1=2 psi2=16 tau=0.001,descriptive: per-fold max over cells
+ProtoGLAD,IMDB-BINARY,3,grid_cell_mean,49.94624999999999,51.44454905873418,99.08333333333333,mean of 144 cells,descriptive
+ProtoGLAD,IMDB-BINARY,4,grid_perfold_best,56.169999999999995,53.94473895374246,100.0,psi1=16 psi2=8 tau=0.001,descriptive: per-fold max over cells
+ProtoGLAD,IMDB-BINARY,4,grid_cell_mean,51.03347222222222,52.05676989614402,99.83333333333333,mean of 144 cells,descriptive
+ProtoGLAD,REDDIT-BINARY,0,oracle_own_gridbest,60.93124999999999,55.79592390054313,94.0,h=2 psi1=8 psi2=16 tau=0.001,own: first max of 5-fold mean test AUC over 144 cells (test-label selected)
+ProtoGLAD,REDDIT-BINARY,1,oracle_own_gridbest,74.67125,74.52843230604563,71.0,h=2 psi1=8 psi2=16 tau=0.001,own: first max of 5-fold mean test AUC over 144 cells (test-label selected)
+ProtoGLAD,REDDIT-BINARY,2,oracle_own_gridbest,61.84624999999999,61.2854527457409,93.5,h=2 psi1=8 psi2=16 tau=0.001,own: first max of 5-fold mean test AUC over 144 cells (test-label selected)
+ProtoGLAD,REDDIT-BINARY,3,oracle_own_gridbest,63.09375000000001,65.70648414299161,83.0,h=2 psi1=8 psi2=16 tau=0.001,own: first max of 5-fold mean test AUC over 144 cells (test-label selected)
+ProtoGLAD,REDDIT-BINARY,4,oracle_own_gridbest,63.83624999999999,62.71847292503134,94.5,h=2 psi1=8 psi2=16 tau=0.001,own: first max of 5-fold mean test AUC over 144 cells (test-label selected)
+ProtoGLAD,REDDIT-BINARY,0,grid_perfold_best,62.153749999999995,64.17863231270994,89.5,psi1=16 psi2=32 tau=0.001,descriptive: per-fold max over cells
+ProtoGLAD,REDDIT-BINARY,0,grid_cell_mean,51.72611111111111,55.97626372312836,95.15277777777779,mean of 144 cells,descriptive
+ProtoGLAD,REDDIT-BINARY,1,grid_perfold_best,74.67125,74.52843230604563,71.0,psi1=8 psi2=16 tau=0.001,descriptive: per-fold max over cells
+ProtoGLAD,REDDIT-BINARY,1,grid_cell_mean,53.68056423611112,58.0548185886,89.95833333333333,mean of 144 cells,descriptive
+ProtoGLAD,REDDIT-BINARY,2,grid_perfold_best,63.19874999999999,62.661228424853,94.5,psi1=4 psi2=16 tau=0.001,descriptive: per-fold max over cells
+ProtoGLAD,REDDIT-BINARY,2,grid_cell_mean,54.803828124999995,56.919421816623604,90.94444444444446,mean of 144 cells,descriptive
+ProtoGLAD,REDDIT-BINARY,3,grid_perfold_best,71.32124999999999,69.94851671334318,80.5,psi1=2 psi2=8 tau=0.05,descriptive: per-fold max over cells
+ProtoGLAD,REDDIT-BINARY,3,grid_cell_mean,56.82326388888889,57.6102879043118,89.46875000000001,mean of 144 cells,descriptive
+ProtoGLAD,REDDIT-BINARY,4,grid_perfold_best,63.83624999999999,62.71847292503134,94.5,psi1=8 psi2=16 tau=0.001,descriptive: per-fold max over cells
+ProtoGLAD,REDDIT-BINARY,4,grid_cell_mean,46.467960069444445,50.16645043042159,95.01041666666666,mean of 144 cells,descriptive
+ProtoGLAD,MUTAG,0,oracle_own_gridbest,82.15384615384616,82.12393815334993,84.0,h=2 psi1=2 psi2=2 tau=0.001,own: first max of 5-fold mean test AUC over 144 cells (test-label selected)
+ProtoGLAD,MUTAG,1,oracle_own_gridbest,78.3076923076923,64.08103592314119,68.0,h=2 psi1=2 psi2=2 tau=0.001,own: first max of 5-fold mean test AUC over 144 cells (test-label selected)
+ProtoGLAD,MUTAG,2,oracle_own_gridbest,76.92307692307692,73.55144855144854,80.0,h=2 psi1=2 psi2=2 tau=0.001,own: first max of 5-fold mean test AUC over 144 cells (test-label selected)
+ProtoGLAD,MUTAG,3,oracle_own_gridbest,90.66666666666666,82.66885690798735,44.0,h=2 psi1=2 psi2=2 tau=0.001,own: first max of 5-fold mean test AUC over 144 cells (test-label selected)
+ProtoGLAD,MUTAG,4,oracle_own_gridbest,90.33333333333333,76.51990553306342,28.000000000000004,h=2 psi1=2 psi2=2 tau=0.001,own: first max of 5-fold mean test AUC over 144 cells (test-label selected)
+ProtoGLAD,MUTAG,0,grid_perfold_best,96.46153846153847,93.03418803418803,20.0,psi1=4 psi2=4 tau=0.001,descriptive: per-fold max over cells
+ProtoGLAD,MUTAG,0,grid_cell_mean,76.95405982905983,63.57163953790034,62.22222222222222,mean of 144 cells,descriptive
+ProtoGLAD,MUTAG,1,grid_perfold_best,78.92307692307692,61.37070445893975,80.0,psi1=8 psi2=2 tau=0.001,descriptive: per-fold max over cells
+ProtoGLAD,MUTAG,1,grid_cell_mean,59.26923076923076,44.494639982638176,86.3611111111111,mean of 144 cells,descriptive
+ProtoGLAD,MUTAG,2,grid_perfold_best,79.69230769230768,73.84652211709272,64.0,psi1=4 psi2=4 tau=0.001,descriptive: per-fold max over cells
+ProtoGLAD,MUTAG,2,grid_cell_mean,73.87820512820514,60.63762291671282,65.61111111111111,mean of 144 cells,descriptive
+ProtoGLAD,MUTAG,3,grid_perfold_best,92.0,84.70839345839345,36.0,psi1=32 psi2=2 tau=0.001,descriptive: per-fold max over cells
+ProtoGLAD,MUTAG,3,grid_cell_mean,74.5335648148148,56.14481387247309,65.11111111111111,mean of 144 cells,descriptive
+ProtoGLAD,MUTAG,4,grid_perfold_best,90.33333333333333,76.51990553306342,28.000000000000004,psi1=2 psi2=2 tau=0.001,descriptive: per-fold max over cells
+ProtoGLAD,MUTAG,4,grid_cell_mean,72.30555555555554,53.82546278443057,73.4722222222222,mean of 144 cells,descriptive

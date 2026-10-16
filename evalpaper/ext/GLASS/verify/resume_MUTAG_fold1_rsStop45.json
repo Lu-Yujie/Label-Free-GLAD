@@ -1,0 +1,29 @@
+{
+ "a": "GLASS_MUTAG_fold1_rsStraight",
+ "b": "GLASS_MUTAG_fold1_rsStop45",
+ "n_eval": [
+  12,
+  12
+ ],
+ "traj_max_abs_diff": 0.0,
+ "train_loss_max_abs_diff": 0.0,
+ "score_arrays": 116,
+ "scores_max_abs_diff": 0.0,
+ "nonzero_score_diffs": {},
+ "own_equal": true,
+ "own_a": {
+  "stop_epoch": 40,
+  "best_epoch": 1,
+  "best_method": "ensemble"
+ },
+ "segments_b": [
+  [
+   0,
+   null
+  ],
+  [
+   45,
+   null
+  ]
+ ]
+}

@@ -1,0 +1,19 @@
+convention,reference,dataset,n_folds,auroc
+main (class 0 anomalous),graphlet count + LW,BZR,5,44.755226164539884
+main (class 0 anomalous),graphlet count + LW,COX2,5,57.494781474233534
+main (class 0 anomalous),graphlet count + LW,PROTEINS_full,5,54.9580516948938
+main (class 0 anomalous),size only,BZR,5,42.46688258636787
+main (class 0 anomalous),size only,COX2,5,50.92954990215263
+main (class 0 anomalous),size only,PROTEINS_full,5,57.78292321713375
+main (class 0 anomalous),GRAIL-0,BZR,5,54.39017273576097
+main (class 0 anomalous),GRAIL-0,COX2,5,58.570123939986956
+main (class 0 anomalous),GRAIL-0,PROTEINS_full,5,56.29085339611656
+flipped (class 1 anomalous),graphlet count + LW,BZR,5,67.64563232700489
+flipped (class 1 anomalous),graphlet count + LW,COX2,5,43.60371819960861
+flipped (class 1 anomalous),graphlet count + LW,PROTEINS_full,5,65.75551251867041
+flipped (class 1 anomalous),size only,BZR,5,63.91999623923643
+flipped (class 1 anomalous),size only,COX2,5,50.24135681669928
+flipped (class 1 anomalous),size only,PROTEINS_full,5,65.48441178704336
+flipped (class 1 anomalous),GRAIL-0,BZR,5,64.32799045544142
+flipped (class 1 anomalous),GRAIL-0,COX2,5,51.182648401826484
+flipped (class 1 anomalous),GRAIL-0,PROTEINS_full,5,64.51481608060556

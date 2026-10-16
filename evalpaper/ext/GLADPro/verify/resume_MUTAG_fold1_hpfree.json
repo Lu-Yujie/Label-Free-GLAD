@@ -1,0 +1,42 @@
+{
+ "rsA_vs_rsB": {
+  "max_abs_diff_traj": 0.0,
+  "max_abs_diff_scores": 0.0,
+  "same_nan_pattern": true
+ },
+ "rsA_vs_rsC": {
+  "max_abs_diff_traj": 0.0,
+  "max_abs_diff_scores": 0.0,
+  "same_nan_pattern": true
+ },
+ "n_prot_trajectory_changes": [
+  [
+   1,
+   2
+  ],
+  [
+   61,
+   1
+  ]
+ ],
+ "segments_B": [
+  {
+   "device": "cpu",
+   "job": null,
+   "host": "login1",
+   "threads": 4,
+   "start_epoch": 1,
+   "t0": "2026-10-13 01:29:19"
+  },
+  {
+   "device": "cpu",
+   "job": null,
+   "host": "login1",
+   "threads": 4,
+   "start_epoch": 81,
+   "t0": "2026-10-13 01:29:50",
+   "t1": "2026-10-13 01:29:55"
+  }
+ ],
+ "final_auroc_A": NaN
+}

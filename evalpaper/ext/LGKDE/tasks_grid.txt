@@ -1,0 +1,2 @@
+LGKDE REDDIT-BINARY 0 hpfree threads=2 mem=8   # GPU est 2.67 h (shared A100)
+LGKDE REDDIT-BINARY 4 hpfree threads=2 mem=8   # GPU est 2.67 h (shared A100)

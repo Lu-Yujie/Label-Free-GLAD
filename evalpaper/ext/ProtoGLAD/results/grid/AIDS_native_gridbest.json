@@ -1,0 +1,15 @@
+{
+ "dataset": "AIDS",
+ "features": "native",
+ "best_auc": 0.9001015625000001,
+ "best_std": 0.020792376162770323,
+ "best_params": {
+  "h": 2,
+  "psi1": 2,
+  "psi2": 2,
+  "tau": 0.001
+ },
+ "n_cells": 144,
+ "rule": "run_detection.py l.167-272: first cell with strictly larger 5-fold mean test roc_auc_score (TEST-LABEL SELECTION; upper bound)",
+ "completed": "2026-10-13 13:14:18"
+}

@@ -1,0 +1,4 @@
+pool,n_methods,obs_oracle_minus_last,obs_ds_ci_lo,obs_ds_ci_hi,null_max_minus_last,null_ds_ci_lo,null_ds_ci_hi,ratio_null_to_obs,obs_oracle_minus_S6,null_max_minus_mean,null2_ds_ci_lo,null2_ds_ci_hi,ratio_nullmean_to_obs_oracle_minus_last,ratio_nullmean_to_obs_oracle_minus_S6,methods
+frozen12,8,5.560699,4.219218,6.897247,3.279385,2.201046,4.445143,0.589743,5.310641,3.281404,2.200979,4.455701,0.590106,0.617892,GLADC|CVTGAD|GOOD-D|GraphDE|GraphCL_IF|GraphCL_OCSVM|InfoGraph_IF|InfoGraph_OCSVM
+recent,8,6.694748,5.749397,7.606291,5.337450,4.022773,6.773693,0.797259,7.339934,5.299276,3.993048,6.719777,0.791557,0.721979,MUSE|LGKDE|GLADPro|GLADMamba|SEGO|GLASS|HC-GLAD|SUL-GUL
+frozen12+recent,16,6.127724,5.142422,7.040516,4.308418,3.128810,5.569028,0.703102,6.325287,4.290340,3.116983,5.539561,0.700152,0.678284,GLADC|CVTGAD|GOOD-D|GraphDE|GraphCL_IF|GraphCL_OCSVM|InfoGraph_IF|InfoGraph_OCSVM|MUSE|LGKDE|GLADPro|GLADMamba|SEGO|GLASS|HC-GLAD|SUL-GUL

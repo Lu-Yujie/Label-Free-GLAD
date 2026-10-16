@@ -1,0 +1,15 @@
+{
+ "dataset": "BZR",
+ "features": "ubgold",
+ "best_auc": 0.5760988886295259,
+ "best_std": 0.07643257528887144,
+ "best_params": {
+  "h": 2,
+  "psi1": 8,
+  "psi2": 32,
+  "tau": 0.001
+ },
+ "n_cells": 144,
+ "rule": "run_detection.py l.167-272: first cell with strictly larger 5-fold mean test roc_auc_score (TEST-LABEL SELECTION; upper bound)",
+ "completed": "2026-10-13 13:09:18"
+}

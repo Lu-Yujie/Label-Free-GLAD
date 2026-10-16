@@ -1,0 +1,302 @@
+{
+ "MUTAG/0": {
+  "cache": "ok",
+  "n_train_normals": 100,
+  "m1_npz_checked": 0,
+  "harness_npz_checked": 0
+ },
+ "MUTAG/1": {
+  "cache": "ok",
+  "n_train_normals": 100,
+  "m1_npz_checked": 0,
+  "harness_npz_checked": 0
+ },
+ "MUTAG/2": {
+  "cache": "ok",
+  "n_train_normals": 100,
+  "m1_npz_checked": 0,
+  "harness_npz_checked": 0
+ },
+ "MUTAG/3": {
+  "cache": "ok",
+  "n_train_normals": 100,
+  "m1_npz_checked": 0,
+  "harness_npz_checked": 0
+ },
+ "MUTAG/4": {
+  "cache": "ok",
+  "n_train_normals": 100,
+  "m1_npz_checked": 0,
+  "harness_npz_checked": 0
+ },
+ "BZR/0": {
+  "cache": "ok",
+  "n_train_normals": 69,
+  "m1_npz_checked": 4,
+  "harness_npz_checked": 12
+ },
+ "BZR/1": {
+  "cache": "ok",
+  "n_train_normals": 69,
+  "m1_npz_checked": 4,
+  "harness_npz_checked": 8
+ },
+ "BZR/2": {
+  "cache": "ok",
+  "n_train_normals": 69,
+  "m1_npz_checked": 4,
+  "harness_npz_checked": 8
+ },
+ "BZR/3": {
+  "cache": "ok",
+  "n_train_normals": 69,
+  "m1_npz_checked": 4,
+  "harness_npz_checked": 8
+ },
+ "BZR/4": {
+  "cache": "ok",
+  "n_train_normals": 68,
+  "m1_npz_checked": 4,
+  "harness_npz_checked": 8
+ },
+ "COX2/0": {
+  "cache": "ok",
+  "n_train_normals": 81,
+  "m1_npz_checked": 4,
+  "harness_npz_checked": 3
+ },
+ "COX2/1": {
+  "cache": "ok",
+  "n_train_normals": 81,
+  "m1_npz_checked": 4,
+  "harness_npz_checked": 3
+ },
+ "COX2/2": {
+  "cache": "ok",
+  "n_train_normals": 82,
+  "m1_npz_checked": 4,
+  "harness_npz_checked": 3
+ },
+ "COX2/3": {
+  "cache": "ok",
+  "n_train_normals": 82,
+  "m1_npz_checked": 4,
+  "harness_npz_checked": 3
+ },
+ "COX2/4": {
+  "cache": "ok",
+  "n_train_normals": 82,
+  "m1_npz_checked": 4,
+  "harness_npz_checked": 3
+ },
+ "DHFR/0": {
+  "cache": "ok",
+  "n_train_normals": 368,
+  "m1_npz_checked": 4,
+  "harness_npz_checked": 4
+ },
+ "DHFR/1": {
+  "cache": "ok",
+  "n_train_normals": 369,
+  "m1_npz_checked": 4,
+  "harness_npz_checked": 4
+ },
+ "DHFR/2": {
+  "cache": "ok",
+  "n_train_normals": 369,
+  "m1_npz_checked": 4,
+  "harness_npz_checked": 4
+ },
+ "DHFR/3": {
+  "cache": "ok",
+  "n_train_normals": 369,
+  "m1_npz_checked": 4,
+  "harness_npz_checked": 4
+ },
+ "DHFR/4": {
+  "cache": "ok",
+  "n_train_normals": 369,
+  "m1_npz_checked": 4,
+  "harness_npz_checked": 4
+ },
+ "AIDS/0": {
+  "cache": "ok",
+  "n_train_normals": 1280,
+  "m1_npz_checked": 4,
+  "harness_npz_checked": 5
+ },
+ "AIDS/1": {
+  "cache": "ok",
+  "n_train_normals": 1280,
+  "m1_npz_checked": 4,
+  "harness_npz_checked": 6
+ },
+ "AIDS/2": {
+  "cache": "ok",
+  "n_train_normals": 1280,
+  "m1_npz_checked": 4,
+  "harness_npz_checked": 6
+ },
+ "AIDS/3": {
+  "cache": "ok",
+  "n_train_normals": 1280,
+  "m1_npz_checked": 4,
+  "harness_npz_checked": 6
+ },
+ "AIDS/4": {
+  "cache": "ok",
+  "n_train_normals": 1280,
+  "m1_npz_checked": 4,
+  "harness_npz_checked": 5
+ },
+ "ENZYMES/0": {
+  "cache": "ok",
+  "n_train_normals": 400,
+  "m1_npz_checked": 4,
+  "harness_npz_checked": 1
+ },
+ "ENZYMES/1": {
+  "cache": "ok",
+  "n_train_normals": 400,
+  "m1_npz_checked": 4,
+  "harness_npz_checked": 1
+ },
+ "ENZYMES/2": {
+  "cache": "ok",
+  "n_train_normals": 400,
+  "m1_npz_checked": 4,
+  "harness_npz_checked": 1
+ },
+ "ENZYMES/3": {
+  "cache": "ok",
+  "n_train_normals": 400,
+  "m1_npz_checked": 4,
+  "harness_npz_checked": 1
+ },
+ "ENZYMES/4": {
+  "cache": "ok",
+  "n_train_normals": 400,
+  "m1_npz_checked": 4,
+  "harness_npz_checked": 1
+ },
+ "NCI1/0": {
+  "cache": "ok",
+  "n_train_normals": 1646,
+  "m1_npz_checked": 4,
+  "harness_npz_checked": 1
+ },
+ "NCI1/1": {
+  "cache": "ok",
+  "n_train_normals": 1646,
+  "m1_npz_checked": 4,
+  "harness_npz_checked": 0
+ },
+ "NCI1/2": {
+  "cache": "ok",
+  "n_train_normals": 1646,
+  "m1_npz_checked": 4,
+  "harness_npz_checked": 0
+ },
+ "NCI1/3": {
+  "cache": "ok",
+  "n_train_normals": 1645,
+  "m1_npz_checked": 4,
+  "harness_npz_checked": 0
+ },
+ "NCI1/4": {
+  "cache": "ok",
+  "n_train_normals": 1645,
+  "m1_npz_checked": 4,
+  "harness_npz_checked": 0
+ },
+ "PROTEINS_full/0": {
+  "cache": "ok",
+  "n_train_normals": 360,
+  "m1_npz_checked": 4,
+  "harness_npz_checked": 5
+ },
+ "PROTEINS_full/1": {
+  "cache": "ok",
+  "n_train_normals": 360,
+  "m1_npz_checked": 4,
+  "harness_npz_checked": 5
+ },
+ "PROTEINS_full/2": {
+  "cache": "ok",
+  "n_train_normals": 360,
+  "m1_npz_checked": 4,
+  "harness_npz_checked": 5
+ },
+ "PROTEINS_full/3": {
+  "cache": "ok",
+  "n_train_normals": 360,
+  "m1_npz_checked": 4,
+  "harness_npz_checked": 5
+ },
+ "PROTEINS_full/4": {
+  "cache": "ok",
+  "n_train_normals": 360,
+  "m1_npz_checked": 4,
+  "harness_npz_checked": 5
+ },
+ "IMDB-BINARY/0": {
+  "cache": "ok",
+  "n_train_normals": 400,
+  "m1_npz_checked": 4,
+  "harness_npz_checked": 1
+ },
+ "IMDB-BINARY/1": {
+  "cache": "ok",
+  "n_train_normals": 400,
+  "m1_npz_checked": 4,
+  "harness_npz_checked": 1
+ },
+ "IMDB-BINARY/2": {
+  "cache": "ok",
+  "n_train_normals": 400,
+  "m1_npz_checked": 4,
+  "harness_npz_checked": 1
+ },
+ "IMDB-BINARY/3": {
+  "cache": "ok",
+  "n_train_normals": 400,
+  "m1_npz_checked": 4,
+  "harness_npz_checked": 1
+ },
+ "IMDB-BINARY/4": {
+  "cache": "ok",
+  "n_train_normals": 400,
+  "m1_npz_checked": 4,
+  "harness_npz_checked": 1
+ },
+ "REDDIT-BINARY/0": {
+  "cache": "ok",
+  "n_train_normals": 800,
+  "m1_npz_checked": 3,
+  "harness_npz_checked": 0
+ },
+ "REDDIT-BINARY/1": {
+  "cache": "ok",
+  "n_train_normals": 800,
+  "m1_npz_checked": 3,
+  "harness_npz_checked": 0
+ },
+ "REDDIT-BINARY/2": {
+  "cache": "ok",
+  "n_train_normals": 800,
+  "m1_npz_checked": 3,
+  "harness_npz_checked": 0
+ },
+ "REDDIT-BINARY/3": {
+  "cache": "ok",
+  "n_train_normals": 800,
+  "m1_npz_checked": 3,
+  "harness_npz_checked": 0
+ },
+ "REDDIT-BINARY/4": {
+  "cache": "ok",
+  "n_train_normals": 800,
+  "m1_npz_checked": 3,
+  "harness_npz_checked": 0
+ }
+}

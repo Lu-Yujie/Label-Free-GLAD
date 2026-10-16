@@ -1,0 +1,11 @@
+check,dataset,folds,ours_mean,ours_std,paper,paper_std,diff,within5,same_anomaly_class,cell,cells_done,completed,device,attr,cell_auc_median,cell_auc_min
+"R1 UB-GOLD folds, own rule (test-grid-best)",AIDS,5,98.298046875,0.8693741785919017,98.0,0.5,0.29804687499999716,True,True,"{'h': 2, 'psi1': 2, 'psi2': 8, 'tau': 0.05}",,,,,,
+"R1 UB-GOLD folds, own rule (test-grid-best)",BZR,5,57.609888862952594,7.643257528887144,85.6,0.5,-27.9901111370474,False,False,"{'h': 2, 'psi1': 8, 'psi2': 32, 'tau': 0.001}",,,,,,
+"R1 UB-GOLD folds, own rule (test-grid-best)",COX2,5,50.8600782778865,5.931217109464143,70.9,1.5,-20.039921722113505,False,False,"{'h': 2, 'psi1': 64, 'psi2': 64, 'tau': 0.05}",,,,,,
+"R1 UB-GOLD folds, own rule (test-grid-best)",DHFR,5,57.42050379949446,2.600401735307879,62.4,5.6,-4.979496200505537,True,True,"{'h': 2, 'psi1': 64, 'psi2': 64, 'tau': 0.05}",,,,,,
+"R1 UB-GOLD folds, own rule (test-grid-best)",NCI1,5,69.6196312564484,1.3046375610590843,70.1,2.4,-0.480368743551594,True,True,"{'h': 2, 'psi1': 32, 'psi2': 64, 'tau': 0.001}",,,,,,
+"R1 UB-GOLD folds, own rule (test-grid-best)",PROTEINS_full,5,56.85688337004126,3.935284476133986,79.4,2.6,-22.543116629958746,False,False,"{'h': 2, 'psi1': 64, 'psi2': 64, 'tau': 0.001}",,,,,,
+"R1 UB-GOLD folds, own rule (test-grid-best)",MUTAG,5,83.67692307692307,5.829702448473533,89.8,0.5,-6.123076923076923,False,True,"{'h': 2, 'psi1': 2, 'psi2': 2, 'tau': 0.001}",,,,,,
+"R2 native protocol (verbatim run.py search, seed 42, minority anomaly, own features)",BZR,5,83.44711264135283,7.29950163022997,85.6,0.5,-2.1528873586471633,True,True,psi1=32 psi2=8 tau=0.01,144.0,True,cpu,node attribute,76.46341522720199,63.30233945430025
+"R2 native protocol (verbatim run.py search, seed 42, minority anomaly, own features)",COX2,5,71.6242661448141,8.47778839617493,70.9,1.5,0.724266144814095,True,True,psi1=2 psi2=32 tau=0.01,144.0,True,cpu,node attribute,65.54761904761905,48.051859099804304
+"R2 native protocol (verbatim run.py search, seed 42, minority anomaly, own features)",MUTAG,5,87.69743589743591,6.3443670108148496,89.8,0.5,-2.102564102564088,True,True,psi1=64 psi2=2 tau=0.05,144.0,True,cpu,node label,75.09230769230768,54.68461538461538

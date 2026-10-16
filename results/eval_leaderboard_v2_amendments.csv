@@ -1,0 +1,14 @@
+amendment,rule,state
+"A0-A4, A6-A8","harness-level definitions (HP-FREE, VAL-NORMAL signal, CVTGAD score, two-stage alignment, environment, secondary datasets)",applied upstream in harness/run_eval.py + collect.py; stats consumes eval_folds.csv
+A5,GraphDE paper orientation main,390 UB-GOLD-orientation rows kept as reproduction only
+A9,G2(c) out-of-sample typed test,G2(c) PASS; verdict: CONFIRMED
+A10/A11,"E5 / E4 strata, MUTAG secondary","rows per stratum: frozen12 6256, E5 2000, E4 1600, kernel 2080, reference 2800"
+A12,DIVERGED runs,6 registered; excluded from aggregates; coverage shows 6 diverged folds
+A13/A16/A18/A19/A22,"per-method labels (MUSE, SEGO released-modal, LGKDE MUTAG.yaml, HC-GLAD memory rule, SUL-GUL GUL only + 500 epochs)",hp_label / method_label columns
+A14,dual-selector G1; VAL-NORMAL-degenerate flag,"G1 VAL-NORMAL PASS, LAST PASS -> primary PASS; degenerate (scope all): GLADMamba/hpfree"
+A15,non-finite rules,12 protocol rows changed by the audit; nonfinite_selected rows 12; runs flagged 12
+A17,version sensitivity GLocalKD/GLADC a96137b,computed
+A20,checkpoint-free excluded from pooled checkpoint inflation,"GRAIL-0, PK-IF, PK-OCSVM, ProtoGLAD, WL-IF, WL-OCSVM, WL-hist+iForest (ctrl), graphlet-count+LW, graphlet-count+iForest, size-only"
+A21,identical-config excluded from pooled HP leak; tie_collapsed flag,"excluded: GLASS, SUL-GUL; tie_collapsed runs 71; rows without per-graph scores: 5680"
+A23/A24,GLASS: inductive default rule (A24 withdraws the transductive flag); ubgold==hpfree noise estimate,"GLASS: 18/50 pairs bit-identical, 32 differ; SUL-GUL: 50/50 pairs bit-identical, 0 differ; transductive rows: 0"
+adapters,E5/E4 adapter runs,all ran

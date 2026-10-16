@@ -1,0 +1,2 @@
+# overlay 'ext-gladmamba': installed with pip install --no-deps --target $GLAD_ENVS/ext-gladmamba; the runners add it to sys.path
+einops==0.8.0

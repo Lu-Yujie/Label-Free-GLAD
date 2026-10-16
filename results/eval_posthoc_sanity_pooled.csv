@@ -1,0 +1,5 @@
+comparison,detectors,value,ds_ci_lo,ds_ci_hi
+ORACLE - VAL-NORMAL,"12 (all runs, trajectories)",4.130303,3.321645,4.793184
+ORACLE - VAL-NORMAL,8 with per-graph scores (NEW8),4.253585,3.306319,5.050733
+ORACLE - LAST,"12 (all runs, trajectories)",5.119494,3.970365,6.240349
+ORACLE - LAST,8 with per-graph scores (NEW8),5.560699,4.219218,6.897247

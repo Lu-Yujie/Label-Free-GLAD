@@ -1,0 +1,31 @@
+method,method_label,stratum,oracle_rule,tuned_label,hpfree_label,transductive,notes
+CVTGAD,CVTGAD,frozen12,ubgold_patience30,UB-GOLD per-dataset script (test-tuned),label-free: mymain defaults (A1),False,
+GLADC,GLADC,frozen12,ubgold_patience30,UB-GOLD per-dataset script (test-tuned),label-free: mymain defaults (A1),False,
+GLADMamba,GLADMamba,E5,own: common epoch with max 5-fold mean test AUROC (A14),released per-dataset script,repository defaults; per-dataset batch sizes (A14),False,A14: batch sizes per dataset in HP-FREE; modal config for PROTEINS_full/MUTAG; VAL-NORMAL scale artifact (A14 trigger).
+GLADPro,GLADPro,E5,"own: epoch with max 5-fold mean test AUROC (A10 §2, A15)",released README configuration (A15),repository defaults (A10 §3),False,"A15 ratifications: README lines, repository defaults; ORACLE-own + UB-GOLD-rule ORACLE."
+GLASS,GLASS,E4,own: test-selected checkpoint + best of 24 rules (A23 §2),single released configuration (README line; A23 §3),repository defaults (== ubgold; A23 §3),False,"A23/A24: label-free columns use rcsm_full_test_cdf (label-free AND inductive, A24 §1); ORACLE-own = test-selected checkpoint + best of 24 rules; ubgold == hpfree (A21 identical config)."
+GLocalKD,GLocalKD,frozen12,ubgold_patience30,UB-GOLD per-dataset script (test-tuned),label-free: mymain defaults (A1),False,
+GOOD-D,GOOD-D,frozen12,ubgold_patience30,UB-GOLD per-dataset script (test-tuned),label-free: mymain defaults (A1),False,
+GRAIL-0,GRAIL-0,reference,none: a-priori reference,a-priori (no hyperparameters),a-priori (no hyperparameters),False,
+GraphCL_IF,GraphCL_IF,frozen12,ubgold_patience30,UB-GOLD per-dataset script (test-tuned),label-free: mymain defaults (A1),False,
+GraphCL_OCSVM,GraphCL_OCSVM,frozen12,ubgold_patience30,UB-GOLD per-dataset script (test-tuned),label-free: mymain defaults (A1),False,
+GraphDE,"GraphDE (paper orientation, A5)",frozen12,ubgold_patience30,UB-GOLD per-dataset script (test-tuned),label-free: mymain defaults (A1),False,
+HC-GLAD,HC-GLAD,E4,own: common epoch with max 5-fold mean test AUROC (A11 §2),released per-dataset script,repository defaults; memory-feasibility fallback (A19 §2),False,A19: memory-feasibility rule (modal fallback); ORACLE-own = common best epoch.
+InfoGraph_IF,InfoGraph_IF,frozen12,ubgold_patience30,UB-GOLD per-dataset script (test-tuned),label-free: mymain defaults (A1),False,
+InfoGraph_OCSVM,InfoGraph_OCSVM,frozen12,ubgold_patience30,UB-GOLD per-dataset script (test-tuned),label-free: mymain defaults (A1),False,
+LGKDE,LGKDE ('ubgold' = MUTAG.yaml for all),E5,own: max (AUROC+AUPR)/2 with LGKDE EarlyStopping (A10 §2),MUTAG.yaml for all datasets (A18 §2),config-reader defaults; KeyError options from MUTAG.yaml (A18 §1),False,"A18: 'ubgold' rows = MUTAG.yaml for all datasets; HP-FREE = config-reader defaults; reproduction criterion (A10 §4) not met (1/4), port bitwise identical."
+MUSE,MUSE,E5,ubgold_patience30 (MUSE has no own test-label rule; A10 §2),MUSE released per-dataset configuration,repository defaults (A10 §3),False,"A13: modal anom_0 config for COX2/ENZYMES/MUTAG, 'protein' config for PROTEINS_full; 10 snapshots; detector grid rows (oracle_grid) descriptive only; labelled-validation protocol not emulated."
+OCGIN,OCGIN,frozen12,ubgold_patience30,UB-GOLD per-dataset script (test-tuned),label-free: mymain defaults (A1),False,
+OCGTL,OCGTL,frozen12,ubgold_patience30,UB-GOLD per-dataset script (test-tuned),label-free: mymain defaults (A1),False,
+PK-IF,PK-IF,kernel,none: no checkpoint (test-tuned HP 'tuned'),test-tuned grid cell ('tuned'),UB-GOLD defaults ('default'),False,
+PK-OCSVM,PK-OCSVM,kernel,none: no checkpoint (test-tuned HP 'tuned'),test-tuned grid cell ('tuned'),UB-GOLD defaults ('default'),False,
+ProtoGLAD,ProtoGLAD,E4,"none: no checkpoint ('tuned' cell; A11 §2, A20)",test-grid-best replay: TEST-LABEL-SELECTED (A11 §2),repository defaults (A10 §3),False,"A20: no checkpoint axis; UB9 'tuned' = test-grid-best (test-label-selected upper bound), MUTAG 'tuned' = README line; CPU rows."
+SEGO,SEGO ('ubgold' = released-modal),E5,ubgold_patience30 (SEGO's own reporting rule is LAST; A16 §3),released-modal (A16 §1),treecl.py defaults (A16 §2),False,A16: 'ubgold' = released-modal (not author-tuned); ORACLE = UB-GOLD rule; own reporting rule = LAST.
+SIGNET,SIGNET,frozen12,ubgold_patience30,UB-GOLD per-dataset script (test-tuned),label-free: mymain defaults (A1),False,
+SUL-GUL,SUL-GUL (GUL only; SUL not released),E4,own: GUL best test epoch over 5-fold mean (A11 §2),released code defaults (500 epochs; paper states 1000) (A22 §3),repository argparse defaults (== ubgold; A21 §2),False,A21/A22: GUL only (SUL not released); normal-only (poll_ratio 0); 'ubgold' = released code defaults (500 epochs; paper states 1000); ubgold == hpfree (identical config).
+WL-IF,WL-IF,kernel,none: no checkpoint (test-tuned HP 'tuned'),test-tuned grid cell ('tuned'),UB-GOLD defaults ('default'),False,
+WL-OCSVM,WL-OCSVM,kernel,none: no checkpoint (test-tuned HP 'tuned'),test-tuned grid cell ('tuned'),UB-GOLD defaults ('default'),False,
+WL-hist+iForest (ctrl),WL-hist+iForest (ctrl),reference,none: a-priori reference,a-priori (no hyperparameters),a-priori (no hyperparameters),False,
+graphlet-count+LW,graphlet-count+LW,reference,none: a-priori reference,a-priori (no hyperparameters),a-priori (no hyperparameters),False,
+graphlet-count+iForest,graphlet-count+iForest,reference,none: a-priori reference,a-priori (no hyperparameters),a-priori (no hyperparameters),False,
+size-only,size-only,reference,none: a-priori reference,a-priori (no hyperparameters),a-priori (no hyperparameters),False,

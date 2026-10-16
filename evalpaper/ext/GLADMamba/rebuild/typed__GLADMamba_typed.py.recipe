@@ -1,0 +1,182 @@
+#target evalpaper/typed/ext/GLADMamba_typed.py
+#sha256 69e6b26546671711d3504bd602e98e3b254e29a137e5fde6bdb8ffa279d2f81a
+#commit 2b2462c5ed257796290dfbf41d730d9d5e044358
+#final-newline 1
+O 23
+"""Phase B typed adapter: GLADMamba (E5; ECML-PKDD'25) on GX / MS-v2 (RUN_NOTES_ext.md §0).
+
+The port evalpaper/ext/GLADMamba/run_method.py (GLADMamba src @2b2462c, unmodified; einops overlay) is imported
+READ-ONLY. Reused as is: load_main_functions (arg_parse, setup_seed), load_data_functions (init_structural_encoding),
+load_model_module, resolve_hparams (a typed dataset has no released line -> the modal configuration over all 12 released
+AD lines, ratified in A14 for PROTEINS_full / MUTAG), rng_isolated, maybe_stop-compatible context. The port's fit()
+(the line-by-line copy of main.py:96-158) is copied here with its evaluation block changed (# CHANGE-TYPED):
+  * data = typed_data with GLADMamba's own init_structural_encoding (x_s rw/dg 16, XLX_f, XLX_s) on every graph;
+    setup_seed(3407 + seed) before the data and the model (port: before the split code);
+  * at every evaluation point each group's test set (test normals + T) is scored through main.py's shuffled test
+    DataLoader (batch_size_test 9999 = one batch), unscrambled by graph id; groups 2..K from the saved RNG state S0, the
+    first group last as the RNG-carrying set (RUN_NOTES §0a); the adaptive score uses the epoch's training statistics;
+  * held-out normals: the port's fixed chunks of batch_size_test, RNG-isolated (A3), with the secondary signals.
+Own ORACLE (collector): common epoch (epoch % 5 == 0) with the max 5-seed mean test AUROC, ties lower std, then earlier
+(main.py:165-170), finite in all seeds.
+  PYTHONDONTWRITEBYTECODE=1 $GLAD_ENVS/ubgold-gpu/bin/python -B GLADMamba_typed.py --generator GX --seed 0
+"""
+import os.path as _osp, sys as _sys
+_sys.dont_write_bytecode = True
+_HERE_ = _osp.realpath(_osp.dirname(_osp.abspath(__file__)))
+if _HERE_ not in _sys.path:
+    _sys.path.insert(0, _HERE_)
+
+U data_loader.py 3 1 [0]
+O 2
+import time
+
+U main.py 11 2 [0,0]
+O 26
+
+import typed_ext_common as TC
+
+METHOD = "GLADMamba"
+
+
+def run(R, a):
+    M = TC.load_port(METHOD)                        # ext/GLADMamba/run_method.py (read only)
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")   # = main.py:96
+    metric = TC.load_metric()
+    mns = M.load_main_functions()
+    dfn = M.load_data_functions()
+    MM = M.load_model_module()
+    # CHANGE-TYPED: typed dataset name -> no released line -> modal configuration (A14)
+    args, sh_line, hp_notes = M.resolve_hparams(R.generator, "ubgold")
+    assert sh_line.startswith("MODAL"), sh_line
+    if R.max_epochs is not None:
+        args.num_epoch = R.max_epochs
+    seed = 3407 + R.seed
+    mns["setup_seed"](seed)                         # main.py:74-77 (port: setup_seed(3407 + fold))
+
+    # ---- CHANGE-TYPED: typed data + GLADMamba's own structural encodings (no RNG consumed) -----------------------
+    td = R.load_data()
+    enc = lambda gs: dfn["init_structural_encoding"](gs, rw_dim=args.rw_dim, dg_dim=args.dg_dim)
+    P = td.pyg(transform=enc)
+    keys = R.keys
+U data_loader.py 8 1 [4]
+O 15
+    from torch_geometric.data import Batch
+    fit_list, hold_list = P["fit"], P["hold"]
+    args.feat_dim = td.num_feat
+    dataset_num_features = td.num_feat
+    dataloader = DataLoader(fit_list, batch_size=args.batch_size, shuffle=True)
+    n_train = len(fit_list)
+    tests = {}
+    for k in keys:
+        lst = P["test"][k]
+        for i, d in enumerate(lst):
+            d.gid = i
+        tests[k] = DataLoader(lst, batch_size=args.batch_size_test, shuffle=True)   # main.py's test loader
+    hold_batches = [Batch.from_data_list(c) for c in M.chunks(hold_list, min(args.batch_size_test, len(hold_list)))]
+
+    model = MM.GLADMamba(args.hidden_dim, args.num_layer, dataset_num_features, args.dg_dim + args.rw_dim, args).to(device)
+U main.py 98 1 [4]
+O 26
+    R.eval_epochs = set(range(args.eval_freq, args.num_epoch + 1, args.eval_freq)) | {args.num_epoch}
+
+    R.base_meta({"ext/GLADMamba/run_method.py": osp.join(TC.PORTS, METHOD, "run_method.py"),
+                 "ext/GLADMamba/src/model.py": osp.join(M.SRC, "model.py"),
+                 "ext/GLADMamba/src/main.py": osp.join(M.SRC, "main.py"),
+                 "ext/GLADMamba/src/data_loader.py": osp.join(M.SRC, "data_loader.py"),
+                 "typed/ext/GLADMamba_typed.py": osp.abspath(__file__)},
+                M.REPO_COMMIT, dict(vars(args)), sh_line, hp_notes, device=str(device),
+                flags=dict(oracle_own="common epoch (epoch % eval_freq == 0), max 5-seed mean test AUROC, ties lower "
+                                      "std then earlier (main.py:165-170), finite in all seeds",
+                           n_params=int(sum(p.numel() for p in model.parameters())), per_type_mode="own_set",
+                           a14_note="VAL-NORMAL scale artefact of z-normalised in-batch scores (A14)"),
+                extra_versions=("einops",))
+
+    state = R.load_state(device.type, torch.get_num_threads(), first_epoch=1)
+    hbs = [b.to(device) for b in hold_batches]
+    start_epoch = 1
+    weight_g = weight_n = mean_g = std_g = mean_n = std_n = None
+    if state is not None:   # port: resume (model, optimizer, RNG, trajectory, loop-carried adaptive stats)
+        model.load_state_dict(state["model"])
+        optimizer.load_state_dict(state["opt"])
+        mean_g, std_g, mean_n, std_n = state["adapt"]
+        start_epoch = R.restore_common()
+    payload = lambda: dict(model=model.state_dict(), opt=optimizer.state_dict(), adapt=(mean_g, std_g, mean_n, std_n))
+
+    def score_batch(data):
+U main.py 143 7 [8,8,8,8,12,8,12]
+O 6
+        return y_score, y_score_g, y_score_n
+
+    def score_group(k):
+        """CHANGE-TYPED: main.py's test loop on group k's test set (shuffled loader), canonical order by gid."""
+        y_score_all, y_true_all, gid_all, g_all, n_all = [], [], [], [], []
+        for data in tests[k]:
+U main.py 115 1 [12]
+O 2
+            with torch.no_grad():
+                y_score, y_score_g, y_score_n = score_batch(data)
+U main.py 152 1 [12]
+O 4
+            y_true_all = y_true_all + data.y.detach().cpu().tolist()
+            gid_all = gid_all + data.gid.cpu().tolist()
+            g_all = g_all + y_score_g.detach().cpu().tolist()
+            n_all = n_all + y_score_n.detach().cpu().tolist()
+U data_loader.py 30 1 [8]
+O 14
+            auc_own = float(metric.ood_auc(y_true_all, y_score_all))      # main.py:154 (skm.roc_auc_score)
+        except ValueError:
+            auc_own = float("nan")
+        n = len(R.y[k])
+        gids = np.asarray(gid_all, dtype=np.int64)
+        assert len(gids) == n and len(np.unique(gids)) == n
+        assert np.array_equal(R.y[k][gids], np.asarray(y_true_all, dtype=np.int64))
+        test, tg, tn = (np.full(n, np.nan) for _ in range(3))
+        test[gids], tg[gids], tn[gids] = y_score_all, g_all, n_all
+        return test, tg, tn, auc_own
+
+    # =========================== copy of the port's fit() (main.py:96-158) ============================
+    for epoch in range(start_epoch, args.num_epoch + 1):
+        t0 = time.time()
+U main.py 101 28 [8,12,16,12,16,16,16,null,8,8,8,12,null,8,12,12,12,12,12,12,16,16,16,12,16,12,12,12]
+O 2
+        R.train_loss.append(loss_all / n_train)
+
+U main.py 131 3 [8,12,12]
+O 4
+        R.t_train += time.time() - t0
+
+        if epoch in R.eval_epochs:
+            t1 = time.time()
+U main.py 136 1 [12]
+O 31
+            res = R.score_groups(score_group)                # CHANGE-TYPED: per-group test passes (§0a)
+            hs, hg, hn = [], [], []
+            with M.rng_isolated(), torch.no_grad():
+                for hb in hbs:
+                    s, g, n = score_batch(hb)
+                    hs.append(s.cpu().numpy()); hg.append(g.cpu().numpy()); hn.append(n.cpu().numpy())
+            hs, hg, hn = (np.concatenate(x).astype(np.float64) if x else np.zeros(0) for x in (hs, hg, hn))
+            tx = {}
+            for k in keys:
+                raw = TC.eval_metrics(metric, R.y[k], res[k][1] + res[k][2])
+                tx[k] = dict(auroc_own=res[k][3], auroc_raw=raw["auroc"])
+            rec = dict(holdout_raw=TC.finite_mean(hg + hn), holdout_g=TC.finite_mean(hg), holdout_n=TC.finite_mean(hn),
+                       holdout_obj=(float(weight_g * TC.finite_mean(hg) + weight_n * TC.finite_mean(hn))
+                                    if args.is_adaptive else TC.finite_mean(hg + hn)),
+                       mean_g=float(mean_g) if mean_g is not None else None, std_g=float(std_g) if std_g is not None else None,
+                       mean_n=float(mean_n) if mean_n is not None else None, std_n=float(std_n) if std_n is not None else None,
+                       weight_g=float(weight_g) if weight_g is not None else None,
+                       weight_n=float(weight_n) if weight_n is not None else None)
+            R.record(epoch, {k: res[k][0] for k in keys}, hs, rec_extra=rec, types_extra=tx,
+                     extra_S=dict(hold_g=hg, hold_n=hn, **{f"test_g__{TC.skey(k)}": res[k][1] for k in keys},
+                                  **{f"test_n__{TC.skey(k)}": res[k][2] for k in keys}),
+                     t_eval0=t1, metric=metric)
+        if R.maybe_stop(epoch, payload, final_epoch=args.num_epoch):
+            return "incomplete"
+    # =========================== end of the fit() copy ================================================
+
+    return R.finish(args.num_epoch, args.eval_freq, expected_epochs=sorted(R.eval_epochs))
+
+
+if __name__ == "__main__":
+    TC.main(METHOD, run)

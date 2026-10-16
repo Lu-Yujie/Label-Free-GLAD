@@ -1,0 +1,3 @@
+method,hp,runs,frac_valnormal_first10pct,mean_last_minus_valnormal,valnormal_degenerate
+HC-GLAD,ubgold,50,0.04,-1.3528383947170042,False
+HC-GLAD,hpfree,50,0.0,0.023937879400591555,False

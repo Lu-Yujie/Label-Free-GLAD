@@ -1,0 +1,622 @@
+#target evalpaper/ext/ProtoGLAD/run_method.py
+#sha256 9cdd83845fc6e0caf38a1306efbf95c0b79f2276c81c135377d11f25415d66d1
+#commit f7d8ce953de2c559abb9502c3a2b8195f3da380a
+#final-newline 1
+O 24
+"""E4 extension (PREREG_AMENDMENTS A11): instrumented ProtoGLAD (arXiv 2602.10708) runs on UB-GOLD folds.
+
+Same CLI and per-run JSON "part" schema as evalpaper/harness/run_eval.py:
+  PYTHONDONTWRITEBYTECODE=1 python -B run_method.py --method ProtoGLAD --dataset BZR --fold 0 [--hp hpfree]
+Grid replay of ProtoGLAD's own test-AUC hyperparameter search (NOTES.md):
+  python -B run_method.py grid --dataset BZR --fold 0 --psi1 64      # one unit = (dataset, fold, psi1), 24 cells
+  python -B run_method.py select --dataset BZR                        # needs all 30 units of the dataset
+
+* ProtoGLAD's code is the official repository at commit f7d8ce9 (src/, byte-identical, no license: run only).
+  The pipeline below is a line-by-line copy of src/protoglad/experiments/run_detection.py: run_single_trial()
+  split into stage 1 (node IK + WL) and stage 2 (graph IK + prototypes + scoring); every change is marked
+  "# CHANGE" and listed in NOTES.md (D1-D5).
+* Folds, features, seeds and the held-out normals come from the harness itself (its run_eval.py is imported,
+  never modified): UB-GOLD get_ad_split_TU / get_ad_dataset_TU, asserted against
+  $GLAD_DATA_ROOT/ubgold_splits, set_seed(3407+fold), RandomState(2026+1000*fold) carve-out.
+* hp 'ubgold' (= 'tuned', NOTES.md): UB9 -> the test-grid-best cell of the replay (test-label-selected upper bound);
+  MUTAG -> the README eval-mode line. hp 'hpfree' -> config.py defaults.
+* One evaluation point per run (no epochs): meta.hparams num_epoch = eval_freq = 1, so ORACLE = LAST = VAL-NORMAL.
+
+Outputs (EP_PARTS / EP_SCORES / EP_GRID override):
+  evalpaper/ext/parts/<run_id>.json                           meta + the single evaluation record
+  $GLAD_DATA_ROOT/ext_protoglad/scores/<run_id>.npz         per-graph test / held-out scores
+  $GLAD_DATA_ROOT/ext_protoglad/grid/<feat>/<DS>/fold<f>_psi1_<p>.{json,npz}   grid units
+  evalpaper/ext/ProtoGLAD/results/grid/<DS>[_native]_{grid.csv,gridbest.json}   replay summaries
+U protoglad/__init__.py 1 1 [0]
+O 4
+import os.path as _osp, sys as _sys
+_HERE_ = _osp.realpath(_osp.dirname(_osp.abspath(__file__)))
+_sys.path[:] = [p for p in _sys.path if _osp.realpath(p or ".") != _HERE_]  # never import from cwd
+
+U protoglad/experiments/run_detection.py 1 1 [0]
+O 4
+import hashlib
+import importlib
+import importlib.util
+import itertools
+U protoglad/experiments/run_detection.py 3 2 [0,0]
+O 1
+import os.path as osp
+U protoglad/experiments/run_detection.py 6 2 [0,0]
+O 4
+import types
+
+os.environ.setdefault("TQDM_DISABLE", "1")   # CHANGE (D5): no progress bar from detector.fit (values unaffected)
+
+U protoglad/detector.py 9 2 [0,0]
+U protoglad/data.py 14 1 [0]
+U protoglad/experiments/run_detection.py 11 1 [0]
+O 79
+
+HERE = osp.dirname(osp.abspath(__file__))
+PG_SRC = osp.join(HERE, "src")                                     # ProtoGLAD @ f7d8ce9 (unmodified)
+PG_COMMIT = "f7d8ce953de2c559abb9502c3a2b8195f3da380a"
+HARNESS = osp.join(osp.dirname(osp.dirname(HERE)), "harness")      # evalpaper/harness
+ROOT = (os.environ.get("GLAD_DATA_ROOT", "glad_data") + "/ext_protoglad")
+PARTS = os.environ.get("EP_PARTS", osp.join(osp.dirname(HERE), "parts"))
+SCORES = os.environ.get("EP_SCORES", osp.join(ROOT, "scores"))
+GRID = os.environ.get("EP_GRID", osp.join(ROOT, "grid"))
+GRID_RES = os.environ.get("EP_GRID_RES", osp.join(HERE, "results", "grid"))
+NATIVE_DATA_ROOT = osp.join(ROOT, "native", "data", "TUDataset")  # copies of the local TU raw files
+METHOD = "ProtoGLAD"
+UB9 = ["AIDS", "BZR", "COX2", "DHFR", "ENZYMES", "NCI1", "PROTEINS_full", "IMDB-BINARY", "REDDIT-BINARY"]
+DATASETS = UB9 + ["MUTAG"]
+
+# ProtoGLAD's search space (run_detection.py l.311-316 == run_all_tudatasets.py DEFAULT_SEARCH_SPACE)
+GRID_SPACE = {"h": [2], "psi1": [2, 4, 8, 16, 32, 64], "psi2": [2, 4, 8, 16, 32, 64], "tau": [0.001, 0.005, 0.01, 0.05]}
+README_MUTAG = dict(h=2, psi1=64, psi2=2, tau=0.01)   # README "Single parameter-combination example (eval mode)"
+# run_all_tudatasets.py l.45-56 (DEFAULT_ATTR_MAP; unlisted datasets -> "degree", l.306)
+NATIVE_ATTR = {"AIDS": "node attribute", "BZR": "node attribute", "COX2": "node attribute", "DD": "node label",
+               "MUTAG": "node label", "PROTEINS_full": "node attribute", "NCI1": "node label", "DHFR": "node label",
+               "IMDB-BINARY": "degree", "REDDIT-BINARY": "degree"}
+
+
+def sha256(path):
+    return hashlib.sha256(open(path, "rb").read()).hexdigest()
+
+
+def arr_sha(a):
+    return hashlib.sha256(np.ascontiguousarray(a).tobytes()).hexdigest()[:16]
+
+
+def load_harness():
+    """Import evalpaper/harness/run_eval.py as a module (read-only use of its data/RNG/IO helpers)."""
+    spec = importlib.util.spec_from_file_location("ep_harness_run_eval", osp.join(HARNESS, "run_eval.py"))
+    H = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(H)
+    return H
+
+
+_SET_SEED = {}
+
+
+def ubgold_set_seed(H):
+    """UB-GOLD's set_seed (benchmark/mymain.py), extracted verbatim by the harness."""
+    if "f" not in _SET_SEED:
+        _SET_SEED["f"] = H.load_ubgold_data_functions()["set_seed"]
+    return _SET_SEED["f"]
+
+
+def load_ubgold_metric(H):
+    if H.SRC not in sys.path:
+        sys.path.append(H.SRC)
+    H.stub_package("GAOOD", osp.join(H.SRC, "GAOOD"))
+    importlib.import_module("GAOOD.metric")
+    return importlib.import_module("GAOOD.metric.metric")
+
+
+def load_protoglad(with_run_detection=False):
+    """Import ProtoGLAD's modules from src/ and apply the runtime override D1."""
+    if PG_SRC not in sys.path:
+        sys.path.insert(0, PG_SRC)
+    P = types.SimpleNamespace()
+    P.cfg = importlib.import_module("protoglad.config")
+    P.data = importlib.import_module("protoglad.data")
+    P.emb = importlib.import_module("protoglad.embedding")
+    P.det = importlib.import_module("protoglad.detector")
+    P.ik = importlib.import_module("protoglad.ik_inne_gpu")
+    if with_run_detection:   # verification only (it prepends src/protoglad to sys.path; removed again)
+        saved = list(sys.path)
+        P.rd = importlib.import_module("protoglad.experiments.run_detection")
+        sys.path[:] = saved
+    for mod in (P.cfg, P.data, P.emb, P.det, P.ik):
+        assert osp.realpath(mod.__file__).startswith(osp.realpath(PG_SRC)), mod.__file__
+
+    # CHANGE (D1): IK_inne_gpu.__init__ raises "CUDA is not available." without a GPU. Copy of __init__ with a CPU
+    # fallback; every other line of the class runs unchanged on self.device.
+    def _ik_init(self, psi, t) -> None:
+        self.device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
+U protoglad/ik_inne_gpu.py 13 5 [8,8,8,8,8]
+O 18
+    P.ik.IK_inne_gpu.__init__ = _ik_init
+    return P
+
+
+# ----------------------------------------------------------------------------------------------
+# data: UB-GOLD folds exactly as the harness
+# ----------------------------------------------------------------------------------------------
+def load_fold(H, DS, fold, holdout_frac=0.2):
+    """CHANGE (D2): UB-GOLD trial `fold` exactly as the harness: set_seed(3407+fold), then UB-GOLD's own
+    get_ad_split_TU / get_ad_dataset_TU (asserted against ubgold_splits), then the 20% held-out carve-out
+    RandomState(2026+1000*fold). Returns the 80% fit list, the held-out list, the test list (UB-GOLD order) and the
+    TU dataset indices of each graph (for the native-feature diagnostic)."""
+    ns = H.load_ubgold_data_functions()
+    ns["set_seed"](3407 + fold)
+    assert not DS.startswith("Tox21"), "Tox21 not supported by this adapter"
+    uargs = types.SimpleNamespace(DS=DS, num_trial=5, batch_size=128, batch_size_test=9999)   # loaders never iterated
+    cwd = os.getcwd()
+    os.chdir(H.DATA_RUN)
+U protoglad/experiments/run_detection.py 135 1 [4]
+O 2
+        splits = ns["get_ad_split_TU"](uargs, fold=uargs.num_trial)
+        out = ns["get_ad_dataset_TU"](uargs, splits[fold], need_str_enc=False)
+U synthetic_exp/run_synthetic_search.py 111 1 [4]
+O 33
+        os.chdir(cwd)
+    (dataset_train, dataset_val, dataset_test, dataloader, dataloader_val, dataloader_test, meta) = out
+    ref = json.load(open(osp.join(H.SPLITS, f"{DS}.json")))
+    rf = ref["folds"][fold]
+    train_index = list(map(int, splits[fold][0]))
+    test_index = list(map(int, splits[fold][1]))
+    assert train_index == list(map(int, rf["split_train_index"]))
+    assert test_index == list(map(int, rf["split_test_index"]))
+    train_all = list(dataloader.dataset)
+    # TU indices of UB-GOLD's training normals (get_ad_dataset_TU keeps train graphs with y != 0, in split order)
+    raw_y_train = [int(d.y) for d in dataset_train]
+    tr_norm_idx = [i for i, y in zip(train_index, raw_y_train) if y != 0]
+    assert len(tr_norm_idx) == len(train_all)
+    n_all = len(train_all)
+    n_hold = int(round(holdout_frac * n_all))
+    perm = np.random.RandomState(H.HOLDOUT_SEED + 1000 * fold).permutation(n_all)
+    hold_pos = sorted(perm[:n_hold].tolist())
+    fit_pos = sorted(perm[n_hold:].tolist())
+    assert n_hold > 0
+    test_list = list(dataloader_test.dataset)            # canonical (UB-GOLD split) order; y = 1 anomaly
+    y_test = np.array([int(d.y) for d in test_list], dtype=np.int64)
+    assert list(map(int, y_test)) == list(map(int, rf["y_test"])), "test labels differ from ubgold_splits"
+    return dict(fit_list=[train_all[i] for i in fit_pos], hold_list=[train_all[i] for i in hold_pos],
+                test_list=test_list, y_test=y_test, n_all=n_all, n_hold=n_hold, hold_pos=hold_pos, fit_pos=fit_pos,
+                fit_tu=[tr_norm_idx[i] for i in fit_pos], hold_tu=[tr_norm_idx[i] for i in hold_pos],
+                test_tu=test_index, split_test_index=test_index, split_train_index=train_index, meta=meta)
+
+
+def to_protoglad(d):
+    """Copy of data.load_tu_dataset l.214-222 (sparse adjacency from edge_index) with UB-GOLD's node features
+    (CHANGE D2: UB-GOLD features, float64 as ProtoGLAD's loader)."""
+    num_nodes = int(d.num_nodes)
+    edge_index = d.edge_index.cpu().numpy()
+U protoglad/data.py 171 5 [4,4,8,8,4]
+O 44
+    x = d.x.cpu().numpy().astype(np.float64, copy=False)
+    assert x.shape[0] == num_nodes
+    return adj, x
+
+
+_NATIVE_CACHE = {}
+
+
+def native_features(P, DS):
+    """ProtoGLAD's own loader (verbatim) with its released per-dataset feature choice; diagnostic only."""
+    if DS not in _NATIVE_CACHE:
+        attr = NATIVE_ATTR.get(DS, "degree")
+        adj_list, feat_list, _labels = P.data.load_tu_dataset(DS, attr, data_root=NATIVE_DATA_ROOT)
+        _NATIVE_CACHE[DS] = (attr, adj_list, feat_list)
+    return _NATIVE_CACHE[DS]
+
+
+def fold_graphs(P, F, DS, features):
+    """(adj, x) lists for fit / held-out / test graphs."""
+    fit = [to_protoglad(d) for d in F["fit_list"]]
+    hold = [to_protoglad(d) for d in F["hold_list"]]
+    test = [to_protoglad(d) for d in F["test_list"]]
+    if features == "ubgold":
+        return fit, hold, test, "ubgold"
+    assert features == "native", features
+    attr, adj_list, feat_list = native_features(P, DS)
+    out = []
+    for ub, idx in ((fit, F["fit_tu"]), (hold, F["hold_tu"]), (test, F["test_tu"])):
+        lst = []
+        for (a_ub, _x), i in zip(ub, idx):
+            a = adj_list[i]
+            assert a.shape == a_ub.shape and (a != a_ub).nnz == 0, (DS, i)   # same graph as UB-GOLD's
+            lst.append((a, feat_list[i]))
+        out.append(lst)
+    return out[0], out[1], out[2], f"native:{attr}"
+
+
+# ----------------------------------------------------------------------------------------------
+# pipeline: copy of run_detection.run_single_trial (l.22-66), split into two stages
+# ----------------------------------------------------------------------------------------------
+def ik_transform3(P, feat_train, feat_test, feat_hold, psi, t=None):
+    """Copy of embedding.ik_transform; CHANGE (D2): the held-out graphs are also mapped with the fitted model
+    (transform draws no random numbers; train/test outputs unchanged)."""
+    t = P.cfg.DEFAULT_T1 if t is None else t
+U protoglad/embedding.py 107 2 [4,4]
+O 2
+
+    model = P.ik.IK_inne_gpu(psi=psi, t=t)
+U protoglad/embedding.py 111 4 [4,null,4,4]
+O 2
+    ik_hold_all = model.transform(np.concatenate(feat_hold, axis=0))   # CHANGE (D2)
+
+U protoglad/embedding.py 116 10 [4,8,8,8,12,12,8,null,4,4]
+O 9
+    hold_sizes = [f.shape[0] for f in feat_hold]
+
+    return (_split_by_sizes(ik_train_all, train_sizes), _split_by_sizes(ik_test_all, test_sizes),
+            _split_by_sizes(ik_hold_all, hold_sizes))
+
+
+def graph_embeddings(P, adj_list, feat_list, h):
+    """Copy of embedding.compute_graph_embeddings; CHANGE (D3, memory): the per-graph node-embedding list (unused by
+    the detector; ~35 GB on REDDIT-B at psi1=64) is not accumulated. Graph embeddings are identical."""
+U protoglad/embedding.py 152 1 [4]
+O 1
+
+U protoglad/embedding.py 155 1 [4]
+O 1
+        node_emb = P.emb.wl_embedding(adj, feat, h)
+U protoglad/embedding.py 158 1 [8]
+O 7
+
+    return np.vstack(graph_embs)
+
+
+def stage1(P, H, fit, hold, test, psi1, h, seed):
+    """run_single_trial l.33-42 (+ held-out graphs). set_seed(3407+fold) immediately before (NOTES.md)."""
+    ubgold_set_seed(H)(seed)
+U protoglad/experiments/run_detection.py 31 3 [4,null,4]
+O 2
+    train_x_ik, test_x_ik, hold_x_ik = ik_transform3(
+        P, [x for _, x in fit], [x for _, x in test], [x for _, x in hold], psi=psi1
+U protoglad/experiments/run_detection.py 36 4 [4,4,null,4]
+O 2
+    X_train = graph_embeddings(P, [a for a, _ in fit], train_x_ik, h)
+    X_test = graph_embeddings(P, [a for a, _ in test], test_x_ik, h)
+U protoglad/experiments/run_detection.py 42 1 [4]
+O 9
+    t1b = time.time()
+    X_hold = graph_embeddings(P, [a for a, _ in hold], hold_x_ik, h)   # CHANGE (D2)
+    timings["wl_embedding_hold"] = time.time() - t1b
+    return X_train, X_test, X_hold, timings
+
+
+def stage2(P, H, X_train, X_test, X_hold, y_test, psi2, tau, k_neighbors=None):
+    """run_single_trial l.44-60 (+ held-out scores). Every fitting graph is a UB-GOLD training normal."""
+    k_neighbors = P.cfg.DEFAULT_TOP_K if k_neighbors is None else k_neighbors
+U protoglad/experiments/run_detection.py 31 1 [4]
+O 2
+    train_labels = np.zeros(X_train.shape[0], dtype=np.int64)          # UB-GOLD training set: normals only
+
+U synthetic_exp/run_bm_best_node_auc.py 117 2 [4,4]
+U protoglad/experiments/run_detection.py 46 4 [4,8,null,4]
+O 1
+    detector = P.det.ProtoGLADDetector(psi=psi2, tau=tau)
+U protoglad/experiments/run_detection.py 51 9 [4,4,null,4,4,4,null,4,4]
+O 7
+    auc = roc_auc_score(y_test, anomaly_scores)
+
+    t4 = time.time()
+    with H.rng_isolated():                                              # CHANGE (D2): held-out normals
+        hold_scores, _ = detector.score(X_hold)
+    timings["scoring_hold"] = time.time() - t4
+
+U protoglad/experiments/run_detection.py 62 4 [4,8,8,8]
+O 2
+        "test_scores": np.asarray(anomaly_scores, dtype=np.float64),
+        "hold_scores": np.asarray(-hold_scores, dtype=np.float64),
+U protoglad/experiments/run_detection.py 66 1 [4]
+O 20
+
+
+# ----------------------------------------------------------------------------------------------
+# hyperparameters (NOTES.md, pre-registered 2026-10-13 12:49:30 EDT)
+# ----------------------------------------------------------------------------------------------
+def grid_cells():
+    return list(itertools.product(GRID_SPACE["h"], GRID_SPACE["psi1"], GRID_SPACE["psi2"], GRID_SPACE["tau"]))
+
+
+def gridbest_path(DS, features):
+    return osp.join(GRID_RES, f"{DS}{'' if features == 'ubgold' else '_native'}_gridbest.json")
+
+
+def resolve_hparams(P, DS, hp, features="ubgold"):
+    cfg = P.cfg
+    fixed = dict(t1=cfg.DEFAULT_T1, t2=cfg.DEFAULT_T2, rho=cfg.DEFAULT_RHO, top_k=cfg.DEFAULT_TOP_K)
+    if hp == "hpfree":
+        p = dict(h=cfg.DEFAULT_WL_ITERS, psi1=cfg.DEFAULT_PSI1, psi2=cfg.DEFAULT_PSI2, tau=cfg.DEFAULT_TAU)
+        line = "ProtoGLAD hpfree: repository defaults (config.py = run_detection.py argparse defaults)"
+        meaning = "repository defaults"
+U protoglad/data.py 199 1 [4]
+O 5
+        assert hp == "ubgold", hp
+        if DS == "MUTAG" and features == "ubgold":
+            p = dict(README_MUTAG)
+            line = "ProtoGLAD tuned: README eval-mode line for MUTAG (released per-dataset choice)"
+            meaning = "released per-dataset choice (README MUTAG line)"
+U protoglad/data.py 199 1 [8]
+O 31
+            gb = gridbest_path(DS, features)
+            if not osp.exists(gb):
+                raise FileNotFoundError(f"grid replay for {DS} ({features}) not complete: {gb}")
+            G = json.load(open(gb))
+            p = dict(G["best_params"])
+            line = "ProtoGLAD tuned: test-grid-best of the replayed 144-cell search (own rule, TEST-LABEL SELECTED)"
+            meaning = "test-grid-best (replay of the method's own test-AUC grid search; upper bound)"
+    p = dict(h=int(p["h"]), psi1=int(p["psi1"]), psi2=int(p["psi2"]), tau=float(p["tau"]))
+    line = line + " | " + " ".join(f"{k}={v}" for k, v in p.items())
+    return p, fixed, line, meaning
+
+
+# ----------------------------------------------------------------------------------------------
+# one part (harness schema)
+# ----------------------------------------------------------------------------------------------
+def run(DS, fold, hp="ubgold", features="ubgold", holdout_frac=0.2, tag="", verbose=True):
+    t_start = time.time()
+    run_id = (f"{METHOD}_{DS}_fold{fold}" + ("_hpfree" if hp == "hpfree" else "")
+              + ("_nativefeat" if features == "native" else "") + (f"_{tag}" if tag else ""))
+    os.makedirs(PARTS, exist_ok=True)
+    out_json = osp.join(PARTS, run_id + ".json")
+    if osp.exists(out_json):
+        print(f"[skip] {out_json} exists")
+        return "done"
+    H = load_harness()
+    lockdir = osp.join(ROOT, "locks")
+    os.makedirs(lockdir, exist_ok=True)
+    lock = osp.join(lockdir, run_id + ".lock")
+    if not H.acquire_lock(lock):
+        print(f"[locked] {run_id} is running in another job")
+        return "locked"
+U protoglad/experiments/run_detection.py 135 1 [4]
+O 1
+        return _run(H, DS, fold, hp, features, run_id, out_json, holdout_frac, verbose, t_start)
+U synthetic_exp/run_synthetic_search.py 111 1 [4]
+U protoglad/experiments/run_detection.py 135 1 [8]
+O 104
+            os.remove(lock)
+        except OSError:
+            pass
+
+
+def _run(H, DS, fold, hp, features, run_id, out_json, holdout_frac, verbose, t_start):
+    metric = load_ubgold_metric(H)
+    P = load_protoglad()
+    p, fixed, hp_line, meaning = resolve_hparams(P, DS, hp, features)
+    seed = 3407 + fold
+    F = load_fold(H, DS, fold, holdout_frac)
+    fit, hold, test, feat_desc = fold_graphs(P, F, DS, features)
+    y_test = F["y_test"]
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+
+    X_train, X_test, X_hold, tim1 = stage1(P, H, fit, hold, test, p["psi1"], p["h"], seed)
+    res = stage2(P, H, X_train, X_test, X_hold, y_test, p["psi2"], p["tau"])
+    assert res is not None
+    test_scores, hold_scores = res["test_scores"], res["hold_scores"]
+
+    rec = H.eval_metrics(metric, y_test, test_scores)
+    rec["holdout_score"] = H.finite_mean(hold_scores)
+    rec["holdout_loss"] = rec["holdout_score"]
+    rec.update(epoch=1, auroc_protoglad=float(res["auc"]), n_prototypes=int(res["n_prototypes"]),
+               t=time.time() - t_start, timings=dict(tim1, **res["timings"]),
+               test_scores_sha=arr_sha(test_scores), hold_scores_sha=arr_sha(hold_scores))
+
+    # the same cell in the grid replay (if present) must be bit-identical (same seed, same code path)
+    unit = grid_unit_paths(DS, fold, p["psi1"], features)[1]
+    grid_check = None
+    if osp.exists(unit):
+        Z = np.load(unit)
+        cells = [tuple(c) for c in Z["cells"].tolist()]
+        key = (float(p["h"]), float(p["psi1"]), float(p["psi2"]), float(p["tau"]))
+        if key in cells:
+            j = cells.index(key)
+            grid_check = bool(np.array_equal(Z["test"][j], test_scores) and np.array_equal(Z["hold"][j], hold_scores))
+            assert grid_check, f"{run_id}: differs from its grid-replay cell"
+    if verbose:
+        print(f"[{run_id}] {hp_line} | feat {feat_desc} | auroc {rec['auroc']:.4f} (sklearn {res['auc']:.4f}) "
+              f"auprc {rec['auprc']:.4f} hold {rec['holdout_score']:.4f} n_proto {res['n_prototypes']} "
+              f"grid_identical {grid_check} t={rec['t']:.1f}s", flush=True)
+
+    meta_out = dict(method=METHOD, dataset=DS, fold=fold, hp=hp, seed=seed, run_id=run_id,
+                    ubgold_sh_line=hp_line, hp_notes=[meaning], hp_meaning=meaning,
+                    features=feat_desc,
+                    hparams=dict(p, **fixed, num_epoch=1, eval_freq=1),
+                    n_train_normal_ubgold=F["n_all"], n_fit=len(fit), n_holdout=F["n_hold"],
+                    holdout_seed=H.HOLDOUT_SEED + 1000 * fold, n_test=len(test), n_test_anomalous=int(y_test.sum()),
+                    max_nodes_num=int(F["meta"]["max_nodes_num"]), num_feat=int(F["meta"]["num_feat"]),
+                    device=device, device_all=device, torch=torch.__version__,
+                    cuda_name=(torch.cuda.get_device_name(0) if device == "cuda" else None),
+                    threads=torch.get_num_threads(), max_epochs_override=None,
+                    protoglad_commit=PG_COMMIT, harness_run_eval_sha256=sha256(osp.join(HARNESS, "run_eval.py")),
+                    adapter_sha256=sha256(osp.abspath(__file__)), grid_identical=grid_check,
+                    job=os.environ.get("SLURM_JOB_ID"), host=os.uname().nodename,
+                    impl="ProtoGLAD src@f7d8ce9 + D1 (IK CPU fallback), D2 (UB-GOLD folds/features, held-out "
+                         "scoring), D3 (no node-embedding list), D5 (tqdm off); UB-GOLD folds via harness run_eval.py")
+    meta_out["seconds"] = time.time() - t_start
+    meta_out["n_eval"] = 1
+    meta_out["memory"] = H.peak_mem()
+    meta_out["completed"] = time.strftime("%Y-%m-%d %H:%M:%S")
+    npz = osp.join(SCORES, run_id + ".npz")
+    H.save_scores(npz, [1], {"test": [test_scores], "hold": [hold_scores]}, dict(
+        y_test=y_test, test_index=np.asarray(F["split_test_index"], dtype=np.int64),
+        hold_pos=np.asarray(F["hold_pos"], dtype=np.int64),
+        test_n_nodes=np.array([int(d.num_nodes) for d in F["test_list"]], dtype=np.int64),
+        test_n_edges=np.array([int(d.edge_index.size(1)) // 2 for d in F["test_list"]], dtype=np.int64),
+        hold_n_nodes=np.array([int(d.num_nodes) for d in F["hold_list"]], dtype=np.int64),
+        hold_n_edges=np.array([int(d.edge_index.size(1)) // 2 for d in F["hold_list"]], dtype=np.int64),
+        num_epoch=np.int64(1), eval_freq=np.int64(1)))
+    meta_out["scores_npz"] = npz
+    out = dict(meta=meta_out, traj=[rec], train_loss=[])
+    tmp = out_json + ".tmp"
+    with open(tmp, "w") as f:
+        json.dump(out, f)
+    os.replace(tmp, out_json)
+    print(f"[done] {run_id} in {meta_out['seconds']:.0f}s -> {out_json}", flush=True)
+    return "done"
+
+
+# ----------------------------------------------------------------------------------------------
+# grid replay of hyperparam_search (run_detection.py l.167-272) on the UB-GOLD folds
+# ----------------------------------------------------------------------------------------------
+def grid_unit_paths(DS, fold, psi1, features):
+    d = osp.join(GRID, features, DS)
+    stem = osp.join(d, f"fold{fold}_psi1_{psi1}")
+    return stem + ".json", stem + ".npz"
+
+
+def run_grid_unit(DS, fold, psi1, features="ubgold", holdout_frac=0.2, verbose=True):
+    """Stage 1 once for (fold, psi1); RNG state saved after it and restored before every (psi2, tau) cell, which is
+    exactly the from-scratch pipeline with set_seed(3407+fold) per cell (NOTES.md; checked by verify.py)."""
+    t_start = time.time()
+    js, npz = grid_unit_paths(DS, fold, psi1, features)
+    if osp.exists(js):
+        print(f"[skip] {js} exists")
+        return "done"
+    os.makedirs(osp.dirname(js), exist_ok=True)
+    H = load_harness()
+    lock = js + ".lock"
+    if not H.acquire_lock(lock):
+        print(f"[locked] {js}")
+        return "locked"
+U protoglad/experiments/run_detection.py 135 1 [4]
+O 14
+        metric = load_ubgold_metric(H)
+        P = load_protoglad()
+        seed = 3407 + fold
+        F = load_fold(H, DS, fold, holdout_frac)
+        fit, hold, test, feat_desc = fold_graphs(P, F, DS, features)
+        y_test = F["y_test"]
+        cells = [c for c in grid_cells() if c[1] == psi1]
+        hs = sorted({c[0] for c in cells})
+        rows, T, Hd, keys = [], [], [], []
+        for h in hs:
+            X_train, X_test, X_hold, tim1 = stage1(P, H, fit, hold, test, psi1, h, seed)
+            st = H.rng_state()
+            for (h_, p1, psi2, tau) in [c for c in cells if c[0] == h]:
+                H.set_rng_state(st)
+U protoglad/experiments/run_detection.py 33 1 [16]
+O 31
+                res = stage2(P, H, X_train, X_test, X_hold, y_test, psi2, tau)
+                rec = H.eval_metrics(metric, y_test, res["test_scores"])
+                rows.append(dict(dataset=DS, fold=fold, features=feat_desc, h=h_, psi1=p1, psi2=psi2, tau=tau,
+                                 auroc_protoglad=float(res["auc"]), auroc=rec["auroc"], auprc=rec["auprc"],
+                                 fpr95=rec["fpr95"], nonfinite=rec["nonfinite"],
+                                 holdout_score=H.finite_mean(res["hold_scores"]),
+                                 n_prototypes=int(res["n_prototypes"]), seconds_stage2=time.time() - t0,
+                                 seconds_stage1=sum(tim1.values()),
+                                 test_scores_sha=arr_sha(res["test_scores"])))
+                T.append(res["test_scores"])
+                Hd.append(res["hold_scores"])
+                keys.append((h_, p1, psi2, tau))
+                if verbose:
+                    print(f"  {DS} f{fold} h={h_} psi1={p1} psi2={psi2} tau={tau}: auc {res['auc']:.4f} "
+                          f"n_proto {res['n_prototypes']} ({time.time() - t0:.1f}s)", flush=True)
+        tmp = npz + ".tmp.npz"
+        np.savez_compressed(tmp, cells=np.asarray(keys, dtype=np.float64), test=np.stack(T), hold=np.stack(Hd),
+                            y_test=y_test)
+        os.replace(tmp, npz)
+        payload = dict(dataset=DS, fold=fold, psi1=psi1, features=feat_desc, seed=seed, rows=rows,
+                       device="cuda" if torch.cuda.is_available() else "cpu", threads=torch.get_num_threads(),
+                       seconds=time.time() - t_start, memory=H.peak_mem(), job=os.environ.get("SLURM_JOB_ID"),
+                       host=os.uname().nodename, protoglad_commit=PG_COMMIT,
+                       adapter_sha256=sha256(osp.abspath(__file__)),
+                       completed=time.strftime("%Y-%m-%d %H:%M:%S"))
+        tmp = js + ".tmp"
+        with open(tmp, "w") as f:
+            json.dump(payload, f)
+        os.replace(tmp, js)
+        print(f"[done] grid {DS} fold{fold} psi1={psi1} ({features}) in {time.time() - t_start:.0f}s", flush=True)
+        return "done"
+U synthetic_exp/run_synthetic_search.py 111 1 [4]
+U protoglad/experiments/run_detection.py 135 1 [8]
+O 9
+            os.remove(lock)
+        except OSError:
+            pass
+
+
+def select(DS, features="ubgold"):
+    """Replay of hyperparam_search's selection: cells in product order, 5-fold mean of the test AUC
+    (roc_auc_score, l.60), first strictly larger mean wins, starting from 0.0 (l.184, l.259)."""
+    import pandas as pd
+U protoglad/experiments/run_detection.py 127 1 [4]
+O 13
+    for fold in range(5):
+        for psi1 in GRID_SPACE["psi1"]:
+            js = grid_unit_paths(DS, fold, psi1, features)[0]
+            if not osp.exists(js):
+                raise FileNotFoundError(js)
+            rows += json.load(open(js))["rows"]
+    df = pd.DataFrame(rows)
+    assert len(df) == 5 * len(grid_cells()), len(df)
+    best_avg_auc, best_std, best_params, table = 0.0, 0.0, {}, []
+    for (h, psi1, psi2, tau) in grid_cells():
+        g = df[(df.h == h) & (df.psi1 == psi1) & (df.psi2 == psi2) & (df.tau == tau)].sort_values("fold")
+        assert list(g.fold) == [0, 1, 2, 3, 4]
+        fold_aucs = list(g.auroc_protoglad)
+U protoglad/experiments/run_detection.py 233 2 [8,8]
+O 4
+        table.append(dict(h=h, psi1=psi1, psi2=psi2, tau=tau, auc_mean=mean_auc, auc_std=std_auc,
+                          auprc_mean=float(g.auprc.mean()), fpr95_mean=float(g.fpr95.mean()),
+                          holdout_score_mean=float(g.holdout_score.mean()),
+                          n_prototypes_mean=float(g.n_prototypes.mean())))
+U protoglad/experiments/run_detection.py 259 4 [8,12,12,12]
+O 15
+    os.makedirs(GRID_RES, exist_ok=True)
+    suffix = "" if features == "ubgold" else "_native"
+    df.sort_values(["h", "psi1", "psi2", "tau", "fold"]).to_csv(osp.join(GRID_RES, f"{DS}{suffix}_grid.csv"),
+                                                                 index=False)
+    pd.DataFrame(table).to_csv(osp.join(GRID_RES, f"{DS}{suffix}_cells.csv"), index=False)
+    out = dict(dataset=DS, features=features, best_auc=best_avg_auc, best_std=best_std, best_params=best_params,
+               n_cells=len(table), rule="run_detection.py l.167-272: first cell with strictly larger 5-fold mean "
+                                         "test roc_auc_score (TEST-LABEL SELECTION; upper bound)",
+               completed=time.strftime("%Y-%m-%d %H:%M:%S"))
+    with open(gridbest_path(DS, features), "w") as f:
+        json.dump(out, f, indent=1)
+    print(f"[select] {DS} ({features}): best {best_params} mean test AUC {best_avg_auc:.4f} +- {best_std:.4f}")
+    return out
+
+
+U protoglad/experiments/run_detection.py 363 1 [0]
+O 14
+    if len(sys.argv) > 1 and sys.argv[1] in ("grid", "select"):
+        cmd = sys.argv.pop(1)
+        ap = argparse.ArgumentParser()
+        ap.add_argument("--dataset", required=True)
+        ap.add_argument("--fold", type=int)
+        ap.add_argument("--psi1", type=int)
+        ap.add_argument("--features", default="ubgold", choices=["ubgold", "native"])
+        ap.add_argument("--threads", type=int, default=int(os.environ.get("EP_THREADS", "1")))
+        a = ap.parse_args()
+        torch.set_num_threads(a.threads)
+        if cmd == "grid":
+            st = run_grid_unit(a.dataset, a.fold, a.psi1, a.features)
+            sys.exit(0 if st == "done" else 3)
+        select(a.dataset, a.features)
+U run.py 22 1 [8]
+O 14
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--method", default=METHOD)
+    ap.add_argument("--dataset", required=True)
+    ap.add_argument("--fold", type=int, required=True)
+    ap.add_argument("--hp", default="ubgold", choices=["ubgold", "hpfree"])
+    ap.add_argument("--features", default="ubgold", choices=["ubgold", "native"],
+                    help="native = ProtoGLAD's own feature map (diagnostic only; run_id gets _nativefeat)")
+    ap.add_argument("--holdout_frac", type=float, default=0.2)
+    ap.add_argument("--tag", default="")
+    ap.add_argument("--threads", type=int, default=int(os.environ.get("EP_THREADS", "1")))
+    a = ap.parse_args()
+    if a.method != METHOD:
+        sys.exit(f"this adapter runs only {METHOD}")
+    torch.set_num_threads(a.threads)
+U protoglad/experiments/run_detection.py 135 1 [4]
+O 5
+        st = run(a.dataset, a.fold, hp=a.hp, features=a.features, holdout_frac=a.holdout_frac, tag=a.tag)
+    except FileNotFoundError as e:
+        print(f"[wait] {e}", flush=True)
+        sys.exit(4)
+    sys.exit(0 if st == "done" else 3)

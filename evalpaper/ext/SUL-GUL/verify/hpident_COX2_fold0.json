@@ -1,0 +1,35 @@
+{
+ "n_points": [
+  30,
+  30
+ ],
+ "max_abs_diff_traj": 0.0,
+ "max_abs_diff_scores": 0.0,
+ "same_nan_pattern": true,
+ "bit_identical": true,
+ "hparams_identical": true,
+ "hparams": {
+  "batch_size": 256,
+  "batch_size_test": 9999,
+  "conv_layers": 2,
+  "dataset": "COX2",
+  "device": "cpu",
+  "dropout": 0.3,
+  "epochs": 30,
+  "hidden_dim": 128,
+  "interval": 10,
+  "lr": 0.001,
+  "n_split": 5,
+  "out_dim": 64,
+  "poll_ratio": 0.0,
+  "pooling_type": "avg",
+  "seed": 3407,
+  "topk": 96,
+  "w_a": 0.4,
+  "w_g": 0.7,
+  "w_n": 0.6,
+  "topk_effective": 65,
+  "num_epoch": 30,
+  "eval_freq": 1
+ }
+}

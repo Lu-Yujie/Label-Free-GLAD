@@ -1,0 +1,5 @@
+dataset,paper,n_seeds,own_best24_rule,own_best24,own_best24_std,apriori_rcsm_full_test_cdf,fallback_fixed_test_raw,fixed_test_cdf,train_single_best6,train_single_methods,ckpt_epochs,diff_best24_vs_paper
+MUTAG,91.42,5,domain_test_cdf,91.47,3.8,89.51,84.19,89.49,91.85,"graph_knn,ensemble,ensemble,ensemble,graph_knn","5,45,5,120,5",0.05
+AIDS,99.32,5,fixed_test_z,99.81,0.02,98.88,97.46,98.98,99.83,"ensemble,ensemble,ensemble,ensemble,ensemble","0,30,1,0,80",0.49
+DHFR,69.38,5,domain_test_raw,60.18,2.81,57.37,59.35,56.62,60.86,"graph_knn,fusion_knn,graph_knn,graph_knn,graph_knn","120,10,1,105,40",-9.2
+IMDB-BINARY,77.2,5,fixed_test_z,76.83,1.14,73.63,73.82,74.0,76.88,"ensemble,ensemble,ensemble,ensemble,ensemble","0,0,105,10,10",-0.37

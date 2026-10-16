@@ -1,0 +1,32 @@
+pool,selector,selector_label,view,n_methods,delta,ds_ci_lo,ds_ci_hi,ci_above_0,methods
+frozen12,S1,LAST,primary,12,5.119494,3.970365,6.240349,True,SIGNET|OCGTL|OCGIN|GLocalKD|GLADC|CVTGAD|GOOD-D|GraphDE|GraphCL_IF|GraphCL_OCSVM|InfoGraph_IF|InfoGraph_OCSVM
+frozen12,S1,LAST,coverage-matched (S3-covered detectors),8,5.560699,4.219218,6.897247,True,GLADC|CVTGAD|GOOD-D|GraphDE|GraphCL_IF|GraphCL_OCSVM|InfoGraph_IF|InfoGraph_OCSVM
+frozen12,S2,VAL-NORMAL (min mean held-out score),primary,12,4.130303,3.321645,4.793184,True,SIGNET|OCGTL|OCGIN|GLocalKD|GLADC|CVTGAD|GOOD-D|GraphDE|GraphCL_IF|GraphCL_OCSVM|InfoGraph_IF|InfoGraph_OCSVM
+frozen12,S2,VAL-NORMAL (min mean held-out score),coverage-matched (S3-covered detectors),8,4.253585,3.306319,5.050733,True,GLADC|CVTGAD|GOOD-D|GraphDE|GraphCL_IF|GraphCL_OCSVM|InfoGraph_IF|InfoGraph_OCSVM
+frozen12,S3,min median held-out score,primary,8,4.153947,3.224713,4.978108,True,GLADC|CVTGAD|GOOD-D|GraphDE|GraphCL_IF|GraphCL_OCSVM|InfoGraph_IF|InfoGraph_OCSVM
+frozen12,S4,min training loss,primary,12,5.100383,3.875526,6.254905,True,SIGNET|OCGTL|OCGIN|GLocalKD|GLADC|CVTGAD|GOOD-D|GraphDE|GraphCL_IF|GraphCL_OCSVM|InfoGraph_IF|InfoGraph_OCSVM
+frozen12,S4,min training loss,coverage-matched (S3-covered detectors),8,5.583963,4.197221,6.970500,True,GLADC|CVTGAD|GOOD-D|GraphDE|GraphCL_IF|GraphCL_OCSVM|InfoGraph_IF|InfoGraph_OCSVM
+frozen12,S5,point closest to half the epoch budget,primary,12,5.209739,3.999859,6.298120,True,SIGNET|OCGTL|OCGIN|GLocalKD|GLADC|CVTGAD|GOOD-D|GraphDE|GraphCL_IF|GraphCL_OCSVM|InfoGraph_IF|InfoGraph_OCSVM
+frozen12,S5,point closest to half the epoch budget,coverage-matched (S3-covered detectors),8,5.526222,4.198419,6.771728,True,GLADC|CVTGAD|GOOD-D|GraphDE|GraphCL_IF|GraphCL_OCSVM|InfoGraph_IF|InfoGraph_OCSVM
+frozen12,S6,uniform checkpoint (trajectory mean),primary,12,5.221644,4.339205,6.078355,True,SIGNET|OCGTL|OCGIN|GLocalKD|GLADC|CVTGAD|GOOD-D|GraphDE|GraphCL_IF|GraphCL_OCSVM|InfoGraph_IF|InfoGraph_OCSVM
+frozen12,S6,uniform checkpoint (trajectory mean),coverage-matched (S3-covered detectors),8,5.310641,4.360075,6.303215,True,GLADC|CVTGAD|GOOD-D|GraphDE|GraphCL_IF|GraphCL_OCSVM|InfoGraph_IF|InfoGraph_OCSVM
+frozen12,S7,min mean standardised held-out score,primary,1,10.811029,6.281514,16.338589,True,CVTGAD
+recent,S1,LAST,primary,8,6.694748,5.749397,7.606291,True,MUSE|LGKDE|GLADPro|GLADMamba|SEGO|GLASS|HC-GLAD|SUL-GUL
+recent,S2,VAL-NORMAL (min mean held-out score),primary,8,7.467873,6.153258,8.827728,True,MUSE|LGKDE|GLADPro|GLADMamba|SEGO|GLASS|HC-GLAD|SUL-GUL
+recent,S3,min median held-out score,primary,8,7.416344,6.297605,8.654933,True,MUSE|LGKDE|GLADPro|GLADMamba|SEGO|GLASS|HC-GLAD|SUL-GUL
+recent,S4,min training loss,primary,8,6.748711,5.703792,7.708465,True,MUSE|LGKDE|GLADPro|GLADMamba|SEGO|GLASS|HC-GLAD|SUL-GUL
+recent,S5,point closest to half the epoch budget,primary,8,7.669310,6.064000,9.327595,True,MUSE|LGKDE|GLADPro|GLADMamba|SEGO|GLASS|HC-GLAD|SUL-GUL
+recent,S6,uniform checkpoint (trajectory mean),primary,8,7.339934,6.075307,8.657149,True,MUSE|LGKDE|GLADPro|GLADMamba|SEGO|GLASS|HC-GLAD|SUL-GUL
+recent,S7,min mean standardised held-out score,primary,3,7.970797,6.451119,9.602235,True,GLADMamba|SEGO|GLASS
+frozen12+recent,S1,LAST,primary,20,5.749596,4.749584,6.668030,True,SIGNET|OCGTL|OCGIN|GLocalKD|GLADC|CVTGAD|GOOD-D|GraphDE|GraphCL_IF|GraphCL_OCSVM|InfoGraph_IF|InfoGraph_OCSVM|MUSE|LGKDE|GLADPro|GLADMamba|SEGO|GLASS|HC-GLAD|SUL-GUL
+frozen12+recent,S1,LAST,coverage-matched (S3-covered detectors),16,6.127724,5.142422,7.040516,True,GLADC|CVTGAD|GOOD-D|GraphDE|GraphCL_IF|GraphCL_OCSVM|InfoGraph_IF|InfoGraph_OCSVM|MUSE|LGKDE|GLADPro|GLADMamba|SEGO|GLASS|HC-GLAD|SUL-GUL
+frozen12+recent,S2,VAL-NORMAL (min mean held-out score),primary,20,5.465331,4.827910,6.020510,True,SIGNET|OCGTL|OCGIN|GLocalKD|GLADC|CVTGAD|GOOD-D|GraphDE|GraphCL_IF|GraphCL_OCSVM|InfoGraph_IF|InfoGraph_OCSVM|MUSE|LGKDE|GLADPro|GLADMamba|SEGO|GLASS|HC-GLAD|SUL-GUL
+frozen12+recent,S2,VAL-NORMAL (min mean held-out score),coverage-matched (S3-covered detectors),16,5.860729,5.078992,6.551207,True,GLADC|CVTGAD|GOOD-D|GraphDE|GraphCL_IF|GraphCL_OCSVM|InfoGraph_IF|InfoGraph_OCSVM|MUSE|LGKDE|GLADPro|GLADMamba|SEGO|GLASS|HC-GLAD|SUL-GUL
+frozen12+recent,S3,min median held-out score,primary,16,5.785146,5.168927,6.361444,True,GLADC|CVTGAD|GOOD-D|GraphDE|GraphCL_IF|GraphCL_OCSVM|InfoGraph_IF|InfoGraph_OCSVM|MUSE|LGKDE|GLADPro|GLADMamba|SEGO|GLASS|HC-GLAD|SUL-GUL
+frozen12+recent,S4,min training loss,primary,20,5.759714,4.775181,6.640156,True,SIGNET|OCGTL|OCGIN|GLocalKD|GLADC|CVTGAD|GOOD-D|GraphDE|GraphCL_IF|GraphCL_OCSVM|InfoGraph_IF|InfoGraph_OCSVM|MUSE|LGKDE|GLADPro|GLADMamba|SEGO|GLASS|HC-GLAD|SUL-GUL
+frozen12+recent,S4,min training loss,coverage-matched (S3-covered detectors),16,6.166337,5.201130,7.029922,True,GLADC|CVTGAD|GOOD-D|GraphDE|GraphCL_IF|GraphCL_OCSVM|InfoGraph_IF|InfoGraph_OCSVM|MUSE|LGKDE|GLADPro|GLADMamba|SEGO|GLASS|HC-GLAD|SUL-GUL
+frozen12+recent,S5,point closest to half the epoch budget,primary,20,6.193568,5.146886,7.203427,True,SIGNET|OCGTL|OCGIN|GLocalKD|GLADC|CVTGAD|GOOD-D|GraphDE|GraphCL_IF|GraphCL_OCSVM|InfoGraph_IF|InfoGraph_OCSVM|MUSE|LGKDE|GLADPro|GLADMamba|SEGO|GLASS|HC-GLAD|SUL-GUL
+frozen12+recent,S5,point closest to half the epoch budget,coverage-matched (S3-covered detectors),16,6.597766,5.521350,7.635049,True,GLADC|CVTGAD|GOOD-D|GraphDE|GraphCL_IF|GraphCL_OCSVM|InfoGraph_IF|InfoGraph_OCSVM|MUSE|LGKDE|GLADPro|GLADMamba|SEGO|GLASS|HC-GLAD|SUL-GUL
+frozen12+recent,S6,uniform checkpoint (trajectory mean),primary,20,6.068960,5.272117,6.876772,True,SIGNET|OCGTL|OCGIN|GLocalKD|GLADC|CVTGAD|GOOD-D|GraphDE|GraphCL_IF|GraphCL_OCSVM|InfoGraph_IF|InfoGraph_OCSVM|MUSE|LGKDE|GLADPro|GLADMamba|SEGO|GLASS|HC-GLAD|SUL-GUL
+frozen12+recent,S6,uniform checkpoint (trajectory mean),coverage-matched (S3-covered detectors),16,6.325287,5.487586,7.135696,True,GLADC|CVTGAD|GOOD-D|GraphDE|GraphCL_IF|GraphCL_OCSVM|InfoGraph_IF|InfoGraph_OCSVM|MUSE|LGKDE|GLADPro|GLADMamba|SEGO|GLASS|HC-GLAD|SUL-GUL
+frozen12+recent,S7,min mean standardised held-out score,primary,4,8.680855,6.479715,11.179206,True,CVTGAD|GLADMamba|SEGO|GLASS

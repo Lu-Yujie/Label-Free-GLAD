@@ -1,0 +1,189 @@
+{
+ "time": "2026-10-14 23:56:17",
+ "builder_sha256": "642a8f6f1bb346a6e233d914f4827fa28b1040ef7e3106b9e6b82c6fdf2ceda6",
+ "run_eval_sha256": "179e6705cb6ddf859abf82078446cdcc161cfd087ff62f9d24c49c8d0f9575fd",
+ "versions": {
+  "python": "3.12.6",
+  "torch": "2.5.1+cu124",
+  "numpy": "1.26.4",
+  "torch_geometric": "2.6.1",
+  "scipy": "1.17.1",
+  "sklearn": "1.9.1",
+  "networkx": "3.6.1",
+  "torch_scatter": "2.1.2+pt25cu124",
+  "faiss": "1.8.0"
+ },
+ "datasets": {
+  "BZR": {
+   "class_counts": [
+    319,
+    86
+   ],
+   "majority_class": 0,
+   "minority_class": 1,
+   "n_graphs": 405,
+   "test_partition": true,
+   "train_normals_each_in_4_folds": true,
+   "split_equals_unflipped_and_export": true,
+   "anomalies_total": 86,
+   "per_fold": [
+    {
+     "fold": 0,
+     "n_train_normal": 255,
+     "n_test": 81,
+     "n_test_anomalous": 17,
+     "prevalence": 0.209877,
+     "n_train_normal_original": 69
+    },
+    {
+     "fold": 1,
+     "n_train_normal": 255,
+     "n_test": 81,
+     "n_test_anomalous": 17,
+     "prevalence": 0.209877,
+     "n_train_normal_original": 69
+    },
+    {
+     "fold": 2,
+     "n_train_normal": 255,
+     "n_test": 81,
+     "n_test_anomalous": 17,
+     "prevalence": 0.209877,
+     "n_train_normal_original": 69
+    },
+    {
+     "fold": 3,
+     "n_train_normal": 255,
+     "n_test": 81,
+     "n_test_anomalous": 17,
+     "prevalence": 0.209877,
+     "n_train_normal_original": 69
+    },
+    {
+     "fold": 4,
+     "n_train_normal": 256,
+     "n_test": 81,
+     "n_test_anomalous": 18,
+     "prevalence": 0.222222,
+     "n_train_normal_original": 68
+    }
+   ],
+   "fold_file": "$GLAD_DATA_ROOT/followups/orientation/folds/BZR.json",
+   "fold_file_sha256": "73155a16649207339b46cd90076ae6ba7ab3f71e14e8d149f1937af47917f2ab"
+  },
+  "COX2": {
+   "class_counts": [
+    365,
+    102
+   ],
+   "majority_class": 0,
+   "minority_class": 1,
+   "n_graphs": 467,
+   "test_partition": true,
+   "train_normals_each_in_4_folds": true,
+   "split_equals_unflipped_and_export": true,
+   "anomalies_total": 102,
+   "per_fold": [
+    {
+     "fold": 0,
+     "n_train_normal": 292,
+     "n_test": 94,
+     "n_test_anomalous": 21,
+     "prevalence": 0.223404,
+     "n_train_normal_original": 81
+    },
+    {
+     "fold": 1,
+     "n_train_normal": 292,
+     "n_test": 94,
+     "n_test_anomalous": 21,
+     "prevalence": 0.223404,
+     "n_train_normal_original": 81
+    },
+    {
+     "fold": 2,
+     "n_train_normal": 292,
+     "n_test": 93,
+     "n_test_anomalous": 20,
+     "prevalence": 0.215054,
+     "n_train_normal_original": 82
+    },
+    {
+     "fold": 3,
+     "n_train_normal": 292,
+     "n_test": 93,
+     "n_test_anomalous": 20,
+     "prevalence": 0.215054,
+     "n_train_normal_original": 82
+    },
+    {
+     "fold": 4,
+     "n_train_normal": 292,
+     "n_test": 93,
+     "n_test_anomalous": 20,
+     "prevalence": 0.215054,
+     "n_train_normal_original": 82
+    }
+   ],
+   "fold_file": "$GLAD_DATA_ROOT/followups/orientation/folds/COX2.json",
+   "fold_file_sha256": "898d6b172a37f3a07171a8beacb8e62004f5f358fb620ba1aae03ef81ac6ff78"
+  },
+  "PROTEINS_full": {
+   "class_counts": [
+    663,
+    450
+   ],
+   "majority_class": 0,
+   "minority_class": 1,
+   "n_graphs": 1113,
+   "test_partition": true,
+   "train_normals_each_in_4_folds": true,
+   "split_equals_unflipped_and_export": true,
+   "anomalies_total": 450,
+   "per_fold": [
+    {
+     "fold": 0,
+     "n_train_normal": 530,
+     "n_test": 223,
+     "n_test_anomalous": 90,
+     "prevalence": 0.403587,
+     "n_train_normal_original": 360
+    },
+    {
+     "fold": 1,
+     "n_train_normal": 530,
+     "n_test": 223,
+     "n_test_anomalous": 90,
+     "prevalence": 0.403587,
+     "n_train_normal_original": 360
+    },
+    {
+     "fold": 2,
+     "n_train_normal": 530,
+     "n_test": 223,
+     "n_test_anomalous": 90,
+     "prevalence": 0.403587,
+     "n_train_normal_original": 360
+    },
+    {
+     "fold": 3,
+     "n_train_normal": 531,
+     "n_test": 222,
+     "n_test_anomalous": 90,
+     "prevalence": 0.405405,
+     "n_train_normal_original": 360
+    },
+    {
+     "fold": 4,
+     "n_train_normal": 531,
+     "n_test": 222,
+     "n_test_anomalous": 90,
+     "prevalence": 0.405405,
+     "n_train_normal_original": 360
+    }
+   ],
+   "fold_file": "$GLAD_DATA_ROOT/followups/orientation/folds/PROTEINS_full.json",
+   "fold_file_sha256": "ea534c5ce516e17b8132e75d7a8a2be91a4f02d90144142e8bbe9f89d44e6422"
+  }
+ }
+}

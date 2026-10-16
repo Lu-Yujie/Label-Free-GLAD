@@ -1,0 +1,86 @@
+{
+ "verdict": "FAIL",
+ "gain_pseudo_vs_valnormal_avg4": -0.1029129696473377,
+ "gain_ci_fold": [
+  -0.7387889466599621,
+  0.5443498209453221
+ ],
+ "gain_ci_dataset": [
+  -1.207632989046644,
+  1.016313449220551
+ ],
+ "methods_improved": 2,
+ "per_method_gain": {
+  "SIGNET": -1.097864982792225,
+  "OCGTL": -0.6937018612451663,
+  "OCGIN": 0.5085797508190675,
+  "GLocalKD": 0.8713352146289732
+ },
+ "better_literature_baseline": "ckpt_ensemble",
+ "pseudo_minus_better_baseline": 0.22095058135724344,
+ "pseudo_beats_both_baselines": true,
+ "pass_not_robust": false,
+ "mean_auroc_avg4": {
+  "oracle": 70.36836688439823,
+  "last": 65.71513456687246,
+  "valnormal": 66.10816552328194,
+  "pseudo": 66.0052525536346,
+  "ckpt_ensemble": 65.78430197227736,
+  "consensus": 65.60061821824954,
+  "pseudo_ensemble": 66.10589917545416,
+  "oracle_nostop": 71.1463826645585,
+  "aucp": 65.84062031489208,
+  "pseudo_rewire": 65.5709226476,
+  "pseudo_motif": 65.95824155601998,
+  "pseudo_roleswap": 65.59054647536537,
+  "pseudo_labelnoise": 65.9248078103331
+ },
+ "coverage": {
+  "GLocalKD": {
+   "AIDS": 5,
+   "BZR": 5,
+   "COX2": 5,
+   "DHFR": 5,
+   "ENZYMES": 5,
+   "IMDB-BINARY": 5,
+   "NCI1": 5,
+   "PROTEINS_full": 5,
+   "REDDIT-BINARY": 0
+  },
+  "OCGIN": {
+   "AIDS": 5,
+   "BZR": 5,
+   "COX2": 5,
+   "DHFR": 5,
+   "ENZYMES": 5,
+   "IMDB-BINARY": 5,
+   "NCI1": 5,
+   "PROTEINS_full": 5,
+   "REDDIT-BINARY": 5
+  },
+  "OCGTL": {
+   "AIDS": 5,
+   "BZR": 5,
+   "COX2": 5,
+   "DHFR": 5,
+   "ENZYMES": 5,
+   "IMDB-BINARY": 5,
+   "NCI1": 5,
+   "PROTEINS_full": 5,
+   "REDDIT-BINARY": 5
+  },
+  "SIGNET": {
+   "AIDS": 5,
+   "BZR": 5,
+   "COX2": 5,
+   "DHFR": 5,
+   "ENZYMES": 5,
+   "IMDB-BINARY": 5,
+   "NCI1": 5,
+   "PROTEINS_full": 5,
+   "REDDIT-BINARY": 5
+  }
+ },
+ "n_runs": 175,
+ "boot": 10000
+}

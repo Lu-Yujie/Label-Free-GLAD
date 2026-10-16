@@ -1,0 +1,22 @@
+method,stratum,runs_listed,runs_with_part,runs_analysed,runs_with_scores,source,cov_ORACLE,cov_S1,cov_S2,cov_S3,cov_S4,cov_S5,cov_S6,cov_S7,cov_perm,cov_sizematch
+SIGNET,frozen12,45,45,45,0,"deep_rerun parts (trajectory only, no per-graph scores)",45,45,45,0,45,45,45,0,0,0
+OCGTL,frozen12,45,45,45,0,"deep_rerun parts (trajectory only, no per-graph scores)",45,45,45,0,45,45,45,0,0,0
+OCGIN,frozen12,45,45,45,0,"deep_rerun parts (trajectory only, no per-graph scores)",45,45,45,0,45,45,45,0,0,0
+GLocalKD,frozen12,45,45,45,0,"deep_rerun parts (trajectory only, no per-graph scores)",45,45,45,0,45,45,45,0,0,0
+GLADC,frozen12,45,45,45,45,harness parts + npz,45,45,45,45,45,45,45,0,45,43
+CVTGAD,frozen12,45,45,45,45,harness parts + npz,45,45,45,45,45,45,45,45,45,43
+GOOD-D,frozen12,45,45,45,45,harness parts + npz,45,45,45,45,45,45,45,0,45,43
+GraphDE,frozen12,45,45,45,45,harness parts + npz,45,45,45,45,45,45,45,0,45,43
+GraphCL_IF,frozen12,45,45,45,45,harness parts + npz,45,45,45,45,45,45,45,0,45,43
+GraphCL_OCSVM,frozen12,45,45,45,45,harness parts + npz,45,45,45,45,45,45,45,0,45,43
+InfoGraph_IF,frozen12,45,45,45,45,harness parts + npz,45,45,45,45,45,45,45,0,45,43
+InfoGraph_OCSVM,frozen12,45,45,45,45,harness parts + npz,45,45,45,45,45,45,45,0,45,43
+MUSE,E5,45,45,45,45,ext parts + npz,45,45,45,45,45,45,45,0,45,43
+LGKDE,E5,45,45,45,45,ext parts + npz,45,45,45,45,45,45,45,0,45,43
+GLADPro,E5,45,45,45,45,ext parts + npz,45,45,45,45,45,45,45,0,45,43
+GLADMamba,E5,45,45,45,45,ext parts + npz,45,45,45,45,45,45,45,45,45,43
+SEGO,E5,45,45,45,45,ext parts + npz,45,45,45,45,45,45,45,45,45,43
+GLASS,E4,45,45,45,45,ext parts + npz,45,45,45,45,45,45,45,45,45,43
+ProtoGLAD,E4,45,45,45,45,"ext parts + npz; A20: no checkpoint axis, item 4 only",0,0,0,0,0,0,0,0,0,43
+HC-GLAD,E4,45,45,45,45,ext parts + npz,45,45,45,45,45,45,45,0,45,43
+SUL-GUL,E4,45,45,45,45,ext parts + npz,45,45,45,45,45,45,45,0,45,43

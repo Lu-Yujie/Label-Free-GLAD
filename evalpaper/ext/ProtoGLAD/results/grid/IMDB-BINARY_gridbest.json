@@ -1,0 +1,15 @@
+{
+ "dataset": "IMDB-BINARY",
+ "features": "ubgold",
+ "best_auc": 0.53854,
+ "best_std": 0.02887193100573638,
+ "best_params": {
+  "h": 2,
+  "psi1": 2,
+  "psi2": 4,
+  "tau": 0.001
+ },
+ "n_cells": 144,
+ "rule": "run_detection.py l.167-272: first cell with strictly larger 5-fold mean test roc_auc_score (TEST-LABEL SELECTION; upper bound)",
+ "completed": "2026-10-13 13:08:39"
+}

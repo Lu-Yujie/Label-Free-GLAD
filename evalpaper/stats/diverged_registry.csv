@@ -1,0 +1,4 @@
+method,dataset,fold,hp,attempts,jobs,evidence,amendment
+GLADC,COLLAB,1,ubgold,3,8549854|8549855|8549857,"GLADC.gen_ran_output: torch.normal(0, std) with non-finite param.data.std() (training diverged to NaN), unmodified UB-GOLD code, same error each attempt",A12
+GLADC,COLLAB,3,ubgold,3,8549854|8549855|8549857,"GLADC.gen_ran_output: torch.normal(0, std) with non-finite param.data.std() (training diverged to NaN), unmodified UB-GOLD code, same error each attempt",A12
+GLADC,COLLAB,4,ubgold,3,8549854|8549855|8549857,"GLADC.gen_ran_output: torch.normal(0, std) with non-finite param.data.std() (training diverged to NaN), unmodified UB-GOLD code, same error each attempt",A12

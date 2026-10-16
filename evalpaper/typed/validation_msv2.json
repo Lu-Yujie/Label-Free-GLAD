@@ -1,0 +1,226 @@
+{
+ "checks": {
+  "MS1_matched_labels_identical": 1252,
+  "MS1_matched_nm_equal": 1252,
+  "MS1_matched_not_isomorphic_to_any_P0_graph": 1252,
+  "MS1_matched_not_isomorphic_to_parent": 1252,
+  "MS1_matched_signature_ok": 1252,
+  "MS1_matched_simple_connected_parent_ok": 1252,
+  "MS1_matched_total": 1252,
+  "MS1_matched_valence_ok": 1252,
+  "MS1_sizechg_core_eq_matched_donor_intact_one_bridge": 1250,
+  "MS1_sizechg_dn_20_to_100pct": 1250,
+  "MS1_sizechg_not_isomorphic_to_any_P0_graph": 1250,
+  "MS1_sizechg_simple_connected_parent_ok": 1250,
+  "MS1_sizechg_total": 1250,
+  "MS1_sizechg_valence_ok": 1250,
+  "MS2_matched_labels_identical": 752,
+  "MS2_matched_nm_equal": 752,
+  "MS2_matched_not_isomorphic_to_any_P0_graph": 752,
+  "MS2_matched_not_isomorphic_to_parent": 752,
+  "MS2_matched_signature_ok": 752,
+  "MS2_matched_simple_connected_parent_ok": 752,
+  "MS2_matched_total": 752,
+  "MS2_matched_valence_ok": 752,
+  "MS2_sizechg_core_eq_matched_donor_intact_one_bridge": 748,
+  "MS2_sizechg_dn_20_to_100pct": 748,
+  "MS2_sizechg_not_isomorphic_to_any_P0_graph": 748,
+  "MS2_sizechg_simple_connected_parent_ok": 748,
+  "MS2_sizechg_total": 748,
+  "MS2_sizechg_valence_ok": 748,
+  "MS3_matched_labels_identical": 1502,
+  "MS3_matched_nm_equal": 1502,
+  "MS3_matched_not_isomorphic_to_any_P0_graph": 1502,
+  "MS3_matched_not_isomorphic_to_parent": 1502,
+  "MS3_matched_signature_ok": 1502,
+  "MS3_matched_simple_connected_parent_ok": 1502,
+  "MS3_matched_total": 1502,
+  "MS3_matched_valence_ok": 1502,
+  "MS3_sizechg_core_eq_matched_donor_intact_one_bridge": 1499,
+  "MS3_sizechg_dn_20_to_100pct": 1499,
+  "MS3_sizechg_not_isomorphic_to_any_P0_graph": 1499,
+  "MS3_sizechg_simple_connected_parent_ok": 1499,
+  "MS3_sizechg_total": 1499,
+  "MS3_sizechg_valence_ok": 1499,
+  "split_ok": 5
+ },
+ "per_seed": {
+  "0": {
+   "wl_dup_with_train": {
+    "anom_MS1_matched": 0,
+    "anom_MS1_sizechg": 0,
+    "anom_MS2_matched": 0,
+    "anom_MS2_sizechg": 0,
+    "anom_MS3_matched": 0,
+    "anom_MS3_sizechg": 0
+   },
+   "wl_dup_with_test_normal": {
+    "anom_MS1_matched": 0,
+    "anom_MS1_sizechg": 0,
+    "anom_MS2_matched": 0,
+    "anom_MS2_sizechg": 0,
+    "anom_MS3_matched": 0,
+    "anom_MS3_sizechg": 0
+   },
+   "n_edits": {
+    "MS1": {
+     "1": 237
+    },
+    "MS2": {
+     "1": 30,
+     "2": 124
+    },
+    "MS3": {
+     "1": 295
+    }
+   },
+   "new_ring_sizes_D": {
+    "4": 170,
+    "5": 37,
+    "6": 5
+   }
+  },
+  "1": {
+   "wl_dup_with_train": {
+    "anom_MS1_matched": 0,
+    "anom_MS1_sizechg": 0,
+    "anom_MS2_matched": 0,
+    "anom_MS2_sizechg": 0,
+    "anom_MS3_matched": 0,
+    "anom_MS3_sizechg": 0
+   },
+   "wl_dup_with_test_normal": {
+    "anom_MS1_matched": 0,
+    "anom_MS1_sizechg": 0,
+    "anom_MS2_matched": 0,
+    "anom_MS2_sizechg": 0,
+    "anom_MS3_matched": 0,
+    "anom_MS3_sizechg": 0
+   },
+   "n_edits": {
+    "MS1": {
+     "1": 246
+    },
+    "MS2": {
+     "1": 33,
+     "2": 110
+    },
+    "MS3": {
+     "1": 294
+    }
+   },
+   "new_ring_sizes_D": {
+    "4": 132,
+    "5": 48,
+    "6": 5
+   }
+  },
+  "2": {
+   "wl_dup_with_train": {
+    "anom_MS1_matched": 0,
+    "anom_MS1_sizechg": 0,
+    "anom_MS2_matched": 0,
+    "anom_MS2_sizechg": 0,
+    "anom_MS3_matched": 0,
+    "anom_MS3_sizechg": 0
+   },
+   "wl_dup_with_test_normal": {
+    "anom_MS1_matched": 0,
+    "anom_MS1_sizechg": 0,
+    "anom_MS2_matched": 0,
+    "anom_MS2_sizechg": 0,
+    "anom_MS3_matched": 0,
+    "anom_MS3_sizechg": 0
+   },
+   "n_edits": {
+    "MS1": {
+     "1": 262
+    },
+    "MS2": {
+     "1": 35,
+     "2": 138
+    },
+    "MS3": {
+     "1": 303
+    }
+   },
+   "new_ring_sizes_D": {
+    "4": 159,
+    "5": 62,
+    "6": 4
+   }
+  },
+  "3": {
+   "wl_dup_with_train": {
+    "anom_MS1_matched": 0,
+    "anom_MS1_sizechg": 0,
+    "anom_MS2_matched": 0,
+    "anom_MS2_sizechg": 0,
+    "anom_MS3_matched": 0,
+    "anom_MS3_sizechg": 0
+   },
+   "wl_dup_with_test_normal": {
+    "anom_MS1_matched": 0,
+    "anom_MS1_sizechg": 0,
+    "anom_MS2_matched": 0,
+    "anom_MS2_sizechg": 0,
+    "anom_MS3_matched": 0,
+    "anom_MS3_sizechg": 0
+   },
+   "n_edits": {
+    "MS1": {
+     "1": 255
+    },
+    "MS2": {
+     "1": 20,
+     "2": 123
+    },
+    "MS3": {
+     "1": 303
+    }
+   },
+   "new_ring_sizes_D": {
+    "4": 133,
+    "5": 52,
+    "6": 6
+   }
+  },
+  "4": {
+   "wl_dup_with_train": {
+    "anom_MS1_matched": 0,
+    "anom_MS1_sizechg": 0,
+    "anom_MS2_matched": 0,
+    "anom_MS2_sizechg": 0,
+    "anom_MS3_matched": 0,
+    "anom_MS3_sizechg": 0
+   },
+   "wl_dup_with_test_normal": {
+    "anom_MS1_matched": 0,
+    "anom_MS1_sizechg": 0,
+    "anom_MS2_matched": 0,
+    "anom_MS2_sizechg": 0,
+    "anom_MS3_matched": 0,
+    "anom_MS3_sizechg": 0
+   },
+   "n_edits": {
+    "MS1": {
+     "1": 252
+    },
+    "MS2": {
+     "1": 35,
+     "2": 104
+    },
+    "MS3": {
+     "1": 307
+    }
+   },
+   "new_ring_sizes_D": {
+    "4": 134,
+    "5": 35,
+    "6": 2
+   }
+  }
+ },
+ "failures": [],
+ "n_failures": 0
+}

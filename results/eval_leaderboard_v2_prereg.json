@@ -1,0 +1,413 @@
+{
+ "generated": "2026-10-15 12:17:13 EDT",
+ "version": "v2",
+ "final_mode": true,
+ "rule": "PASS/FAIL once every frozen-12 UB9 cell is resolved (5 folds done or DIVERGED), or with --final; otherwise PENDING with the current value",
+ "G1": {
+  "valnormal": {
+   "selector": "valnormal",
+   "comparison": "ORACLE - VAL-NORMAL",
+   "complete_methods": [
+    "SIGNET",
+    "OCGTL",
+    "OCGIN",
+    "GLocalKD",
+    "GLADC",
+    "CVTGAD",
+    "GOOD-D",
+    "GraphDE",
+    "GraphCL_IF",
+    "GraphCL_OCSVM",
+    "InfoGraph_IF",
+    "InfoGraph_OCSVM"
+   ],
+   "n_complete": 12,
+   "n_required": 8,
+   "all_methods_resolved": true,
+   "inflation_per_method": {
+    "SIGNET": 3.1483156869742603,
+    "OCGTL": 3.213272622931296,
+    "OCGIN": 5.336268805242356,
+    "GLocalKD": 3.837099061880453,
+    "GLADC": 4.823290559862235,
+    "CVTGAD": 5.023730489532387,
+    "GOOD-D": 4.647549507770277,
+    "GraphDE": 2.148398366610673,
+    "GraphCL_IF": 3.103638120197152,
+    "GraphCL_OCSVM": 6.002678055590363,
+    "InfoGraph_IF": 5.321782749618361,
+    "InfoGraph_OCSVM": 2.957612687800688
+   },
+   "mean_inflation": 4.130303059500875,
+   "mean_fold_ci": [
+    3.767454953123304,
+    4.496444937282505
+   ],
+   "mean_ds_ci": [
+    3.321645352455155,
+    4.793184467754745
+   ],
+   "n_methods_ge2": 12,
+   "frac_methods_ge2": 1.0,
+   "conditions": {
+    "n_complete>=8": true,
+    "mean>=3.0": true,
+    "frac(>=2.0)>=0.75": true
+   },
+   "currently_met": true,
+   "status": "PASS"
+  },
+  "last": {
+   "selector": "last",
+   "comparison": "ORACLE - LAST",
+   "complete_methods": [
+    "SIGNET",
+    "OCGTL",
+    "OCGIN",
+    "GLocalKD",
+    "GLADC",
+    "CVTGAD",
+    "GOOD-D",
+    "GraphDE",
+    "GraphCL_IF",
+    "GraphCL_OCSVM",
+    "InfoGraph_IF",
+    "InfoGraph_OCSVM"
+   ],
+   "n_complete": 12,
+   "n_required": 8,
+   "all_methods_resolved": true,
+   "inflation_per_method": {
+    "SIGNET": 4.007412515926626,
+    "OCGTL": 3.405872548571825,
+    "OCGIN": 5.685049894337262,
+    "GLocalKD": 3.850005908120633,
+    "GLADC": 5.073641870018136,
+    "CVTGAD": 5.122157257386793,
+    "GOOD-D": 4.55168739652082,
+    "GraphDE": 3.3766918923445166,
+    "GraphCL_IF": 3.9944831933269986,
+    "GraphCL_OCSVM": 6.369569690023672,
+    "InfoGraph_IF": 9.668868714712733,
+    "InfoGraph_OCSVM": 6.328490061310174
+   },
+   "mean_inflation": 5.119494245216683,
+   "mean_fold_ci": [
+    4.765452802398375,
+    5.48043040408155
+   ],
+   "mean_ds_ci": [
+    3.9703647785483946,
+    6.240349377856375
+   ],
+   "n_methods_ge2": 12,
+   "frac_methods_ge2": 1.0,
+   "conditions": {
+    "n_complete>=8": true,
+    "mean>=3.0": true,
+    "frac(>=2.0)>=0.75": true
+   },
+   "currently_met": true,
+   "status": "PASS"
+  },
+  "primary": "PASS"
+ },
+ "G2a": {
+  "pool": "frozen-12 methods with complete UB9 ORACLE and VAL-NORMAL",
+  "methods": [
+   "SIGNET",
+   "OCGTL",
+   "OCGIN",
+   "GLocalKD",
+   "GLADC",
+   "CVTGAD",
+   "GOOD-D",
+   "GraphDE",
+   "GraphCL_IF",
+   "GraphCL_OCSVM",
+   "InfoGraph_IF",
+   "InfoGraph_OCSVM"
+  ],
+  "tau_b": 0.7575757575757576,
+  "top3_oracle": [
+   "CVTGAD",
+   "SIGNET",
+   "GOOD-D"
+  ],
+  "top3_valnormal": [
+   "SIGNET",
+   "CVTGAD",
+   "OCGTL"
+  ],
+  "top3_changed": true,
+  "currently_met": true,
+  "status": "PASS"
+ },
+ "G2b": {
+  "pool": "frozen-12 methods with complete UB9 VAL-NORMAL and HP-FREE, minus A21 identical-config",
+  "methods": [
+   "SIGNET",
+   "OCGTL",
+   "OCGIN",
+   "GLocalKD",
+   "GLADC",
+   "CVTGAD",
+   "GOOD-D",
+   "GraphDE",
+   "GraphCL_IF",
+   "GraphCL_OCSVM",
+   "InfoGraph_IF",
+   "InfoGraph_OCSVM"
+  ],
+  "excluded_A21": [],
+  "n_complete": 12,
+  "hp_leak_per_method": {
+   "SIGNET": 2.293578296854523,
+   "OCGTL": 8.755519352684503,
+   "OCGIN": 0.9626844293343494,
+   "GLocalKD": 1.471732666280832,
+   "GLADC": -0.8337450226626804,
+   "CVTGAD": 4.526265845735466,
+   "GOOD-D": 0.793921824913123,
+   "GraphDE": -1.1046638549331786,
+   "GraphCL_IF": 0.09115665682837523,
+   "GraphCL_OCSVM": 0.1741481104378104,
+   "InfoGraph_IF": 0.7095266329791922,
+   "InfoGraph_OCSVM": 0.5667793317490277
+  },
+  "mean_hp_leak": 1.533908689183445,
+  "mean_fold_ci": [
+   1.1595160682591792,
+   1.9008975023591308
+  ],
+  "mean_ds_ci": [
+   0.6434033573573692,
+   2.4166688723153067
+  ],
+  "currently_met": false,
+  "status": "FAIL"
+ },
+ "G2c": {
+  "label": "hypothesis generated post hoc; tested out of sample per A9",
+  "confirmatory_methods": [
+   "GLADC",
+   "CVTGAD",
+   "GOOD-D",
+   "GraphDE",
+   "GraphCL_IF",
+   "GraphCL_OCSVM",
+   "InfoGraph_IF",
+   "InfoGraph_OCSVM"
+  ],
+  "rule": {
+   "valid_gc_min": 85.0,
+   "valid_size_max": 60.0,
+   "confound_elp_min": 85.0,
+   "blind_max": 60.0,
+   "min_anomalies": 100,
+   "pooled_blind_min": 0.75,
+   "ms_blind_min": 0.6,
+   "ms_methods_min": 5,
+   "refuted_ms_max": 0.4,
+   "min_valid_ms": 2,
+   "h4s_drop_pp": 25.0
+  },
+  "feasibility_reading": "any_seed_below_100_infeasible (A25)",
+  "feasibility_note": "A9 \u00a72 as amended by A25: infeasible iff any seed yields < 100 anomalies",
+  "decision": {
+   "decision_types": [
+    "GX:T1a",
+    "GX:T3a",
+    "GX:T3b",
+    "MS:MS1",
+    "MS:MS2",
+    "MS:MS3"
+   ],
+   "n_valid_ms_types": 3,
+   "undetermined_types": [],
+   "n_pairs": 48,
+   "n_pairs_missing": 0,
+   "n_cells_incomplete": 0,
+   "frac_blind_pooled": 0.8125,
+   "frac_blind_ms": 0.75,
+   "methods_blind_on_majority_of_ms": 6,
+   "per_method_majority_ms": {
+    "GLADC": true,
+    "CVTGAD": false,
+    "GOOD-D": false,
+    "GraphDE": true,
+    "GraphCL_IF": true,
+    "GraphCL_OCSVM": true,
+    "InfoGraph_IF": true,
+    "InfoGraph_OCSVM": true
+   },
+   "cond_i": true,
+   "cond_ii": true,
+   "verdict": "CONFIRMED",
+   "complete": true
+  },
+  "verdict": "CONFIRMED",
+  "status": "PASS",
+  "sensitivity_F1": {
+   "decision_types": [
+    "GX:T1a",
+    "GX:T3a",
+    "GX:T3b",
+    "MS:MS1",
+    "MS:MS2",
+    "MS:MS3"
+   ],
+   "n_valid_ms_types": 3,
+   "undetermined_types": [],
+   "n_pairs": 48,
+   "n_pairs_missing": 0,
+   "n_cells_incomplete": 0,
+   "frac_blind_pooled": 0.7708333333333334,
+   "frac_blind_ms": 0.75,
+   "methods_blind_on_majority_of_ms": 6,
+   "per_method_majority_ms": {
+    "GLADC": true,
+    "CVTGAD": false,
+    "GOOD-D": false,
+    "GraphDE": true,
+    "GraphCL_IF": true,
+    "GraphCL_OCSVM": true,
+    "InfoGraph_IF": true,
+    "InfoGraph_OCSVM": true
+   },
+   "cond_i": true,
+   "cond_ii": true,
+   "verdict": "CONFIRMED",
+   "complete": true
+  },
+  "discovery_methods_descriptive": {
+   "old4 (discovery)": {
+    "decision_types": [
+     "GX:T1a",
+     "GX:T3a",
+     "GX:T3b",
+     "MS:MS1",
+     "MS:MS2",
+     "MS:MS3"
+    ],
+    "n_valid_ms_types": 3,
+    "undetermined_types": [],
+    "n_pairs": 24,
+    "n_pairs_missing": 0,
+    "n_cells_incomplete": 0,
+    "frac_blind_pooled": 0.7916666666666666,
+    "frac_blind_ms": 0.5833333333333334,
+    "methods_blind_on_majority_of_ms": 3,
+    "per_method_majority_ms": {
+     "SIGNET": true,
+     "OCGTL": false,
+     "OCGIN": true,
+     "GLocalKD": true
+    },
+    "cond_i": true,
+    "cond_ii": false,
+    "verdict": "PARTIAL",
+    "complete": true
+   },
+   "E5": {
+    "decision_types": [
+     "GX:T1a",
+     "GX:T3a",
+     "GX:T3b",
+     "MS:MS1",
+     "MS:MS2",
+     "MS:MS3"
+    ],
+    "n_valid_ms_types": 3,
+    "undetermined_types": [],
+    "n_pairs": 30,
+    "n_pairs_missing": 0,
+    "n_cells_incomplete": 0,
+    "frac_blind_pooled": 0.5666666666666667,
+    "frac_blind_ms": 0.6,
+    "methods_blind_on_majority_of_ms": 3,
+    "per_method_majority_ms": {
+     "MUSE": true,
+     "LGKDE": true,
+     "GLADPro": true,
+     "GLADMamba": false,
+     "SEGO": false
+    },
+    "cond_i": false,
+    "cond_ii": false,
+    "verdict": "PARTIAL",
+    "complete": true
+   },
+   "E4": {
+    "decision_types": [
+     "GX:T1a",
+     "GX:T3a",
+     "GX:T3b",
+     "MS:MS1",
+     "MS:MS2",
+     "MS:MS3"
+    ],
+    "n_valid_ms_types": 3,
+    "undetermined_types": [],
+    "n_pairs": 24,
+    "n_pairs_missing": 0,
+    "n_cells_incomplete": 0,
+    "frac_blind_pooled": 0.75,
+    "frac_blind_ms": 0.75,
+    "methods_blind_on_majority_of_ms": 3,
+    "per_method_majority_ms": {
+     "GLASS": false,
+     "ProtoGLAD": true,
+     "HC-GLAD": true,
+     "SUL-GUL": true
+    },
+    "cond_i": true,
+    "cond_ii": false,
+    "verdict": "PARTIAL",
+    "complete": true
+   }
+  },
+  "H4s_scope": {
+   "types": [
+    "MS1",
+    "MS2",
+    "MS3"
+   ],
+   "blind_rate_matched": 0.75,
+   "n_matched": 24,
+   "blind_rate_changing": 0.125,
+   "n_changing": 24,
+   "drop_pp": 62.5,
+   "scope_to_size_preserving": true,
+   "status": "computed"
+  },
+  "descriptive_4method_m2": {
+   "label": "descriptive only (A9 \u00a75): PREREG's post-hoc 4-method computation on M2",
+   "per_method": {
+    "GLocalKD": {
+     "T1a": 50.10527999999999,
+     "T3a": 51.53536,
+     "T3b": 51.58736
+    },
+    "OCGIN": {
+     "T1a": 48.07487999999999,
+     "T3a": 52.90592000000001,
+     "T3b": 51.60928
+    },
+    "OCGTL": {
+     "T1a": 52.77088,
+     "T3a": 53.979200000000006,
+     "T3b": 54.7544
+    },
+    "SIGNET": {
+     "T1a": 49.81088,
+     "T3a": 50.478080000000006,
+     "T3b": 52.922880000000006
+    }
+   },
+   "frac_all_le60": 1.0
+  }
+ },
+ "G2": "PASS",
+ "GO": "GO"
+}

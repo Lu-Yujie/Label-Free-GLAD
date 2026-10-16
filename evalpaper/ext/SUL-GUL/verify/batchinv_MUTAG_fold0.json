@@ -1,0 +1,21 @@
+{
+ "dataset": "MUTAG",
+ "fold": 0,
+ "epochs_trained": 3,
+ "hold": {
+  "n": 20,
+  "max_abs_one_vs_single": 5.960464477539063e-08,
+  "max_abs_one_vs_rev7": 0.0,
+  "max_abs_one_vs_other_anchors": 0.0,
+  "max_rel_one_vs_single": 6.235823946099117e-08,
+  "mean_score": 0.9539211392402649
+ },
+ "test": {
+  "n": 38,
+  "max_abs_one_vs_single": 5.960464477539063e-08,
+  "max_abs_one_vs_rev7": 0.0,
+  "max_abs_one_vs_other_anchors": 0.0,
+  "max_rel_one_vs_single": 6.284941633794006e-08,
+  "mean_score": 0.9507497549057007
+ }
+}

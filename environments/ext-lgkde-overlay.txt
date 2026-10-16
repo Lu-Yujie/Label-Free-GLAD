@@ -1,0 +1,2 @@
+# overlay 'ext-lgkde-overlay': installed with pip install --no-deps --target $GLAD_ENVS/ext-lgkde-overlay; the runners add it to sys.path
+PyYAML==6.0.2

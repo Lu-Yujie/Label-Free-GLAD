@@ -1,0 +1,4 @@
+# overlay 'ext-sego': installed with pip install --no-deps --target $GLAD_ENVS/ext-sego; the runners add it to sys.path
+llvmlite==0.43.0
+numba==0.60.0
+ogb==1.3.6

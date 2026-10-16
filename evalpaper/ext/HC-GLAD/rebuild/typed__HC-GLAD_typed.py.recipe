@@ -1,0 +1,239 @@
+#target evalpaper/typed/ext/HC-GLAD_typed.py
+#sha256 cb4a96490f68b281160e1141e055c6facf4d41155c55ed557f154349f93d8de5
+#commit 4238b20dccd1335a337630d52f5f7448c5b222a6
+#final-newline 1
+O 19
+"""Phase B typed adapter: HC-GLAD (E4; Neural Networks'26) on GX / MS-v2 (RUN_NOTES_ext.md §0).
+
+The port evalpaper/ext/HC-GLAD/run_method.py (HC-GLAD src @4238b20, unmodified) is imported READ-ONLY. Reused as
+is: load_main_functions (arg_parse, setup_seed), load_data_functions (init_structural_encoding, get_hyperedge_index),
+import_src_modules (HC, RiemannianSGD), resolve_hparams (a typed dataset has no released line -> the modal configuration
+over all 12 released lines, A27 §2), unregistered_encoders, housekeeping, chunks, rng_isolated. The port's fit() (the
+line-by-line copy of main.py:110-185) is copied here with its evaluation block changed (# CHANGE-TYPED):
+  * data = typed_data with HC-GLAD's own init_structural_encoding (rw/dg 8) and get_hyperedge_index (triangle
+    hyperedges, collated as released: the hyperedge-batching defect stays, A11/A27); setup_seed(3407 + seed) before the
+    data and the model, as the port;
+  * at every evaluation point each group's test set (test normals + T) is scored through main.py's shuffled test
+    DataLoader (batch_size_test 9999 = one batch), unscrambled by graph id; groups 2..K from the saved RNG state S0, the
+    first group last as the RNG-carrying set (RUN_NOTES §0a);
+  * held-out normals: the port's freshly collated chunks (batch_size_test; and batch_size for holdout_obj), RNG-isolated.
+A19/A27 memory rule: eval 4·d·N² (d = 16) = 53-90 GB per group set on typed data (< 120 GB): feasible, runs as is, on CPU
+(no 40 GB A100 holds it). A run that completes with non-finite scores is A15 (A27 §1); own_code_would_crash recorded.
+Own ORACLE (collector): common epoch (epoch % 5 == 0) with the max 5-seed mean test AUROC, ties lower std, then earlier
+(main.py:193-199), finite in all seeds.
+  PYTHONDONTWRITEBYTECODE=1 $GLAD_ENVS/ubgold-gpu/bin/python -B HC-GLAD_typed.py --generator GX --seed 0
+U layers/hyp_layers.py 14 1 [0]
+O 6
+import os.path as _osp, sys as _sys
+_sys.dont_write_bytecode = True
+_HERE_ = _osp.realpath(_osp.dirname(_osp.abspath(__file__)))
+if _HERE_ not in _sys.path:
+    _sys.path.insert(0, _HERE_)
+
+U utils/data_loader.py 3 1 [0]
+O 2
+import time
+
+U main.py 11 2 [0,0]
+O 12
+
+import typed_ext_common as TC
+
+METHOD = "HC-GLAD"
+
+
+def mem_estimate_gb(d, n_nodes, factor):
+    """A19/A27 memory model of the dense node loss: factor * d * N^2 bytes (eval 4, training 8)."""
+    return factor * d * float(n_nodes) ** 2 / 1e9
+
+
+def run(R, a):
+U main.py 6 1 [4]
+S main.py 4 4 "          # = main.py:4-7 (as the port)"
+U main.py 5 1 [8]
+U main.py 7 1 [4]
+O 23
+    M = TC.load_port(METHOD)                        # ext/HC-GLAD/run_method.py (read only)
+    metric = TC.load_metric()
+    mns = M.load_main_functions()
+    dfn = M.load_data_functions(None)               # no REDDIT-B hyperedge cache: built in-run, verbatim
+    HC, RiemannianSGD, _ = M.import_src_modules()
+    # CHANGE-TYPED: typed dataset name -> no released line -> modal configuration over all 12 released lines (A27 §2)
+    args, sh_line, hp_notes = M.resolve_hparams(R.generator, "ubgold")
+    assert sh_line.startswith("MODAL"), sh_line
+    if R.max_epochs is not None:
+        args.num_epoch = R.max_epochs
+    seed = 3407 + R.seed
+    mns["setup_seed"](seed)                         # main.py:65-86 (port: setup_seed(3407 + fold) before the data)
+
+    # ---- CHANGE-TYPED: typed data + HC-GLAD's own encodings / hyperedges (no RNG consumed) -----------------------
+    td = R.load_data()
+    t_load = time.time()
+    P = td.pyg()
+    enc = lambda gs: dfn["get_hyperedge_index"](dfn["init_structural_encoding"](gs, rw_dim=args.rw_dim,
+                                                                                  dg_dim=args.dg_dim), args)
+    keys = R.keys
+    fit_list, hold_list = enc(P["fit"]), enc(P["hold"])
+    test_lists = {k: enc(P["test"][k]) for k in keys}
+    t_load = time.time() - t_load
+U utils/data_loader.py 8 1 [4]
+O 18
+    from torch_geometric.data import Batch
+    dataloader = DataLoader(fit_list, batch_size=args.batch_size, shuffle=True)
+    tests = {}
+    for k in keys:
+        for i, d in enumerate(test_lists[k]):
+            d.gid = i
+        tests[k] = DataLoader(test_lists[k], batch_size=args.batch_size_test, shuffle=True)   # main.py's test loader
+    d_emb = int(args.hidden_dim) * int(args.num_layers)
+    n_set = max(sum(int(g.num_nodes) for g in test_lists[k]) for k in keys)
+    mem = dict(d=d_emb, max_group_set_nodes=n_set, eval_gb=mem_estimate_gb(d_emb, n_set, 4),
+               max_train_batch_nodes_bound=sum(sorted((int(g.num_nodes) for g in fit_list), reverse=True)[:args.batch_size]))
+    mem["train_gb_bound"] = mem_estimate_gb(d_emb, mem["max_train_batch_nodes_bound"], 8)
+    if not R.dry_n:
+        assert mem["eval_gb"] <= 120.0 and mem["train_gb_bound"] <= 120.0, mem   # A19 rule: feasible as configured
+
+    # ---- main.py:88-108 ---------------------------------------------------------------------------------------
+    args.feat_dim = td.num_feat
+    n_train = len(fit_list)
+U main.py 91 2 [4,8]
+U layers/hyp_layers.py 48 1 [4]
+U main.py 96 6 [4,4,8,4,8,34]
+O 1
+    lr_scheduler = None
+U main.py 102 6 [4,8,12,12,12,8]
+O 32
+    encoders = M.unregistered_encoders(model)
+    R.eval_epochs = set(range(args.eval_freq, args.num_epoch + 1, args.eval_freq)) | {args.num_epoch}
+
+    R.base_meta({"ext/HC-GLAD/run_method.py": osp.join(TC.PORTS, METHOD, "run_method.py"),
+                 "ext/HC-GLAD/src/main.py": osp.join(M.SRC, "main.py"),
+                 "ext/HC-GLAD/src/models/model.py": osp.join(M.SRC, "models", "model.py"),
+                 "ext/HC-GLAD/src/utils/data_loader.py": osp.join(M.SRC, "utils", "data_loader.py"),
+                 "typed/ext/HC-GLAD_typed.py": osp.abspath(__file__)},
+                M.REPO_COMMIT, dict(vars(args)), sh_line, hp_notes, device=str(device),
+                flags=dict(oracle_own="common epoch (epoch % eval_freq == 0), max 5-seed mean test AUROC, ties lower "
+                                      "std then earlier (main.py:193-199), finite in all seeds (A27 §1)",
+                           memory_rule=mem, verbatim_gc=M.VERBATIM_GC, per_type_mode="own_set",
+                           hyperedge_defect="kept as released (A11/A27)", seconds_data_build=t_load,
+                           n_params_registered=int(sum(p.numel() for p in model.parameters())),
+                           n_params_unregistered_encoders=int(sum(p.numel() for m in encoders.values()
+                                                                  for p in m.parameters()))))
+
+    state = R.load_state(device.type, torch.get_num_threads(), first_epoch=1)
+    start_epoch = 1
+    if state is not None:   # port: resume (model, unregistered encoders, optimizer, scheduler, RNG, trajectory)
+        model.load_state_dict(state["model"])
+        for k, m in encoders.items():
+            m.load_state_dict(state["encoders"][k])
+        optimizer.load_state_dict(state["opt"])
+        if lr_scheduler is not None:
+            lr_scheduler.load_state_dict(state["sched"])
+        start_epoch = R.restore_common()
+    payload = lambda: dict(model=model.state_dict(), encoders={k: m.state_dict() for k, m in encoders.items()},
+                           opt=optimizer.state_dict(),
+                           sched=(lr_scheduler.state_dict() if lr_scheduler is not None else None))
+
+    def score_batch(data):    # = main.py:159-171 (port's score_batch)
+U main.py 123 1 [8]
+U main.py 163 1 [8]
+U main.py 165 1 [8]
+U main.py 167 1 [8]
+U main.py 169 1 [8]
+U main.py 171 1 [8]
+O 15
+        return y_score, torch.stack([y_score_g, y_score_n, y_score_g_hyper, y_score_n_hyper], 1)
+
+    def score_list(graphs, bs):   # port: held-out scoring, freshly collated chunks in fixed order (A3)
+        out = []
+        for ch in M.chunks(graphs, bs):
+            M.housekeeping()
+            data = Batch.from_data_list(ch).to(device)
+            s, _ = score_batch(data)
+            out.append(s.detach().cpu().numpy().astype(np.float64))
+        return np.concatenate(out) if out else np.zeros(0)
+
+    def score_group(k):
+        """CHANGE-TYPED: main.py's test loop on group k's test set (shuffled loader), canonical order by gid."""
+        y_score_all, y_true_all, gid_all, comp_all = [], [], [], []
+        for data in tests[k]:
+U main.py 155 1 [12]
+O 1
+                M.housekeeping()
+U main.py 119 1 [16]
+O 1
+                y_score, comp = score_batch(data)
+U main.py 176 1 [16]
+O 3
+                y_true_all = y_true_all + data.y.detach().cpu().tolist()
+                gid_all = gid_all + data.gid.cpu().tolist()
+                comp_all.append(comp.detach().cpu().numpy())
+U utils/data_loader.py 30 1 [8]
+O 17
+            auc_own = float(metric.ood_auc(y_true_all, y_score_all))   # main.py:179 (skm.roc_auc_score)
+            own_crash = 0
+        except ValueError:
+            auc_own, own_crash = float("nan"), 1                       # main.py would raise here (A27 §1: A15)
+        n = len(R.y[k])
+        gids = np.asarray(gid_all, dtype=np.int64)
+        assert len(gids) == n and len(np.unique(gids)) == n
+        assert np.array_equal(R.y[k][gids], np.asarray(y_true_all, dtype=np.int64))
+        test = np.full(n, np.nan)
+        test[gids] = y_score_all
+        tc = np.full((n, 4), np.nan)
+        tc[gids] = np.concatenate(comp_all, 0)
+        return test, tc, auc_own, own_crash
+
+    # =========================== copy of the port's fit() (main.py:110-185) ===========================
+    for epoch in range(start_epoch, args.num_epoch + 1):
+        t0 = time.time()
+U main.py 111 4 [8,8,null,8]
+O 3
+
+            M.housekeeping()
+
+U main.py 119 2 [12,12]
+O 1
+
+U main.py 123 1 [12]
+O 1
+
+U main.py 126 3 [12,null,12]
+O 1
+
+U main.py 131 5 [12,null,12,null,12]
+O 1
+
+U main.py 138 5 [12,12,12,12,16]
+O 6
+
+        R.train_loss.append(loss_all / n_train)
+        R.t_train += time.time() - t0
+
+        if epoch in R.eval_epochs:
+            t1 = time.time()
+U main.py 150 1 [12]
+O 23
+            res = R.score_groups(score_group)                # CHANGE-TYPED: per-group test passes (§0a)
+            with M.rng_isolated(), torch.no_grad():
+                hs = score_list(hold_list, min(args.batch_size_test, max(1, len(hold_list))))
+                ho = score_list(hold_list, min(args.batch_size, max(1, len(hold_list))))
+            tx = {}
+            for k in keys:
+                tx[k] = dict(auroc_own=res[k][2], own_code_would_crash=res[k][3])
+                for j, nm in enumerate(("g", "n", "g_hyper", "n_hyper")):
+                    tx[k]["auroc_" + nm] = TC.eval_metrics(metric, R.y[k], res[k][1][:, j])["auroc"]
+            R.record(epoch, {k: res[k][0] for k in keys}, hs,
+                     rec_extra=dict(holdout_obj=TC.finite_mean(ho), n_holdobj_nonfinite=int((~np.isfinite(ho)).sum())),
+                     types_extra=tx, extra_S=dict(hold_obj=ho, **{f"test_c__{TC.skey(k)}": res[k][1] for k in keys}),
+                     t_eval0=t1, metric=metric)
+        if R.maybe_stop(epoch, payload, final_epoch=args.num_epoch):
+            return "incomplete"
+    # =========================== end of the fit() copy ================================================
+
+    return R.finish(args.num_epoch, args.eval_freq, expected_epochs=sorted(R.eval_epochs),
+                    extra_npz=dict(test_c_names=np.array(["g", "n", "g_hyper", "n_hyper"])))
+
+
+if __name__ == "__main__":
+    TC.main(METHOD, run)

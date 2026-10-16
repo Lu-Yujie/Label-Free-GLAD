@@ -1,0 +1,555 @@
+{
+ "generated_by": "followups/jobs/gen_tasks.py",
+ "plan": {
+  "abl_ub9 CVTGAD AIDS 0": {
+   "device": "cuda",
+   "unablated_run_id": "CVTGAD_AIDS_fold0",
+   "threads": 2
+  },
+  "abl_ub9 CVTGAD AIDS 1": {
+   "device": "cuda",
+   "unablated_run_id": "CVTGAD_AIDS_fold1",
+   "threads": 2
+  },
+  "abl_ub9 CVTGAD AIDS 2": {
+   "device": "cuda",
+   "unablated_run_id": "CVTGAD_AIDS_fold2",
+   "threads": 2
+  },
+  "abl_ub9 CVTGAD AIDS 3": {
+   "device": "cuda",
+   "unablated_run_id": "CVTGAD_AIDS_fold3",
+   "threads": 2
+  },
+  "abl_ub9 CVTGAD AIDS 4": {
+   "device": "cuda",
+   "unablated_run_id": "CVTGAD_AIDS_fold4",
+   "threads": 2
+  },
+  "abl_ub9 CVTGAD BZR 0": {
+   "device": "cuda",
+   "unablated_run_id": "CVTGAD_BZR_fold0",
+   "threads": 2
+  },
+  "abl_ub9 CVTGAD BZR 1": {
+   "device": "cuda",
+   "unablated_run_id": "CVTGAD_BZR_fold1",
+   "threads": 2
+  },
+  "abl_ub9 CVTGAD BZR 2": {
+   "device": "cuda",
+   "unablated_run_id": "CVTGAD_BZR_fold2",
+   "threads": 2
+  },
+  "abl_ub9 CVTGAD BZR 3": {
+   "device": "cuda",
+   "unablated_run_id": "CVTGAD_BZR_fold3",
+   "threads": 2
+  },
+  "abl_ub9 CVTGAD BZR 4": {
+   "device": "cuda",
+   "unablated_run_id": "CVTGAD_BZR_fold4",
+   "threads": 2
+  },
+  "abl_ub9 CVTGAD COX2 0": {
+   "device": "cpu",
+   "unablated_run_id": "CVTGAD_COX2_fold0",
+   "threads": 2
+  },
+  "abl_ub9 CVTGAD COX2 1": {
+   "device": "cpu",
+   "unablated_run_id": "CVTGAD_COX2_fold1",
+   "threads": 2
+  },
+  "abl_ub9 CVTGAD COX2 2": {
+   "device": "cpu",
+   "unablated_run_id": "CVTGAD_COX2_fold2",
+   "threads": 2
+  },
+  "abl_ub9 CVTGAD COX2 3": {
+   "device": "cpu",
+   "unablated_run_id": "CVTGAD_COX2_fold3",
+   "threads": 2
+  },
+  "abl_ub9 CVTGAD COX2 4": {
+   "device": "cpu",
+   "unablated_run_id": "CVTGAD_COX2_fold4",
+   "threads": 2
+  },
+  "abl_ub9 CVTGAD DHFR 0": {
+   "device": "cuda",
+   "unablated_run_id": "CVTGAD_DHFR_fold0",
+   "threads": 2
+  },
+  "abl_ub9 CVTGAD DHFR 1": {
+   "device": "cuda",
+   "unablated_run_id": "CVTGAD_DHFR_fold1",
+   "threads": 2
+  },
+  "abl_ub9 CVTGAD DHFR 2": {
+   "device": "cuda",
+   "unablated_run_id": "CVTGAD_DHFR_fold2",
+   "threads": 2
+  },
+  "abl_ub9 CVTGAD DHFR 3": {
+   "device": "cuda",
+   "unablated_run_id": "CVTGAD_DHFR_fold3",
+   "threads": 2
+  },
+  "abl_ub9 CVTGAD DHFR 4": {
+   "device": "cuda",
+   "unablated_run_id": "CVTGAD_DHFR_fold4",
+   "threads": 2
+  },
+  "abl_ub9 CVTGAD ENZYMES 0": {
+   "device": "cpu",
+   "unablated_run_id": "CVTGAD_ENZYMES_fold0",
+   "threads": 2
+  },
+  "abl_ub9 CVTGAD ENZYMES 1": {
+   "device": "cpu",
+   "unablated_run_id": "CVTGAD_ENZYMES_fold1",
+   "threads": 2
+  },
+  "abl_ub9 CVTGAD ENZYMES 2": {
+   "device": "cpu",
+   "unablated_run_id": "CVTGAD_ENZYMES_fold2",
+   "threads": 2
+  },
+  "abl_ub9 CVTGAD ENZYMES 3": {
+   "device": "cpu",
+   "unablated_run_id": "CVTGAD_ENZYMES_fold3",
+   "threads": 2
+  },
+  "abl_ub9 CVTGAD ENZYMES 4": {
+   "device": "cpu",
+   "unablated_run_id": "CVTGAD_ENZYMES_fold4",
+   "threads": 2
+  },
+  "abl_ub9 CVTGAD NCI1 0": {
+   "device": "cpu",
+   "unablated_run_id": "CVTGAD_NCI1_fold0",
+   "threads": 2
+  },
+  "abl_ub9 CVTGAD NCI1 1": {
+   "device": "cpu",
+   "unablated_run_id": "CVTGAD_NCI1_fold1",
+   "threads": 2
+  },
+  "abl_ub9 CVTGAD NCI1 2": {
+   "device": "cpu",
+   "unablated_run_id": "CVTGAD_NCI1_fold2",
+   "threads": 2
+  },
+  "abl_ub9 CVTGAD NCI1 3": {
+   "device": "cpu",
+   "unablated_run_id": "CVTGAD_NCI1_fold3",
+   "threads": 2
+  },
+  "abl_ub9 CVTGAD NCI1 4": {
+   "device": "cpu",
+   "unablated_run_id": "CVTGAD_NCI1_fold4",
+   "threads": 2
+  },
+  "abl_ub9 CVTGAD PROTEINS_full 0": {
+   "device": "cpu",
+   "unablated_run_id": "CVTGAD_PROTEINS_full_fold0",
+   "threads": 2
+  },
+  "abl_ub9 CVTGAD PROTEINS_full 1": {
+   "device": "cpu",
+   "unablated_run_id": "CVTGAD_PROTEINS_full_fold1",
+   "threads": 2
+  },
+  "abl_ub9 CVTGAD PROTEINS_full 2": {
+   "device": "cpu",
+   "unablated_run_id": "CVTGAD_PROTEINS_full_fold2",
+   "threads": 2
+  },
+  "abl_ub9 CVTGAD PROTEINS_full 3": {
+   "device": "cpu",
+   "unablated_run_id": "CVTGAD_PROTEINS_full_fold3",
+   "threads": 2
+  },
+  "abl_ub9 CVTGAD PROTEINS_full 4": {
+   "device": "cpu",
+   "unablated_run_id": "CVTGAD_PROTEINS_full_fold4",
+   "threads": 2
+  },
+  "abl_ub9 CVTGAD IMDB-BINARY 0": {
+   "device": "cpu",
+   "unablated_run_id": "CVTGAD_IMDB-BINARY_fold0",
+   "threads": 2
+  },
+  "abl_ub9 CVTGAD IMDB-BINARY 1": {
+   "device": "cpu",
+   "unablated_run_id": "CVTGAD_IMDB-BINARY_fold1",
+   "threads": 2
+  },
+  "abl_ub9 CVTGAD IMDB-BINARY 2": {
+   "device": "cpu",
+   "unablated_run_id": "CVTGAD_IMDB-BINARY_fold2",
+   "threads": 2
+  },
+  "abl_ub9 CVTGAD IMDB-BINARY 3": {
+   "device": "cpu",
+   "unablated_run_id": "CVTGAD_IMDB-BINARY_fold3",
+   "threads": 2
+  },
+  "abl_ub9 CVTGAD IMDB-BINARY 4": {
+   "device": "cpu",
+   "unablated_run_id": "CVTGAD_IMDB-BINARY_fold4",
+   "threads": 2
+  },
+  "abl_ub9 CVTGAD REDDIT-BINARY 0": {
+   "device": "cpu",
+   "unablated_run_id": "CVTGAD_REDDIT-BINARY_fold0",
+   "threads": 4
+  },
+  "abl_ub9 CVTGAD REDDIT-BINARY 1": {
+   "device": "cpu",
+   "unablated_run_id": "CVTGAD_REDDIT-BINARY_fold1",
+   "threads": 4
+  },
+  "abl_ub9 CVTGAD REDDIT-BINARY 2": {
+   "device": "cpu",
+   "unablated_run_id": "CVTGAD_REDDIT-BINARY_fold2",
+   "threads": 4
+  },
+  "abl_ub9 CVTGAD REDDIT-BINARY 3": {
+   "device": "cpu",
+   "unablated_run_id": "CVTGAD_REDDIT-BINARY_fold3",
+   "threads": 4
+  },
+  "abl_ub9 CVTGAD REDDIT-BINARY 4": {
+   "device": "cpu",
+   "unablated_run_id": "CVTGAD_REDDIT-BINARY_fold4",
+   "threads": 4
+  },
+  "abl_typed CVTGAD GX:F2 0": {
+   "device": "cuda",
+   "unablated_run_id": "CVTGAD_GX_F2_s0",
+   "threads": 4
+  },
+  "abl_typed CVTGAD GX:F2 1": {
+   "device": "cuda",
+   "unablated_run_id": "CVTGAD_GX_F2_s1",
+   "threads": 4
+  },
+  "abl_typed CVTGAD GX:F2 2": {
+   "device": "cuda",
+   "unablated_run_id": "CVTGAD_GX_F2_s2",
+   "threads": 4
+  },
+  "abl_typed CVTGAD GX:F2 3": {
+   "device": "cuda",
+   "unablated_run_id": "CVTGAD_GX_F2_s3",
+   "threads": 4
+  },
+  "abl_typed CVTGAD GX:F2 4": {
+   "device": "cuda",
+   "unablated_run_id": "CVTGAD_GX_F2_s4",
+   "threads": 4
+  },
+  "abl_typed CVTGAD MSV2:MS 0": {
+   "device": "cuda",
+   "unablated_run_id": "CVTGAD_MSV2_MS_s0",
+   "threads": 4
+  },
+  "abl_typed CVTGAD MSV2:MS 1": {
+   "device": "cuda",
+   "unablated_run_id": "CVTGAD_MSV2_MS_s1",
+   "threads": 4
+  },
+  "abl_typed CVTGAD MSV2:MS 2": {
+   "device": "cuda",
+   "unablated_run_id": "CVTGAD_MSV2_MS_s2",
+   "threads": 4
+  },
+  "abl_typed CVTGAD MSV2:MS 3": {
+   "device": "cuda",
+   "unablated_run_id": "CVTGAD_MSV2_MS_s3",
+   "threads": 4
+  },
+  "abl_typed CVTGAD MSV2:MS 4": {
+   "device": "cuda",
+   "unablated_run_id": "CVTGAD_MSV2_MS_s4",
+   "threads": 4
+  },
+  "abl_ub9 GOOD-D AIDS 0": {
+   "device": "cpu",
+   "unablated_run_id": "GOOD-D_AIDS_fold0",
+   "threads": 2
+  },
+  "abl_ub9 GOOD-D AIDS 1": {
+   "device": "cpu",
+   "unablated_run_id": "GOOD-D_AIDS_fold1",
+   "threads": 2
+  },
+  "abl_ub9 GOOD-D AIDS 2": {
+   "device": "cpu",
+   "unablated_run_id": "GOOD-D_AIDS_fold2",
+   "threads": 2
+  },
+  "abl_ub9 GOOD-D AIDS 3": {
+   "device": "cpu",
+   "unablated_run_id": "GOOD-D_AIDS_fold3",
+   "threads": 2
+  },
+  "abl_ub9 GOOD-D AIDS 4": {
+   "device": "cpu",
+   "unablated_run_id": "GOOD-D_AIDS_fold4",
+   "threads": 2
+  },
+  "abl_ub9 GOOD-D BZR 0": {
+   "device": "cuda",
+   "unablated_run_id": "GOOD-D_BZR_fold0",
+   "threads": 2
+  },
+  "abl_ub9 GOOD-D BZR 1": {
+   "device": "cuda",
+   "unablated_run_id": "GOOD-D_BZR_fold1",
+   "threads": 2
+  },
+  "abl_ub9 GOOD-D BZR 2": {
+   "device": "cuda",
+   "unablated_run_id": "GOOD-D_BZR_fold2",
+   "threads": 2
+  },
+  "abl_ub9 GOOD-D BZR 3": {
+   "device": "cuda",
+   "unablated_run_id": "GOOD-D_BZR_fold3",
+   "threads": 2
+  },
+  "abl_ub9 GOOD-D BZR 4": {
+   "device": "cuda",
+   "unablated_run_id": "GOOD-D_BZR_fold4",
+   "threads": 2
+  },
+  "abl_ub9 GOOD-D COX2 0": {
+   "device": "cuda",
+   "unablated_run_id": "GOOD-D_COX2_fold0",
+   "threads": 2
+  },
+  "abl_ub9 GOOD-D COX2 1": {
+   "device": "cuda",
+   "unablated_run_id": "GOOD-D_COX2_fold1",
+   "threads": 2
+  },
+  "abl_ub9 GOOD-D COX2 2": {
+   "device": "cuda",
+   "unablated_run_id": "GOOD-D_COX2_fold2",
+   "threads": 2
+  },
+  "abl_ub9 GOOD-D COX2 3": {
+   "device": "cuda",
+   "unablated_run_id": "GOOD-D_COX2_fold3",
+   "threads": 2
+  },
+  "abl_ub9 GOOD-D COX2 4": {
+   "device": "cuda",
+   "unablated_run_id": "GOOD-D_COX2_fold4",
+   "threads": 2
+  },
+  "abl_ub9 GOOD-D DHFR 0": {
+   "device": "cuda",
+   "unablated_run_id": "GOOD-D_DHFR_fold0",
+   "threads": 2
+  },
+  "abl_ub9 GOOD-D DHFR 1": {
+   "device": "cuda",
+   "unablated_run_id": "GOOD-D_DHFR_fold1",
+   "threads": 2
+  },
+  "abl_ub9 GOOD-D DHFR 2": {
+   "device": "cuda",
+   "unablated_run_id": "GOOD-D_DHFR_fold2",
+   "threads": 2
+  },
+  "abl_ub9 GOOD-D DHFR 3": {
+   "device": "cuda",
+   "unablated_run_id": "GOOD-D_DHFR_fold3",
+   "threads": 2
+  },
+  "abl_ub9 GOOD-D DHFR 4": {
+   "device": "cuda",
+   "unablated_run_id": "GOOD-D_DHFR_fold4",
+   "threads": 2
+  },
+  "abl_ub9 GOOD-D ENZYMES 0": {
+   "device": "cpu",
+   "unablated_run_id": "GOOD-D_ENZYMES_fold0",
+   "threads": 2
+  },
+  "abl_ub9 GOOD-D ENZYMES 1": {
+   "device": "cpu",
+   "unablated_run_id": "GOOD-D_ENZYMES_fold1",
+   "threads": 2
+  },
+  "abl_ub9 GOOD-D ENZYMES 2": {
+   "device": "cpu",
+   "unablated_run_id": "GOOD-D_ENZYMES_fold2",
+   "threads": 2
+  },
+  "abl_ub9 GOOD-D ENZYMES 3": {
+   "device": "cpu",
+   "unablated_run_id": "GOOD-D_ENZYMES_fold3",
+   "threads": 2
+  },
+  "abl_ub9 GOOD-D ENZYMES 4": {
+   "device": "cpu",
+   "unablated_run_id": "GOOD-D_ENZYMES_fold4",
+   "threads": 2
+  },
+  "abl_ub9 GOOD-D NCI1 0": {
+   "device": "cpu",
+   "unablated_run_id": "GOOD-D_NCI1_fold0",
+   "threads": 2
+  },
+  "abl_ub9 GOOD-D NCI1 1": {
+   "device": "cpu",
+   "unablated_run_id": "GOOD-D_NCI1_fold1",
+   "threads": 2
+  },
+  "abl_ub9 GOOD-D NCI1 2": {
+   "device": "cpu",
+   "unablated_run_id": "GOOD-D_NCI1_fold2",
+   "threads": 2
+  },
+  "abl_ub9 GOOD-D NCI1 3": {
+   "device": "cpu",
+   "unablated_run_id": "GOOD-D_NCI1_fold3",
+   "threads": 2
+  },
+  "abl_ub9 GOOD-D NCI1 4": {
+   "device": "cpu",
+   "unablated_run_id": "GOOD-D_NCI1_fold4",
+   "threads": 2
+  },
+  "abl_ub9 GOOD-D PROTEINS_full 0": {
+   "device": "cpu",
+   "unablated_run_id": "GOOD-D_PROTEINS_full_fold0",
+   "threads": 2
+  },
+  "abl_ub9 GOOD-D PROTEINS_full 1": {
+   "device": "cpu",
+   "unablated_run_id": "GOOD-D_PROTEINS_full_fold1",
+   "threads": 2
+  },
+  "abl_ub9 GOOD-D PROTEINS_full 2": {
+   "device": "cpu",
+   "unablated_run_id": "GOOD-D_PROTEINS_full_fold2",
+   "threads": 2
+  },
+  "abl_ub9 GOOD-D PROTEINS_full 3": {
+   "device": "cpu",
+   "unablated_run_id": "GOOD-D_PROTEINS_full_fold3",
+   "threads": 2
+  },
+  "abl_ub9 GOOD-D PROTEINS_full 4": {
+   "device": "cpu",
+   "unablated_run_id": "GOOD-D_PROTEINS_full_fold4",
+   "threads": 2
+  },
+  "abl_ub9 GOOD-D IMDB-BINARY 0": {
+   "device": "cpu",
+   "unablated_run_id": "GOOD-D_IMDB-BINARY_fold0",
+   "threads": 2
+  },
+  "abl_ub9 GOOD-D IMDB-BINARY 1": {
+   "device": "cpu",
+   "unablated_run_id": "GOOD-D_IMDB-BINARY_fold1",
+   "threads": 2
+  },
+  "abl_ub9 GOOD-D IMDB-BINARY 2": {
+   "device": "cpu",
+   "unablated_run_id": "GOOD-D_IMDB-BINARY_fold2",
+   "threads": 2
+  },
+  "abl_ub9 GOOD-D IMDB-BINARY 3": {
+   "device": "cpu",
+   "unablated_run_id": "GOOD-D_IMDB-BINARY_fold3",
+   "threads": 2
+  },
+  "abl_ub9 GOOD-D IMDB-BINARY 4": {
+   "device": "cpu",
+   "unablated_run_id": "GOOD-D_IMDB-BINARY_fold4",
+   "threads": 2
+  },
+  "abl_ub9 GOOD-D REDDIT-BINARY 0": {
+   "device": "cpu",
+   "unablated_run_id": "GOOD-D_REDDIT-BINARY_fold0",
+   "threads": 2
+  },
+  "abl_ub9 GOOD-D REDDIT-BINARY 1": {
+   "device": "cpu",
+   "unablated_run_id": "GOOD-D_REDDIT-BINARY_fold1",
+   "threads": 2
+  },
+  "abl_ub9 GOOD-D REDDIT-BINARY 2": {
+   "device": "cpu",
+   "unablated_run_id": "GOOD-D_REDDIT-BINARY_fold2",
+   "threads": 2
+  },
+  "abl_ub9 GOOD-D REDDIT-BINARY 3": {
+   "device": "cpu",
+   "unablated_run_id": "GOOD-D_REDDIT-BINARY_fold3",
+   "threads": 2
+  },
+  "abl_ub9 GOOD-D REDDIT-BINARY 4": {
+   "device": "cpu",
+   "unablated_run_id": "GOOD-D_REDDIT-BINARY_fold4",
+   "threads": 2
+  },
+  "abl_typed GOOD-D GX:F2 0": {
+   "device": "cuda",
+   "unablated_run_id": "GOOD-D_GX_F2_s0",
+   "threads": 4
+  },
+  "abl_typed GOOD-D GX:F2 1": {
+   "device": "cuda",
+   "unablated_run_id": "GOOD-D_GX_F2_s1",
+   "threads": 4
+  },
+  "abl_typed GOOD-D GX:F2 2": {
+   "device": "cuda",
+   "unablated_run_id": "GOOD-D_GX_F2_s2",
+   "threads": 4
+  },
+  "abl_typed GOOD-D GX:F2 3": {
+   "device": "cuda",
+   "unablated_run_id": "GOOD-D_GX_F2_s3",
+   "threads": 4
+  },
+  "abl_typed GOOD-D GX:F2 4": {
+   "device": "cuda",
+   "unablated_run_id": "GOOD-D_GX_F2_s4",
+   "threads": 4
+  },
+  "abl_typed GOOD-D MSV2:MS 0": {
+   "device": "cuda",
+   "unablated_run_id": "GOOD-D_MSV2_MS_s0",
+   "threads": 4
+  },
+  "abl_typed GOOD-D MSV2:MS 1": {
+   "device": "cuda",
+   "unablated_run_id": "GOOD-D_MSV2_MS_s1",
+   "threads": 4
+  },
+  "abl_typed GOOD-D MSV2:MS 2": {
+   "device": "cuda",
+   "unablated_run_id": "GOOD-D_MSV2_MS_s2",
+   "threads": 4
+  },
+  "abl_typed GOOD-D MSV2:MS 3": {
+   "device": "cuda",
+   "unablated_run_id": "GOOD-D_MSV2_MS_s3",
+   "threads": 4
+  },
+  "abl_typed GOOD-D MSV2:MS 4": {
+   "device": "cuda",
+   "unablated_run_id": "GOOD-D_MSV2_MS_s4",
+   "threads": 4
+  }
+ }
+}

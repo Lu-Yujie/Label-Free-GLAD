@@ -1,0 +1,85 @@
+#target evalpaper/ext/ProtoGLAD/native_repro.py
+#sha256 32acf5266918d5ed78cd0e0f6820f49e03ba01bb28ce41af98005d3d8a12f1dc
+#commit f7d8ce953de2c559abb9502c3a2b8195f3da380a
+#final-newline 1
+O 10
+"""R2 (NOTES.md): ProtoGLAD's own protocol, run through its official entry point verbatim.
+
+  python -B native_repro.py --ds BZR [--attr "node attribute"]
+
+Equivalent to `cd <run dir> && python src/run.py detect --ds_name BZR --mode search --attr <DEFAULT_ATTR_MAP[BZR]>`
+(seed 42 once, its StratifiedKFold splits, minority-class anomaly, its features, its 144-cell test-AUC search, one
+RNG stream through the whole search). Only change: D1 (IK CPU fallback) when no GPU is present; D5 (TQDM_DISABLE).
+Run dir: $GLAD_DATA_ROOT/ext_protoglad/native/run_<DS>/ (fresh; data/ -> the copied TU raw files).
+The search must run uninterrupted: ProtoGLAD's own resume skips finished cells, which shifts its RNG stream, so an
+interrupted search is restarted from scratch (the run dir is wiped).
+U protoglad/__init__.py 1 1 [0]
+O 4
+import os.path as _osp, sys as _sys
+_HERE_ = _osp.realpath(_osp.dirname(_osp.abspath(__file__)))
+_sys.path[:] = [p for p in _sys.path if _osp.realpath(p or ".") != _HERE_]
+
+U synthetic_exp/run_synthetic_search.py 1 3 [0,0,0]
+O 2
+import os.path as osp
+import runpy
+U run_all_tudatasets.py 18 1 [0]
+U protoglad/experiments/run_detection.py 6 2 [0,0]
+O 10
+
+os.environ.setdefault("TQDM_DISABLE", "1")   # CHANGE (D5)
+
+HERE = osp.dirname(osp.abspath(__file__))
+PG_SRC = osp.join(HERE, "src")
+NATIVE = (os.environ.get("GLAD_DATA_ROOT", "glad_data") + "/ext_protoglad/native")
+NATIVE_ATTR = {"AIDS": "node attribute", "BZR": "node attribute", "COX2": "node attribute", "DD": "node label",
+               "MUTAG": "node label", "PROTEINS_full": "node attribute", "NCI1": "node label", "DHFR": "node label",
+               "IMDB-BINARY": "degree", "REDDIT-BINARY": "degree"}
+
+U protoglad/experiments/run_detection.py 363 1 [0]
+O 15
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--ds", required=True)
+    ap.add_argument("--attr", default=None)
+    ap.add_argument("--threads", type=int, default=int(os.environ.get("EP_THREADS", "1")))
+    ap.add_argument("--tag", default="", help="separate run dir run_<DS>_<tag> (e.g. gpu)")
+    a = ap.parse_args()
+    attr = a.attr or NATIVE_ATTR.get(a.ds, "degree")
+    run_dir = osp.join(NATIVE, f"run_{a.ds}" + (f"_{a.tag}" if a.tag else ""))
+    if osp.exists(run_dir):
+        shutil.rmtree(run_dir)                       # never resume (RNG stream, see docstring)
+    os.makedirs(run_dir)
+    os.makedirs(osp.join(run_dir, "data"))
+    os.symlink(osp.join(NATIVE, "data", "TUDataset"), osp.join(run_dir, "data", "TUDataset"))
+    os.chdir(run_dir)
+
+U protoglad/config.py 6 1 [4]
+O 2
+    torch.set_num_threads(a.threads)
+    sys.path.insert(0, PG_SRC)
+S protoglad/data.py 12 4 "  # noqa: F401"
+O 2
+    import protoglad.ik_inne_gpu as ik
+
+U protoglad/ik_inne_gpu.py 9 1 [4]
+O 3
+        # CHANGE (D1): copy of IK_inne_gpu.__init__ with a CPU fallback (released code raises without CUDA)
+        def _ik_init(self, psi, t) -> None:
+            self.device = torch.device("cpu")
+U protoglad/ik_inne_gpu.py 13 4 [12,12,12,12]
+O 3
+            self.X = None
+        ik.IK_inne_gpu.__init__ = _ik_init
+
+U protoglad/experiments/run_detection.py 33 1 [4]
+O 10
+    meta = dict(dataset=a.ds, attr=attr, device="cuda" if torch.cuda.is_available() else "cpu",
+                threads=torch.get_num_threads(), job=os.environ.get("SLURM_JOB_ID"), host=os.uname().nodename,
+                start=time.strftime("%Y-%m-%d %H:%M:%S"),
+                argv=["run.py", "detect", "--ds_name", a.ds, "--mode", "search", "--attr", attr])
+    json.dump(meta, open(osp.join(run_dir, "native_meta.json"), "w"), indent=1)
+    sys.argv = list(meta["argv"])
+    runpy.run_path(osp.join(PG_SRC, "run.py"), run_name="__main__")
+    meta.update(end=time.strftime("%Y-%m-%d %H:%M:%S"), seconds=time.time() - t0, completed=True)
+    json.dump(meta, open(osp.join(run_dir, "native_meta.json"), "w"), indent=1)
+    print(f"[native done] {a.ds} in {time.time() - t0:.0f}s", flush=True)

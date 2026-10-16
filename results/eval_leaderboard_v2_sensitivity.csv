@@ -1,0 +1,122 @@
+variant,n_runs_dropped,quantity,n_methods,mean_over_methods,ds_ci_lo,ds_ci_hi,n_methods_ge2,per_method,g1_conditions_met,method,stratum
+drop nonfinite_selected,12,G1/VAL-NORMAL,12,4.1303,3.3216,4.7932,12.0000,CVTGAD 5.02; GLADC 4.82; GLocalKD 3.84; GOOD-D 4.65; GraphCL_IF 3.10; GraphCL_OCSVM 6.00; GraphDE 2.15; InfoGraph_IF 5.32; InfoGraph_OCSVM 2.96; OCGIN 5.34; OCGTL 3.21; SIGNET 3.15,True,,
+drop nonfinite_selected,12,G1/LAST,12,5.1195,3.9704,6.2403,12.0000,CVTGAD 5.12; GLADC 5.07; GLocalKD 3.85; GOOD-D 4.55; GraphCL_IF 3.99; GraphCL_OCSVM 6.37; GraphDE 3.38; InfoGraph_IF 9.67; InfoGraph_OCSVM 6.33; OCGIN 5.69; OCGTL 3.41; SIGNET 4.01,True,,
+drop nonfinite_selected,12,G2b HP leak,12,1.5339,0.6434,2.4167,3.0000,CVTGAD 4.53; GLADC -0.83; GLocalKD 1.47; GOOD-D 0.79; GraphCL_IF 0.09; GraphCL_OCSVM 0.17; GraphDE -1.10; InfoGraph_IF 0.71; InfoGraph_OCSVM 0.57; OCGIN 0.96; OCGTL 8.76; SIGNET 2.29,,,
+drop nonfinite_selected,12,per-method oracle-valnormal,1,5.0237,,,,,,CVTGAD,frozen12
+drop nonfinite_selected,12,per-method oracle-last,1,5.1222,,,,,,CVTGAD,frozen12
+drop nonfinite_selected,12,per-method oracle-valnormal,1,4.8233,,,,,,GLADC,frozen12
+drop nonfinite_selected,12,per-method oracle-last,1,5.0736,,,,,,GLADC,frozen12
+drop nonfinite_selected,12,per-method oracle-valnormal,1,9.4513,,,,,,GLADMamba,E5
+drop nonfinite_selected,12,per-method oracle-last,1,3.3917,,,,,,GLADMamba,E5
+drop nonfinite_selected,12,per-method oracle-valnormal,1,12.7476,,,,,,GLADPro,E5
+drop nonfinite_selected,12,per-method oracle-last,1,12.2229,,,,,,GLADPro,E5
+drop nonfinite_selected,12,per-method oracle-valnormal,1,7.9134,,,,,,GLASS,E4
+drop nonfinite_selected,12,per-method oracle-last,1,8.9460,,,,,,GLASS,E4
+drop nonfinite_selected,12,per-method oracle-valnormal,1,3.8371,,,,,,GLocalKD,frozen12
+drop nonfinite_selected,12,per-method oracle-last,1,3.8500,,,,,,GLocalKD,frozen12
+drop nonfinite_selected,12,per-method oracle-valnormal,1,4.6475,,,,,,GOOD-D,frozen12
+drop nonfinite_selected,12,per-method oracle-last,1,4.5517,,,,,,GOOD-D,frozen12
+drop nonfinite_selected,12,per-method oracle-valnormal,1,3.1036,,,,,,GraphCL_IF,frozen12
+drop nonfinite_selected,12,per-method oracle-last,1,3.9945,,,,,,GraphCL_IF,frozen12
+drop nonfinite_selected,12,per-method oracle-valnormal,1,6.0027,,,,,,GraphCL_OCSVM,frozen12
+drop nonfinite_selected,12,per-method oracle-last,1,6.3696,,,,,,GraphCL_OCSVM,frozen12
+drop nonfinite_selected,12,per-method oracle-valnormal,1,2.1484,,,,,,GraphDE,frozen12
+drop nonfinite_selected,12,per-method oracle-last,1,3.3767,,,,,,GraphDE,frozen12
+drop nonfinite_selected,12,per-method oracle-valnormal,1,1.9737,,,,,,HC-GLAD,E4
+drop nonfinite_selected,12,per-method oracle-last,1,3.0819,,,,,,HC-GLAD,E4
+drop nonfinite_selected,12,per-method oracle-valnormal,1,5.3218,,,,,,InfoGraph_IF,frozen12
+drop nonfinite_selected,12,per-method oracle-last,1,9.6689,,,,,,InfoGraph_IF,frozen12
+drop nonfinite_selected,12,per-method oracle-valnormal,1,2.9576,,,,,,InfoGraph_OCSVM,frozen12
+drop nonfinite_selected,12,per-method oracle-last,1,6.3285,,,,,,InfoGraph_OCSVM,frozen12
+drop nonfinite_selected,12,per-method oracle-valnormal,1,-1.2700,,,,,,LGKDE,E5
+drop nonfinite_selected,12,per-method oracle-last,1,-1.6234,,,,,,LGKDE,E5
+drop nonfinite_selected,12,per-method oracle-valnormal,1,6.5737,,,,,,MUSE,E5
+drop nonfinite_selected,12,per-method oracle-last,1,7.6768,,,,,,MUSE,E5
+drop nonfinite_selected,12,per-method oracle-valnormal,1,5.3363,,,,,,OCGIN,frozen12
+drop nonfinite_selected,12,per-method oracle-last,1,5.6850,,,,,,OCGIN,frozen12
+drop nonfinite_selected,12,per-method oracle-valnormal,1,3.2133,,,,,,OCGTL,frozen12
+drop nonfinite_selected,12,per-method oracle-last,1,3.4059,,,,,,OCGTL,frozen12
+drop nonfinite_selected,12,per-method oracle-valnormal,1,8.2460,,,,,,SEGO,E5
+drop nonfinite_selected,12,per-method oracle-last,1,4.3818,,,,,,SEGO,E5
+drop nonfinite_selected,12,per-method oracle-valnormal,1,3.1483,,,,,,SIGNET,frozen12
+drop nonfinite_selected,12,per-method oracle-last,1,4.0074,,,,,,SIGNET,frozen12
+drop nonfinite_selected,12,per-method oracle-valnormal,1,8.7166,,,,,,SUL-GUL,E4
+drop nonfinite_selected,12,per-method oracle-last,1,10.3071,,,,,,SUL-GUL,E4
+drop tie_collapsed,71,G1/VAL-NORMAL,12,4.1319,3.3217,4.7932,12.0000,CVTGAD 5.02; GLADC 4.82; GLocalKD 3.84; GOOD-D 4.65; GraphCL_IF 3.10; GraphCL_OCSVM 6.00; GraphDE 2.17; InfoGraph_IF 5.32; InfoGraph_OCSVM 2.96; OCGIN 5.34; OCGTL 3.21; SIGNET 3.15,True,,
+drop tie_collapsed,71,G1/LAST,12,5.1143,3.9702,6.2323,12.0000,CVTGAD 5.12; GLADC 5.07; GLocalKD 3.85; GOOD-D 4.55; GraphCL_IF 3.99; GraphCL_OCSVM 6.37; GraphDE 3.31; InfoGraph_IF 9.67; InfoGraph_OCSVM 6.33; OCGIN 5.69; OCGTL 3.41; SIGNET 4.01,True,,
+drop tie_collapsed,71,G2b HP leak,12,1.5430,0.6496,2.4255,3.0000,CVTGAD 4.53; GLADC -0.83; GLocalKD 1.47; GOOD-D 0.79; GraphCL_IF 0.09; GraphCL_OCSVM 0.17; GraphDE -1.00; InfoGraph_IF 0.71; InfoGraph_OCSVM 0.57; OCGIN 0.96; OCGTL 8.76; SIGNET 2.29,,,
+drop tie_collapsed,71,per-method oracle-valnormal,1,5.0237,,,,,,CVTGAD,frozen12
+drop tie_collapsed,71,per-method oracle-last,1,5.1222,,,,,,CVTGAD,frozen12
+drop tie_collapsed,71,per-method oracle-valnormal,1,4.8233,,,,,,GLADC,frozen12
+drop tie_collapsed,71,per-method oracle-last,1,5.0736,,,,,,GLADC,frozen12
+drop tie_collapsed,71,per-method oracle-valnormal,1,9.4513,,,,,,GLADMamba,E5
+drop tie_collapsed,71,per-method oracle-last,1,3.3917,,,,,,GLADMamba,E5
+drop tie_collapsed,71,per-method oracle-valnormal,1,7.9134,,,,,,GLASS,E4
+drop tie_collapsed,71,per-method oracle-last,1,8.9460,,,,,,GLASS,E4
+drop tie_collapsed,71,per-method oracle-valnormal,1,3.8371,,,,,,GLocalKD,frozen12
+drop tie_collapsed,71,per-method oracle-last,1,3.8500,,,,,,GLocalKD,frozen12
+drop tie_collapsed,71,per-method oracle-valnormal,1,4.6475,,,,,,GOOD-D,frozen12
+drop tie_collapsed,71,per-method oracle-last,1,4.5517,,,,,,GOOD-D,frozen12
+drop tie_collapsed,71,per-method oracle-valnormal,1,3.1036,,,,,,GraphCL_IF,frozen12
+drop tie_collapsed,71,per-method oracle-last,1,3.9945,,,,,,GraphCL_IF,frozen12
+drop tie_collapsed,71,per-method oracle-valnormal,1,6.0027,,,,,,GraphCL_OCSVM,frozen12
+drop tie_collapsed,71,per-method oracle-last,1,6.3696,,,,,,GraphCL_OCSVM,frozen12
+drop tie_collapsed,71,per-method oracle-valnormal,1,2.1678,,,,,,GraphDE,frozen12
+drop tie_collapsed,71,per-method oracle-last,1,3.3149,,,,,,GraphDE,frozen12
+drop tie_collapsed,71,per-method oracle-valnormal,1,1.9737,,,,,,HC-GLAD,E4
+drop tie_collapsed,71,per-method oracle-last,1,3.0819,,,,,,HC-GLAD,E4
+drop tie_collapsed,71,per-method oracle-valnormal,1,5.3218,,,,,,InfoGraph_IF,frozen12
+drop tie_collapsed,71,per-method oracle-last,1,9.6689,,,,,,InfoGraph_IF,frozen12
+drop tie_collapsed,71,per-method oracle-valnormal,1,2.9576,,,,,,InfoGraph_OCSVM,frozen12
+drop tie_collapsed,71,per-method oracle-last,1,6.3285,,,,,,InfoGraph_OCSVM,frozen12
+drop tie_collapsed,71,per-method oracle-valnormal,1,-1.2700,,,,,,LGKDE,E5
+drop tie_collapsed,71,per-method oracle-last,1,-1.6234,,,,,,LGKDE,E5
+drop tie_collapsed,71,per-method oracle-valnormal,1,6.5737,,,,,,MUSE,E5
+drop tie_collapsed,71,per-method oracle-last,1,7.6768,,,,,,MUSE,E5
+drop tie_collapsed,71,per-method oracle-valnormal,1,5.3363,,,,,,OCGIN,frozen12
+drop tie_collapsed,71,per-method oracle-last,1,5.6850,,,,,,OCGIN,frozen12
+drop tie_collapsed,71,per-method oracle-valnormal,1,3.2133,,,,,,OCGTL,frozen12
+drop tie_collapsed,71,per-method oracle-last,1,3.4059,,,,,,OCGTL,frozen12
+drop tie_collapsed,71,per-method oracle-valnormal,1,8.2460,,,,,,SEGO,E5
+drop tie_collapsed,71,per-method oracle-last,1,4.3818,,,,,,SEGO,E5
+drop tie_collapsed,71,per-method oracle-valnormal,1,3.1483,,,,,,SIGNET,frozen12
+drop tie_collapsed,71,per-method oracle-last,1,4.0074,,,,,,SIGNET,frozen12
+drop any flag,71,G1/VAL-NORMAL,12,4.1319,3.3217,4.7932,12.0000,CVTGAD 5.02; GLADC 4.82; GLocalKD 3.84; GOOD-D 4.65; GraphCL_IF 3.10; GraphCL_OCSVM 6.00; GraphDE 2.17; InfoGraph_IF 5.32; InfoGraph_OCSVM 2.96; OCGIN 5.34; OCGTL 3.21; SIGNET 3.15,True,,
+drop any flag,71,G1/LAST,12,5.1143,3.9702,6.2323,12.0000,CVTGAD 5.12; GLADC 5.07; GLocalKD 3.85; GOOD-D 4.55; GraphCL_IF 3.99; GraphCL_OCSVM 6.37; GraphDE 3.31; InfoGraph_IF 9.67; InfoGraph_OCSVM 6.33; OCGIN 5.69; OCGTL 3.41; SIGNET 4.01,True,,
+drop any flag,71,G2b HP leak,12,1.5430,0.6496,2.4255,3.0000,CVTGAD 4.53; GLADC -0.83; GLocalKD 1.47; GOOD-D 0.79; GraphCL_IF 0.09; GraphCL_OCSVM 0.17; GraphDE -1.00; InfoGraph_IF 0.71; InfoGraph_OCSVM 0.57; OCGIN 0.96; OCGTL 8.76; SIGNET 2.29,,,
+drop any flag,71,per-method oracle-valnormal,1,5.0237,,,,,,CVTGAD,frozen12
+drop any flag,71,per-method oracle-last,1,5.1222,,,,,,CVTGAD,frozen12
+drop any flag,71,per-method oracle-valnormal,1,4.8233,,,,,,GLADC,frozen12
+drop any flag,71,per-method oracle-last,1,5.0736,,,,,,GLADC,frozen12
+drop any flag,71,per-method oracle-valnormal,1,9.4513,,,,,,GLADMamba,E5
+drop any flag,71,per-method oracle-last,1,3.3917,,,,,,GLADMamba,E5
+drop any flag,71,per-method oracle-valnormal,1,7.9134,,,,,,GLASS,E4
+drop any flag,71,per-method oracle-last,1,8.9460,,,,,,GLASS,E4
+drop any flag,71,per-method oracle-valnormal,1,3.8371,,,,,,GLocalKD,frozen12
+drop any flag,71,per-method oracle-last,1,3.8500,,,,,,GLocalKD,frozen12
+drop any flag,71,per-method oracle-valnormal,1,4.6475,,,,,,GOOD-D,frozen12
+drop any flag,71,per-method oracle-last,1,4.5517,,,,,,GOOD-D,frozen12
+drop any flag,71,per-method oracle-valnormal,1,3.1036,,,,,,GraphCL_IF,frozen12
+drop any flag,71,per-method oracle-last,1,3.9945,,,,,,GraphCL_IF,frozen12
+drop any flag,71,per-method oracle-valnormal,1,6.0027,,,,,,GraphCL_OCSVM,frozen12
+drop any flag,71,per-method oracle-last,1,6.3696,,,,,,GraphCL_OCSVM,frozen12
+drop any flag,71,per-method oracle-valnormal,1,2.1678,,,,,,GraphDE,frozen12
+drop any flag,71,per-method oracle-last,1,3.3149,,,,,,GraphDE,frozen12
+drop any flag,71,per-method oracle-valnormal,1,1.9737,,,,,,HC-GLAD,E4
+drop any flag,71,per-method oracle-last,1,3.0819,,,,,,HC-GLAD,E4
+drop any flag,71,per-method oracle-valnormal,1,5.3218,,,,,,InfoGraph_IF,frozen12
+drop any flag,71,per-method oracle-last,1,9.6689,,,,,,InfoGraph_IF,frozen12
+drop any flag,71,per-method oracle-valnormal,1,2.9576,,,,,,InfoGraph_OCSVM,frozen12
+drop any flag,71,per-method oracle-last,1,6.3285,,,,,,InfoGraph_OCSVM,frozen12
+drop any flag,71,per-method oracle-valnormal,1,-1.2700,,,,,,LGKDE,E5
+drop any flag,71,per-method oracle-last,1,-1.6234,,,,,,LGKDE,E5
+drop any flag,71,per-method oracle-valnormal,1,6.5737,,,,,,MUSE,E5
+drop any flag,71,per-method oracle-last,1,7.6768,,,,,,MUSE,E5
+drop any flag,71,per-method oracle-valnormal,1,5.3363,,,,,,OCGIN,frozen12
+drop any flag,71,per-method oracle-last,1,5.6850,,,,,,OCGIN,frozen12
+drop any flag,71,per-method oracle-valnormal,1,3.2133,,,,,,OCGTL,frozen12
+drop any flag,71,per-method oracle-last,1,3.4059,,,,,,OCGTL,frozen12
+drop any flag,71,per-method oracle-valnormal,1,8.2460,,,,,,SEGO,E5
+drop any flag,71,per-method oracle-last,1,4.3818,,,,,,SEGO,E5
+drop any flag,71,per-method oracle-valnormal,1,3.1483,,,,,,SIGNET,frozen12
+drop any flag,71,per-method oracle-last,1,4.0074,,,,,,SIGNET,frozen12

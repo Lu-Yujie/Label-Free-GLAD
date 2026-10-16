@@ -1,0 +1,57 @@
+# config.yaml
+#
+base:
+  seed: 42
+  gpu_id: "0"
+  save_dir: "./outputs"
+
+#
+dataset:
+  name: "MUTAG"
+  type: "GIN"  # "GIN" or "TU"
+  normal_class: null  #
+  train_ratio: 0.8
+  mixed_anomaly_ratio: 0.0
+  self_loop: true
+  batch_size: null  #
+
+#
+model:
+  in_dim: null
+  hidden_dim: 32
+  out_dim: 16
+  num_layers: 2
+  bandwidths: [0.01, 0.1, 1, 10, 100]
+  dropout: 0.2
+  batch_norm: true
+  learn_kde_weights: true
+
+#
+negative_sampling:
+  perturbation_methods: ["feature_swap", "structure"]
+  attr_swap_ratio: 0.2
+  spectral_perturb_ratio: 0.2
+  threshold: 0.5
+  weighted_graph: false
+  verbose: false
+  big_energy_threshold: 0.5
+  mid_energy_threshold: 0.75
+  max_ratio: 10.0
+
+#
+training:
+  epochs: 100
+  lr: 0.01
+  weight_decay: 0.1
+  loss_alpha: 1.0
+  loss_type: "LogRatioLossAD"  # or "AnomalyDetectionLoss"
+  epsilon: 1.0e-6
+
+early_stopping:
+  patience: 5  #
+  min_epochs: 10  #
+  min_delta: 0.001  #
+
+#
+evaluation:
+  anomaly_threshold_percentile: 0.1  #

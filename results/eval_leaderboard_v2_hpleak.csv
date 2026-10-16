@@ -1,0 +1,31 @@
+method,method_label,stratum,hp_axis,tuned_label,hpfree_label,excluded_from_pooled,ub9_mean_hp_leak,fold_ci_lo,fold_ci_hi,ds_ci_lo,ds_ci_hi,pairs_compared,pairs_hparams_identical
+CVTGAD,CVTGAD,frozen12,tuned vs label-free HP,UB-GOLD per-dataset script (test-tuned),label-free: mymain defaults (A1),,4.5263,2.7282,6.2732,-0.4589,10.5513,65.0000,0.0000
+GLADC,GLADC,frozen12,tuned vs label-free HP,UB-GOLD per-dataset script (test-tuned),label-free: mymain defaults (A1),,-0.8337,-1.9370,0.2924,-2.8518,1.1276,57.0000,0.0000
+GLADMamba,GLADMamba,E5,tuned vs label-free HP,released per-dataset script,repository defaults; per-dataset batch sizes (A14),,0.4259,-0.9393,1.8273,-1.2603,2.1201,50.0000,0.0000
+GLADPro,GLADPro,E5,tuned vs label-free HP,released README configuration (A15),repository defaults (A10 §3),,-2.6227,-5.2405,-0.1568,-7.8948,1.8247,50.0000,0.0000
+GLASS,GLASS,E4,no HP axis: identical ubgold/hpfree configuration (A21; 'no per-dataset configuration released'),single released configuration (README line; A23 §3),repository defaults (== ubgold; A23 §3),A21: identical ubgold/hpfree configuration (0 by construction),0.3154,-0.1562,0.7804,-0.3241,1.1510,50.0000,50.0000
+GLocalKD,GLocalKD,frozen12,tuned vs label-free HP,UB-GOLD per-dataset script (test-tuned),label-free: mymain defaults (A1),,1.4717,-0.8716,3.8261,-3.3316,7.2107,60.0000,0.0000
+GOOD-D,GOOD-D,frozen12,tuned vs label-free HP,UB-GOLD per-dataset script (test-tuned),label-free: mymain defaults (A1),,0.7939,-0.3674,1.9019,-0.5193,2.2714,65.0000,5.0000
+GRAIL-0,GRAIL-0,reference,no hyperparameters (a-priori reference),a-priori (no hyperparameters),a-priori (no hyperparameters),a-priori reference: no hyperparameters,0.0000,0.0000,0.0000,0.0000,0.0000,,
+GraphCL_IF,GraphCL_IF,frozen12,tuned vs label-free HP,UB-GOLD per-dataset script (test-tuned),label-free: mymain defaults (A1),,0.0912,-0.6860,0.9347,-0.5946,0.7545,65.0000,0.0000
+GraphCL_OCSVM,GraphCL_OCSVM,frozen12,tuned vs label-free HP,UB-GOLD per-dataset script (test-tuned),label-free: mymain defaults (A1),,0.1741,-1.0248,1.4039,-1.8478,2.2613,65.0000,0.0000
+GraphDE,"GraphDE (paper orientation, A5)",frozen12,tuned vs label-free HP,UB-GOLD per-dataset script (test-tuned),label-free: mymain defaults (A1),,-1.1047,-1.8919,-0.3218,-2.7370,-0.0038,65.0000,0.0000
+HC-GLAD,HC-GLAD,E4,tuned vs label-free HP,released per-dataset script,repository defaults; memory-feasibility fallback (A19 §2),,-0.0500,-1.7514,1.7155,-2.7119,3.1991,50.0000,0.0000
+InfoGraph_IF,InfoGraph_IF,frozen12,tuned vs label-free HP,UB-GOLD per-dataset script (test-tuned),label-free: mymain defaults (A1),,0.7095,-0.3891,1.8256,-1.6573,2.8655,65.0000,0.0000
+InfoGraph_OCSVM,InfoGraph_OCSVM,frozen12,tuned vs label-free HP,UB-GOLD per-dataset script (test-tuned),label-free: mymain defaults (A1),,0.5668,-0.4947,1.6935,-1.6510,2.8602,65.0000,0.0000
+LGKDE,LGKDE ('ubgold' = MUTAG.yaml for all),E5,tuned vs label-free HP,MUTAG.yaml for all datasets (A18 §2),config-reader defaults; KeyError options from MUTAG.yaml (A18 §1),,2.6305,0.5980,4.6712,-1.1602,7.0611,50.0000,0.0000
+MUSE,MUSE,E5,tuned vs label-free HP,MUSE released per-dataset configuration,repository defaults (A10 §3),,4.1949,-0.0648,7.9291,0.8279,9.6677,50.0000,0.0000
+OCGIN,OCGIN,frozen12,tuned vs label-free HP,UB-GOLD per-dataset script (test-tuned),label-free: mymain defaults (A1),,0.9627,-0.2775,2.1711,-1.6502,3.2334,65.0000,0.0000
+OCGTL,OCGTL,frozen12,tuned vs label-free HP,UB-GOLD per-dataset script (test-tuned),label-free: mymain defaults (A1),,8.7555,7.4489,9.9337,5.4984,12.2618,65.0000,0.0000
+PK-IF,PK-IF,kernel,tuned vs label-free HP,test-tuned grid cell ('tuned'),UB-GOLD defaults ('default'),,3.6000,2.4918,4.7767,0.7940,7.3020,,
+PK-OCSVM,PK-OCSVM,kernel,tuned vs label-free HP,test-tuned grid cell ('tuned'),UB-GOLD defaults ('default'),,1.6175,0.4027,2.7916,0.4071,3.0663,,
+ProtoGLAD,ProtoGLAD,E4,tuned vs label-free HP,test-grid-best replay: TEST-LABEL-SELECTED (A11 §2),repository defaults (A10 §3),,3.8608,2.5923,5.1908,2.4066,5.3757,50.0000,0.0000
+SEGO,SEGO ('ubgold' = released-modal),E5,tuned vs label-free HP,released-modal (A16 §1),treecl.py defaults (A16 §2),,-2.2570,-3.4725,-1.1199,-3.7067,-0.8210,50.0000,0.0000
+SIGNET,SIGNET,frozen12,tuned vs label-free HP,UB-GOLD per-dataset script (test-tuned),label-free: mymain defaults (A1),,2.2936,0.6290,3.9760,-0.7319,5.4491,65.0000,0.0000
+SUL-GUL,SUL-GUL (GUL only; SUL not released),E4,no HP axis: identical ubgold/hpfree configuration (A21; 'no per-dataset configuration released'),released code defaults (500 epochs; paper states 1000) (A22 §3),repository argparse defaults (== ubgold; A21 §2),A21: identical ubgold/hpfree configuration (0 by construction),0.0000,0.0000,0.0000,0.0000,0.0000,50.0000,50.0000
+WL-IF,WL-IF,kernel,tuned vs label-free HP,test-tuned grid cell ('tuned'),UB-GOLD defaults ('default'),,1.8584,1.3300,2.3509,1.1760,2.6392,,
+WL-OCSVM,WL-OCSVM,kernel,tuned vs label-free HP,test-tuned grid cell ('tuned'),UB-GOLD defaults ('default'),,1.2411,0.9368,1.5494,0.6829,2.0680,,
+WL-hist+iForest (ctrl),WL-hist+iForest (ctrl),reference,no hyperparameters (a-priori reference),a-priori (no hyperparameters),a-priori (no hyperparameters),a-priori reference: no hyperparameters,0.0000,0.0000,0.0000,0.0000,0.0000,,
+graphlet-count+LW,graphlet-count+LW,reference,no hyperparameters (a-priori reference),a-priori (no hyperparameters),a-priori (no hyperparameters),a-priori reference: no hyperparameters,0.0000,0.0000,0.0000,0.0000,0.0000,,
+graphlet-count+iForest,graphlet-count+iForest,reference,no hyperparameters (a-priori reference),a-priori (no hyperparameters),a-priori (no hyperparameters),a-priori reference: no hyperparameters,0.0000,0.0000,0.0000,0.0000,0.0000,,
+size-only,size-only,reference,no hyperparameters (a-priori reference),a-priori (no hyperparameters),a-priori (no hyperparameters),a-priori reference: no hyperparameters,0.0000,0.0000,0.0000,0.0000,0.0000,,

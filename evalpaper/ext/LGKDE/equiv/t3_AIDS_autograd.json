@@ -1,0 +1,124 @@
+{
+ "versions": {
+  "torch": "2.4.0+cpu",
+  "dgl": "2.4.0",
+  "numpy": "1.26.4"
+ },
+ "started": "2026-10-13 09:41:21",
+ "lgkde_commit": "1bba5ef00067230fa327a630d67cabbd53fdf523",
+ "T2_init_bitwise_AIDS": true,
+ "T3_forward_backward_AIDS": {
+  "orig32": {
+   "vs_orig64": {
+    "dist_intra_max_rel": 1.5325811148311507e-05,
+    "dist_cross_max_rel": 9.348364478810852e-06,
+    "kde_intra_max_rel": 1.984915241124668e-07,
+    "kde_cross_max_rel": 3.884286800039092e-07,
+    "loss_rel": 3.6682682549838795e-08,
+    "grad_rel_l2": 8.157753823112769e-08,
+    "grad_rel_l2_kde_logits": 4.72355466025053e-08,
+    "bn_running_max_rel": 2.8264321279396993e-07
+   },
+   "intra_symmetric_zero_diag": true
+  },
+  "port_loop": {
+   "vs_orig32": {
+    "dist_intra_max_rel": 0.0,
+    "dist_cross_max_rel": 0.0,
+    "kde_intra_max_rel": 0.0,
+    "kde_cross_max_rel": 0.0,
+    "loss_rel": 0.0,
+    "grad_rel_l2": 1.8656775303994745e-09,
+    "grad_rel_l2_kde_logits": 0.0,
+    "bn_running_max_rel": 0.0
+   },
+   "vs_orig64": {
+    "dist_intra_max_rel": 1.5325811148311507e-05,
+    "dist_cross_max_rel": 9.348364478810852e-06,
+    "kde_intra_max_rel": 1.984915241124668e-07,
+    "kde_cross_max_rel": 3.884286800039092e-07,
+    "loss_rel": 3.6682682549838795e-08,
+    "grad_rel_l2": 8.175784256544171e-08,
+    "grad_rel_l2_kde_logits": 4.72355466025053e-08,
+    "bn_running_max_rel": 2.8264321279396993e-07
+   },
+   "intra_symmetric_zero_diag": true
+  },
+  "port_vec": {
+   "vs_orig32": {
+    "dist_intra_max_rel": 7.932259910543498e-07,
+    "dist_cross_max_rel": 6.193296861592389e-06,
+    "kde_intra_max_rel": 6.708436523062968e-08,
+    "kde_cross_max_rel": 1.909984894884459e-07,
+    "loss_rel": 0.0,
+    "grad_rel_l2": 7.209525704270358e-08,
+    "grad_rel_l2_kde_logits": 0.0,
+    "bn_running_max_rel": 0.0
+   },
+   "vs_orig64": {
+    "dist_intra_max_rel": 1.5325811148311507e-05,
+    "dist_cross_max_rel": 8.179818917735167e-06,
+    "kde_intra_max_rel": 1.5608635847235154e-07,
+    "kde_cross_max_rel": 2.0628181790946003e-07,
+    "loss_rel": 3.6682682549838795e-08,
+    "grad_rel_l2": 9.039111986393343e-08,
+    "grad_rel_l2_kde_logits": 4.72355466025053e-08,
+    "bn_running_max_rel": 2.8264321279396993e-07
+   },
+   "intra_symmetric_zero_diag": true
+  },
+  "port_vec_smallblocks": {
+   "vs_orig32": {
+    "dist_intra_max_rel": 7.932259910543498e-07,
+    "dist_cross_max_rel": 6.193296861592389e-06,
+    "kde_intra_max_rel": 6.708436523062968e-08,
+    "kde_cross_max_rel": 1.909984894884459e-07,
+    "loss_rel": 0.0,
+    "grad_rel_l2": 7.355498114074732e-08,
+    "grad_rel_l2_kde_logits": 0.0,
+    "bn_running_max_rel": 0.0
+   },
+   "vs_orig64": {
+    "dist_intra_max_rel": 1.5325811148311507e-05,
+    "dist_cross_max_rel": 8.179818917735167e-06,
+    "kde_intra_max_rel": 1.5608635847235154e-07,
+    "kde_cross_max_rel": 2.981298192915587e-07,
+    "loss_rel": 3.6682682549838795e-08,
+    "grad_rel_l2": 8.132536224075957e-08,
+    "grad_rel_l2_kde_logits": 4.72355466025053e-08,
+    "bn_running_max_rel": 2.8264321279396993e-07
+   },
+   "intra_symmetric_zero_diag": true
+  },
+  "port_vec_autograd": {
+   "vs_orig32": {
+    "dist_intra_max_rel": 7.932259910543498e-07,
+    "dist_cross_max_rel": 6.193296861592389e-06,
+    "kde_intra_max_rel": 6.708436523062968e-08,
+    "kde_cross_max_rel": 1.909984894884459e-07,
+    "loss_rel": 0.0,
+    "grad_rel_l2": 6.661785777753378e-08,
+    "grad_rel_l2_kde_logits": 0.0,
+    "bn_running_max_rel": 0.0
+   },
+   "vs_orig64": {
+    "dist_intra_max_rel": 1.5325811148311507e-05,
+    "dist_cross_max_rel": 8.179818917735167e-06,
+    "kde_intra_max_rel": 1.5608635847235154e-07,
+    "kde_cross_max_rel": 2.0628181790946003e-07,
+    "loss_rel": 3.6682682549838795e-08,
+    "grad_rel_l2": 8.28327325920841e-08,
+    "grad_rel_l2_kde_logits": 4.72355466025053e-08,
+    "bn_running_max_rel": 2.8264321279396993e-07
+   },
+   "intra_symmetric_zero_diag": true
+  }
+ },
+ "T3_sizes_AIDS": {
+  "n_graphs_A": 60,
+  "n_graphs_Q": 40,
+  "nodes_A": 616,
+  "nodes_Q": 532
+ },
+ "finished": "2026-10-13 09:42:10"
+}

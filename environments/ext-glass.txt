@@ -1,0 +1,8 @@
+# overlay 'ext-glass': installed with pip install --no-deps --target $GLAD_ENVS/ext-glass; the runners add it to sys.path
+huggingface_hub==0.36.0
+packaging==26.3
+pyyaml==6.0.3
+regex==2026.1.15
+safetensors==0.7.0
+tokenizers==0.21.4
+transformers==4.55.2

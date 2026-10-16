@@ -1,0 +1,44 @@
+# fetched third-party code without a licence (see THIRD_PARTY_NOTICES.md)
+evalpaper/ext/MUSE/src/
+evalpaper/ext/GLADMamba/src/
+evalpaper/ext/HC-GLAD/src/
+evalpaper/ext/ProtoGLAD/src/
+evalpaper/ext/SUL-GUL/src/
+# adapter files rebuilt from the recipes after the fetch (they reuse upstream lines)
+evalpaper/ext/MUSE/run_method.py
+evalpaper/ext/GLADMamba/run_method.py
+evalpaper/ext/HC-GLAD/run_method.py
+evalpaper/ext/HC-GLAD/tests/check_training_only.py
+evalpaper/ext/ProtoGLAD/run_method.py
+evalpaper/ext/ProtoGLAD/native_repro.py
+evalpaper/ext/SUL-GUL/run_method.py
+evalpaper/typed/ext/MUSE_typed.py
+evalpaper/typed/ext/GLADMamba_typed.py
+evalpaper/typed/ext/HC-GLAD_typed.py
+evalpaper/typed/ext/SUL-GUL_typed.py
+# run outputs (released as archives, see README.md)
+evalpaper/harness/parts/
+evalpaper/ext/parts/
+evalpaper/typed/parts/
+evalpaper/typed/ext/parts/
+evalpaper/version_a96137b/parts/
+evalpaper/followups/orientation/parts/
+evalpaper/followups/orientation/refs_parts/
+evalpaper/followups/ablation_xs/parts_*/
+evalpaper/kernels/parts/
+results/deep_rerun_parts/
+results/grail0_parts/
+# data you download or rebuild
+data/raw/
+data/ubgold_run/
+data/folds/
+glad_data/
+# outputs of the scripts when you re-run them
+**/logs/
+**/ckpt/
+**/smoke*/
+*.pt
+*.pth
+__pycache__/
+*.pyc
+.pytest_cache/

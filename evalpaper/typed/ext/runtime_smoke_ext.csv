@@ -1,0 +1,37 @@
+run_id,method,generator,fv,tag,dry,complete,n_eval,num_epoch,threads,device,seconds,sec_per_epoch_train,sec_per_eval,maxrss_gb,segments,slice_check,n_values,n_nonfinite,n_out_of_range,hold_finite
+GLADMamba_GX_F2_s0_dry,GLADMamba,GX,F2,dry,True,True,1,5,4,cpu,44.1,5.403,1.171,3.59,1,null,9,0,0,1/1
+GLADMamba_GX_F2_s0_smoke,GLADMamba,GX,F2,smoke,False,True,2,10,8,cpu,104.8,4.943,15.627,23.45,1,null,18,0,0,2/2
+GLADMamba_MSV2_MS_s0_smoke,GLADMamba,MSV2,MS,smoke,False,True,2,10,8,cpu,86.2,3.455,10.768,13.83,1,null,36,0,0,2/2
+GLADMamba_MSV2_MS_s1_rr,GLADMamba,MSV2,MS,rr,False,True,2,10,8,cpu,60.0,3.591,10.735,13.13,2,null,36,0,0,2/2
+GLADMamba_MSV2_MS_s1_rs,GLADMamba,MSV2,MS,rs,False,True,2,10,8,cpu,90.9,3.777,11.226,13.16,1,null,36,0,0,2/2
+GLADPro_GX_F2_s0_smoke,GLADPro,GX,F2,smoke,False,True,4,4,4,cpu,37.7,1.933,1.918,1.39,1,null,36,0,0,4/4
+GLADPro_MSV2_MS_s0_smoke,GLADPro,MSV2,MS,smoke,False,True,10,10,4,cpu,54.5,1.585,2.572,1.13,1,null,180,0,0,10/10
+GLADPro_MSV2_MS_s1_rr,GLADPro,MSV2,MS,rr,False,True,6,6,4,cpu,29.9,1.814,2.884,1.17,2,null,108,0,0,6/6
+GLADPro_MSV2_MS_s1_rs,GLADPro,MSV2,MS,rs,False,True,6,6,4,cpu,41.7,1.847,3.008,1.1,1,null,108,0,0,6/6
+GLASS_GX_F1_s0_rr,GLASS,GX,F1,rr,False,True,3,8,1,cpu,37.3,0.718,11.107,0.56,2,null,27,0,0,3/3
+GLASS_GX_F1_s0_rs,GLASS,GX,F1,rs,False,True,3,8,1,cpu,59.9,0.672,11.334,0.58,1,null,27,0,0,3/3
+GLASS_GX_F2_s0_smoke,GLASS,GX,F2,smoke,False,True,7,25,1,cpu,286.6,2.007,11.746,0.66,1,null,63,0,0,7/7
+GLASS_MSV2_MS_s0_smoke,GLASS,MSV2,MS,smoke,False,True,7,25,1,cpu,275.8,2.077,27.975,0.64,1,null,126,0,0,7/7
+HC-GLAD_GX_F2_s0_smoke,HC-GLAD,GX,F2,smoke,False,True,2,10,16,cpu,312.2,6.87,43.677,90.76,1,null,18,0,0,2/2
+HC-GLAD_MSV2_MS_s0_dry,HC-GLAD,MSV2,MS,dry,True,True,1,5,4,cpu,59.1,6.022,2.942,3.33,1,null,18,0,0,1/1
+HC-GLAD_MSV2_MS_s0_smoke,HC-GLAD,MSV2,MS,smoke,False,True,2,10,16,cpu,258.9,3.571,35.958,53.48,1,null,36,0,0,2/2
+HC-GLAD_MSV2_MS_s1_rr,HC-GLAD,MSV2,MS,rr,False,True,2,10,16,cpu,113.1,3.92,29.069,50.55,2,null,36,0,0,2/2
+HC-GLAD_MSV2_MS_s1_rs,HC-GLAD,MSV2,MS,rs,False,True,2,10,16,cpu,149.5,3.037,28.967,50.55,1,null,36,0,0,2/2
+LGKDE_GX_F2_s0_smoke,LGKDE,GX,F2,smoke,False,True,3,3,8,cpu,143.4,25.166,16.088,0.74,1,null,27,0,0,3/3
+LGKDE_MSV2_MS_s0_smoke,LGKDE,MSV2,MS,smoke,False,True,2,2,4,cpu,99.9,22.598,19.062,1.05,1,null,36,0,0,2/2
+LGKDE_MSV2_MS_s1_rr,LGKDE,MSV2,MS,rr,False,True,3,3,8,cpu,87.0,19.818,16.56,1.06,2,null,54,0,0,3/3
+LGKDE_MSV2_MS_s1_rs,LGKDE,MSV2,MS,rs,False,True,3,3,8,cpu,128.7,20.588,18.758,1.06,1,null,54,0,0,3/3
+MUSE_GX_F2_s0_smoke,MUSE,GX,F2,smoke,False,True,1,20,4,cpu,45.3,0.274,2.158,0.51,1,"{""group"": ""T3b"", ""epoch"": 20, ""max_abs_diff"": 0.0, ""max_rel_diff"": 0.0}",9,0,0,1/1
+MUSE_GX_F2_s1_rr,MUSE,GX,F2,rr,False,True,2,40,2,cpu,18.8,0.229,1.035,0.52,2,null,18,0,0,2/2
+MUSE_GX_F2_s1_rs,MUSE,GX,F2,rs,False,True,2,40,2,cpu,22.8,0.249,1.073,0.52,1,null,18,0,0,2/2
+MUSE_MSV2_MS_s0_smoke,MUSE,MSV2,MS,smoke,False,True,2,40,2,cpu,30.7,0.379,1.999,0.49,1,"{""group"": ""MS3:sizechg"", ""epoch"": 20, ""max_abs_diff"": 0.0, ""max_rel_diff"": 0.0}",36,0,0,2/2
+ProtoGLAD_GX_F2_s0_smoke,ProtoGLAD,GX,F2,smoke,False,True,1,1,4,cpu,257.6,0.0,160.789,1.27,1,"{""group"": ""T3b"", ""max_abs_diff"": 0.0}",9,0,0,1/1
+ProtoGLAD_MSV2_MS_s0_smoke,ProtoGLAD,MSV2,MS,smoke,False,True,1,1,4,cpu,337.3,0.0,324.754,1.45,1,"{""group"": ""MS3:sizechg"", ""max_abs_diff"": 0.0}",18,0,0,1/1
+SEGO_GX_F2_s0_smoke,SEGO,GX,F2,smoke,False,True,2,20,4,cpu,160.3,4.787,6.402,3.08,1,null,18,0,0,2/2
+SEGO_MSV2_MS_s0_smoke,SEGO,MSV2,MS,smoke,False,True,1,10,4,cpu,70.3,1.84,4.198,1.24,1,null,18,0,0,1/1
+SEGO_MSV2_MS_s1_rr,SEGO,MSV2,MS,rr,False,True,2,20,4,cpu,62.9,2.126,4.572,1.21,2,null,36,0,0,2/2
+SEGO_MSV2_MS_s1_rs,SEGO,MSV2,MS,rs,False,True,2,20,4,cpu,94.6,2.408,5.091,1.22,1,null,36,0,0,2/2
+SUL-GUL_GX_F2_s0_smoke,SUL-GUL,GX,F2,smoke,False,True,20,20,2,cpu,24.4,0.322,0.322,0.67,1,null,180,0,0,20/20
+SUL-GUL_MSV2_MS_s0_smoke,SUL-GUL,MSV2,MS,smoke,False,True,12,12,4,cpu,21.2,0.304,0.347,0.57,1,null,216,0,0,12/12
+SUL-GUL_MSV2_MS_s1_rr,SUL-GUL,MSV2,MS,rr,False,True,12,12,2,cpu,17.4,0.264,0.375,0.59,2,null,216,0,0,12/12
+SUL-GUL_MSV2_MS_s1_rs,SUL-GUL,MSV2,MS,rs,False,True,12,12,2,cpu,20.1,0.256,0.368,0.62,1,null,216,0,0,12/12

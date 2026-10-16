@@ -1,0 +1,22 @@
+method,pairs_compared,pairs_hparams_identical,auto_identical_config,declared,excluded_from_pooled_hp_leak
+GLASS,50,50,True,"A23 §3, A24 §2",True
+GraphCL_IF,65,0,False,,False
+GLocalKD,60,0,False,,False
+GraphCL_OCSVM,65,0,False,,False
+GraphDE,65,0,False,,False
+GLADMamba,50,0,False,,False
+SUL-GUL,50,50,True,A21 §2,True
+HC-GLAD,50,0,False,,False
+SIGNET,65,0,False,,False
+MUSE,50,0,False,,False
+ProtoGLAD,50,0,False,,False
+InfoGraph_OCSVM,65,0,False,,False
+OCGIN,65,0,False,,False
+GLADPro,50,0,False,,False
+GLADC,57,0,False,,False
+OCGTL,65,0,False,,False
+CVTGAD,65,0,False,,False
+InfoGraph_IF,65,0,False,,False
+GOOD-D,65,5,False,,False
+SEGO,50,0,False,,False
+LGKDE,50,0,False,,False

@@ -1,0 +1,302 @@
+{
+ "SIGNET": {
+  "GX": {
+   "sec_per_epoch": 1.5493402183055878,
+   "sec_per_eval": 2.3427813053131104,
+   "setup_s": 150.0,
+   "threads": 4,
+   "mem_gb": 4,
+   "peak_rss_gb_smoke": 1.3997802734375,
+   "source": "smoke 4 threads",
+   "device": "cpu"
+  },
+  "MS": {
+   "sec_per_epoch": 1.4070520102977753,
+   "sec_per_eval": 2.337085962295532,
+   "setup_s": 150.0,
+   "threads": 4,
+   "mem_gb": 3.0,
+   "peak_rss_gb_smoke": 1.0039405822753906,
+   "source": "smoke 4 threads",
+   "device": "cpu"
+  }
+ },
+ "CVTGAD": {
+  "GX": {
+   "sec_per_epoch": 12.347783923149109,
+   "sec_per_eval": 64.16942393779755,
+   "setup_s": 150.0,
+   "threads": 4,
+   "mem_gb": 37,
+   "peak_rss_gb_smoke": 23.41830825805664,
+   "source": "smoke 4 threads",
+   "device": "cpu",
+   "gpu": {
+    "sec_per_epoch": 1.1031369268894196,
+    "sec_per_eval": 1.445879578590393,
+    "setup_s": 150.0,
+    "threads": 4,
+    "mem_gb": 4,
+    "device": "cuda (A100 40GB, 1 run per GPU)",
+    "source": "gpu8 smoke job <jobid>"
+   }
+  },
+  "MS": {
+   "sec_per_epoch": 6.294194936752319,
+   "sec_per_eval": 38.494465351104736,
+   "setup_s": 150.0,
+   "threads": 4,
+   "mem_gb": 17,
+   "peak_rss_gb_smoke": 10.362449645996094,
+   "source": "smoke 4 threads",
+   "device": "cpu",
+   "gpu": {
+    "sec_per_epoch": 1.0575627088546753,
+    "sec_per_eval": 0.7521766424179077,
+    "setup_s": 150.0,
+    "threads": 4,
+    "mem_gb": 4,
+    "device": "cuda (A100 40GB, 1 run per GPU)",
+    "source": "gpu8 smoke job <jobid>"
+   }
+  }
+ },
+ "GOOD-D": {
+  "GX": {
+   "sec_per_epoch": 4.215561926364899,
+   "sec_per_eval": 18.45773768424988,
+   "setup_s": 150.0,
+   "threads": 4,
+   "mem_gb": 36,
+   "peak_rss_gb_smoke": 22.90650177001953,
+   "source": "smoke 4 threads",
+   "device": "cpu",
+   "gpu": {
+    "sec_per_epoch": 1.133632779121399,
+    "sec_per_eval": 0.5645240545272827,
+    "setup_s": 150.0,
+    "threads": 4,
+    "mem_gb": 4,
+    "device": "cuda (A100 40GB, 1 run per GPU)",
+    "source": "gpu8 smoke job <jobid>"
+   }
+  },
+  "MS": {
+   "sec_per_epoch": 2.9571145474910736,
+   "sec_per_eval": 11.39900541305542,
+   "setup_s": 150.0,
+   "threads": 4,
+   "mem_gb": 16,
+   "peak_rss_gb_smoke": 9.99972152709961,
+   "source": "smoke 4 threads",
+   "device": "cpu",
+   "gpu": {
+    "sec_per_epoch": 1.4768121540546415,
+    "sec_per_eval": 0.6971964836120605,
+    "setup_s": 150.0,
+    "threads": 4,
+    "mem_gb": 4,
+    "device": "cuda (A100 40GB, 1 run per GPU)",
+    "source": "gpu8 smoke job <jobid>"
+   }
+  }
+ },
+ "GraphDE": {
+  "GX": {
+   "sec_per_epoch": 1.834484487771988,
+   "sec_per_eval": 3.9615169763565055,
+   "setup_s": 150.0,
+   "threads": 4,
+   "mem_gb": 12,
+   "peak_rss_gb_smoke": 7.291717529296875,
+   "source": "smoke 4 threads",
+   "device": "cpu"
+  },
+  "MS": {
+   "sec_per_epoch": 1.6980078518390656,
+   "sec_per_eval": 4.396058797836304,
+   "setup_s": 150.0,
+   "threads": 4,
+   "mem_gb": 7,
+   "peak_rss_gb_smoke": 3.892414093017578,
+   "source": "smoke 4 threads",
+   "device": "cpu"
+  }
+ },
+ "OCGTL": {
+  "GX": {
+   "sec_per_epoch": 0.7077977359294891,
+   "sec_per_eval": 0.99019455909729,
+   "setup_s": 150.0,
+   "threads": 2,
+   "mem_gb": 3.0,
+   "peak_rss_gb_smoke": 0.9390029907226562,
+   "source": "smoke 2 threads",
+   "device": "cpu"
+  },
+  "MS": {
+   "sec_per_epoch": 0.7907571494579315,
+   "sec_per_eval": 0.9423792362213136,
+   "setup_s": 150.0,
+   "threads": 2,
+   "mem_gb": 3.0,
+   "peak_rss_gb_smoke": 0.7027511596679688,
+   "source": "smoke 2 threads",
+   "device": "cpu"
+  }
+ },
+ "OCGIN": {
+  "GX": {
+   "sec_per_epoch": 0.157005101442337,
+   "sec_per_eval": 0.2615364789962768,
+   "setup_s": 150.0,
+   "threads": 2,
+   "mem_gb": 3.0,
+   "peak_rss_gb_smoke": 0.5322113037109375,
+   "source": "smoke 2 threads",
+   "device": "cpu"
+  },
+  "MS": {
+   "sec_per_epoch": 0.1531127691268921,
+   "sec_per_eval": 0.3084605932235718,
+   "setup_s": 150.0,
+   "threads": 2,
+   "mem_gb": 3.0,
+   "peak_rss_gb_smoke": 0.5170364379882812,
+   "source": "smoke 2 threads",
+   "device": "cpu"
+  }
+ },
+ "GLocalKD": {
+  "GX": {
+   "sec_per_epoch": 0.147765427827835,
+   "sec_per_eval": 1.6620491743087769,
+   "setup_s": 150.0,
+   "threads": 2,
+   "mem_gb": 3.0,
+   "peak_rss_gb_smoke": 0.6468467712402344,
+   "source": "smoke 2 threads",
+   "device": "cpu"
+  },
+  "MS": {
+   "sec_per_epoch": 0.4524717330932617,
+   "sec_per_eval": 2.6443026065826416,
+   "setup_s": 150.0,
+   "threads": 2,
+   "mem_gb": 3.0,
+   "peak_rss_gb_smoke": 0.9480934143066406,
+   "source": "smoke 2 threads",
+   "device": "cpu"
+  }
+ },
+ "GLADC": {
+  "GX": {
+   "sec_per_epoch": 0.7377782464027405,
+   "sec_per_eval": 1.3810245990753174,
+   "setup_s": 150.0,
+   "threads": 2,
+   "mem_gb": 3.0,
+   "peak_rss_gb_smoke": 1.0355491638183594,
+   "source": "smoke 2 threads",
+   "device": "cpu"
+  },
+  "MS": {
+   "sec_per_epoch": 2.255224287509918,
+   "sec_per_eval": 2.99096143245697,
+   "setup_s": 150.0,
+   "threads": 2,
+   "mem_gb": 4,
+   "peak_rss_gb_smoke": 1.5951042175292969,
+   "source": "smoke 2 threads",
+   "device": "cpu"
+  }
+ },
+ "GraphCL_IF": {
+  "GX": {
+   "sec_per_epoch": 1.1717686653137207,
+   "sec_per_eval": 0.3888413906097412,
+   "setup_s": 150.0,
+   "threads": 2,
+   "mem_gb": 3.0,
+   "peak_rss_gb_smoke": 0.5497093200683594,
+   "source": "smoke 2 threads",
+   "device": "cpu"
+  },
+  "MS": {
+   "sec_per_epoch": 1.9147619903087616,
+   "sec_per_eval": 0.566804051399231,
+   "setup_s": 150.0,
+   "threads": 2,
+   "mem_gb": 3.0,
+   "peak_rss_gb_smoke": 0.5384254455566406,
+   "source": "smoke 2 threads",
+   "device": "cpu"
+  }
+ },
+ "GraphCL_OCSVM": {
+  "GX": {
+   "sec_per_epoch": 0.2006709277629852,
+   "sec_per_eval": 0.3692262172698974,
+   "setup_s": 150.0,
+   "threads": 2,
+   "mem_gb": 3.0,
+   "peak_rss_gb_smoke": 0.554534912109375,
+   "source": "smoke 2 threads",
+   "device": "cpu"
+  },
+  "MS": {
+   "sec_per_epoch": 0.2076053619384765,
+   "sec_per_eval": 0.4261305332183838,
+   "setup_s": 150.0,
+   "threads": 2,
+   "mem_gb": 3.0,
+   "peak_rss_gb_smoke": 0.5348167419433594,
+   "source": "smoke 2 threads",
+   "device": "cpu"
+  }
+ },
+ "InfoGraph_IF": {
+  "GX": {
+   "sec_per_epoch": 1.5234348475933075,
+   "sec_per_eval": 0.3069348931312561,
+   "setup_s": 150.0,
+   "threads": 2,
+   "mem_gb": 4,
+   "peak_rss_gb_smoke": 1.5701522827148438,
+   "source": "smoke 2 threads",
+   "device": "cpu"
+  },
+  "MS": {
+   "sec_per_epoch": 2.062676787376404,
+   "sec_per_eval": 0.4598197937011719,
+   "setup_s": 150.0,
+   "threads": 2,
+   "mem_gb": 3.0,
+   "peak_rss_gb_smoke": 1.0619888305664062,
+   "source": "smoke 2 threads",
+   "device": "cpu"
+  }
+ },
+ "InfoGraph_OCSVM": {
+  "GX": {
+   "sec_per_epoch": 0.5416947305202484,
+   "sec_per_eval": 0.2308234572410583,
+   "setup_s": 150.0,
+   "threads": 2,
+   "mem_gb": 4,
+   "peak_rss_gb_smoke": 1.5831642150878906,
+   "source": "smoke 2 threads",
+   "device": "cpu"
+  },
+  "MS": {
+   "sec_per_epoch": 0.3213659822940826,
+   "sec_per_eval": 0.3087069392204284,
+   "setup_s": 150.0,
+   "threads": 2,
+   "mem_gb": 3.0,
+   "peak_rss_gb_smoke": 1.0675315856933594,
+   "source": "smoke 2 threads",
+   "device": "cpu"
+  }
+ }
+}

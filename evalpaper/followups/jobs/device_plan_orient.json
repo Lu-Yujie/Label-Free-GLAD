@@ -1,0 +1,1265 @@
+{
+ "generated_by": "followups/jobs/gen_tasks.py",
+ "plan": {
+  "CVTGAD BZR 0": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "CVTGAD_BZR_fold0",
+   "threads": 2,
+   "train_ratio": 3.6957
+  },
+  "CVTGAD BZR 1": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "CVTGAD_BZR_fold1",
+   "threads": 2,
+   "train_ratio": 3.6957
+  },
+  "CVTGAD BZR 2": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "CVTGAD_BZR_fold2",
+   "threads": 2,
+   "train_ratio": 3.6957
+  },
+  "CVTGAD BZR 3": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "CVTGAD_BZR_fold3",
+   "threads": 2,
+   "train_ratio": 3.6957
+  },
+  "CVTGAD BZR 4": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "CVTGAD_BZR_fold4",
+   "threads": 2,
+   "train_ratio": 3.7647
+  },
+  "CVTGAD COX2 0": {
+   "device": "cpu",
+   "source": "evalpaper_harness",
+   "main_run_id": "CVTGAD_COX2_fold0",
+   "threads": 2,
+   "train_ratio": 3.6049
+  },
+  "CVTGAD COX2 1": {
+   "device": "cpu",
+   "source": "evalpaper_harness",
+   "main_run_id": "CVTGAD_COX2_fold1",
+   "threads": 2,
+   "train_ratio": 3.6049
+  },
+  "CVTGAD COX2 2": {
+   "device": "cpu",
+   "source": "evalpaper_harness",
+   "main_run_id": "CVTGAD_COX2_fold2",
+   "threads": 2,
+   "train_ratio": 3.561
+  },
+  "CVTGAD COX2 3": {
+   "device": "cpu",
+   "source": "evalpaper_harness",
+   "main_run_id": "CVTGAD_COX2_fold3",
+   "threads": 2,
+   "train_ratio": 3.561
+  },
+  "CVTGAD COX2 4": {
+   "device": "cpu",
+   "source": "evalpaper_harness",
+   "main_run_id": "CVTGAD_COX2_fold4",
+   "threads": 2,
+   "train_ratio": 3.561
+  },
+  "CVTGAD PROTEINS_full 0": {
+   "device": "cpu",
+   "source": "evalpaper_harness",
+   "main_run_id": "CVTGAD_PROTEINS_full_fold0",
+   "threads": 2,
+   "train_ratio": 1.4722
+  },
+  "CVTGAD PROTEINS_full 1": {
+   "device": "cpu",
+   "source": "evalpaper_harness",
+   "main_run_id": "CVTGAD_PROTEINS_full_fold1",
+   "threads": 2,
+   "train_ratio": 1.4722
+  },
+  "CVTGAD PROTEINS_full 2": {
+   "device": "cpu",
+   "source": "evalpaper_harness",
+   "main_run_id": "CVTGAD_PROTEINS_full_fold2",
+   "threads": 2,
+   "train_ratio": 1.4722
+  },
+  "CVTGAD PROTEINS_full 3": {
+   "device": "cpu",
+   "source": "evalpaper_harness",
+   "main_run_id": "CVTGAD_PROTEINS_full_fold3",
+   "threads": 2,
+   "train_ratio": 1.475
+  },
+  "CVTGAD PROTEINS_full 4": {
+   "device": "cpu",
+   "source": "evalpaper_harness",
+   "main_run_id": "CVTGAD_PROTEINS_full_fold4",
+   "threads": 2,
+   "train_ratio": 1.475
+  },
+  "GLADC BZR 0": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "GLADC_BZR_fold0",
+   "threads": 2,
+   "train_ratio": 3.6957
+  },
+  "GLADC BZR 1": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "GLADC_BZR_fold1",
+   "threads": 2,
+   "train_ratio": 3.6957
+  },
+  "GLADC BZR 2": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "GLADC_BZR_fold2",
+   "threads": 2,
+   "train_ratio": 3.6957
+  },
+  "GLADC BZR 3": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "GLADC_BZR_fold3",
+   "threads": 2,
+   "train_ratio": 3.6957
+  },
+  "GLADC BZR 4": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "GLADC_BZR_fold4",
+   "threads": 2,
+   "train_ratio": 3.7647
+  },
+  "GLADC COX2 0": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "GLADC_COX2_fold0",
+   "threads": 2,
+   "train_ratio": 3.6049
+  },
+  "GLADC COX2 1": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "GLADC_COX2_fold1",
+   "threads": 2,
+   "train_ratio": 3.6049
+  },
+  "GLADC COX2 2": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "GLADC_COX2_fold2",
+   "threads": 2,
+   "train_ratio": 3.561
+  },
+  "GLADC COX2 3": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "GLADC_COX2_fold3",
+   "threads": 2,
+   "train_ratio": 3.561
+  },
+  "GLADC COX2 4": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "GLADC_COX2_fold4",
+   "threads": 2,
+   "train_ratio": 3.561
+  },
+  "GLADC PROTEINS_full 0": {
+   "device": "cpu",
+   "source": "evalpaper_harness",
+   "main_run_id": "GLADC_PROTEINS_full_fold0",
+   "threads": 2,
+   "train_ratio": 1.4722
+  },
+  "GLADC PROTEINS_full 1": {
+   "device": "cpu",
+   "source": "evalpaper_harness",
+   "main_run_id": "GLADC_PROTEINS_full_fold1",
+   "threads": 2,
+   "train_ratio": 1.4722
+  },
+  "GLADC PROTEINS_full 2": {
+   "device": "cpu",
+   "source": "evalpaper_harness",
+   "main_run_id": "GLADC_PROTEINS_full_fold2",
+   "threads": 2,
+   "train_ratio": 1.4722
+  },
+  "GLADC PROTEINS_full 3": {
+   "device": "cpu",
+   "source": "evalpaper_harness",
+   "main_run_id": "GLADC_PROTEINS_full_fold3",
+   "threads": 2,
+   "train_ratio": 1.475
+  },
+  "GLADC PROTEINS_full 4": {
+   "device": "cpu",
+   "source": "evalpaper_harness",
+   "main_run_id": "GLADC_PROTEINS_full_fold4",
+   "threads": 2,
+   "train_ratio": 1.475
+  },
+  "GLocalKD BZR 0": {
+   "device": "cuda",
+   "source": "deep_rerun",
+   "main_run_id": "GLocalKD_BZR_fold0",
+   "threads": 2,
+   "train_ratio": 3.6957
+  },
+  "GLocalKD BZR 1": {
+   "device": "cuda",
+   "source": "deep_rerun",
+   "main_run_id": "GLocalKD_BZR_fold1",
+   "threads": 2,
+   "train_ratio": 3.6957
+  },
+  "GLocalKD BZR 2": {
+   "device": "cuda",
+   "source": "deep_rerun",
+   "main_run_id": "GLocalKD_BZR_fold2",
+   "threads": 2,
+   "train_ratio": 3.6957
+  },
+  "GLocalKD BZR 3": {
+   "device": "cuda",
+   "source": "deep_rerun",
+   "main_run_id": "GLocalKD_BZR_fold3",
+   "threads": 2,
+   "train_ratio": 3.6957
+  },
+  "GLocalKD BZR 4": {
+   "device": "cuda",
+   "source": "deep_rerun",
+   "main_run_id": "GLocalKD_BZR_fold4",
+   "threads": 2,
+   "train_ratio": 3.7647
+  },
+  "GLocalKD COX2 0": {
+   "device": "cuda",
+   "source": "deep_rerun",
+   "main_run_id": "GLocalKD_COX2_fold0",
+   "threads": 2,
+   "train_ratio": 3.6049
+  },
+  "GLocalKD COX2 1": {
+   "device": "cuda",
+   "source": "deep_rerun",
+   "main_run_id": "GLocalKD_COX2_fold1",
+   "threads": 2,
+   "train_ratio": 3.6049
+  },
+  "GLocalKD COX2 2": {
+   "device": "cuda",
+   "source": "deep_rerun",
+   "main_run_id": "GLocalKD_COX2_fold2",
+   "threads": 2,
+   "train_ratio": 3.561
+  },
+  "GLocalKD COX2 3": {
+   "device": "cuda",
+   "source": "deep_rerun",
+   "main_run_id": "GLocalKD_COX2_fold3",
+   "threads": 2,
+   "train_ratio": 3.561
+  },
+  "GLocalKD COX2 4": {
+   "device": "cuda",
+   "source": "deep_rerun",
+   "main_run_id": "GLocalKD_COX2_fold4",
+   "threads": 2,
+   "train_ratio": 3.561
+  },
+  "GLocalKD PROTEINS_full 0": {
+   "device": "cuda",
+   "source": "deep_rerun",
+   "main_run_id": "GLocalKD_PROTEINS_full_fold0",
+   "threads": 2,
+   "train_ratio": 1.4722
+  },
+  "GLocalKD PROTEINS_full 1": {
+   "device": "cuda",
+   "source": "deep_rerun",
+   "main_run_id": "GLocalKD_PROTEINS_full_fold1",
+   "threads": 2,
+   "train_ratio": 1.4722
+  },
+  "GLocalKD PROTEINS_full 2": {
+   "device": "cuda",
+   "source": "deep_rerun",
+   "main_run_id": "GLocalKD_PROTEINS_full_fold2",
+   "threads": 2,
+   "train_ratio": 1.4722
+  },
+  "GLocalKD PROTEINS_full 3": {
+   "device": "cuda",
+   "source": "deep_rerun",
+   "main_run_id": "GLocalKD_PROTEINS_full_fold3",
+   "threads": 2,
+   "train_ratio": 1.475
+  },
+  "GLocalKD PROTEINS_full 4": {
+   "device": "cuda",
+   "source": "deep_rerun",
+   "main_run_id": "GLocalKD_PROTEINS_full_fold4",
+   "threads": 2,
+   "train_ratio": 1.475
+  },
+  "GOOD-D BZR 0": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "GOOD-D_BZR_fold0",
+   "threads": 2,
+   "train_ratio": 3.6957
+  },
+  "GOOD-D BZR 1": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "GOOD-D_BZR_fold1",
+   "threads": 2,
+   "train_ratio": 3.6957
+  },
+  "GOOD-D BZR 2": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "GOOD-D_BZR_fold2",
+   "threads": 2,
+   "train_ratio": 3.6957
+  },
+  "GOOD-D BZR 3": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "GOOD-D_BZR_fold3",
+   "threads": 2,
+   "train_ratio": 3.6957
+  },
+  "GOOD-D BZR 4": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "GOOD-D_BZR_fold4",
+   "threads": 2,
+   "train_ratio": 3.7647
+  },
+  "GOOD-D COX2 0": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "GOOD-D_COX2_fold0",
+   "threads": 2,
+   "train_ratio": 3.6049
+  },
+  "GOOD-D COX2 1": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "GOOD-D_COX2_fold1",
+   "threads": 2,
+   "train_ratio": 3.6049
+  },
+  "GOOD-D COX2 2": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "GOOD-D_COX2_fold2",
+   "threads": 2,
+   "train_ratio": 3.561
+  },
+  "GOOD-D COX2 3": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "GOOD-D_COX2_fold3",
+   "threads": 2,
+   "train_ratio": 3.561
+  },
+  "GOOD-D COX2 4": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "GOOD-D_COX2_fold4",
+   "threads": 2,
+   "train_ratio": 3.561
+  },
+  "GOOD-D PROTEINS_full 0": {
+   "device": "cpu",
+   "source": "evalpaper_harness",
+   "main_run_id": "GOOD-D_PROTEINS_full_fold0",
+   "threads": 2,
+   "train_ratio": 1.4722
+  },
+  "GOOD-D PROTEINS_full 1": {
+   "device": "cpu",
+   "source": "evalpaper_harness",
+   "main_run_id": "GOOD-D_PROTEINS_full_fold1",
+   "threads": 2,
+   "train_ratio": 1.4722
+  },
+  "GOOD-D PROTEINS_full 2": {
+   "device": "cpu",
+   "source": "evalpaper_harness",
+   "main_run_id": "GOOD-D_PROTEINS_full_fold2",
+   "threads": 2,
+   "train_ratio": 1.4722
+  },
+  "GOOD-D PROTEINS_full 3": {
+   "device": "cpu",
+   "source": "evalpaper_harness",
+   "main_run_id": "GOOD-D_PROTEINS_full_fold3",
+   "threads": 2,
+   "train_ratio": 1.475
+  },
+  "GOOD-D PROTEINS_full 4": {
+   "device": "cpu",
+   "source": "evalpaper_harness",
+   "main_run_id": "GOOD-D_PROTEINS_full_fold4",
+   "threads": 2,
+   "train_ratio": 1.475
+  },
+  "GraphCL_IF BZR 0": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "GraphCL_IF_BZR_fold0",
+   "threads": 2,
+   "train_ratio": 3.6957
+  },
+  "GraphCL_IF BZR 1": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "GraphCL_IF_BZR_fold1",
+   "threads": 2,
+   "train_ratio": 3.6957
+  },
+  "GraphCL_IF BZR 2": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "GraphCL_IF_BZR_fold2",
+   "threads": 2,
+   "train_ratio": 3.6957
+  },
+  "GraphCL_IF BZR 3": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "GraphCL_IF_BZR_fold3",
+   "threads": 2,
+   "train_ratio": 3.6957
+  },
+  "GraphCL_IF BZR 4": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "GraphCL_IF_BZR_fold4",
+   "threads": 2,
+   "train_ratio": 3.7647
+  },
+  "GraphCL_IF COX2 0": {
+   "device": "cpu",
+   "source": "evalpaper_harness",
+   "main_run_id": "GraphCL_IF_COX2_fold0",
+   "threads": 2,
+   "train_ratio": 3.6049
+  },
+  "GraphCL_IF COX2 1": {
+   "device": "cpu",
+   "source": "evalpaper_harness",
+   "main_run_id": "GraphCL_IF_COX2_fold1",
+   "threads": 2,
+   "train_ratio": 3.6049
+  },
+  "GraphCL_IF COX2 2": {
+   "device": "cpu",
+   "source": "evalpaper_harness",
+   "main_run_id": "GraphCL_IF_COX2_fold2",
+   "threads": 2,
+   "train_ratio": 3.561
+  },
+  "GraphCL_IF COX2 3": {
+   "device": "cpu",
+   "source": "evalpaper_harness",
+   "main_run_id": "GraphCL_IF_COX2_fold3",
+   "threads": 2,
+   "train_ratio": 3.561
+  },
+  "GraphCL_IF COX2 4": {
+   "device": "cpu",
+   "source": "evalpaper_harness",
+   "main_run_id": "GraphCL_IF_COX2_fold4",
+   "threads": 2,
+   "train_ratio": 3.561
+  },
+  "GraphCL_IF PROTEINS_full 0": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "GraphCL_IF_PROTEINS_full_fold0",
+   "threads": 2,
+   "train_ratio": 1.4722
+  },
+  "GraphCL_IF PROTEINS_full 1": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "GraphCL_IF_PROTEINS_full_fold1",
+   "threads": 2,
+   "train_ratio": 1.4722
+  },
+  "GraphCL_IF PROTEINS_full 2": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "GraphCL_IF_PROTEINS_full_fold2",
+   "threads": 2,
+   "train_ratio": 1.4722
+  },
+  "GraphCL_IF PROTEINS_full 3": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "GraphCL_IF_PROTEINS_full_fold3",
+   "threads": 2,
+   "train_ratio": 1.475
+  },
+  "GraphCL_IF PROTEINS_full 4": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "GraphCL_IF_PROTEINS_full_fold4",
+   "threads": 2,
+   "train_ratio": 1.475
+  },
+  "GraphCL_OCSVM BZR 0": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "GraphCL_OCSVM_BZR_fold0",
+   "threads": 2,
+   "train_ratio": 3.6957
+  },
+  "GraphCL_OCSVM BZR 1": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "GraphCL_OCSVM_BZR_fold1",
+   "threads": 2,
+   "train_ratio": 3.6957
+  },
+  "GraphCL_OCSVM BZR 2": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "GraphCL_OCSVM_BZR_fold2",
+   "threads": 2,
+   "train_ratio": 3.6957
+  },
+  "GraphCL_OCSVM BZR 3": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "GraphCL_OCSVM_BZR_fold3",
+   "threads": 2,
+   "train_ratio": 3.6957
+  },
+  "GraphCL_OCSVM BZR 4": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "GraphCL_OCSVM_BZR_fold4",
+   "threads": 2,
+   "train_ratio": 3.7647
+  },
+  "GraphCL_OCSVM COX2 0": {
+   "device": "cpu",
+   "source": "evalpaper_harness",
+   "main_run_id": "GraphCL_OCSVM_COX2_fold0",
+   "threads": 2,
+   "train_ratio": 3.6049
+  },
+  "GraphCL_OCSVM COX2 1": {
+   "device": "cpu",
+   "source": "evalpaper_harness",
+   "main_run_id": "GraphCL_OCSVM_COX2_fold1",
+   "threads": 2,
+   "train_ratio": 3.6049
+  },
+  "GraphCL_OCSVM COX2 2": {
+   "device": "cpu",
+   "source": "evalpaper_harness",
+   "main_run_id": "GraphCL_OCSVM_COX2_fold2",
+   "threads": 2,
+   "train_ratio": 3.561
+  },
+  "GraphCL_OCSVM COX2 3": {
+   "device": "cpu",
+   "source": "evalpaper_harness",
+   "main_run_id": "GraphCL_OCSVM_COX2_fold3",
+   "threads": 2,
+   "train_ratio": 3.561
+  },
+  "GraphCL_OCSVM COX2 4": {
+   "device": "cpu",
+   "source": "evalpaper_harness",
+   "main_run_id": "GraphCL_OCSVM_COX2_fold4",
+   "threads": 2,
+   "train_ratio": 3.561
+  },
+  "GraphCL_OCSVM PROTEINS_full 0": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "GraphCL_OCSVM_PROTEINS_full_fold0",
+   "threads": 2,
+   "train_ratio": 1.4722
+  },
+  "GraphCL_OCSVM PROTEINS_full 1": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "GraphCL_OCSVM_PROTEINS_full_fold1",
+   "threads": 2,
+   "train_ratio": 1.4722
+  },
+  "GraphCL_OCSVM PROTEINS_full 2": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "GraphCL_OCSVM_PROTEINS_full_fold2",
+   "threads": 2,
+   "train_ratio": 1.4722
+  },
+  "GraphCL_OCSVM PROTEINS_full 3": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "GraphCL_OCSVM_PROTEINS_full_fold3",
+   "threads": 2,
+   "train_ratio": 1.475
+  },
+  "GraphCL_OCSVM PROTEINS_full 4": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "GraphCL_OCSVM_PROTEINS_full_fold4",
+   "threads": 2,
+   "train_ratio": 1.475
+  },
+  "GraphDE BZR 0": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "GraphDE_BZR_fold0",
+   "threads": 2,
+   "train_ratio": 3.6957
+  },
+  "GraphDE BZR 1": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "GraphDE_BZR_fold1",
+   "threads": 2,
+   "train_ratio": 3.6957
+  },
+  "GraphDE BZR 2": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "GraphDE_BZR_fold2",
+   "threads": 2,
+   "train_ratio": 3.6957
+  },
+  "GraphDE BZR 3": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "GraphDE_BZR_fold3",
+   "threads": 2,
+   "train_ratio": 3.6957
+  },
+  "GraphDE BZR 4": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "GraphDE_BZR_fold4",
+   "threads": 2,
+   "train_ratio": 3.7647
+  },
+  "GraphDE COX2 0": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "GraphDE_COX2_fold0",
+   "threads": 2,
+   "train_ratio": 3.6049
+  },
+  "GraphDE COX2 1": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "GraphDE_COX2_fold1",
+   "threads": 2,
+   "train_ratio": 3.6049
+  },
+  "GraphDE COX2 2": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "GraphDE_COX2_fold2",
+   "threads": 2,
+   "train_ratio": 3.561
+  },
+  "GraphDE COX2 3": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "GraphDE_COX2_fold3",
+   "threads": 2,
+   "train_ratio": 3.561
+  },
+  "GraphDE COX2 4": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "GraphDE_COX2_fold4",
+   "threads": 2,
+   "train_ratio": 3.561
+  },
+  "GraphDE PROTEINS_full 0": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "GraphDE_PROTEINS_full_fold0",
+   "threads": 2,
+   "train_ratio": 1.4722
+  },
+  "GraphDE PROTEINS_full 1": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "GraphDE_PROTEINS_full_fold1",
+   "threads": 2,
+   "train_ratio": 1.4722
+  },
+  "GraphDE PROTEINS_full 2": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "GraphDE_PROTEINS_full_fold2",
+   "threads": 2,
+   "train_ratio": 1.4722
+  },
+  "GraphDE PROTEINS_full 3": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "GraphDE_PROTEINS_full_fold3",
+   "threads": 2,
+   "train_ratio": 1.475
+  },
+  "GraphDE PROTEINS_full 4": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "GraphDE_PROTEINS_full_fold4",
+   "threads": 2,
+   "train_ratio": 1.475
+  },
+  "InfoGraph_IF BZR 0": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "InfoGraph_IF_BZR_fold0",
+   "threads": 2,
+   "train_ratio": 3.6957
+  },
+  "InfoGraph_IF BZR 1": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "InfoGraph_IF_BZR_fold1",
+   "threads": 2,
+   "train_ratio": 3.6957
+  },
+  "InfoGraph_IF BZR 2": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "InfoGraph_IF_BZR_fold2",
+   "threads": 2,
+   "train_ratio": 3.6957
+  },
+  "InfoGraph_IF BZR 3": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "InfoGraph_IF_BZR_fold3",
+   "threads": 2,
+   "train_ratio": 3.6957
+  },
+  "InfoGraph_IF BZR 4": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "InfoGraph_IF_BZR_fold4",
+   "threads": 2,
+   "train_ratio": 3.7647
+  },
+  "InfoGraph_IF COX2 0": {
+   "device": "cpu",
+   "source": "evalpaper_harness",
+   "main_run_id": "InfoGraph_IF_COX2_fold0",
+   "threads": 2,
+   "train_ratio": 3.6049
+  },
+  "InfoGraph_IF COX2 1": {
+   "device": "cpu",
+   "source": "evalpaper_harness",
+   "main_run_id": "InfoGraph_IF_COX2_fold1",
+   "threads": 2,
+   "train_ratio": 3.6049
+  },
+  "InfoGraph_IF COX2 2": {
+   "device": "cpu",
+   "source": "evalpaper_harness",
+   "main_run_id": "InfoGraph_IF_COX2_fold2",
+   "threads": 2,
+   "train_ratio": 3.561
+  },
+  "InfoGraph_IF COX2 3": {
+   "device": "cpu",
+   "source": "evalpaper_harness",
+   "main_run_id": "InfoGraph_IF_COX2_fold3",
+   "threads": 2,
+   "train_ratio": 3.561
+  },
+  "InfoGraph_IF COX2 4": {
+   "device": "cpu",
+   "source": "evalpaper_harness",
+   "main_run_id": "InfoGraph_IF_COX2_fold4",
+   "threads": 2,
+   "train_ratio": 3.561
+  },
+  "InfoGraph_IF PROTEINS_full 0": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "InfoGraph_IF_PROTEINS_full_fold0",
+   "threads": 2,
+   "train_ratio": 1.4722
+  },
+  "InfoGraph_IF PROTEINS_full 1": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "InfoGraph_IF_PROTEINS_full_fold1",
+   "threads": 2,
+   "train_ratio": 1.4722
+  },
+  "InfoGraph_IF PROTEINS_full 2": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "InfoGraph_IF_PROTEINS_full_fold2",
+   "threads": 2,
+   "train_ratio": 1.4722
+  },
+  "InfoGraph_IF PROTEINS_full 3": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "InfoGraph_IF_PROTEINS_full_fold3",
+   "threads": 2,
+   "train_ratio": 1.475
+  },
+  "InfoGraph_IF PROTEINS_full 4": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "InfoGraph_IF_PROTEINS_full_fold4",
+   "threads": 2,
+   "train_ratio": 1.475
+  },
+  "InfoGraph_OCSVM BZR 0": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "InfoGraph_OCSVM_BZR_fold0",
+   "threads": 2,
+   "train_ratio": 3.6957
+  },
+  "InfoGraph_OCSVM BZR 1": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "InfoGraph_OCSVM_BZR_fold1",
+   "threads": 2,
+   "train_ratio": 3.6957
+  },
+  "InfoGraph_OCSVM BZR 2": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "InfoGraph_OCSVM_BZR_fold2",
+   "threads": 2,
+   "train_ratio": 3.6957
+  },
+  "InfoGraph_OCSVM BZR 3": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "InfoGraph_OCSVM_BZR_fold3",
+   "threads": 2,
+   "train_ratio": 3.6957
+  },
+  "InfoGraph_OCSVM BZR 4": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "InfoGraph_OCSVM_BZR_fold4",
+   "threads": 2,
+   "train_ratio": 3.7647
+  },
+  "InfoGraph_OCSVM COX2 0": {
+   "device": "cpu",
+   "source": "evalpaper_harness",
+   "main_run_id": "InfoGraph_OCSVM_COX2_fold0",
+   "threads": 2,
+   "train_ratio": 3.6049
+  },
+  "InfoGraph_OCSVM COX2 1": {
+   "device": "cpu",
+   "source": "evalpaper_harness",
+   "main_run_id": "InfoGraph_OCSVM_COX2_fold1",
+   "threads": 2,
+   "train_ratio": 3.6049
+  },
+  "InfoGraph_OCSVM COX2 2": {
+   "device": "cpu",
+   "source": "evalpaper_harness",
+   "main_run_id": "InfoGraph_OCSVM_COX2_fold2",
+   "threads": 2,
+   "train_ratio": 3.561
+  },
+  "InfoGraph_OCSVM COX2 3": {
+   "device": "cpu",
+   "source": "evalpaper_harness",
+   "main_run_id": "InfoGraph_OCSVM_COX2_fold3",
+   "threads": 2,
+   "train_ratio": 3.561
+  },
+  "InfoGraph_OCSVM COX2 4": {
+   "device": "cpu",
+   "source": "evalpaper_harness",
+   "main_run_id": "InfoGraph_OCSVM_COX2_fold4",
+   "threads": 2,
+   "train_ratio": 3.561
+  },
+  "InfoGraph_OCSVM PROTEINS_full 0": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "InfoGraph_OCSVM_PROTEINS_full_fold0",
+   "threads": 2,
+   "train_ratio": 1.4722
+  },
+  "InfoGraph_OCSVM PROTEINS_full 1": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "InfoGraph_OCSVM_PROTEINS_full_fold1",
+   "threads": 2,
+   "train_ratio": 1.4722
+  },
+  "InfoGraph_OCSVM PROTEINS_full 2": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "InfoGraph_OCSVM_PROTEINS_full_fold2",
+   "threads": 2,
+   "train_ratio": 1.4722
+  },
+  "InfoGraph_OCSVM PROTEINS_full 3": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "InfoGraph_OCSVM_PROTEINS_full_fold3",
+   "threads": 2,
+   "train_ratio": 1.475
+  },
+  "InfoGraph_OCSVM PROTEINS_full 4": {
+   "device": "cuda",
+   "source": "evalpaper_harness",
+   "main_run_id": "InfoGraph_OCSVM_PROTEINS_full_fold4",
+   "threads": 2,
+   "train_ratio": 1.475
+  },
+  "OCGIN BZR 0": {
+   "device": "cuda",
+   "source": "deep_rerun",
+   "main_run_id": "OCGIN_BZR_fold0",
+   "threads": 2,
+   "train_ratio": 3.6957
+  },
+  "OCGIN BZR 1": {
+   "device": "cuda",
+   "source": "deep_rerun",
+   "main_run_id": "OCGIN_BZR_fold1",
+   "threads": 2,
+   "train_ratio": 3.6957
+  },
+  "OCGIN BZR 2": {
+   "device": "cuda",
+   "source": "deep_rerun",
+   "main_run_id": "OCGIN_BZR_fold2",
+   "threads": 2,
+   "train_ratio": 3.6957
+  },
+  "OCGIN BZR 3": {
+   "device": "cuda",
+   "source": "deep_rerun",
+   "main_run_id": "OCGIN_BZR_fold3",
+   "threads": 2,
+   "train_ratio": 3.6957
+  },
+  "OCGIN BZR 4": {
+   "device": "cuda",
+   "source": "deep_rerun",
+   "main_run_id": "OCGIN_BZR_fold4",
+   "threads": 2,
+   "train_ratio": 3.7647
+  },
+  "OCGIN COX2 0": {
+   "device": "cuda",
+   "source": "deep_rerun",
+   "main_run_id": "OCGIN_COX2_fold0",
+   "threads": 2,
+   "train_ratio": 3.6049
+  },
+  "OCGIN COX2 1": {
+   "device": "cuda",
+   "source": "deep_rerun",
+   "main_run_id": "OCGIN_COX2_fold1",
+   "threads": 2,
+   "train_ratio": 3.6049
+  },
+  "OCGIN COX2 2": {
+   "device": "cuda",
+   "source": "deep_rerun",
+   "main_run_id": "OCGIN_COX2_fold2",
+   "threads": 2,
+   "train_ratio": 3.561
+  },
+  "OCGIN COX2 3": {
+   "device": "cuda",
+   "source": "deep_rerun",
+   "main_run_id": "OCGIN_COX2_fold3",
+   "threads": 2,
+   "train_ratio": 3.561
+  },
+  "OCGIN COX2 4": {
+   "device": "cuda",
+   "source": "deep_rerun",
+   "main_run_id": "OCGIN_COX2_fold4",
+   "threads": 2,
+   "train_ratio": 3.561
+  },
+  "OCGIN PROTEINS_full 0": {
+   "device": "cuda",
+   "source": "deep_rerun",
+   "main_run_id": "OCGIN_PROTEINS_full_fold0",
+   "threads": 2,
+   "train_ratio": 1.4722
+  },
+  "OCGIN PROTEINS_full 1": {
+   "device": "cuda",
+   "source": "deep_rerun",
+   "main_run_id": "OCGIN_PROTEINS_full_fold1",
+   "threads": 2,
+   "train_ratio": 1.4722
+  },
+  "OCGIN PROTEINS_full 2": {
+   "device": "cuda",
+   "source": "deep_rerun",
+   "main_run_id": "OCGIN_PROTEINS_full_fold2",
+   "threads": 2,
+   "train_ratio": 1.4722
+  },
+  "OCGIN PROTEINS_full 3": {
+   "device": "cuda",
+   "source": "deep_rerun",
+   "main_run_id": "OCGIN_PROTEINS_full_fold3",
+   "threads": 2,
+   "train_ratio": 1.475
+  },
+  "OCGIN PROTEINS_full 4": {
+   "device": "cuda",
+   "source": "deep_rerun",
+   "main_run_id": "OCGIN_PROTEINS_full_fold4",
+   "threads": 2,
+   "train_ratio": 1.475
+  },
+  "OCGTL BZR 0": {
+   "device": "cuda",
+   "source": "deep_rerun",
+   "main_run_id": "OCGTL_BZR_fold0",
+   "threads": 2,
+   "train_ratio": 3.6957
+  },
+  "OCGTL BZR 1": {
+   "device": "cuda",
+   "source": "deep_rerun",
+   "main_run_id": "OCGTL_BZR_fold1",
+   "threads": 2,
+   "train_ratio": 3.6957
+  },
+  "OCGTL BZR 2": {
+   "device": "cuda",
+   "source": "deep_rerun",
+   "main_run_id": "OCGTL_BZR_fold2",
+   "threads": 2,
+   "train_ratio": 3.6957
+  },
+  "OCGTL BZR 3": {
+   "device": "cuda",
+   "source": "deep_rerun",
+   "main_run_id": "OCGTL_BZR_fold3",
+   "threads": 2,
+   "train_ratio": 3.6957
+  },
+  "OCGTL BZR 4": {
+   "device": "cuda",
+   "source": "deep_rerun",
+   "main_run_id": "OCGTL_BZR_fold4",
+   "threads": 2,
+   "train_ratio": 3.7647
+  },
+  "OCGTL COX2 0": {
+   "device": "cuda",
+   "source": "deep_rerun",
+   "main_run_id": "OCGTL_COX2_fold0",
+   "threads": 2,
+   "train_ratio": 3.6049
+  },
+  "OCGTL COX2 1": {
+   "device": "cuda",
+   "source": "deep_rerun",
+   "main_run_id": "OCGTL_COX2_fold1",
+   "threads": 2,
+   "train_ratio": 3.6049
+  },
+  "OCGTL COX2 2": {
+   "device": "cuda",
+   "source": "deep_rerun",
+   "main_run_id": "OCGTL_COX2_fold2",
+   "threads": 2,
+   "train_ratio": 3.561
+  },
+  "OCGTL COX2 3": {
+   "device": "cuda",
+   "source": "deep_rerun",
+   "main_run_id": "OCGTL_COX2_fold3",
+   "threads": 2,
+   "train_ratio": 3.561
+  },
+  "OCGTL COX2 4": {
+   "device": "cuda",
+   "source": "deep_rerun",
+   "main_run_id": "OCGTL_COX2_fold4",
+   "threads": 2,
+   "train_ratio": 3.561
+  },
+  "OCGTL PROTEINS_full 0": {
+   "device": "cuda",
+   "source": "deep_rerun",
+   "main_run_id": "OCGTL_PROTEINS_full_fold0",
+   "threads": 2,
+   "train_ratio": 1.4722
+  },
+  "OCGTL PROTEINS_full 1": {
+   "device": "cuda",
+   "source": "deep_rerun",
+   "main_run_id": "OCGTL_PROTEINS_full_fold1",
+   "threads": 2,
+   "train_ratio": 1.4722
+  },
+  "OCGTL PROTEINS_full 2": {
+   "device": "cuda",
+   "source": "deep_rerun",
+   "main_run_id": "OCGTL_PROTEINS_full_fold2",
+   "threads": 2,
+   "train_ratio": 1.4722
+  },
+  "OCGTL PROTEINS_full 3": {
+   "device": "cuda",
+   "source": "deep_rerun",
+   "main_run_id": "OCGTL_PROTEINS_full_fold3",
+   "threads": 2,
+   "train_ratio": 1.475
+  },
+  "OCGTL PROTEINS_full 4": {
+   "device": "cuda",
+   "source": "deep_rerun",
+   "main_run_id": "OCGTL_PROTEINS_full_fold4",
+   "threads": 2,
+   "train_ratio": 1.475
+  },
+  "SIGNET BZR 0": {
+   "device": "cuda",
+   "source": "deep_rerun",
+   "main_run_id": "SIGNET_BZR_fold0",
+   "threads": 2,
+   "train_ratio": 3.6957
+  },
+  "SIGNET BZR 1": {
+   "device": "cuda",
+   "source": "deep_rerun",
+   "main_run_id": "SIGNET_BZR_fold1",
+   "threads": 2,
+   "train_ratio": 3.6957
+  },
+  "SIGNET BZR 2": {
+   "device": "cuda",
+   "source": "deep_rerun",
+   "main_run_id": "SIGNET_BZR_fold2",
+   "threads": 2,
+   "train_ratio": 3.6957
+  },
+  "SIGNET BZR 3": {
+   "device": "cuda",
+   "source": "deep_rerun",
+   "main_run_id": "SIGNET_BZR_fold3",
+   "threads": 2,
+   "train_ratio": 3.6957
+  },
+  "SIGNET BZR 4": {
+   "device": "cuda",
+   "source": "deep_rerun",
+   "main_run_id": "SIGNET_BZR_fold4",
+   "threads": 2,
+   "train_ratio": 3.7647
+  },
+  "SIGNET COX2 0": {
+   "device": "cuda",
+   "source": "deep_rerun",
+   "main_run_id": "SIGNET_COX2_fold0",
+   "threads": 2,
+   "train_ratio": 3.6049
+  },
+  "SIGNET COX2 1": {
+   "device": "cuda",
+   "source": "deep_rerun",
+   "main_run_id": "SIGNET_COX2_fold1",
+   "threads": 2,
+   "train_ratio": 3.6049
+  },
+  "SIGNET COX2 2": {
+   "device": "cuda",
+   "source": "deep_rerun",
+   "main_run_id": "SIGNET_COX2_fold2",
+   "threads": 2,
+   "train_ratio": 3.561
+  },
+  "SIGNET COX2 3": {
+   "device": "cuda",
+   "source": "deep_rerun",
+   "main_run_id": "SIGNET_COX2_fold3",
+   "threads": 2,
+   "train_ratio": 3.561
+  },
+  "SIGNET COX2 4": {
+   "device": "cuda",
+   "source": "deep_rerun",
+   "main_run_id": "SIGNET_COX2_fold4",
+   "threads": 2,
+   "train_ratio": 3.561
+  },
+  "SIGNET PROTEINS_full 0": {
+   "device": "cuda",
+   "source": "deep_rerun",
+   "main_run_id": "SIGNET_PROTEINS_full_fold0",
+   "threads": 2,
+   "train_ratio": 1.4722
+  },
+  "SIGNET PROTEINS_full 1": {
+   "device": "cuda",
+   "source": "deep_rerun",
+   "main_run_id": "SIGNET_PROTEINS_full_fold1",
+   "threads": 2,
+   "train_ratio": 1.4722
+  },
+  "SIGNET PROTEINS_full 2": {
+   "device": "cuda",
+   "source": "deep_rerun",
+   "main_run_id": "SIGNET_PROTEINS_full_fold2",
+   "threads": 2,
+   "train_ratio": 1.4722
+  },
+  "SIGNET PROTEINS_full 3": {
+   "device": "cuda",
+   "source": "deep_rerun",
+   "main_run_id": "SIGNET_PROTEINS_full_fold3",
+   "threads": 2,
+   "train_ratio": 1.475
+  },
+  "SIGNET PROTEINS_full 4": {
+   "device": "cuda",
+   "source": "deep_rerun",
+   "main_run_id": "SIGNET_PROTEINS_full_fold4",
+   "threads": 2,
+   "train_ratio": 1.475
+  }
+ }
+}

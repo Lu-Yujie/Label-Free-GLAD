@@ -1,0 +1,50 @@
+#target evalpaper/ext/HC-GLAD/tests/check_training_only.py
+#sha256 bcb4c9cf3405cb1e93fad3a45a6c45cf7f426e4cd8a056cbe32239d011a8cca5
+#commit 4238b20dccd1335a337630d52f5f7448c5b222a6
+#final-newline 1
+O 3
+"""Training-only checks (no test scoring, no labels): parameter registration of HC-GLAD's encoders, whether the
+encoder weights change during training, the deprecated RiemannianSGD add_ overload, and finite losses.
+  python -B tests/check_training_only.py DS [HP] [EPOCHS]
+U layers/hyp_layers.py 14 1 [0]
+O 13
+import os.path as osp, sys, time
+HERE = osp.dirname(osp.dirname(osp.abspath(__file__)))
+sys.path.insert(0, HERE)
+import numpy as np, torch
+import run_method as R
+DS = sys.argv[1]; HP = sys.argv[2] if len(sys.argv) > 2 else "ubgold"; E = int(sys.argv[3]) if len(sys.argv) > 3 else 3
+torch.set_num_threads(4)
+mns = R.load_main_functions(); dfn = R.load_data_functions(DS)
+HC, RiemannianSGD, _ = R.import_src_modules()
+args, line, notes = R.resolve_hparams(DS, HP)
+mns["setup_seed"](3407)
+splits, dl, dlt, meta = R.load_fold(args, DS, 0, dfn)
+args.feat_dim = meta["num_feat"]
+U main.py 91 2 [0,4]
+O 25
+model = HC(args)
+opt = RiemannianSGD(params=model.parameters(), lr=args.lr, weight_decay=args.weight_decay, momentum=args.momentum)
+enc = R.unregistered_encoders(model)
+n_reg = sum(p.numel() for p in model.parameters())
+n_enc = sum(p.numel() for m in enc.values() for p in m.parameters())
+names = [n for n, _ in model.named_parameters()]
+print(f"{DS} {HP}: registered params {n_reg} ({names}); unregistered encoder params {n_enc}")
+enc0 = {k: [p.detach().clone() for p in m.parameters()] for k, m in enc.items()}
+reg0 = [p.detach().clone() for p in model.parameters()]
+t0 = time.time()
+for ep in range(E):
+    tot = 0.0
+    for data in dl:
+        opt.zero_grad()
+        out = model.encode(data)
+        g_hBol, g_f_hBol, n_f_hBol, g_s_hBol, n_s_hBol, g_hBol_hGra, g_f_hBol_hGra, n_f_hBol_hGra, g_s_hBol_hGra, n_s_hBol_hGra = out
+        loss = args.a * (model.calc_loss_g(g_f_hBol, g_s_hBol).mean() + model.calc_loss_n(n_f_hBol, n_s_hBol, data.batch).mean()) + \
+               args.b * (model.calc_loss_g(g_f_hBol_hGra, g_s_hBol_hGra).mean() + model.calc_loss_n(n_f_hBol_hGra, n_s_hBol_hGra, data.batch).mean())
+        loss.backward(); opt.step(); tot += loss.item() * data.num_graphs
+    print(f"  epoch {ep+1}: train loss {tot/len(dl.dataset):.5f} finite={np.isfinite(tot)}")
+d_enc = max(float((p - q).abs().max()) for k, m in enc.items() for p, q in zip(m.parameters(), enc0[k]))
+d_reg = max(float((p - q).abs().max()) for p, q in zip(model.parameters(), reg0))
+g_enc = max(float(p.grad.abs().max()) if p.grad is not None else 0.0 for m in enc.values() for p in m.parameters())
+print(f"  after {E} epochs ({time.time()-t0:.1f}s): max|change| registered (projection heads) {d_reg:.3g}; "
+      f"unregistered GNN/hypergraph encoders {d_enc:.3g} (their accumulated .grad max {g_enc:.3g})")

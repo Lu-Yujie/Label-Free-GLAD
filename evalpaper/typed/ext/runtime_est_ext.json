@@ -1,0 +1,164 @@
+{
+ "GLADMamba": {
+  "GX": {
+   "mem_gb": 31,
+   "sec_per_epoch": 4.943,
+   "sec_per_eval": 15.627,
+   "setup_s": 90.0,
+   "source": "estimated from runtime_smoke_ext.csv (job <jobid>; max over smoke rows; mem = 1.25 x peak RSS + 1)",
+   "threads": 8
+  },
+  "MSV2": {
+   "mem_gb": 19,
+   "sec_per_epoch": 3.455,
+   "sec_per_eval": 10.768,
+   "setup_s": 90.0,
+   "source": "estimated from runtime_smoke_ext.csv (job <jobid>; max over smoke rows; mem = 1.25 x peak RSS + 1)",
+   "threads": 8
+  }
+ },
+ "GLADPro": {
+  "GX": {
+   "mem_gb": 3,
+   "sec_per_epoch": 1.933,
+   "sec_per_eval": 1.918,
+   "setup_s": 90.0,
+   "source": "estimated from runtime_smoke_ext.csv (job <jobid>; max over smoke rows; mem = 1.25 x peak RSS + 1)",
+   "threads": 4
+  },
+  "MSV2": {
+   "mem_gb": 3,
+   "sec_per_epoch": 1.585,
+   "sec_per_eval": 2.572,
+   "setup_s": 90.0,
+   "source": "estimated from runtime_smoke_ext.csv (job <jobid>; max over smoke rows; mem = 1.25 x peak RSS + 1)",
+   "threads": 4
+  }
+ },
+ "GLASS": {
+  "GX": {
+   "mem_gb": 2,
+   "sec_per_epoch": 2.007,
+   "sec_per_eval": 11.746,
+   "setup_s": 90.0,
+   "source": "estimated from runtime_smoke_ext.csv (job <jobid>; max over smoke rows; mem = 1.25 x peak RSS + 1)",
+   "threads": 1
+  },
+  "MSV2": {
+   "mem_gb": 2,
+   "sec_per_epoch": 2.077,
+   "sec_per_eval": 27.975,
+   "setup_s": 90.0,
+   "source": "estimated from runtime_smoke_ext.csv (job <jobid>; max over smoke rows; mem = 1.25 x peak RSS + 1)",
+   "threads": 1
+  }
+ },
+ "HC-GLAD": {
+  "GX": {
+   "mem_gb": 100,
+   "sec_per_epoch": 6.87,
+   "sec_per_eval": 43.677,
+   "setup_s": 90.0,
+   "source": "estimated from runtime_smoke_ext.csv (job <jobid>; max over smoke rows; mem = 1.25 x peak RSS + 1); 2026-10-15: mem lowered to 100 = 1.09 x the peak RSS of the two finished full runs (90.8, 91.9 GB, parts/HC-GLAD_GX_F1_s{0,1}.json), so two GX runs fit one 240G CPU node (scheduling only)",
+   "threads": 16
+  },
+  "MSV2": {
+   "mem_gb": 68,
+   "sec_per_epoch": 3.571,
+   "sec_per_eval": 35.958,
+   "setup_s": 90.0,
+   "source": "estimated from runtime_smoke_ext.csv (job <jobid>; max over smoke rows; mem = 1.25 x peak RSS + 1)",
+   "threads": 16
+  }
+ },
+ "LGKDE": {
+  "GX": {
+   "mem_gb": 2,
+   "sec_per_epoch": 25.166,
+   "sec_per_eval": 16.088,
+   "setup_s": 90.0,
+   "source": "estimated from runtime_smoke_ext.csv (job <jobid>; max over smoke rows; mem = 1.25 x peak RSS + 1)",
+   "threads": 8
+  },
+  "MSV2": {
+   "mem_gb": 3,
+   "sec_per_epoch": 22.598,
+   "sec_per_eval": 19.062,
+   "setup_s": 90.0,
+   "source": "estimated from runtime_smoke_ext.csv (job <jobid>; max over smoke rows; mem = 1.25 x peak RSS + 1)",
+   "threads": 4
+  }
+ },
+ "MUSE": {
+  "GX": {
+   "mem_gb": 2,
+   "sec_per_epoch": 0.274,
+   "sec_per_eval": 2.158,
+   "setup_s": 90.0,
+   "source": "estimated from runtime_smoke_ext.csv (job <jobid>; max over smoke rows; mem = 1.25 x peak RSS + 1)",
+   "threads": 4
+  },
+  "MSV2": {
+   "mem_gb": 2,
+   "sec_per_epoch": 0.379,
+   "sec_per_eval": 1.999,
+   "setup_s": 90.0,
+   "source": "estimated from runtime_smoke_ext.csv (job <jobid>; max over smoke rows; mem = 1.25 x peak RSS + 1)",
+   "threads": 2
+  }
+ },
+ "ProtoGLAD": {
+  "GX": {
+   "mem_gb": 3,
+   "sec_per_epoch": 257.6,
+   "sec_per_eval": 0.0,
+   "setup_s": 90.0,
+   "source": "estimated from runtime_smoke_ext.csv (job <jobid>; max over smoke rows; mem = 1.25 x peak RSS + 1)",
+   "threads": 4
+  },
+  "MSV2": {
+   "mem_gb": 3,
+   "sec_per_epoch": 337.3,
+   "sec_per_eval": 0.0,
+   "setup_s": 90.0,
+   "source": "estimated from runtime_smoke_ext.csv (job <jobid>; max over smoke rows; mem = 1.25 x peak RSS + 1)",
+   "threads": 4
+  }
+ },
+ "SEGO": {
+  "GX": {
+   "mem_gb": 5,
+   "sec_per_epoch": 4.787,
+   "sec_per_eval": 6.402,
+   "setup_s": 90.0,
+   "source": "estimated from runtime_smoke_ext.csv (job <jobid>; max over smoke rows; mem = 1.25 x peak RSS + 1)",
+   "threads": 4
+  },
+  "MSV2": {
+   "mem_gb": 3,
+   "sec_per_epoch": 1.84,
+   "sec_per_eval": 4.198,
+   "setup_s": 90.0,
+   "source": "estimated from runtime_smoke_ext.csv (job <jobid>; max over smoke rows; mem = 1.25 x peak RSS + 1)",
+   "threads": 4
+  }
+ },
+ "SUL-GUL": {
+  "GX": {
+   "mem_gb": 2,
+   "sec_per_epoch": 0.322,
+   "sec_per_eval": 0.322,
+   "setup_s": 90.0,
+   "source": "estimated from runtime_smoke_ext.csv (job <jobid>; max over smoke rows; mem = 1.25 x peak RSS + 1)",
+   "threads": 2
+  },
+  "MSV2": {
+   "mem_gb": 2,
+   "sec_per_epoch": 0.304,
+   "sec_per_eval": 0.347,
+   "setup_s": 90.0,
+   "source": "estimated from runtime_smoke_ext.csv (job <jobid>; max over smoke rows; mem = 1.25 x peak RSS + 1)",
+   "threads": 4
+  }
+ }
+}

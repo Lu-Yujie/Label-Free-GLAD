@@ -1,0 +1,7 @@
+pool,comparison,n_methods,mean_over_methods,ds_ci_lo,ds_ci_hi,dropped,methods
+all 8 iterative recent methods (= REPORT.md recent(E5+E4)),ORACLE_ubgold - VAL-NORMAL,8,7.467873,6.153258,8.827728,,MUSE|LGKDE|GLADPro|GLADMamba|SEGO|GLASS|HC-GLAD|SUL-GUL
+all 8 iterative recent methods (= REPORT.md recent(E5+E4)),ORACLE_ubgold - LAST,8,6.694748,5.749397,7.606291,,MUSE|LGKDE|GLADPro|GLADMamba|SEGO|GLASS|HC-GLAD|SUL-GUL
+without 'reproduction not met' (primary tier reading),ORACLE_ubgold - VAL-NORMAL,7,8.156453,6.709038,9.580706,LGKDE,MUSE|GLADPro|GLADMamba|SEGO|GLASS|HC-GLAD|SUL-GUL
+without 'reproduction not met' (primary tier reading),ORACLE_ubgold - LAST,7,7.323372,5.726473,8.930278,LGKDE,MUSE|GLADPro|GLADMamba|SEGO|GLASS|HC-GLAD|SUL-GUL
+without 'reproduction not met' or contested/not evaluable (alternative reading),ORACLE_ubgold - VAL-NORMAL,5,6.384534,5.385460,7.429847,LGKDE|GLADPro|SUL-GUL,MUSE|GLADMamba|SEGO|GLASS|HC-GLAD
+without 'reproduction not met' or contested/not evaluable (alternative reading),ORACLE_ubgold - LAST,5,5.051103,3.647564,6.693471,LGKDE|GLADPro|SUL-GUL,MUSE|GLADMamba|SEGO|GLASS|HC-GLAD

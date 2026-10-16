@@ -1,0 +1,771 @@
+method,method_label,stratum,dataset,set,hp,folds_done,folds_diverged,diverged_folds,folds_missing,runs_nonfinite_selected,nonfinite_selected_folds,runs_tie_collapsed,tie_collapsed_folds,status,resolved
+CVTGAD,CVTGAD,frozen12,AIDS,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+CVTGAD,CVTGAD,frozen12,AIDS,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+CVTGAD,CVTGAD,frozen12,BZR,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+CVTGAD,CVTGAD,frozen12,BZR,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+CVTGAD,CVTGAD,frozen12,COX2,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+CVTGAD,CVTGAD,frozen12,COX2,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+CVTGAD,CVTGAD,frozen12,DHFR,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+CVTGAD,CVTGAD,frozen12,DHFR,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+CVTGAD,CVTGAD,frozen12,ENZYMES,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+CVTGAD,CVTGAD,frozen12,ENZYMES,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+CVTGAD,CVTGAD,frozen12,NCI1,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+CVTGAD,CVTGAD,frozen12,NCI1,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+CVTGAD,CVTGAD,frozen12,PROTEINS_full,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+CVTGAD,CVTGAD,frozen12,PROTEINS_full,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+CVTGAD,CVTGAD,frozen12,IMDB-BINARY,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+CVTGAD,CVTGAD,frozen12,IMDB-BINARY,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+CVTGAD,CVTGAD,frozen12,REDDIT-BINARY,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+CVTGAD,CVTGAD,frozen12,REDDIT-BINARY,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+CVTGAD,CVTGAD,frozen12,DD,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+CVTGAD,CVTGAD,frozen12,DD,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+CVTGAD,CVTGAD,frozen12,COLLAB,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+CVTGAD,CVTGAD,frozen12,COLLAB,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+CVTGAD,CVTGAD,frozen12,Tox21_p53,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+CVTGAD,CVTGAD,frozen12,Tox21_p53,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+CVTGAD,CVTGAD,frozen12,Tox21_MMP,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+CVTGAD,CVTGAD,frozen12,Tox21_MMP,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+CVTGAD,CVTGAD,frozen12,MUTAG,secondary,ubgold,0,0,,5,0,,0,,missing,False
+CVTGAD,CVTGAD,frozen12,MUTAG,secondary,hpfree,0,0,,5,0,,0,,missing,False
+GLADC,GLADC,frozen12,AIDS,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GLADC,GLADC,frozen12,AIDS,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GLADC,GLADC,frozen12,BZR,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GLADC,GLADC,frozen12,BZR,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GLADC,GLADC,frozen12,COX2,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GLADC,GLADC,frozen12,COX2,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GLADC,GLADC,frozen12,DHFR,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GLADC,GLADC,frozen12,DHFR,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GLADC,GLADC,frozen12,ENZYMES,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GLADC,GLADC,frozen12,ENZYMES,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GLADC,GLADC,frozen12,NCI1,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GLADC,GLADC,frozen12,NCI1,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GLADC,GLADC,frozen12,PROTEINS_full,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GLADC,GLADC,frozen12,PROTEINS_full,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GLADC,GLADC,frozen12,IMDB-BINARY,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GLADC,GLADC,frozen12,IMDB-BINARY,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GLADC,GLADC,frozen12,REDDIT-BINARY,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GLADC,GLADC,frozen12,REDDIT-BINARY,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GLADC,GLADC,frozen12,DD,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+GLADC,GLADC,frozen12,DD,secondary,hpfree,0,0,,5,0,,0,,missing,False
+GLADC,GLADC,frozen12,COLLAB,secondary,ubgold,2,3,1|3|4,0,0,,0,,2/5 + DIVERGED 3,True
+GLADC,GLADC,frozen12,COLLAB,secondary,hpfree,2,3,1|3|4,0,0,,0,,2/5 + DIVERGED 3,True
+GLADC,GLADC,frozen12,Tox21_p53,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+GLADC,GLADC,frozen12,Tox21_p53,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+GLADC,GLADC,frozen12,Tox21_MMP,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+GLADC,GLADC,frozen12,Tox21_MMP,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+GLADC,GLADC,frozen12,MUTAG,secondary,ubgold,0,0,,5,0,,0,,missing,False
+GLADC,GLADC,frozen12,MUTAG,secondary,hpfree,0,0,,5,0,,0,,missing,False
+GLADMamba,GLADMamba,E5,AIDS,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GLADMamba,GLADMamba,E5,AIDS,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GLADMamba,GLADMamba,E5,BZR,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GLADMamba,GLADMamba,E5,BZR,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GLADMamba,GLADMamba,E5,COX2,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GLADMamba,GLADMamba,E5,COX2,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GLADMamba,GLADMamba,E5,DHFR,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GLADMamba,GLADMamba,E5,DHFR,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GLADMamba,GLADMamba,E5,ENZYMES,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GLADMamba,GLADMamba,E5,ENZYMES,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GLADMamba,GLADMamba,E5,NCI1,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GLADMamba,GLADMamba,E5,NCI1,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GLADMamba,GLADMamba,E5,PROTEINS_full,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GLADMamba,GLADMamba,E5,PROTEINS_full,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GLADMamba,GLADMamba,E5,IMDB-BINARY,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GLADMamba,GLADMamba,E5,IMDB-BINARY,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GLADMamba,GLADMamba,E5,REDDIT-BINARY,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GLADMamba,GLADMamba,E5,REDDIT-BINARY,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GLADMamba,GLADMamba,E5,DD,secondary,ubgold,0,0,,5,0,,0,,missing,False
+GLADMamba,GLADMamba,E5,DD,secondary,hpfree,0,0,,5,0,,0,,missing,False
+GLADMamba,GLADMamba,E5,COLLAB,secondary,ubgold,0,0,,5,0,,0,,missing,False
+GLADMamba,GLADMamba,E5,COLLAB,secondary,hpfree,0,0,,5,0,,0,,missing,False
+GLADMamba,GLADMamba,E5,Tox21_p53,secondary,ubgold,0,0,,5,0,,0,,missing,False
+GLADMamba,GLADMamba,E5,Tox21_p53,secondary,hpfree,0,0,,5,0,,0,,missing,False
+GLADMamba,GLADMamba,E5,Tox21_MMP,secondary,ubgold,0,0,,5,0,,0,,missing,False
+GLADMamba,GLADMamba,E5,Tox21_MMP,secondary,hpfree,0,0,,5,0,,0,,missing,False
+GLADMamba,GLADMamba,E5,MUTAG,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+GLADMamba,GLADMamba,E5,MUTAG,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+GLADPro,GLADPro,E5,AIDS,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GLADPro,GLADPro,E5,AIDS,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GLADPro,GLADPro,E5,BZR,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GLADPro,GLADPro,E5,BZR,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GLADPro,GLADPro,E5,COX2,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GLADPro,GLADPro,E5,COX2,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GLADPro,GLADPro,E5,DHFR,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GLADPro,GLADPro,E5,DHFR,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GLADPro,GLADPro,E5,ENZYMES,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GLADPro,GLADPro,E5,ENZYMES,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GLADPro,GLADPro,E5,NCI1,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GLADPro,GLADPro,E5,NCI1,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GLADPro,GLADPro,E5,PROTEINS_full,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GLADPro,GLADPro,E5,PROTEINS_full,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GLADPro,GLADPro,E5,IMDB-BINARY,UB9,ubgold,5,0,,0,0,,5,0|1|2|3|4,"5/5 [tie_collapsed: f0,1,2,3,4]",True
+GLADPro,GLADPro,E5,IMDB-BINARY,UB9,hpfree,5,0,,0,0,,5,0|1|2|3|4,"5/5 [tie_collapsed: f0,1,2,3,4]",True
+GLADPro,GLADPro,E5,REDDIT-BINARY,UB9,ubgold,5,0,,0,0,,2,1|2,"5/5 [tie_collapsed: f1,2]",True
+GLADPro,GLADPro,E5,REDDIT-BINARY,UB9,hpfree,5,0,,0,0,,3,1|2|3,"5/5 [tie_collapsed: f1,2,3]",True
+GLADPro,GLADPro,E5,DD,secondary,ubgold,0,0,,5,0,,0,,missing,False
+GLADPro,GLADPro,E5,DD,secondary,hpfree,0,0,,5,0,,0,,missing,False
+GLADPro,GLADPro,E5,COLLAB,secondary,ubgold,0,0,,5,0,,0,,missing,False
+GLADPro,GLADPro,E5,COLLAB,secondary,hpfree,0,0,,5,0,,0,,missing,False
+GLADPro,GLADPro,E5,Tox21_p53,secondary,ubgold,0,0,,5,0,,0,,missing,False
+GLADPro,GLADPro,E5,Tox21_p53,secondary,hpfree,0,0,,5,0,,0,,missing,False
+GLADPro,GLADPro,E5,Tox21_MMP,secondary,ubgold,0,0,,5,0,,0,,missing,False
+GLADPro,GLADPro,E5,Tox21_MMP,secondary,hpfree,0,0,,5,0,,0,,missing,False
+GLADPro,GLADPro,E5,MUTAG,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+GLADPro,GLADPro,E5,MUTAG,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+GLASS,GLASS,E4,AIDS,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GLASS,GLASS,E4,AIDS,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GLASS,GLASS,E4,BZR,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GLASS,GLASS,E4,BZR,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GLASS,GLASS,E4,COX2,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GLASS,GLASS,E4,COX2,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GLASS,GLASS,E4,DHFR,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GLASS,GLASS,E4,DHFR,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GLASS,GLASS,E4,ENZYMES,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GLASS,GLASS,E4,ENZYMES,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GLASS,GLASS,E4,NCI1,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GLASS,GLASS,E4,NCI1,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GLASS,GLASS,E4,PROTEINS_full,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GLASS,GLASS,E4,PROTEINS_full,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GLASS,GLASS,E4,IMDB-BINARY,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GLASS,GLASS,E4,IMDB-BINARY,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GLASS,GLASS,E4,REDDIT-BINARY,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GLASS,GLASS,E4,REDDIT-BINARY,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GLASS,GLASS,E4,DD,secondary,ubgold,0,0,,5,0,,0,,missing,False
+GLASS,GLASS,E4,DD,secondary,hpfree,0,0,,5,0,,0,,missing,False
+GLASS,GLASS,E4,COLLAB,secondary,ubgold,0,0,,5,0,,0,,missing,False
+GLASS,GLASS,E4,COLLAB,secondary,hpfree,0,0,,5,0,,0,,missing,False
+GLASS,GLASS,E4,Tox21_p53,secondary,ubgold,0,0,,5,0,,0,,missing,False
+GLASS,GLASS,E4,Tox21_p53,secondary,hpfree,0,0,,5,0,,0,,missing,False
+GLASS,GLASS,E4,Tox21_MMP,secondary,ubgold,0,0,,5,0,,0,,missing,False
+GLASS,GLASS,E4,Tox21_MMP,secondary,hpfree,0,0,,5,0,,0,,missing,False
+GLASS,GLASS,E4,MUTAG,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+GLASS,GLASS,E4,MUTAG,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+GLocalKD,GLocalKD,frozen12,AIDS,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GLocalKD,GLocalKD,frozen12,AIDS,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GLocalKD,GLocalKD,frozen12,BZR,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GLocalKD,GLocalKD,frozen12,BZR,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GLocalKD,GLocalKD,frozen12,COX2,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GLocalKD,GLocalKD,frozen12,COX2,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GLocalKD,GLocalKD,frozen12,DHFR,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GLocalKD,GLocalKD,frozen12,DHFR,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GLocalKD,GLocalKD,frozen12,ENZYMES,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GLocalKD,GLocalKD,frozen12,ENZYMES,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GLocalKD,GLocalKD,frozen12,NCI1,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GLocalKD,GLocalKD,frozen12,NCI1,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GLocalKD,GLocalKD,frozen12,PROTEINS_full,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GLocalKD,GLocalKD,frozen12,PROTEINS_full,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GLocalKD,GLocalKD,frozen12,IMDB-BINARY,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GLocalKD,GLocalKD,frozen12,IMDB-BINARY,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GLocalKD,GLocalKD,frozen12,REDDIT-BINARY,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GLocalKD,GLocalKD,frozen12,REDDIT-BINARY,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GLocalKD,GLocalKD,frozen12,DD,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+GLocalKD,GLocalKD,frozen12,DD,secondary,hpfree,0,0,,5,0,,0,,missing,False
+GLocalKD,GLocalKD,frozen12,COLLAB,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+GLocalKD,GLocalKD,frozen12,COLLAB,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+GLocalKD,GLocalKD,frozen12,Tox21_p53,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+GLocalKD,GLocalKD,frozen12,Tox21_p53,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+GLocalKD,GLocalKD,frozen12,Tox21_MMP,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+GLocalKD,GLocalKD,frozen12,Tox21_MMP,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+GLocalKD,GLocalKD,frozen12,MUTAG,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+GLocalKD,GLocalKD,frozen12,MUTAG,secondary,hpfree,0,0,,5,0,,0,,missing,False
+GOOD-D,GOOD-D,frozen12,AIDS,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GOOD-D,GOOD-D,frozen12,AIDS,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GOOD-D,GOOD-D,frozen12,BZR,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GOOD-D,GOOD-D,frozen12,BZR,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GOOD-D,GOOD-D,frozen12,COX2,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GOOD-D,GOOD-D,frozen12,COX2,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GOOD-D,GOOD-D,frozen12,DHFR,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GOOD-D,GOOD-D,frozen12,DHFR,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GOOD-D,GOOD-D,frozen12,ENZYMES,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GOOD-D,GOOD-D,frozen12,ENZYMES,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GOOD-D,GOOD-D,frozen12,NCI1,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GOOD-D,GOOD-D,frozen12,NCI1,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GOOD-D,GOOD-D,frozen12,PROTEINS_full,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GOOD-D,GOOD-D,frozen12,PROTEINS_full,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GOOD-D,GOOD-D,frozen12,IMDB-BINARY,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GOOD-D,GOOD-D,frozen12,IMDB-BINARY,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GOOD-D,GOOD-D,frozen12,REDDIT-BINARY,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GOOD-D,GOOD-D,frozen12,REDDIT-BINARY,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GOOD-D,GOOD-D,frozen12,DD,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+GOOD-D,GOOD-D,frozen12,DD,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+GOOD-D,GOOD-D,frozen12,COLLAB,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+GOOD-D,GOOD-D,frozen12,COLLAB,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+GOOD-D,GOOD-D,frozen12,Tox21_p53,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+GOOD-D,GOOD-D,frozen12,Tox21_p53,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+GOOD-D,GOOD-D,frozen12,Tox21_MMP,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+GOOD-D,GOOD-D,frozen12,Tox21_MMP,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+GOOD-D,GOOD-D,frozen12,MUTAG,secondary,ubgold,0,0,,5,0,,0,,missing,False
+GOOD-D,GOOD-D,frozen12,MUTAG,secondary,hpfree,0,0,,5,0,,0,,missing,False
+GRAIL-0,GRAIL-0,reference,AIDS,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GRAIL-0,GRAIL-0,reference,BZR,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GRAIL-0,GRAIL-0,reference,COX2,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GRAIL-0,GRAIL-0,reference,DHFR,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GRAIL-0,GRAIL-0,reference,ENZYMES,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GRAIL-0,GRAIL-0,reference,NCI1,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GRAIL-0,GRAIL-0,reference,PROTEINS_full,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GRAIL-0,GRAIL-0,reference,IMDB-BINARY,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GRAIL-0,GRAIL-0,reference,REDDIT-BINARY,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GRAIL-0,GRAIL-0,reference,DD,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+GRAIL-0,GRAIL-0,reference,COLLAB,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+GRAIL-0,GRAIL-0,reference,Tox21_p53,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+GRAIL-0,GRAIL-0,reference,Tox21_MMP,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+GRAIL-0,GRAIL-0,reference,MUTAG,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+GraphCL_IF,GraphCL_IF,frozen12,AIDS,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GraphCL_IF,GraphCL_IF,frozen12,AIDS,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GraphCL_IF,GraphCL_IF,frozen12,BZR,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GraphCL_IF,GraphCL_IF,frozen12,BZR,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GraphCL_IF,GraphCL_IF,frozen12,COX2,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GraphCL_IF,GraphCL_IF,frozen12,COX2,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GraphCL_IF,GraphCL_IF,frozen12,DHFR,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GraphCL_IF,GraphCL_IF,frozen12,DHFR,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GraphCL_IF,GraphCL_IF,frozen12,ENZYMES,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GraphCL_IF,GraphCL_IF,frozen12,ENZYMES,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GraphCL_IF,GraphCL_IF,frozen12,NCI1,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GraphCL_IF,GraphCL_IF,frozen12,NCI1,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GraphCL_IF,GraphCL_IF,frozen12,PROTEINS_full,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GraphCL_IF,GraphCL_IF,frozen12,PROTEINS_full,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GraphCL_IF,GraphCL_IF,frozen12,IMDB-BINARY,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GraphCL_IF,GraphCL_IF,frozen12,IMDB-BINARY,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GraphCL_IF,GraphCL_IF,frozen12,REDDIT-BINARY,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GraphCL_IF,GraphCL_IF,frozen12,REDDIT-BINARY,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GraphCL_IF,GraphCL_IF,frozen12,DD,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+GraphCL_IF,GraphCL_IF,frozen12,DD,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+GraphCL_IF,GraphCL_IF,frozen12,COLLAB,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+GraphCL_IF,GraphCL_IF,frozen12,COLLAB,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+GraphCL_IF,GraphCL_IF,frozen12,Tox21_p53,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+GraphCL_IF,GraphCL_IF,frozen12,Tox21_p53,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+GraphCL_IF,GraphCL_IF,frozen12,Tox21_MMP,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+GraphCL_IF,GraphCL_IF,frozen12,Tox21_MMP,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+GraphCL_IF,GraphCL_IF,frozen12,MUTAG,secondary,ubgold,0,0,,5,0,,0,,missing,False
+GraphCL_IF,GraphCL_IF,frozen12,MUTAG,secondary,hpfree,0,0,,5,0,,0,,missing,False
+GraphCL_OCSVM,GraphCL_OCSVM,frozen12,AIDS,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GraphCL_OCSVM,GraphCL_OCSVM,frozen12,AIDS,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GraphCL_OCSVM,GraphCL_OCSVM,frozen12,BZR,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GraphCL_OCSVM,GraphCL_OCSVM,frozen12,BZR,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GraphCL_OCSVM,GraphCL_OCSVM,frozen12,COX2,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GraphCL_OCSVM,GraphCL_OCSVM,frozen12,COX2,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GraphCL_OCSVM,GraphCL_OCSVM,frozen12,DHFR,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GraphCL_OCSVM,GraphCL_OCSVM,frozen12,DHFR,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GraphCL_OCSVM,GraphCL_OCSVM,frozen12,ENZYMES,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GraphCL_OCSVM,GraphCL_OCSVM,frozen12,ENZYMES,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GraphCL_OCSVM,GraphCL_OCSVM,frozen12,NCI1,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GraphCL_OCSVM,GraphCL_OCSVM,frozen12,NCI1,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GraphCL_OCSVM,GraphCL_OCSVM,frozen12,PROTEINS_full,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GraphCL_OCSVM,GraphCL_OCSVM,frozen12,PROTEINS_full,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GraphCL_OCSVM,GraphCL_OCSVM,frozen12,IMDB-BINARY,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GraphCL_OCSVM,GraphCL_OCSVM,frozen12,IMDB-BINARY,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GraphCL_OCSVM,GraphCL_OCSVM,frozen12,REDDIT-BINARY,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GraphCL_OCSVM,GraphCL_OCSVM,frozen12,REDDIT-BINARY,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GraphCL_OCSVM,GraphCL_OCSVM,frozen12,DD,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+GraphCL_OCSVM,GraphCL_OCSVM,frozen12,DD,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+GraphCL_OCSVM,GraphCL_OCSVM,frozen12,COLLAB,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+GraphCL_OCSVM,GraphCL_OCSVM,frozen12,COLLAB,secondary,hpfree,5,0,,0,0,,1,3,5/5 [tie_collapsed: f3],True
+GraphCL_OCSVM,GraphCL_OCSVM,frozen12,Tox21_p53,secondary,ubgold,5,0,,0,0,,2,2|3,"5/5 [tie_collapsed: f2,3]",True
+GraphCL_OCSVM,GraphCL_OCSVM,frozen12,Tox21_p53,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+GraphCL_OCSVM,GraphCL_OCSVM,frozen12,Tox21_MMP,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+GraphCL_OCSVM,GraphCL_OCSVM,frozen12,Tox21_MMP,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+GraphCL_OCSVM,GraphCL_OCSVM,frozen12,MUTAG,secondary,ubgold,0,0,,5,0,,0,,missing,False
+GraphCL_OCSVM,GraphCL_OCSVM,frozen12,MUTAG,secondary,hpfree,0,0,,5,0,,0,,missing,False
+GraphDE,"GraphDE (paper orientation, A5)",frozen12,AIDS,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GraphDE,"GraphDE (paper orientation, A5)",frozen12,AIDS,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GraphDE,"GraphDE (paper orientation, A5)",frozen12,BZR,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GraphDE,"GraphDE (paper orientation, A5)",frozen12,BZR,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GraphDE,"GraphDE (paper orientation, A5)",frozen12,COX2,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GraphDE,"GraphDE (paper orientation, A5)",frozen12,COX2,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GraphDE,"GraphDE (paper orientation, A5)",frozen12,DHFR,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GraphDE,"GraphDE (paper orientation, A5)",frozen12,DHFR,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GraphDE,"GraphDE (paper orientation, A5)",frozen12,ENZYMES,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GraphDE,"GraphDE (paper orientation, A5)",frozen12,ENZYMES,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GraphDE,"GraphDE (paper orientation, A5)",frozen12,NCI1,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GraphDE,"GraphDE (paper orientation, A5)",frozen12,NCI1,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GraphDE,"GraphDE (paper orientation, A5)",frozen12,PROTEINS_full,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GraphDE,"GraphDE (paper orientation, A5)",frozen12,PROTEINS_full,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GraphDE,"GraphDE (paper orientation, A5)",frozen12,IMDB-BINARY,UB9,ubgold,5,0,,0,0,,1,3,5/5 [tie_collapsed: f3],True
+GraphDE,"GraphDE (paper orientation, A5)",frozen12,IMDB-BINARY,UB9,hpfree,5,0,,0,0,,4,0|1|2|3,"5/5 [tie_collapsed: f0,1,2,3]",True
+GraphDE,"GraphDE (paper orientation, A5)",frozen12,REDDIT-BINARY,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+GraphDE,"GraphDE (paper orientation, A5)",frozen12,REDDIT-BINARY,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+GraphDE,"GraphDE (paper orientation, A5)",frozen12,DD,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+GraphDE,"GraphDE (paper orientation, A5)",frozen12,DD,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+GraphDE,"GraphDE (paper orientation, A5)",frozen12,COLLAB,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+GraphDE,"GraphDE (paper orientation, A5)",frozen12,COLLAB,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+GraphDE,"GraphDE (paper orientation, A5)",frozen12,Tox21_p53,secondary,ubgold,5,0,,0,0,,2,2|3,"5/5 [tie_collapsed: f2,3]",True
+GraphDE,"GraphDE (paper orientation, A5)",frozen12,Tox21_p53,secondary,hpfree,5,0,,0,0,,1,3,5/5 [tie_collapsed: f3],True
+GraphDE,"GraphDE (paper orientation, A5)",frozen12,Tox21_MMP,secondary,ubgold,5,0,,0,0,,3,2|3|4,"5/5 [tie_collapsed: f2,3,4]",True
+GraphDE,"GraphDE (paper orientation, A5)",frozen12,Tox21_MMP,secondary,hpfree,5,0,,0,0,,2,1|2,"5/5 [tie_collapsed: f1,2]",True
+GraphDE,"GraphDE (paper orientation, A5)",frozen12,MUTAG,secondary,ubgold,0,0,,5,0,,0,,missing,False
+GraphDE,"GraphDE (paper orientation, A5)",frozen12,MUTAG,secondary,hpfree,0,0,,5,0,,0,,missing,False
+HC-GLAD,HC-GLAD,E4,AIDS,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+HC-GLAD,HC-GLAD,E4,AIDS,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+HC-GLAD,HC-GLAD,E4,BZR,UB9,ubgold,5,0,,0,1,0,1,0,5/5 [nonfinite_selected: f0] [tie_collapsed: f0],True
+HC-GLAD,HC-GLAD,E4,BZR,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+HC-GLAD,HC-GLAD,E4,COX2,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+HC-GLAD,HC-GLAD,E4,COX2,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+HC-GLAD,HC-GLAD,E4,DHFR,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+HC-GLAD,HC-GLAD,E4,DHFR,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+HC-GLAD,HC-GLAD,E4,ENZYMES,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+HC-GLAD,HC-GLAD,E4,ENZYMES,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+HC-GLAD,HC-GLAD,E4,NCI1,UB9,ubgold,5,0,,0,1,4,1,4,5/5 [nonfinite_selected: f4] [tie_collapsed: f4],True
+HC-GLAD,HC-GLAD,E4,NCI1,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+HC-GLAD,HC-GLAD,E4,PROTEINS_full,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+HC-GLAD,HC-GLAD,E4,PROTEINS_full,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+HC-GLAD,HC-GLAD,E4,IMDB-BINARY,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+HC-GLAD,HC-GLAD,E4,IMDB-BINARY,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+HC-GLAD,HC-GLAD,E4,REDDIT-BINARY,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+HC-GLAD,HC-GLAD,E4,REDDIT-BINARY,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+HC-GLAD,HC-GLAD,E4,DD,secondary,ubgold,0,0,,5,0,,0,,missing,False
+HC-GLAD,HC-GLAD,E4,DD,secondary,hpfree,0,0,,5,0,,0,,missing,False
+HC-GLAD,HC-GLAD,E4,COLLAB,secondary,ubgold,0,0,,5,0,,0,,missing,False
+HC-GLAD,HC-GLAD,E4,COLLAB,secondary,hpfree,0,0,,5,0,,0,,missing,False
+HC-GLAD,HC-GLAD,E4,Tox21_p53,secondary,ubgold,0,0,,5,0,,0,,missing,False
+HC-GLAD,HC-GLAD,E4,Tox21_p53,secondary,hpfree,0,0,,5,0,,0,,missing,False
+HC-GLAD,HC-GLAD,E4,Tox21_MMP,secondary,ubgold,0,0,,5,0,,0,,missing,False
+HC-GLAD,HC-GLAD,E4,Tox21_MMP,secondary,hpfree,0,0,,5,0,,0,,missing,False
+HC-GLAD,HC-GLAD,E4,MUTAG,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+HC-GLAD,HC-GLAD,E4,MUTAG,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+InfoGraph_IF,InfoGraph_IF,frozen12,AIDS,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+InfoGraph_IF,InfoGraph_IF,frozen12,AIDS,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+InfoGraph_IF,InfoGraph_IF,frozen12,BZR,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+InfoGraph_IF,InfoGraph_IF,frozen12,BZR,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+InfoGraph_IF,InfoGraph_IF,frozen12,COX2,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+InfoGraph_IF,InfoGraph_IF,frozen12,COX2,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+InfoGraph_IF,InfoGraph_IF,frozen12,DHFR,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+InfoGraph_IF,InfoGraph_IF,frozen12,DHFR,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+InfoGraph_IF,InfoGraph_IF,frozen12,ENZYMES,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+InfoGraph_IF,InfoGraph_IF,frozen12,ENZYMES,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+InfoGraph_IF,InfoGraph_IF,frozen12,NCI1,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+InfoGraph_IF,InfoGraph_IF,frozen12,NCI1,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+InfoGraph_IF,InfoGraph_IF,frozen12,PROTEINS_full,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+InfoGraph_IF,InfoGraph_IF,frozen12,PROTEINS_full,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+InfoGraph_IF,InfoGraph_IF,frozen12,IMDB-BINARY,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+InfoGraph_IF,InfoGraph_IF,frozen12,IMDB-BINARY,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+InfoGraph_IF,InfoGraph_IF,frozen12,REDDIT-BINARY,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+InfoGraph_IF,InfoGraph_IF,frozen12,REDDIT-BINARY,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+InfoGraph_IF,InfoGraph_IF,frozen12,DD,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+InfoGraph_IF,InfoGraph_IF,frozen12,DD,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+InfoGraph_IF,InfoGraph_IF,frozen12,COLLAB,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+InfoGraph_IF,InfoGraph_IF,frozen12,COLLAB,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+InfoGraph_IF,InfoGraph_IF,frozen12,Tox21_p53,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+InfoGraph_IF,InfoGraph_IF,frozen12,Tox21_p53,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+InfoGraph_IF,InfoGraph_IF,frozen12,Tox21_MMP,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+InfoGraph_IF,InfoGraph_IF,frozen12,Tox21_MMP,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+InfoGraph_IF,InfoGraph_IF,frozen12,MUTAG,secondary,ubgold,0,0,,5,0,,0,,missing,False
+InfoGraph_IF,InfoGraph_IF,frozen12,MUTAG,secondary,hpfree,0,0,,5,0,,0,,missing,False
+InfoGraph_OCSVM,InfoGraph_OCSVM,frozen12,AIDS,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+InfoGraph_OCSVM,InfoGraph_OCSVM,frozen12,AIDS,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+InfoGraph_OCSVM,InfoGraph_OCSVM,frozen12,BZR,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+InfoGraph_OCSVM,InfoGraph_OCSVM,frozen12,BZR,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+InfoGraph_OCSVM,InfoGraph_OCSVM,frozen12,COX2,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+InfoGraph_OCSVM,InfoGraph_OCSVM,frozen12,COX2,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+InfoGraph_OCSVM,InfoGraph_OCSVM,frozen12,DHFR,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+InfoGraph_OCSVM,InfoGraph_OCSVM,frozen12,DHFR,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+InfoGraph_OCSVM,InfoGraph_OCSVM,frozen12,ENZYMES,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+InfoGraph_OCSVM,InfoGraph_OCSVM,frozen12,ENZYMES,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+InfoGraph_OCSVM,InfoGraph_OCSVM,frozen12,NCI1,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+InfoGraph_OCSVM,InfoGraph_OCSVM,frozen12,NCI1,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+InfoGraph_OCSVM,InfoGraph_OCSVM,frozen12,PROTEINS_full,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+InfoGraph_OCSVM,InfoGraph_OCSVM,frozen12,PROTEINS_full,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+InfoGraph_OCSVM,InfoGraph_OCSVM,frozen12,IMDB-BINARY,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+InfoGraph_OCSVM,InfoGraph_OCSVM,frozen12,IMDB-BINARY,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+InfoGraph_OCSVM,InfoGraph_OCSVM,frozen12,REDDIT-BINARY,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+InfoGraph_OCSVM,InfoGraph_OCSVM,frozen12,REDDIT-BINARY,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+InfoGraph_OCSVM,InfoGraph_OCSVM,frozen12,DD,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+InfoGraph_OCSVM,InfoGraph_OCSVM,frozen12,DD,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+InfoGraph_OCSVM,InfoGraph_OCSVM,frozen12,COLLAB,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+InfoGraph_OCSVM,InfoGraph_OCSVM,frozen12,COLLAB,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+InfoGraph_OCSVM,InfoGraph_OCSVM,frozen12,Tox21_p53,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+InfoGraph_OCSVM,InfoGraph_OCSVM,frozen12,Tox21_p53,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+InfoGraph_OCSVM,InfoGraph_OCSVM,frozen12,Tox21_MMP,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+InfoGraph_OCSVM,InfoGraph_OCSVM,frozen12,Tox21_MMP,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+InfoGraph_OCSVM,InfoGraph_OCSVM,frozen12,MUTAG,secondary,ubgold,0,0,,5,0,,0,,missing,False
+InfoGraph_OCSVM,InfoGraph_OCSVM,frozen12,MUTAG,secondary,hpfree,0,0,,5,0,,0,,missing,False
+LGKDE,LGKDE ('ubgold' = MUTAG.yaml for all),E5,AIDS,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+LGKDE,LGKDE ('ubgold' = MUTAG.yaml for all),E5,AIDS,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+LGKDE,LGKDE ('ubgold' = MUTAG.yaml for all),E5,BZR,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+LGKDE,LGKDE ('ubgold' = MUTAG.yaml for all),E5,BZR,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+LGKDE,LGKDE ('ubgold' = MUTAG.yaml for all),E5,COX2,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+LGKDE,LGKDE ('ubgold' = MUTAG.yaml for all),E5,COX2,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+LGKDE,LGKDE ('ubgold' = MUTAG.yaml for all),E5,DHFR,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+LGKDE,LGKDE ('ubgold' = MUTAG.yaml for all),E5,DHFR,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+LGKDE,LGKDE ('ubgold' = MUTAG.yaml for all),E5,ENZYMES,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+LGKDE,LGKDE ('ubgold' = MUTAG.yaml for all),E5,ENZYMES,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+LGKDE,LGKDE ('ubgold' = MUTAG.yaml for all),E5,NCI1,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+LGKDE,LGKDE ('ubgold' = MUTAG.yaml for all),E5,NCI1,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+LGKDE,LGKDE ('ubgold' = MUTAG.yaml for all),E5,PROTEINS_full,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+LGKDE,LGKDE ('ubgold' = MUTAG.yaml for all),E5,PROTEINS_full,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+LGKDE,LGKDE ('ubgold' = MUTAG.yaml for all),E5,IMDB-BINARY,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+LGKDE,LGKDE ('ubgold' = MUTAG.yaml for all),E5,IMDB-BINARY,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+LGKDE,LGKDE ('ubgold' = MUTAG.yaml for all),E5,REDDIT-BINARY,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+LGKDE,LGKDE ('ubgold' = MUTAG.yaml for all),E5,REDDIT-BINARY,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+LGKDE,LGKDE ('ubgold' = MUTAG.yaml for all),E5,DD,secondary,ubgold,0,0,,5,0,,0,,missing,False
+LGKDE,LGKDE ('ubgold' = MUTAG.yaml for all),E5,DD,secondary,hpfree,0,0,,5,0,,0,,missing,False
+LGKDE,LGKDE ('ubgold' = MUTAG.yaml for all),E5,COLLAB,secondary,ubgold,0,0,,5,0,,0,,missing,False
+LGKDE,LGKDE ('ubgold' = MUTAG.yaml for all),E5,COLLAB,secondary,hpfree,0,0,,5,0,,0,,missing,False
+LGKDE,LGKDE ('ubgold' = MUTAG.yaml for all),E5,Tox21_p53,secondary,ubgold,0,0,,5,0,,0,,missing,False
+LGKDE,LGKDE ('ubgold' = MUTAG.yaml for all),E5,Tox21_p53,secondary,hpfree,0,0,,5,0,,0,,missing,False
+LGKDE,LGKDE ('ubgold' = MUTAG.yaml for all),E5,Tox21_MMP,secondary,ubgold,0,0,,5,0,,0,,missing,False
+LGKDE,LGKDE ('ubgold' = MUTAG.yaml for all),E5,Tox21_MMP,secondary,hpfree,0,0,,5,0,,0,,missing,False
+LGKDE,LGKDE ('ubgold' = MUTAG.yaml for all),E5,MUTAG,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+LGKDE,LGKDE ('ubgold' = MUTAG.yaml for all),E5,MUTAG,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+MUSE,MUSE,E5,AIDS,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+MUSE,MUSE,E5,AIDS,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+MUSE,MUSE,E5,BZR,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+MUSE,MUSE,E5,BZR,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+MUSE,MUSE,E5,COX2,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+MUSE,MUSE,E5,COX2,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+MUSE,MUSE,E5,DHFR,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+MUSE,MUSE,E5,DHFR,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+MUSE,MUSE,E5,ENZYMES,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+MUSE,MUSE,E5,ENZYMES,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+MUSE,MUSE,E5,NCI1,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+MUSE,MUSE,E5,NCI1,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+MUSE,MUSE,E5,PROTEINS_full,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+MUSE,MUSE,E5,PROTEINS_full,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+MUSE,MUSE,E5,IMDB-BINARY,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+MUSE,MUSE,E5,IMDB-BINARY,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+MUSE,MUSE,E5,REDDIT-BINARY,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+MUSE,MUSE,E5,REDDIT-BINARY,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+MUSE,MUSE,E5,DD,secondary,ubgold,0,0,,5,0,,0,,missing,False
+MUSE,MUSE,E5,DD,secondary,hpfree,0,0,,5,0,,0,,missing,False
+MUSE,MUSE,E5,COLLAB,secondary,ubgold,0,0,,5,0,,0,,missing,False
+MUSE,MUSE,E5,COLLAB,secondary,hpfree,0,0,,5,0,,0,,missing,False
+MUSE,MUSE,E5,Tox21_p53,secondary,ubgold,0,0,,5,0,,0,,missing,False
+MUSE,MUSE,E5,Tox21_p53,secondary,hpfree,0,0,,5,0,,0,,missing,False
+MUSE,MUSE,E5,Tox21_MMP,secondary,ubgold,0,0,,5,0,,0,,missing,False
+MUSE,MUSE,E5,Tox21_MMP,secondary,hpfree,0,0,,5,0,,0,,missing,False
+MUSE,MUSE,E5,MUTAG,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+MUSE,MUSE,E5,MUTAG,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+OCGIN,OCGIN,frozen12,AIDS,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+OCGIN,OCGIN,frozen12,AIDS,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+OCGIN,OCGIN,frozen12,BZR,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+OCGIN,OCGIN,frozen12,BZR,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+OCGIN,OCGIN,frozen12,COX2,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+OCGIN,OCGIN,frozen12,COX2,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+OCGIN,OCGIN,frozen12,DHFR,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+OCGIN,OCGIN,frozen12,DHFR,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+OCGIN,OCGIN,frozen12,ENZYMES,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+OCGIN,OCGIN,frozen12,ENZYMES,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+OCGIN,OCGIN,frozen12,NCI1,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+OCGIN,OCGIN,frozen12,NCI1,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+OCGIN,OCGIN,frozen12,PROTEINS_full,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+OCGIN,OCGIN,frozen12,PROTEINS_full,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+OCGIN,OCGIN,frozen12,IMDB-BINARY,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+OCGIN,OCGIN,frozen12,IMDB-BINARY,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+OCGIN,OCGIN,frozen12,REDDIT-BINARY,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+OCGIN,OCGIN,frozen12,REDDIT-BINARY,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+OCGIN,OCGIN,frozen12,DD,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+OCGIN,OCGIN,frozen12,DD,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+OCGIN,OCGIN,frozen12,COLLAB,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+OCGIN,OCGIN,frozen12,COLLAB,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+OCGIN,OCGIN,frozen12,Tox21_p53,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+OCGIN,OCGIN,frozen12,Tox21_p53,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+OCGIN,OCGIN,frozen12,Tox21_MMP,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+OCGIN,OCGIN,frozen12,Tox21_MMP,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+OCGIN,OCGIN,frozen12,MUTAG,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+OCGIN,OCGIN,frozen12,MUTAG,secondary,hpfree,0,0,,5,0,,0,,missing,False
+OCGTL,OCGTL,frozen12,AIDS,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+OCGTL,OCGTL,frozen12,AIDS,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+OCGTL,OCGTL,frozen12,BZR,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+OCGTL,OCGTL,frozen12,BZR,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+OCGTL,OCGTL,frozen12,COX2,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+OCGTL,OCGTL,frozen12,COX2,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+OCGTL,OCGTL,frozen12,DHFR,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+OCGTL,OCGTL,frozen12,DHFR,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+OCGTL,OCGTL,frozen12,ENZYMES,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+OCGTL,OCGTL,frozen12,ENZYMES,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+OCGTL,OCGTL,frozen12,NCI1,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+OCGTL,OCGTL,frozen12,NCI1,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+OCGTL,OCGTL,frozen12,PROTEINS_full,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+OCGTL,OCGTL,frozen12,PROTEINS_full,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+OCGTL,OCGTL,frozen12,IMDB-BINARY,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+OCGTL,OCGTL,frozen12,IMDB-BINARY,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+OCGTL,OCGTL,frozen12,REDDIT-BINARY,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+OCGTL,OCGTL,frozen12,REDDIT-BINARY,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+OCGTL,OCGTL,frozen12,DD,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+OCGTL,OCGTL,frozen12,DD,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+OCGTL,OCGTL,frozen12,COLLAB,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+OCGTL,OCGTL,frozen12,COLLAB,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+OCGTL,OCGTL,frozen12,Tox21_p53,secondary,ubgold,5,0,,0,0,,5,0|1|2|3|4,"5/5 [tie_collapsed: f0,1,2,3,4]",True
+OCGTL,OCGTL,frozen12,Tox21_p53,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+OCGTL,OCGTL,frozen12,Tox21_MMP,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+OCGTL,OCGTL,frozen12,Tox21_MMP,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+OCGTL,OCGTL,frozen12,MUTAG,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+OCGTL,OCGTL,frozen12,MUTAG,secondary,hpfree,0,0,,5,0,,0,,missing,False
+PK-IF,PK-IF,kernel,AIDS,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+PK-IF,PK-IF,kernel,AIDS,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+PK-IF,PK-IF,kernel,BZR,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+PK-IF,PK-IF,kernel,BZR,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+PK-IF,PK-IF,kernel,COX2,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+PK-IF,PK-IF,kernel,COX2,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+PK-IF,PK-IF,kernel,DHFR,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+PK-IF,PK-IF,kernel,DHFR,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+PK-IF,PK-IF,kernel,ENZYMES,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+PK-IF,PK-IF,kernel,ENZYMES,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+PK-IF,PK-IF,kernel,NCI1,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+PK-IF,PK-IF,kernel,NCI1,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+PK-IF,PK-IF,kernel,PROTEINS_full,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+PK-IF,PK-IF,kernel,PROTEINS_full,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+PK-IF,PK-IF,kernel,IMDB-BINARY,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+PK-IF,PK-IF,kernel,IMDB-BINARY,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+PK-IF,PK-IF,kernel,REDDIT-BINARY,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+PK-IF,PK-IF,kernel,REDDIT-BINARY,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+PK-IF,PK-IF,kernel,DD,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+PK-IF,PK-IF,kernel,DD,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+PK-IF,PK-IF,kernel,COLLAB,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+PK-IF,PK-IF,kernel,COLLAB,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+PK-IF,PK-IF,kernel,Tox21_p53,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+PK-IF,PK-IF,kernel,Tox21_p53,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+PK-IF,PK-IF,kernel,Tox21_MMP,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+PK-IF,PK-IF,kernel,Tox21_MMP,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+PK-IF,PK-IF,kernel,MUTAG,secondary,ubgold,0,0,,5,0,,0,,missing,False
+PK-IF,PK-IF,kernel,MUTAG,secondary,hpfree,0,0,,5,0,,0,,missing,False
+PK-OCSVM,PK-OCSVM,kernel,AIDS,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+PK-OCSVM,PK-OCSVM,kernel,AIDS,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+PK-OCSVM,PK-OCSVM,kernel,BZR,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+PK-OCSVM,PK-OCSVM,kernel,BZR,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+PK-OCSVM,PK-OCSVM,kernel,COX2,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+PK-OCSVM,PK-OCSVM,kernel,COX2,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+PK-OCSVM,PK-OCSVM,kernel,DHFR,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+PK-OCSVM,PK-OCSVM,kernel,DHFR,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+PK-OCSVM,PK-OCSVM,kernel,ENZYMES,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+PK-OCSVM,PK-OCSVM,kernel,ENZYMES,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+PK-OCSVM,PK-OCSVM,kernel,NCI1,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+PK-OCSVM,PK-OCSVM,kernel,NCI1,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+PK-OCSVM,PK-OCSVM,kernel,PROTEINS_full,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+PK-OCSVM,PK-OCSVM,kernel,PROTEINS_full,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+PK-OCSVM,PK-OCSVM,kernel,IMDB-BINARY,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+PK-OCSVM,PK-OCSVM,kernel,IMDB-BINARY,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+PK-OCSVM,PK-OCSVM,kernel,REDDIT-BINARY,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+PK-OCSVM,PK-OCSVM,kernel,REDDIT-BINARY,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+PK-OCSVM,PK-OCSVM,kernel,DD,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+PK-OCSVM,PK-OCSVM,kernel,DD,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+PK-OCSVM,PK-OCSVM,kernel,COLLAB,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+PK-OCSVM,PK-OCSVM,kernel,COLLAB,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+PK-OCSVM,PK-OCSVM,kernel,Tox21_p53,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+PK-OCSVM,PK-OCSVM,kernel,Tox21_p53,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+PK-OCSVM,PK-OCSVM,kernel,Tox21_MMP,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+PK-OCSVM,PK-OCSVM,kernel,Tox21_MMP,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+PK-OCSVM,PK-OCSVM,kernel,MUTAG,secondary,ubgold,0,0,,5,0,,0,,missing,False
+PK-OCSVM,PK-OCSVM,kernel,MUTAG,secondary,hpfree,0,0,,5,0,,0,,missing,False
+ProtoGLAD,ProtoGLAD,E4,AIDS,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+ProtoGLAD,ProtoGLAD,E4,AIDS,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+ProtoGLAD,ProtoGLAD,E4,BZR,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+ProtoGLAD,ProtoGLAD,E4,BZR,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+ProtoGLAD,ProtoGLAD,E4,COX2,UB9,ubgold,5,0,,0,0,,3,0|1|2,"5/5 [tie_collapsed: f0,1,2]",True
+ProtoGLAD,ProtoGLAD,E4,COX2,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+ProtoGLAD,ProtoGLAD,E4,DHFR,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+ProtoGLAD,ProtoGLAD,E4,DHFR,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+ProtoGLAD,ProtoGLAD,E4,ENZYMES,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+ProtoGLAD,ProtoGLAD,E4,ENZYMES,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+ProtoGLAD,ProtoGLAD,E4,NCI1,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+ProtoGLAD,ProtoGLAD,E4,NCI1,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+ProtoGLAD,ProtoGLAD,E4,PROTEINS_full,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+ProtoGLAD,ProtoGLAD,E4,PROTEINS_full,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+ProtoGLAD,ProtoGLAD,E4,IMDB-BINARY,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+ProtoGLAD,ProtoGLAD,E4,IMDB-BINARY,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+ProtoGLAD,ProtoGLAD,E4,REDDIT-BINARY,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+ProtoGLAD,ProtoGLAD,E4,REDDIT-BINARY,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+ProtoGLAD,ProtoGLAD,E4,DD,secondary,ubgold,0,0,,5,0,,0,,missing,False
+ProtoGLAD,ProtoGLAD,E4,DD,secondary,hpfree,0,0,,5,0,,0,,missing,False
+ProtoGLAD,ProtoGLAD,E4,COLLAB,secondary,ubgold,0,0,,5,0,,0,,missing,False
+ProtoGLAD,ProtoGLAD,E4,COLLAB,secondary,hpfree,0,0,,5,0,,0,,missing,False
+ProtoGLAD,ProtoGLAD,E4,Tox21_p53,secondary,ubgold,0,0,,5,0,,0,,missing,False
+ProtoGLAD,ProtoGLAD,E4,Tox21_p53,secondary,hpfree,0,0,,5,0,,0,,missing,False
+ProtoGLAD,ProtoGLAD,E4,Tox21_MMP,secondary,ubgold,0,0,,5,0,,0,,missing,False
+ProtoGLAD,ProtoGLAD,E4,Tox21_MMP,secondary,hpfree,0,0,,5,0,,0,,missing,False
+ProtoGLAD,ProtoGLAD,E4,MUTAG,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+ProtoGLAD,ProtoGLAD,E4,MUTAG,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+SEGO,SEGO ('ubgold' = released-modal),E5,AIDS,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+SEGO,SEGO ('ubgold' = released-modal),E5,AIDS,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+SEGO,SEGO ('ubgold' = released-modal),E5,BZR,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+SEGO,SEGO ('ubgold' = released-modal),E5,BZR,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+SEGO,SEGO ('ubgold' = released-modal),E5,COX2,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+SEGO,SEGO ('ubgold' = released-modal),E5,COX2,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+SEGO,SEGO ('ubgold' = released-modal),E5,DHFR,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+SEGO,SEGO ('ubgold' = released-modal),E5,DHFR,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+SEGO,SEGO ('ubgold' = released-modal),E5,ENZYMES,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+SEGO,SEGO ('ubgold' = released-modal),E5,ENZYMES,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+SEGO,SEGO ('ubgold' = released-modal),E5,NCI1,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+SEGO,SEGO ('ubgold' = released-modal),E5,NCI1,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+SEGO,SEGO ('ubgold' = released-modal),E5,PROTEINS_full,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+SEGO,SEGO ('ubgold' = released-modal),E5,PROTEINS_full,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+SEGO,SEGO ('ubgold' = released-modal),E5,IMDB-BINARY,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+SEGO,SEGO ('ubgold' = released-modal),E5,IMDB-BINARY,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+SEGO,SEGO ('ubgold' = released-modal),E5,REDDIT-BINARY,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+SEGO,SEGO ('ubgold' = released-modal),E5,REDDIT-BINARY,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+SEGO,SEGO ('ubgold' = released-modal),E5,DD,secondary,ubgold,0,0,,5,0,,0,,missing,False
+SEGO,SEGO ('ubgold' = released-modal),E5,DD,secondary,hpfree,0,0,,5,0,,0,,missing,False
+SEGO,SEGO ('ubgold' = released-modal),E5,COLLAB,secondary,ubgold,0,0,,5,0,,0,,missing,False
+SEGO,SEGO ('ubgold' = released-modal),E5,COLLAB,secondary,hpfree,0,0,,5,0,,0,,missing,False
+SEGO,SEGO ('ubgold' = released-modal),E5,Tox21_p53,secondary,ubgold,0,0,,5,0,,0,,missing,False
+SEGO,SEGO ('ubgold' = released-modal),E5,Tox21_p53,secondary,hpfree,0,0,,5,0,,0,,missing,False
+SEGO,SEGO ('ubgold' = released-modal),E5,Tox21_MMP,secondary,ubgold,0,0,,5,0,,0,,missing,False
+SEGO,SEGO ('ubgold' = released-modal),E5,Tox21_MMP,secondary,hpfree,0,0,,5,0,,0,,missing,False
+SEGO,SEGO ('ubgold' = released-modal),E5,MUTAG,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+SEGO,SEGO ('ubgold' = released-modal),E5,MUTAG,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+SIGNET,SIGNET,frozen12,AIDS,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+SIGNET,SIGNET,frozen12,AIDS,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+SIGNET,SIGNET,frozen12,BZR,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+SIGNET,SIGNET,frozen12,BZR,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+SIGNET,SIGNET,frozen12,COX2,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+SIGNET,SIGNET,frozen12,COX2,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+SIGNET,SIGNET,frozen12,DHFR,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+SIGNET,SIGNET,frozen12,DHFR,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+SIGNET,SIGNET,frozen12,ENZYMES,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+SIGNET,SIGNET,frozen12,ENZYMES,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+SIGNET,SIGNET,frozen12,NCI1,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+SIGNET,SIGNET,frozen12,NCI1,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+SIGNET,SIGNET,frozen12,PROTEINS_full,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+SIGNET,SIGNET,frozen12,PROTEINS_full,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+SIGNET,SIGNET,frozen12,IMDB-BINARY,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+SIGNET,SIGNET,frozen12,IMDB-BINARY,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+SIGNET,SIGNET,frozen12,REDDIT-BINARY,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+SIGNET,SIGNET,frozen12,REDDIT-BINARY,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+SIGNET,SIGNET,frozen12,DD,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+SIGNET,SIGNET,frozen12,DD,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+SIGNET,SIGNET,frozen12,COLLAB,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+SIGNET,SIGNET,frozen12,COLLAB,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+SIGNET,SIGNET,frozen12,Tox21_p53,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+SIGNET,SIGNET,frozen12,Tox21_p53,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+SIGNET,SIGNET,frozen12,Tox21_MMP,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+SIGNET,SIGNET,frozen12,Tox21_MMP,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+SIGNET,SIGNET,frozen12,MUTAG,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+SIGNET,SIGNET,frozen12,MUTAG,secondary,hpfree,0,0,,5,0,,0,,missing,False
+SUL-GUL,SUL-GUL (GUL only; SUL not released),E4,AIDS,UB9,ubgold,5,0,,0,1,4,2,0|4,"5/5 [nonfinite_selected: f4] [tie_collapsed: f0,4]",True
+SUL-GUL,SUL-GUL (GUL only; SUL not released),E4,AIDS,UB9,hpfree,5,0,,0,1,4,2,0|4,"5/5 [nonfinite_selected: f4] [tie_collapsed: f0,4]",True
+SUL-GUL,SUL-GUL (GUL only; SUL not released),E4,BZR,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+SUL-GUL,SUL-GUL (GUL only; SUL not released),E4,BZR,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+SUL-GUL,SUL-GUL (GUL only; SUL not released),E4,COX2,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+SUL-GUL,SUL-GUL (GUL only; SUL not released),E4,COX2,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+SUL-GUL,SUL-GUL (GUL only; SUL not released),E4,DHFR,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+SUL-GUL,SUL-GUL (GUL only; SUL not released),E4,DHFR,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+SUL-GUL,SUL-GUL (GUL only; SUL not released),E4,ENZYMES,UB9,ubgold,5,0,,0,0,,5,0|1|2|3|4,"5/5 [tie_collapsed: f0,1,2,3,4]",True
+SUL-GUL,SUL-GUL (GUL only; SUL not released),E4,ENZYMES,UB9,hpfree,5,0,,0,0,,5,0|1|2|3|4,"5/5 [tie_collapsed: f0,1,2,3,4]",True
+SUL-GUL,SUL-GUL (GUL only; SUL not released),E4,NCI1,UB9,ubgold,5,0,,0,4,1|2|3|4,5,0|1|2|3|4,"5/5 [nonfinite_selected: f1,2,3,4] [tie_collapsed: f0,1,2,3,4]",True
+SUL-GUL,SUL-GUL (GUL only; SUL not released),E4,NCI1,UB9,hpfree,5,0,,0,4,1|2|3|4,5,0|1|2|3|4,"5/5 [nonfinite_selected: f1,2,3,4] [tie_collapsed: f0,1,2,3,4]",True
+SUL-GUL,SUL-GUL (GUL only; SUL not released),E4,PROTEINS_full,UB9,ubgold,5,0,,0,0,,3,1|3|4,"5/5 [tie_collapsed: f1,3,4]",True
+SUL-GUL,SUL-GUL (GUL only; SUL not released),E4,PROTEINS_full,UB9,hpfree,5,0,,0,0,,3,1|3|4,"5/5 [tie_collapsed: f1,3,4]",True
+SUL-GUL,SUL-GUL (GUL only; SUL not released),E4,IMDB-BINARY,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+SUL-GUL,SUL-GUL (GUL only; SUL not released),E4,IMDB-BINARY,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+SUL-GUL,SUL-GUL (GUL only; SUL not released),E4,REDDIT-BINARY,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+SUL-GUL,SUL-GUL (GUL only; SUL not released),E4,REDDIT-BINARY,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+SUL-GUL,SUL-GUL (GUL only; SUL not released),E4,DD,secondary,ubgold,0,0,,5,0,,0,,missing,False
+SUL-GUL,SUL-GUL (GUL only; SUL not released),E4,DD,secondary,hpfree,0,0,,5,0,,0,,missing,False
+SUL-GUL,SUL-GUL (GUL only; SUL not released),E4,COLLAB,secondary,ubgold,0,0,,5,0,,0,,missing,False
+SUL-GUL,SUL-GUL (GUL only; SUL not released),E4,COLLAB,secondary,hpfree,0,0,,5,0,,0,,missing,False
+SUL-GUL,SUL-GUL (GUL only; SUL not released),E4,Tox21_p53,secondary,ubgold,0,0,,5,0,,0,,missing,False
+SUL-GUL,SUL-GUL (GUL only; SUL not released),E4,Tox21_p53,secondary,hpfree,0,0,,5,0,,0,,missing,False
+SUL-GUL,SUL-GUL (GUL only; SUL not released),E4,Tox21_MMP,secondary,ubgold,0,0,,5,0,,0,,missing,False
+SUL-GUL,SUL-GUL (GUL only; SUL not released),E4,Tox21_MMP,secondary,hpfree,0,0,,5,0,,0,,missing,False
+SUL-GUL,SUL-GUL (GUL only; SUL not released),E4,MUTAG,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+SUL-GUL,SUL-GUL (GUL only; SUL not released),E4,MUTAG,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+WL-IF,WL-IF,kernel,AIDS,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+WL-IF,WL-IF,kernel,AIDS,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+WL-IF,WL-IF,kernel,BZR,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+WL-IF,WL-IF,kernel,BZR,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+WL-IF,WL-IF,kernel,COX2,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+WL-IF,WL-IF,kernel,COX2,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+WL-IF,WL-IF,kernel,DHFR,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+WL-IF,WL-IF,kernel,DHFR,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+WL-IF,WL-IF,kernel,ENZYMES,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+WL-IF,WL-IF,kernel,ENZYMES,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+WL-IF,WL-IF,kernel,NCI1,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+WL-IF,WL-IF,kernel,NCI1,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+WL-IF,WL-IF,kernel,PROTEINS_full,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+WL-IF,WL-IF,kernel,PROTEINS_full,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+WL-IF,WL-IF,kernel,IMDB-BINARY,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+WL-IF,WL-IF,kernel,IMDB-BINARY,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+WL-IF,WL-IF,kernel,REDDIT-BINARY,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+WL-IF,WL-IF,kernel,REDDIT-BINARY,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+WL-IF,WL-IF,kernel,DD,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+WL-IF,WL-IF,kernel,DD,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+WL-IF,WL-IF,kernel,COLLAB,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+WL-IF,WL-IF,kernel,COLLAB,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+WL-IF,WL-IF,kernel,Tox21_p53,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+WL-IF,WL-IF,kernel,Tox21_p53,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+WL-IF,WL-IF,kernel,Tox21_MMP,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+WL-IF,WL-IF,kernel,Tox21_MMP,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+WL-IF,WL-IF,kernel,MUTAG,secondary,ubgold,0,0,,5,0,,0,,missing,False
+WL-IF,WL-IF,kernel,MUTAG,secondary,hpfree,0,0,,5,0,,0,,missing,False
+WL-OCSVM,WL-OCSVM,kernel,AIDS,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+WL-OCSVM,WL-OCSVM,kernel,AIDS,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+WL-OCSVM,WL-OCSVM,kernel,BZR,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+WL-OCSVM,WL-OCSVM,kernel,BZR,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+WL-OCSVM,WL-OCSVM,kernel,COX2,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+WL-OCSVM,WL-OCSVM,kernel,COX2,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+WL-OCSVM,WL-OCSVM,kernel,DHFR,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+WL-OCSVM,WL-OCSVM,kernel,DHFR,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+WL-OCSVM,WL-OCSVM,kernel,ENZYMES,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+WL-OCSVM,WL-OCSVM,kernel,ENZYMES,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+WL-OCSVM,WL-OCSVM,kernel,NCI1,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+WL-OCSVM,WL-OCSVM,kernel,NCI1,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+WL-OCSVM,WL-OCSVM,kernel,PROTEINS_full,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+WL-OCSVM,WL-OCSVM,kernel,PROTEINS_full,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+WL-OCSVM,WL-OCSVM,kernel,IMDB-BINARY,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+WL-OCSVM,WL-OCSVM,kernel,IMDB-BINARY,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+WL-OCSVM,WL-OCSVM,kernel,REDDIT-BINARY,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+WL-OCSVM,WL-OCSVM,kernel,REDDIT-BINARY,UB9,hpfree,5,0,,0,0,,0,,5/5,True
+WL-OCSVM,WL-OCSVM,kernel,DD,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+WL-OCSVM,WL-OCSVM,kernel,DD,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+WL-OCSVM,WL-OCSVM,kernel,COLLAB,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+WL-OCSVM,WL-OCSVM,kernel,COLLAB,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+WL-OCSVM,WL-OCSVM,kernel,Tox21_p53,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+WL-OCSVM,WL-OCSVM,kernel,Tox21_p53,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+WL-OCSVM,WL-OCSVM,kernel,Tox21_MMP,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+WL-OCSVM,WL-OCSVM,kernel,Tox21_MMP,secondary,hpfree,5,0,,0,0,,0,,5/5,True
+WL-OCSVM,WL-OCSVM,kernel,MUTAG,secondary,ubgold,0,0,,5,0,,0,,missing,False
+WL-OCSVM,WL-OCSVM,kernel,MUTAG,secondary,hpfree,0,0,,5,0,,0,,missing,False
+WL-hist+iForest (ctrl),WL-hist+iForest (ctrl),reference,AIDS,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+WL-hist+iForest (ctrl),WL-hist+iForest (ctrl),reference,BZR,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+WL-hist+iForest (ctrl),WL-hist+iForest (ctrl),reference,COX2,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+WL-hist+iForest (ctrl),WL-hist+iForest (ctrl),reference,DHFR,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+WL-hist+iForest (ctrl),WL-hist+iForest (ctrl),reference,ENZYMES,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+WL-hist+iForest (ctrl),WL-hist+iForest (ctrl),reference,NCI1,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+WL-hist+iForest (ctrl),WL-hist+iForest (ctrl),reference,PROTEINS_full,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+WL-hist+iForest (ctrl),WL-hist+iForest (ctrl),reference,IMDB-BINARY,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+WL-hist+iForest (ctrl),WL-hist+iForest (ctrl),reference,REDDIT-BINARY,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+WL-hist+iForest (ctrl),WL-hist+iForest (ctrl),reference,DD,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+WL-hist+iForest (ctrl),WL-hist+iForest (ctrl),reference,COLLAB,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+WL-hist+iForest (ctrl),WL-hist+iForest (ctrl),reference,Tox21_p53,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+WL-hist+iForest (ctrl),WL-hist+iForest (ctrl),reference,Tox21_MMP,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+WL-hist+iForest (ctrl),WL-hist+iForest (ctrl),reference,MUTAG,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+graphlet-count+LW,graphlet-count+LW,reference,AIDS,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+graphlet-count+LW,graphlet-count+LW,reference,BZR,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+graphlet-count+LW,graphlet-count+LW,reference,COX2,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+graphlet-count+LW,graphlet-count+LW,reference,DHFR,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+graphlet-count+LW,graphlet-count+LW,reference,ENZYMES,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+graphlet-count+LW,graphlet-count+LW,reference,NCI1,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+graphlet-count+LW,graphlet-count+LW,reference,PROTEINS_full,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+graphlet-count+LW,graphlet-count+LW,reference,IMDB-BINARY,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+graphlet-count+LW,graphlet-count+LW,reference,REDDIT-BINARY,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+graphlet-count+LW,graphlet-count+LW,reference,DD,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+graphlet-count+LW,graphlet-count+LW,reference,COLLAB,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+graphlet-count+LW,graphlet-count+LW,reference,Tox21_p53,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+graphlet-count+LW,graphlet-count+LW,reference,Tox21_MMP,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+graphlet-count+LW,graphlet-count+LW,reference,MUTAG,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+graphlet-count+iForest,graphlet-count+iForest,reference,AIDS,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+graphlet-count+iForest,graphlet-count+iForest,reference,BZR,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+graphlet-count+iForest,graphlet-count+iForest,reference,COX2,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+graphlet-count+iForest,graphlet-count+iForest,reference,DHFR,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+graphlet-count+iForest,graphlet-count+iForest,reference,ENZYMES,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+graphlet-count+iForest,graphlet-count+iForest,reference,NCI1,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+graphlet-count+iForest,graphlet-count+iForest,reference,PROTEINS_full,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+graphlet-count+iForest,graphlet-count+iForest,reference,IMDB-BINARY,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+graphlet-count+iForest,graphlet-count+iForest,reference,REDDIT-BINARY,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+graphlet-count+iForest,graphlet-count+iForest,reference,DD,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+graphlet-count+iForest,graphlet-count+iForest,reference,COLLAB,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+graphlet-count+iForest,graphlet-count+iForest,reference,Tox21_p53,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+graphlet-count+iForest,graphlet-count+iForest,reference,Tox21_MMP,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+graphlet-count+iForest,graphlet-count+iForest,reference,MUTAG,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+size-only,size-only,reference,AIDS,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+size-only,size-only,reference,BZR,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+size-only,size-only,reference,COX2,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+size-only,size-only,reference,DHFR,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+size-only,size-only,reference,ENZYMES,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+size-only,size-only,reference,NCI1,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+size-only,size-only,reference,PROTEINS_full,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+size-only,size-only,reference,IMDB-BINARY,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+size-only,size-only,reference,REDDIT-BINARY,UB9,ubgold,5,0,,0,0,,0,,5/5,True
+size-only,size-only,reference,DD,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+size-only,size-only,reference,COLLAB,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+size-only,size-only,reference,Tox21_p53,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+size-only,size-only,reference,Tox21_MMP,secondary,ubgold,5,0,,0,0,,0,,5/5,True
+size-only,size-only,reference,MUTAG,secondary,ubgold,5,0,,0,0,,0,,5/5,True

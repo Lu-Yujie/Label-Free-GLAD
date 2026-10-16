@@ -1,0 +1,44 @@
+{
+ "rsA_vs_rsB": {
+  "n_points": [
+   32,
+   32
+  ],
+  "max_abs_diff_traj": 0.0,
+  "max_abs_diff_scores": 0.0,
+  "same_nan_pattern": true,
+  "bit_identical": true
+ },
+ "rsA_vs_rsC": {
+  "n_points": [
+   32,
+   32
+  ],
+  "max_abs_diff_traj": 0.0,
+  "max_abs_diff_scores": 0.0,
+  "same_nan_pattern": true,
+  "bit_identical": true
+ },
+ "segments_B": [
+  {
+   "device": "cpu",
+   "job": null,
+   "host": "login2",
+   "threads": 4,
+   "start_epoch": 1,
+   "t0": "2026-10-13 12:56:36"
+  },
+  {
+   "device": "cpu",
+   "job": null,
+   "host": "login2",
+   "threads": 4,
+   "start_epoch": 22,
+   "t0": "2026-10-13 12:57:09",
+   "t1": "2026-10-13 12:57:11"
+  }
+ ],
+ "anchor_updates_A": 29,
+ "final_auroc_A": 0.49742078113485627,
+ "topk_effective": 96
+}

@@ -1,0 +1,15 @@
+{
+ "dataset": "COX2",
+ "features": "ubgold",
+ "best_auc": 0.508600782778865,
+ "best_std": 0.0593121710946414,
+ "best_params": {
+  "h": 2,
+  "psi1": 64,
+  "psi2": 64,
+  "tau": 0.05
+ },
+ "n_cells": 144,
+ "rule": "run_detection.py l.167-272: first cell with strictly larger 5-fold mean test roc_auc_score (TEST-LABEL SELECTION; upper bound)",
+ "completed": "2026-10-13 13:09:12"
+}

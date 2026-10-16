@@ -1,0 +1,180 @@
+#target evalpaper/typed/ext/SUL-GUL_typed.py
+#sha256 b34c3c19a0276806fef183a322fe6a91ddc595daa07f060400d36258767e4d60
+#commit 1a1f2e42ce48fe14360a03963785081347a3e929
+#final-newline 1
+O 27
+"""Phase B typed adapter: SUL-GUL (E4; WWW'26), GUL only, on GX / MS-v2 (RUN_NOTES_ext.md §0).
+
+GUL is the only released variant (A21 §1 / A22 §3: "SUL-GUL (GUL only; SUL not released)", released code defaults,
+500 epochs). The port evalpaper/ext/SUL-GUL/run_method.py (UncertaintyGLAD src @1a1f2e4, unmodified + the
+matplotlib stub) is imported READ-ONLY: load_gul and resolve_hparams are reused (README MUTAG demo = argparse defaults,
+poll_ratio recorded as 0 = normal-only mode, realised by the normal-only typed training data). The training loop (the
+port's line-by-line copy of src/main.py:run_split()) is copied here with # CHANGE-TYPED marks:
+  * data = typed_data; UB-GOLD set_seed(3407 + seed) before the model; topk = min(96, n_fit) = 96 here (n_fit >= 400,
+    so the A19 topk fallback never applies);
+  * GUL evaluates after every epoch: each group's test set (test normals + T) is one unshuffled loader of
+    batch_size_test 9999, asserted to be ONE batch (GUL keeps only the last test batch, port D5), scored by GUL's own
+    test(); groups 2..K from the saved RNG state S0, the first group last (RUN_NOTES §0a);
+  * held-out normals and the secondary objective exactly as the port (RNG-isolated).
+Own ORACLE (collector): common epoch with the max 5-seed mean test AUROC of that group (first max; A15.1 finite in all
+seeds). CPU with deterministic algorithms (port D8).
+  PYTHONDONTWRITEBYTECODE=1 $GLAD_ENVS/ubgold-gpu/bin/python -B SUL-GUL_typed.py --generator GX --seed 0
+"""
+import os.path as _osp, sys as _sys
+_sys.dont_write_bytecode = True
+_HERE_ = _osp.realpath(_osp.dirname(_osp.abspath(__file__)))
+if _HERE_ not in _sys.path:
+    _sys.path.insert(0, _HERE_)
+
+import os.path as osp
+import random
+import time
+
+U data_loader.py 1 1 [0]
+U layers.py 1 1 [0]
+O 15
+
+import typed_ext_common as TC
+
+METHOD = "SUL-GUL"
+
+
+def run(R, a):
+    M = TC.load_port(METHOD)                        # ext/SUL-GUL/run_method.py (read only)
+    H = TC.load_harness()
+    metric = TC.load_metric()
+    utils, layers, model_mod = M.load_gul()
+    U_GLAD, compute_metrics = model_mod.U_GLAD, utils.compute_metrics
+    deterministic = not torch.cuda.is_available()
+    if deterministic:
+        torch.use_deterministic_algorithms(True, warn_only=True)     # port D8
+U main.py 10 1 [4]
+U main.py 12 1 [4]
+O 30
+
+    args, hp_line, hp_notes = M.resolve_hparams(utils, R.generator, "ubgold")
+    if R.max_epochs is not None:
+        args.epochs = R.max_epochs
+    device = args.device
+    seed = 3407 + R.seed
+    # ---- CHANGE-TYPED: typed data; UB-GOLD set_seed(3407 + seed) as the port's load_fold -----------------------
+    ns = H.load_ubgold_data_functions()
+    ns["set_seed"](seed)
+    td = R.load_data()
+    P = td.pyg()
+    train_graphs, hold_list = P["fit"], P["hold"]
+    keys = R.keys
+    for k in keys:
+        assert len(P["test"][k]) <= args.batch_size_test        # one test batch per group (port D5)
+    assert len(hold_list) <= args.batch_size_test
+    topk = min(args.topk, len(train_graphs))
+    assert topk == args.topk, (topk, args.topk)                   # no A19 fallback on typed data
+
+    R.base_meta({"ext/SUL-GUL/run_method.py": osp.join(TC.PORTS, METHOD, "run_method.py"),
+                 "harness/run_eval.py": osp.join(TC.HARNESS, "run_eval.py"),
+                 "typed/ext/SUL-GUL_typed.py": osp.abspath(__file__)},
+                M.GUL_COMMIT, dict(vars(args), topk_effective=int(topk)), hp_line, hp_notes, device=str(device),
+                flags=dict(variant=M.VARIANT, normal_only=True, poll_ratio_effective=0.0,
+                           label="SUL-GUL (GUL only; SUL not released); released code defaults (500 epochs; paper "
+                                 "states 1000), A21/A22",
+                           oracle_own="common epoch, max 5-seed mean test AUROC (first max), finite in all seeds",
+                           deterministic_algorithms=deterministic, per_type_mode="own_set"))
+
+    # ================= copy of the port's run_split() loop ===============================================
+U main.py 20 5 [4,8,null,4,4]
+O 4
+    # CHANGE-TYPED: one unshuffled test loader per group
+    batch_test = {k: DataLoader(P["test"][k], batch_size=args.batch_size_test, shuffle=False) for k in keys}
+    batch_hold = DataLoader(hold_list, batch_size=args.batch_size_test, shuffle=False)
+
+U main.py 27 2 [4,4]
+O 4
+
+    state = R.load_state(device.type, torch.get_num_threads(), first_epoch=1)
+    if state is None:
+        anchor_graphs = random.sample(train_graphs,topk)
+U main.py 31 1 [8]
+O 1
+        start_epoch = 1
+U data_loader.py 13 1 [4]
+O 6
+        model.load_state_dict(state["model"])
+        optimizer.load_state_dict(state["opt"])
+        anchor_graphs = [train_graphs[i] for i in state["anchor_idx"]]
+        id_var = {i: float(v) for i, v in enumerate(state["id_var"])}
+        start_epoch = R.restore_common()
+
+U main.py 33 15 [4,8,8,12,8,8,8,8,8,null,4,8,12,8,8]
+O 6
+
+    def holdout_objective(hb, anchor_graphs):
+        """= the port's secondary signal (inside rng_isolated)."""
+        torch.manual_seed(0)
+        random.seed(0)
+        for batch_anchor in DataLoader(anchor_graphs, batch_size=args.batch_size_test, shuffle=False):
+U main.py 36 1 [12]
+O 6
+        l_u, _, node_embs = model.encode(hb, batch_anchor)
+        l_g = model.recon_loss(node_embs, hb.edge_index)
+        return float(l_u), float(l_g)
+
+    def score_group(k):
+        """CHANGE-TYPED: GUL's test pass on group k's test set (main.py:68-78 under no_grad; one batch)."""
+U main.py 69 1 [8]
+O 2
+        with torch.no_grad():
+            for batch_graphs in batch_test[k]:
+U main.py 71 5 [16,16,16,16,16]
+U main.py 77 1 [8]
+O 8
+        assert i == 1 and np.array_equal(labels_.cpu().numpy().astype(np.int64), R.y[k])
+        return logits_.detach().cpu().numpy().astype(np.float64), float(auc)
+
+    def payload():
+        return dict(model=model.state_dict(), opt=optimizer.state_dict(), anchor_idx=[int(g.id) for g in anchor_graphs],
+                    id_var=[id_var[i] for i in range(len(train_graphs))])
+
+    for epoch in range(start_epoch, args.epochs+1):
+U main.py 52 2 [8,8]
+O 2
+
+        t0 = time.time()
+U main.py 56 5 [8,12,12,12,16]
+O 2
+
+        anchor_update = bool(epoch % 10)
+U main.py 62 2 [8,12]
+O 1
+            topk_idx = [x[0] for x in sorted_var[:topk]]
+U main.py 65 2 [12,12]
+O 4
+        R.train_loss.append(epoch_loss / len(batch_train))
+        R.t_train += time.time() - t0
+
+        t1 = time.time()
+U main.py 68 1 [8]
+O 24
+        res = R.score_groups(score_group)                      # CHANGE-TYPED: per-group test passes (§0a)
+        hs, ho_u, ho_g = [], [], []
+        with H.rng_isolated(), torch.no_grad():
+            for hb in batch_hold:
+                hb = hb.to(args.device)
+                hs.append(test(hb, anchor_graphs).detach().cpu().numpy().astype(np.float64))
+                lu, lg = holdout_objective(hb, anchor_graphs)
+                ho_u.append(lu)
+                ho_g.append(lg)
+        ou, og = float(np.mean(ho_u)), float(np.mean(ho_g))
+        R.record(epoch, {k: res[k][0] for k in keys}, np.concatenate(hs),
+                 rec_extra=dict(holdout_obj_unc=ou, holdout_obj_gae=og, holdout_obj=ou + args.w_g * og,
+                                anchor_update=anchor_update, n_anchor=len(anchor_graphs)),
+                 types_extra={k: dict(auroc_gul=res[k][1]) for k in keys}, t_eval0=t1, metric=metric)
+
+        if R.maybe_stop(epoch, payload, final_epoch=args.epochs):
+            return "incomplete"
+    # ================= end of the run_split() copy ======================================================
+
+    return R.finish(args.epochs, 1, expected_epochs=range(1, args.epochs + 1))
+
+
+if __name__ == "__main__":
+    TC.main(METHOD, run)

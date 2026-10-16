@@ -1,0 +1,7 @@
+pool,x,y,n_runs,spearman_rho,p_value,n_methods
+frozen12,number of evaluation points,ORACLE - LAST (per run),540,-0.045556,0.290641,12
+frozen12,SD of the test-AUROC trajectory,ORACLE - LAST (per run),540,0.418690,0.000000,12
+recent,number of evaluation points,ORACLE - LAST (per run),360,0.174659,0.000875,8
+recent,SD of the test-AUROC trajectory,ORACLE - LAST (per run),360,0.281919,0.000000,8
+frozen12+recent,number of evaluation points,ORACLE - LAST (per run),900,0.055839,0.094102,20
+frozen12+recent,SD of the test-AUROC trajectory,ORACLE - LAST (per run),900,0.357197,0.000000,20

@@ -1,0 +1,110 @@
+SIGNET MUTAG 0
+SIGNET MUTAG 1
+SIGNET MUTAG 2
+SIGNET MUTAG 3
+SIGNET MUTAG 4
+OCGTL MUTAG 0
+OCGTL MUTAG 1
+OCGTL MUTAG 2
+OCGTL MUTAG 3
+OCGTL MUTAG 4
+OCGIN MUTAG 0
+OCGIN MUTAG 1
+OCGIN MUTAG 2
+OCGIN MUTAG 3
+OCGIN MUTAG 4
+GLocalKD MUTAG 0
+GLocalKD MUTAG 1
+GLocalKD MUTAG 2
+GLocalKD MUTAG 3
+GLocalKD MUTAG 4
+SIGNET NCI1 0 --holdout_frac 0 --tag full
+SIGNET NCI1 1 --holdout_frac 0 --tag full
+SIGNET NCI1 2 --holdout_frac 0 --tag full
+SIGNET NCI1 3 --holdout_frac 0 --tag full
+SIGNET NCI1 4 --holdout_frac 0 --tag full
+SIGNET AIDS 0 --holdout_frac 0 --tag full
+SIGNET AIDS 1 --holdout_frac 0 --tag full
+SIGNET AIDS 2 --holdout_frac 0 --tag full
+SIGNET AIDS 3 --holdout_frac 0 --tag full
+SIGNET AIDS 4 --holdout_frac 0 --tag full
+SIGNET REDDIT-BINARY 0 --holdout_frac 0 --tag full
+SIGNET REDDIT-BINARY 1 --holdout_frac 0 --tag full
+SIGNET REDDIT-BINARY 2 --holdout_frac 0 --tag full
+SIGNET REDDIT-BINARY 3 --holdout_frac 0 --tag full
+SIGNET REDDIT-BINARY 4 --holdout_frac 0 --tag full
+SIGNET IMDB-BINARY 0 --holdout_frac 0 --tag full
+SIGNET IMDB-BINARY 1 --holdout_frac 0 --tag full
+SIGNET IMDB-BINARY 2 --holdout_frac 0 --tag full
+SIGNET IMDB-BINARY 3 --holdout_frac 0 --tag full
+SIGNET IMDB-BINARY 4 --holdout_frac 0 --tag full
+OCGIN BZR 0
+OCGIN BZR 1
+OCGIN BZR 2
+OCGIN BZR 3
+OCGIN BZR 4
+OCGIN COX2 0
+OCGIN COX2 1
+OCGIN COX2 2
+OCGIN COX2 3
+OCGIN COX2 4
+OCGIN ENZYMES 0
+OCGIN ENZYMES 1
+OCGIN ENZYMES 2
+OCGIN ENZYMES 3
+OCGIN ENZYMES 4
+OCGIN DHFR 0
+OCGIN DHFR 1
+OCGIN DHFR 2
+OCGIN DHFR 3
+OCGIN DHFR 4
+OCGIN PROTEINS_full 0
+OCGIN PROTEINS_full 1
+OCGIN PROTEINS_full 2
+OCGIN PROTEINS_full 3
+OCGIN PROTEINS_full 4
+OCGIN IMDB-BINARY 0
+OCGIN IMDB-BINARY 1
+OCGIN IMDB-BINARY 2
+OCGIN IMDB-BINARY 3
+OCGIN IMDB-BINARY 4
+OCGIN AIDS 0
+OCGIN AIDS 1
+OCGIN AIDS 2
+OCGIN AIDS 3
+OCGIN AIDS 4
+OCGIN REDDIT-BINARY 0
+OCGIN REDDIT-BINARY 1
+OCGIN REDDIT-BINARY 2
+OCGIN REDDIT-BINARY 3
+OCGIN REDDIT-BINARY 4
+OCGIN NCI1 0
+OCGIN NCI1 1
+OCGIN NCI1 2
+OCGIN NCI1 3
+OCGIN NCI1 4
+SIGNET ENZYMES 0 --holdout_frac 0 --tag full
+SIGNET ENZYMES 1 --holdout_frac 0 --tag full
+SIGNET ENZYMES 2 --holdout_frac 0 --tag full
+SIGNET ENZYMES 3 --holdout_frac 0 --tag full
+SIGNET ENZYMES 4 --holdout_frac 0 --tag full
+SIGNET DHFR 0 --holdout_frac 0 --tag full
+SIGNET DHFR 1 --holdout_frac 0 --tag full
+SIGNET DHFR 2 --holdout_frac 0 --tag full
+SIGNET DHFR 3 --holdout_frac 0 --tag full
+SIGNET DHFR 4 --holdout_frac 0 --tag full
+SIGNET PROTEINS_full 0 --holdout_frac 0 --tag full
+SIGNET PROTEINS_full 1 --holdout_frac 0 --tag full
+SIGNET PROTEINS_full 2 --holdout_frac 0 --tag full
+SIGNET PROTEINS_full 3 --holdout_frac 0 --tag full
+SIGNET PROTEINS_full 4 --holdout_frac 0 --tag full
+SIGNET COX2 0 --holdout_frac 0 --tag full
+SIGNET COX2 1 --holdout_frac 0 --tag full
+SIGNET COX2 2 --holdout_frac 0 --tag full
+SIGNET COX2 3 --holdout_frac 0 --tag full
+SIGNET COX2 4 --holdout_frac 0 --tag full
+SIGNET BZR 0 --holdout_frac 0 --tag full
+SIGNET BZR 1 --holdout_frac 0 --tag full
+SIGNET BZR 2 --holdout_frac 0 --tag full
+SIGNET BZR 3 --holdout_frac 0 --tag full
+SIGNET BZR 4 --holdout_frac 0 --tag full

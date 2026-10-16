@@ -1,0 +1,21 @@
+{
+ "dataset": "IMDB-BINARY",
+ "fold": 0,
+ "epochs_trained": 3,
+ "hold": {
+  "n": 80,
+  "max_abs_one_vs_single": 0.34375,
+  "max_abs_one_vs_rev7": 0.34375,
+  "max_abs_one_vs_other_anchors": 0.0,
+  "max_rel_one_vs_single": 9.370663178742689e-07,
+  "mean_score": 17135.44921875
+ },
+ "test": {
+  "n": 200,
+  "max_abs_one_vs_single": 13.5,
+  "max_abs_one_vs_rev7": 0.34375,
+  "max_abs_one_vs_other_anchors": 0.0,
+  "max_rel_one_vs_single": 1.8771197574096732e-06,
+  "mean_score": 266381.125
+ }
+}

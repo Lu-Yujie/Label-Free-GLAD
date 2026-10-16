@@ -1,0 +1,158 @@
+{
+ "versions": {
+  "torch": "2.4.0+cpu",
+  "dgl": "2.4.0",
+  "numpy": "1.26.4"
+ },
+ "started": "2026-10-13 09:02:12",
+ "lgkde_commit": "1bba5ef00067230fa327a630d67cabbd53fdf523",
+ "T1_edges_identical": true,
+ "T1_graphconv": {
+  "53->32": {
+   "init_bitwise": true,
+   "out": {
+    "max_abs": 0.0,
+    "max_rel": 0.0
+   },
+   "grad_x": {
+    "max_abs": 2.980232238769531e-07,
+    "max_rel": 1.1259138254381404e-07
+   },
+   "grad_w": {
+    "max_abs": 7.62939453125e-06,
+    "max_rel": 1.0750844344437701e-07
+   },
+   "grad_b": {
+    "max_abs": 0.0,
+    "max_rel": 0.0
+   }
+  },
+  "53->2": {
+   "init_bitwise": true,
+   "out": {
+    "max_abs": 0.0,
+    "max_rel": 0.0
+   },
+   "grad_x": {
+    "max_abs": 0.0,
+    "max_rel": 0.0
+   },
+   "grad_w": {
+    "max_abs": 0.0,
+    "max_rel": 0.0
+   },
+   "grad_b": {
+    "max_abs": 0.0,
+    "max_rel": 0.0
+   }
+  }
+ },
+ "T2_init_bitwise_BZR": true,
+ "T3_forward_backward_BZR": {
+  "orig32": {
+   "vs_orig64": {
+    "dist_intra_max_rel": 2.6968599248228415e-05,
+    "dist_cross_max_rel": 3.7933811374999025e-05,
+    "kde_intra_max_rel": 3.91995277973629e-06,
+    "kde_cross_max_rel": 4.586394178403166e-06,
+    "loss_rel": 1.603774772558469e-07,
+    "grad_rel_l2": 6.858791133758843e-06,
+    "grad_rel_l2_kde_logits": 5.055622354372455e-07,
+    "bn_running_max_rel": 3.863727501286995e-06
+   },
+   "intra_symmetric_zero_diag": true
+  },
+  "port_loop": {
+   "vs_orig32": {
+    "dist_intra_max_rel": 0.0,
+    "dist_cross_max_rel": 0.0,
+    "kde_intra_max_rel": 0.0,
+    "kde_cross_max_rel": 0.0,
+    "loss_rel": 0.0,
+    "grad_rel_l2": 1.0266854992299192e-07,
+    "grad_rel_l2_kde_logits": 0.0,
+    "bn_running_max_rel": 0.0
+   },
+   "vs_orig64": {
+    "dist_intra_max_rel": 2.6968599248228415e-05,
+    "dist_cross_max_rel": 3.7933811374999025e-05,
+    "kde_intra_max_rel": 3.91995277973629e-06,
+    "kde_cross_max_rel": 4.586394178403166e-06,
+    "loss_rel": 1.603774772558469e-07,
+    "grad_rel_l2": 6.851673668680383e-06,
+    "grad_rel_l2_kde_logits": 5.055622354372455e-07,
+    "bn_running_max_rel": 3.863727501286995e-06
+   },
+   "intra_symmetric_zero_diag": true
+  },
+  "port_vec": {
+   "vs_orig32": {
+    "dist_intra_max_rel": 1.648726753099989e-06,
+    "dist_cross_max_rel": 7.457762032508633e-07,
+    "kde_intra_max_rel": 1.0806430993535701e-07,
+    "kde_cross_max_rel": 2.708187147647926e-07,
+    "loss_rel": 6.247843322583086e-08,
+    "grad_rel_l2": 1.3359396661495332e-06,
+    "grad_rel_l2_kde_logits": 0.0,
+    "bn_running_max_rel": 0.0
+   },
+   "vs_orig64": {
+    "dist_intra_max_rel": 2.6968599248228415e-05,
+    "dist_cross_max_rel": 3.7933811374999025e-05,
+    "kde_intra_max_rel": 3.91995277973629e-06,
+    "kde_cross_max_rel": 4.5186894999616574e-06,
+    "loss_rel": 9.789903400988253e-08,
+    "grad_rel_l2": 6.87619430700547e-06,
+    "grad_rel_l2_kde_logits": 5.055622354372455e-07,
+    "bn_running_max_rel": 3.863727501286995e-06
+   },
+   "intra_symmetric_zero_diag": true
+  },
+  "port_vec_smallblocks": {
+   "vs_orig32": {
+    "dist_intra_max_rel": 1.648726753099989e-06,
+    "dist_cross_max_rel": 9.632942625323652e-07,
+    "kde_intra_max_rel": 1.0806430993535701e-07,
+    "kde_cross_max_rel": 1.354093573823963e-07,
+    "loss_rel": 0.0,
+    "grad_rel_l2": 1.115410947183632e-06,
+    "grad_rel_l2_kde_logits": 1.5141597438988402e-08,
+    "bn_running_max_rel": 0.0
+   },
+   "vs_orig64": {
+    "dist_intra_max_rel": 2.6968599248228415e-05,
+    "dist_cross_max_rel": 3.7933811374999025e-05,
+    "kde_intra_max_rel": 3.91995277973629e-06,
+    "kde_cross_max_rel": 4.5186894999616574e-06,
+    "loss_rel": 1.603774772558469e-07,
+    "grad_rel_l2": 6.774622928265316e-06,
+    "grad_rel_l2_kde_logits": 5.087237050113173e-07,
+    "bn_running_max_rel": 3.863727501286995e-06
+   },
+   "intra_symmetric_zero_diag": true
+  }
+ },
+ "T3_sizes_BZR": {
+  "n_graphs_A": 55,
+  "n_graphs_Q": 40,
+  "nodes_A": 1807,
+  "nodes_Q": 1547
+ },
+ "T4_negatives_BZR_ubgold": {
+  "n_graphs": 55,
+  "feature_mismatches": 0,
+  "edge_set_mismatches": 0,
+  "edge_order_mismatches": 0,
+  "rng_state_equal_after": true,
+  "mean_rel_edge_count_change": 0.06346934482345565
+ },
+ "T4_negatives_BZR_hpfree": {
+  "n_graphs": 55,
+  "feature_mismatches": 0,
+  "edge_set_mismatches": 0,
+  "edge_order_mismatches": 0,
+  "rng_state_equal_after": true,
+  "mean_rel_edge_count_change": 0.06346934482345565
+ },
+ "finished": "2026-10-13 09:03:08"
+}

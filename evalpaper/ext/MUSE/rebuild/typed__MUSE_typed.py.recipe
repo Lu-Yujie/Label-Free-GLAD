@@ -1,0 +1,176 @@
+#target evalpaper/typed/ext/MUSE_typed.py
+#sha256 1653567235771435e5bfb7ef8e6e93e7a079ad475f67df5345d1d151a9fbd0d1
+#commit 07da392034b6c4897a08de658abfb7a61bf09728
+#final-newline 1
+O 17
+"""Phase B typed adapter: MUSE (E5; NeurIPS'24) on GX / MS-v2 (RUN_NOTES_ext.md §0).
+
+The port evalpaper/ext/MUSE/run_method.py (MUSE src @07da392, unmodified) is imported READ-ONLY. Reused as is:
+load_muse, resolve_hparams (A13 §1 modal anom_0 configuration for a dataset without a released entry; modal BSize 256),
+prepare_data, fit_mlp_labelfree, muse_normality, heldout_objective and muse_train (MUSE's instrumented training loop,
+which calls our evaluate() at every snapshot and checkpoints through the port's maybe_stop). The port's _run is copied
+below with its data part replaced (# CHANGE-TYPED):
+  * container of graphs = [fit | held-out | test normals | anomalies of group 1 | group 2 | ...] (typed_data);
+  * at every snapshot MUSE's error representations are computed for the whole container and the MLP autoencoder
+    (h 32, lr 1e-3, 500 epochs, label-free, A13 §3) is fitted on the fit graphs, exactly as the port; the score of a
+    group's test set (test normals + T) is the slice of that pass (MUSE scores every graph of its container in one
+    pass by design; per graph). `--check_slice` (smoke) recomputes one group in its own container and reports the
+    max |difference|;
+  * the 9-cell MLP grid of the port (descriptive `oracle_grid`) is not computed; each cell is reseeded before its
+    construction in the port, so the main cell is unchanged.
+Own ORACLE: none (A10 §2): the collector reports UB-GOLD's rule over the 10 snapshots.
+  PYTHONDONTWRITEBYTECODE=1 $GLAD_ENVS/ubgold-gpu/bin/python -B MUSE_typed.py --generator GX --seed 0 [--fv F1]
+U main.py 32 1 [0]
+O 6
+import os.path as _osp, sys as _sys
+_sys.dont_write_bytecode = True
+_HERE_ = _osp.realpath(_osp.dirname(_osp.abspath(__file__)))
+if _HERE_ not in _sys.path:
+    _sys.path.insert(0, _HERE_)
+
+U src.py 4 1 [0]
+O 3
+import os.path as osp
+import time
+
+U data_loader.py 3 1 [0]
+U GNNs.py 1 1 [0]
+O 8
+
+import typed_ext_common as TC
+
+METHOD = "MUSE"
+
+
+def run(R, a):
+    M = TC.load_port(METHOD)                       # ext/MUSE/run_method.py (read only)
+U data_loader.py 8 1 [4]
+O 51
+    mods = M.load_muse()
+    G, S_ = mods["GNNs"], mods["src"]
+    metric = TC.load_metric()
+    device = "cuda:0" if torch.cuda.is_available() else "cpu"
+    # CHANGE-TYPED: the typed dataset has no released MUSE entry -> resolve_hparams' modal branch (A13 §1)
+    H, line, hp_notes = M.resolve_hparams(R.generator, "ubgold")
+    assert "modal released anom_0" in line, line
+    num_epoch = M.FIXED["epochs"] if R.max_epochs is None else int(R.max_epochs)
+    seed = 3407 + R.seed
+
+    # ---- CHANGE-TYPED: typed data (no RNG consumed), container [fit | hold | test normals | anomalies per group] --
+    td = R.load_data()
+    P = td.pyg()
+    keys, n_norm = R.keys, R.n_norm
+    norms = P["test"][keys[0]][:n_norm]
+    cont = list(P["fit"]) + list(P["hold"]) + list(norms)
+    n_fit, n_hold = len(P["fit"]), len(P["hold"])
+    fit_idx = list(range(n_fit))
+    hold_idx = list(range(n_fit, n_fit + n_hold))
+    norm_idx = list(range(n_fit + n_hold, n_fit + n_hold + n_norm))
+    test_idx = {}
+    for k in keys:
+        an = P["test"][k][n_norm:]
+        assert len(an) == len(td.groups[k]) and len(P["test"][k]) == len(R.y[k])
+        start = len(cont)
+        cont += list(an)
+        test_idx[k] = norm_idx + list(range(start, start + len(an)))
+    graphs = [Data(x=d.x, edge_index=d.edge_index) for d in cont]
+    for d, g in zip(graphs, cont):
+        d.num_nodes = int(g.num_nodes)
+
+    R.eval_epochs = set(range(M.FIXED["saving_interval"], num_epoch + 1, M.FIXED["saving_interval"])) | {num_epoch}
+    hparams = dict(H, num_epoch=num_epoch, eval_freq=M.FIXED["saving_interval"], saving_interval=M.FIXED["saving_interval"],
+                   dropout=M.FIXED["dp"], weight_decay=M.FIXED["w_decay"], edge_drop=M.FIXED["edge_drop"],
+                   batch_size=H["bsize"], batch_size_test=H["bsize"], hidden_dim=H["dim"], num_layer=H["n_layers"],
+                   mlp_hid=M.MLP_MAIN[0], mlp_lr=M.MLP_MAIN[1], mlp_layers=M.FIXED["mlp_layers"],
+                   mlp_drop=M.FIXED["mlp_drop"], mlp_epochs=M.FIXED["mlp_epochs"], mlp_wd=M.FIXED["mlp_wd"],
+                   anom_type=0, seed=seed)
+    R.base_meta({"ext/MUSE/run_method.py": osp.join(TC.PORTS, METHOD, "run_method.py"),
+                 "ext/MUSE/src/src.py": osp.join(M.MUSE_SRC, "src.py"),
+                 "ext/MUSE/src/GNNs.py": osp.join(M.MUSE_SRC, "GNNs.py"),
+                 "typed/ext/MUSE_typed.py": osp.abspath(__file__)},
+                M.MUSE_COMMIT, hparams, line, hp_notes, device=device,
+                flags=dict(oracle_own=None, per_type_mode="container_slice",
+                           score="anomaly = sum_l (zhat_l - z_l)^2 / s_l (negated MUSE normality); MLP h=32 lr=1e-3, "
+                                 "500 epochs, no validation early stopping (A13 §3)",
+                           mlp_grid="not computed in Phase B (descriptive only in the main study)"))
+
+    # ---- MUSE main.py (lines 59-107), one trial (copy of the port's _run) ------------------------------------
+    adj, adj_pos_weights = M.prepare_data(graphs, device, H["gamma"])
+    n_feat = graphs[0].x.shape[1]
+U src.py 109 3 [4,4,4]
+O 2
+    dim, n_layer, lr, BSize = H["dim"], H["n_layers"], H["lr"], H["bsize"]
+    model = G.GIN(num_features=n_feat, num_classes=1, hidden_units=dim, num_layers=n_layer, dropout=M.FIXED["dp"],
+U main.py 95 1 [18]
+O 17
+    edge_encoder = G.MLP_Decoder(int(n_layer * dim), dim, dim).to(device)
+    feature_encoder = G.MLP_Decoder(int(n_layer * dim), dim, n_feat).to(device)
+    gnn_trainer = S_.MUSE_representation_learning(datasets=graphs, device=device, labels=adj,
+                                                  labels_pos_weights=adj_pos_weights)
+    gnn_trainer._SubsetSampler = S_.SubsetSampler
+
+    R.load_state(device.split(":")[0], torch.get_num_threads(), first_epoch=1)
+    slice_check = {}
+
+    def error_scores(m_, fe_, ee_, curP, container, fit_idx_):
+        """Snapshot -> error representations of `container` -> label-free MLP (main cell) -> anomaly scores."""
+        ae = S_.MUSE_oneclass_classification(model=m_, feature_encoder=fe_, edge_encoder=ee_, datasets=container,
+                                             device=device, B_size=BSize, labels=adj_of(container),
+                                             pos_weights=pw_of(container))
+        ae.obtain_error_representations(curP, fit_idx_)
+        TX = ae.TX.detach().cpu().numpy().astype(np.float64)
+        r4_dim, r4_lr = M.MLP_MAIN
+U src.py 109 3 [8,8,8]
+O 52
+        mlp = G.AutoEncoderOneclassClassifier(in_dim=M.FIXED["n_feat_err"], hid_dim=r4_dim,
+                                              n_layers=M.FIXED["mlp_layers"], drop_p=M.FIXED["mlp_drop"]).to(device)
+        stds, l_fin = M.fit_mlp_labelfree(ae, mlp, fit_idx_, r4_lr, M.FIXED["mlp_epochs"], M.FIXED["mlp_wd"], seed)
+        norm_all = M.muse_normality(ae, list(range(len(container))), mlp, stds)
+        return -norm_all.astype(np.float64), TX, l_fin
+
+    pos_of = {id(g): i for i, g in enumerate(graphs)}
+
+    def adj_of(container):
+        return adj if container is graphs else [adj[pos_of[id(g)]] for g in container]
+
+    def pw_of(container):
+        return adj_pos_weights if container is graphs else [adj_pos_weights[pos_of[id(g)]] for g in container]
+
+    def evaluate(epoch, t1):
+        """Snapshot `epoch` (port's evaluate, CHANGE-TYPED: main MLP cell only, per-group slices)."""
+        with M.rng_isolated():
+            curP = [copy.deepcopy(model.state_dict()), copy.deepcopy(feature_encoder.state_dict()),
+                    copy.deepcopy(edge_encoder.state_dict())]
+            m_, fe_, ee_ = copy.deepcopy(model), copy.deepcopy(feature_encoder), copy.deepcopy(edge_encoder)
+            an, TX, l_fin = error_scores(m_, fe_, ee_, curP, graphs, fit_idx)
+            nonfinite_rep = int((~np.isfinite(TX)).any(1).sum())
+            hobj = M.heldout_objective(gnn_trainer, m_, fe_, ee_, hold_idx, BSize)
+            if a.check_slice and not slice_check:      # smoke only: group alone in its own container
+                k = keys[-1]
+                own = [graphs[i] for i in fit_idx + hold_idx + test_idx[k]]
+                an_own, _, _ = error_scores(copy.deepcopy(model), copy.deepcopy(feature_encoder),
+                                            copy.deepcopy(edge_encoder), curP, own, fit_idx)
+                d = np.abs(an_own[n_fit + n_hold:] - an[test_idx[k]])
+                slice_check.update(group=k, epoch=epoch, max_abs_diff=float(np.nanmax(d)),
+                                   max_rel_diff=float(np.nanmax(d / np.maximum(np.abs(an[test_idx[k]]), 1e-12))))
+        R.record(epoch, {k: an[test_idx[k]] for k in keys}, an[hold_idx],
+                 rec_extra=dict(holdout_obj=hobj, fitref_score=TC.finite_mean(an[fit_idx]), mlp_final_loss=l_fin,
+                                nonfinite_rep=nonfinite_rep),
+                 extra_S={"rep": TX.ravel()}, t_eval0=t1, metric=metric)
+
+    # ---- src.py MUSE_representation_learning.train via the port's instrumented copy (muse_train) ------------
+    st = M.muse_train(R, gnn_trainer, model, feature_encoder, edge_encoder, fit_idx, lr, M.FIXED["w_decay"],
+                      num_epoch, BSize, seed, evaluate)
+    if st != "done":
+        return st
+    return R.finish(num_epoch, M.FIXED["saving_interval"], expected_epochs=sorted(R.eval_epochs),
+                    extra_npz=dict(n_fit=np.int64(n_fit), n_hold=np.int64(n_hold),
+                                   rep_layout=np.array("rep: per eval point, graphs [fit | held-out | test normals | "
+                                                       "anomalies of each group in group_order] x [avg_L1, std_L1, "
+                                                       "avg_X, std_X]")),
+                    meta_extra=dict(slice_check=slice_check or None))
+
+
+if __name__ == "__main__":
+    TC.main(METHOD, run, extra=lambda ap: ap.add_argument("--check_slice", action="store_true",
+                                                          help="smoke: compare one group in its own container"))
